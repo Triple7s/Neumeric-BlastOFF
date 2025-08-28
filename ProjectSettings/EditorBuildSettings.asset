@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/PrototypeCarScene.unity
+    guid: 54544ddfdd15aba488b11e2aab1cff38
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: a69a577ac35ca9d43a72e5d64f51fded, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f050ed6e3e96bcb41a767632a8925036, type: 2}
