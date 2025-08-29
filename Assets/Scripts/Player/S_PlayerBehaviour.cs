@@ -7,6 +7,7 @@ public class S_PlayerBehaviour : MonoBehaviour
     [Header("Player Variables")]
     [SerializeField] private float driveSpeed = 10f;
     [SerializeField] private float turningSpeed = 10f;
+    [SerializeField] private float buoyancyStrength = 30f;
     
     [Header("Player Components")]
     [SerializeField] private GameObject[] corners;
@@ -29,6 +30,11 @@ public class S_PlayerBehaviour : MonoBehaviour
         playerInteraction.BrakeReleased += StopBrake;
     }
 
+    private void Start()
+    {
+        rb.centerOfMass = centerMass.transform.localPosition;
+    }
+
     void Update()
     {
         if (!_isBraking)
@@ -36,20 +42,35 @@ public class S_PlayerBehaviour : MonoBehaviour
             Drive();
         }
         
-        if (_isTurning)
-        {
-            Turn();
-        }
+        
     }
 
     private void Drive()
     {
         transform.Translate(Vector3.forward * (Time.deltaTime * driveSpeed));
+        
+        rb.AddForceAtPosition(transform.TransformDirection(Vector3.forward) * (Time.deltaTime * driveSpeed), propulsion.transform.position);
+        if (_isTurning)
+        {
+            Turn();
+        }
+
+        foreach (var corner in corners)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(corner.transform.position, transform.TransformDirection(Vector3.down), out hit, 3f))
+            {
+                rb.AddForceAtPosition(transform.TransformDirection(Vector3.up) * (Time.deltaTime * Mathf.Pow(3f - hit.distance, 2f))/3f * buoyancyStrength, corner.transform.position);
+            }
+            Debug.Log(hit.distance);
+        }
+        rb.AddForce(transform.TransformVector(Vector3.right) * (Time.deltaTime * transform.InverseTransformVector(rb.linearVelocity).x * 5f));
+
     }
 
     private void Turn()
     {
-        transform.Rotate(Vector3.up, turningSpeed * _turnDirection * Time.deltaTime);
+        rb.AddTorque(transform.TransformDirection(Vector3.up) * (Time.deltaTime * turningSpeed * _turnDirection));
     }
 
     private void TurnLeft()

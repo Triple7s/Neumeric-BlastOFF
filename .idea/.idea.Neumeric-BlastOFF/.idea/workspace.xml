@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="168bda94-79bb-411a-9428-ca01b7f1bd2e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PrototypeCarScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PrototypeCarScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerBehaviour.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1756374755279</updated>
       <workItem from="1756374756843" duration="8107000" />
-      <workItem from="1756454751240" duration="393000" />
+      <workItem from="1756454751240" duration="3845000" />
     </task>
     <servers />
   </component>
