@@ -5,7 +5,7 @@ using UnityEngine;
 public class S_PlayerBehaviour : MonoBehaviour
 {
     [Header("Player Variables")]
-    [SerializeField] private float driveSpeed = 10f;
+    [SerializeField] private float acceleration = 10f;
     [SerializeField] private float turningSpeed = 10f;
     [SerializeField] private float buoyancyStrength = 30f;
     
@@ -35,21 +35,17 @@ public class S_PlayerBehaviour : MonoBehaviour
         rb.centerOfMass = centerMass.transform.localPosition;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (!_isBraking)
-        {
-            Drive();
-        }
-        
-        
+        Drive();
     }
 
     private void Drive()
     {
-        transform.Translate(Vector3.forward * (Time.deltaTime * driveSpeed));
+        transform.Translate(Vector3.forward * (Time.deltaTime * acceleration));
         
-        rb.AddForceAtPosition(transform.TransformDirection(Vector3.forward) * (Time.deltaTime * driveSpeed), propulsion.transform.position);
+        rb.AddForceAtPosition(transform.TransformDirection(Vector3.forward) * (Time.deltaTime * acceleration), propulsion.transform.position);
+        
         if (_isTurning)
         {
             Turn();
@@ -62,9 +58,9 @@ public class S_PlayerBehaviour : MonoBehaviour
             {
                 rb.AddForceAtPosition(transform.TransformDirection(Vector3.up) * (Time.deltaTime * Mathf.Pow(3f - hit.distance, 2f))/3f * buoyancyStrength, corner.transform.position);
             }
-            Debug.Log(hit.distance);
         }
         rb.AddForce(transform.TransformVector(Vector3.right) * (Time.deltaTime * transform.InverseTransformVector(rb.linearVelocity).x * 5f));
+        Debug.Log(rb.linearVelocity.magnitude);
 
     }
 
@@ -92,12 +88,12 @@ public class S_PlayerBehaviour : MonoBehaviour
     
     private void StartBrake()
     {
-        _isBraking = true;
+        acceleration = 0f;
     }
     
     private void StopBrake()
     {
-        _isBraking = false;
+        acceleration = 50f;
     }
 
     
