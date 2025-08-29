@@ -8,6 +8,11 @@ public class S_PlayerBehaviour : MonoBehaviour
     [SerializeField] private float driveSpeed = 10f;
     [SerializeField] private float turningSpeed = 10f;
     
+    [Header("Player Components")]
+    [SerializeField] private GameObject[] corners;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private GameObject propulsion, centerMass;
+    
     [Header("Scripts")]
     [SerializeField] private S_PlayerInteraction playerInteraction;
 
