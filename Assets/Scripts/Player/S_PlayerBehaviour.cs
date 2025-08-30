@@ -8,11 +8,11 @@ public class S_PlayerBehaviour : MonoBehaviour
     [SerializeField] private float acceleration = 10f;
     [SerializeField] private float turningSpeed = 10f;
     [SerializeField] private float buoyancyStrength = 30f;
+    [SerializeField] private float antiGravityForce = 9.81f;
     
     [Header("Player Components")]
-    [SerializeField] private GameObject[] corners;
     [SerializeField] private Rigidbody rb;
-    [SerializeField] private GameObject propulsion, centerMass;
+    
     
     [Header("Scripts")]
     [SerializeField] private S_PlayerInteraction playerInteraction;
@@ -30,38 +30,26 @@ public class S_PlayerBehaviour : MonoBehaviour
         playerInteraction.BrakeReleased += StopBrake;
     }
 
-    private void Start()
-    {
-        rb.centerOfMass = centerMass.transform.localPosition;
-    }
-
     void FixedUpdate()
     {
         Drive();
-    }
-
-    private void Drive()
-    {
-        transform.Translate(Vector3.forward * (Time.deltaTime * acceleration));
-        
-        rb.AddForceAtPosition(transform.TransformDirection(Vector3.forward) * (Time.deltaTime * acceleration), propulsion.transform.position);
         
         if (_isTurning)
         {
             Turn();
         }
+    }
 
-        foreach (var corner in corners)
+    private void Drive()
+    {
+        if (_isBraking)
         {
-            RaycastHit hit;
-            if (Physics.Raycast(corner.transform.position, transform.TransformDirection(Vector3.down), out hit, 3f))
-            {
-                rb.AddForceAtPosition(transform.TransformDirection(Vector3.up) * (Time.deltaTime * Mathf.Pow(3f - hit.distance, 2f))/3f * buoyancyStrength, corner.transform.position);
-            }
+            rb.AddForce(transform.forward * (acceleration/2 * Time.fixedDeltaTime));
         }
-        rb.AddForce(transform.TransformVector(Vector3.right) * (Time.deltaTime * transform.InverseTransformVector(rb.linearVelocity).x * 5f));
-        Debug.Log(rb.linearVelocity.magnitude);
-
+        else
+        {
+            rb.AddForce(transform.forward * (acceleration * Time.fixedDeltaTime));
+        }
     }
 
     private void Turn()
