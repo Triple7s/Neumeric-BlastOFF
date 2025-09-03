@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -5,20 +6,23 @@ public class S_PlayerBehaviour : MonoBehaviour
 {
     [Header("Player Variables")]
     [SerializeField] private float acceleration = 10f;
+    [SerializeField] private float maxSpeed = 100f;
+    [SerializeField] private float brakeAcceleration = 5f;
     [SerializeField] private float turningSpeed = 10f;
-    [SerializeField] private float buoyancyStrength = 30f;
-    [SerializeField] private float antiGravityForce = 9.81f;
+    [SerializeField] private float baseFloatingHeight = 2f;
+    
     
     [Header("Player Components")]
     [SerializeField] private Rigidbody rb;
     
     
-    [FormerlySerializedAs("playerInteraction")]
     [Header("Scripts")]
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
+    [SerializeField] private S_CarHoverBarycentric carHoverBarycentric;
 
-    private bool _isTurning, _isBraking;
-    private int _turnDirection;
+    private bool isTurning, isBraking;
+    private int turnDirection;
+    private float currentSpeed, currentAcceleration, currentFloatingHeight;
 
     private void Awake()
     {
@@ -30,11 +34,18 @@ public class S_PlayerBehaviour : MonoBehaviour
         playerInputRegister.BrakeReleased += StopBrake;
     }
 
+    private void Start()
+    {
+        currentFloatingHeight = baseFloatingHeight;
+    }
+
     void FixedUpdate()
     {
+        carHoverBarycentric.HoverOverGround(currentFloatingHeight);
+
         Drive();
         
-        if (_isTurning)
+        if (isTurning)
         {
             Turn();
         }
@@ -42,9 +53,9 @@ public class S_PlayerBehaviour : MonoBehaviour
 
     private void Drive()
     {
-        if (_isBraking)
+        if (isBraking)
         {
-            rb.AddForce(transform.forward * (acceleration/2 * Time.fixedDeltaTime));
+            rb.AddForce(transform.forward * (-brakeAcceleration * Time.fixedDeltaTime));
         }
         else
         {
@@ -54,34 +65,34 @@ public class S_PlayerBehaviour : MonoBehaviour
 
     private void Turn()
     {
-        rb.AddTorque(transform.TransformDirection(Vector3.up) * (Time.deltaTime * turningSpeed * _turnDirection));
+        transform.Rotate(transform.TransformDirection(Vector3.up) * (Time.deltaTime * turningSpeed * turnDirection));
     }
 
     private void TurnLeft()
     {
-        _isTurning = true;
-        _turnDirection = -1;
+        isTurning = true;
+        turnDirection = -1;
     }
 
     private void TurnRight()
     {
-        _isTurning = true;
-        _turnDirection = 1;
+        isTurning = true;
+        turnDirection = 1;
     }
 
     private void StopTurning()
     {
-        _isTurning = false;
+        isTurning = false;
     }
     
     private void StartBrake()
     {
-        acceleration = 0f;
+        isBraking = true;
     }
     
     private void StopBrake()
     {
-        acceleration = 50f;
+        isBraking = false;
     }
 
     
