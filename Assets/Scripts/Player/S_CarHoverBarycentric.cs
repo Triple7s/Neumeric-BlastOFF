@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class S_CarHoverBarycentric : MonoBehaviour
@@ -6,16 +7,21 @@ public class S_CarHoverBarycentric : MonoBehaviour
     [SerializeField] private float rotationSpeed = 5f;
     [SerializeField] private float heightChangeSpeed = 5f;
 
-    
+    private Rigidbody rb;
     private RaycastHit hit;
-    // Attach Script to base car
-    
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
     public void HoverOverGround(float carHeight)
     {
         Vector3 normal = FindNormal();
 
         if (normal == Vector3.zero)
         {
+            rb.angularVelocity = Vector3.zero;
             return;
         }
 
@@ -27,16 +33,30 @@ public class S_CarHoverBarycentric : MonoBehaviour
     private void SetCarHeight(Vector3 normal, float targetHeight)
     {
         // Make car go up or down so that the length from ground is same in every direction
-        transform.position = Vector3.Lerp(transform.position, hit.point + normal * targetHeight, Time.deltaTime * heightChangeSpeed);
+        //transform.position = Vector3.Lerp(transform.position, hit.point + normal * targetHeight, Time.deltaTime * heightChangeSpeed);
+        
+        Vector3 targetPosition = hit.point + normal * targetHeight;
+        Vector3 direction = (targetPosition - transform.position);
+        rb.AddForce(direction * heightChangeSpeed, ForceMode.Acceleration);
     }
 
     private void RotateCar(Vector3 normal)
     {
+        /*
         // Compute target rotation
         Quaternion targetRotation = Quaternion.FromToRotation(transform.up, normal) * transform.rotation;
 
         // Smoothly rotate toward it
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+        */
+        // change to rigid body
+        
+        Vector3 axis = Vector3.Cross(transform.up, normal);
+        float angle = Vector3.SignedAngle(transform.up, normal, axis);
+
+        // Apply torque toward aligning up with the normal
+        rb.AddTorque(axis * (angle * rotationSpeed), ForceMode.Acceleration);
+        
     }
 
     private Vector3 FindNormal()
@@ -47,7 +67,7 @@ public class S_CarHoverBarycentric : MonoBehaviour
         }
         
         MeshCollider meshCollider = hit.collider as MeshCollider;
-        if (meshCollider == null || meshCollider.sharedMesh == null)
+        if (!meshCollider || !meshCollider.sharedMesh)
         {
             Debug.Log("missing");
             return Vector3.zero;

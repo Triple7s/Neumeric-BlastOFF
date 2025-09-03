@@ -55,17 +55,17 @@ public class S_PlayerBehaviour : MonoBehaviour
     {
         if (isBraking)
         {
-            rb.AddForce(transform.forward * (-brakeAcceleration * Time.fixedDeltaTime));
+            rb.AddForce(transform.forward * (-brakeAcceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
         }
         else
         {
-            rb.AddForce(transform.forward * (acceleration * Time.fixedDeltaTime));
+            rb.AddForce(transform.forward * (acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
         }
     }
 
     private void Turn()
     {
-        transform.Rotate(transform.TransformDirection(Vector3.up) * (Time.deltaTime * turningSpeed * turnDirection));
+        rb.AddTorque(transform.TransformDirection(Vector3.up) * (Time.deltaTime * turningSpeed * turnDirection), ForceMode.Impulse);
     }
 
     private void TurnLeft()

@@ -1709,7 +1709,7 @@ MonoBehaviour:
   maxSpeed: 100
   brakeAcceleration: 1200
   turningSpeed: 50
-  baseFloatingHeight: 5
+  baseFloatingHeight: 2
   rb: {fileID: 1726853634}
   playerInputRegister: {fileID: 1726853630}
   carHoverBarycentric: {fileID: 1726853635}
@@ -1772,7 +1772,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_PlayerMovement
   rayLength: 5
-  rotationSpeed: 1
+  rotationSpeed: 20
+  heightChangeSpeed: 2
 --- !u!136 &1726853636
 CapsuleCollider:
   m_ObjectHideFlags: 0
