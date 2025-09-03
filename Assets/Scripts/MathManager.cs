@@ -40,7 +40,8 @@ public class MathManager : MonoBehaviour
         }
 
         QuestionSetup();
-        DisplayRandomQuestion();
+        QuestionType randomType = (QuestionType)Random.Range(0, 4);
+        DisplayRandomQuestion(randomType);
     }
 
     private void QuestionSetup()
@@ -102,7 +103,8 @@ public class MathManager : MonoBehaviour
 
     public void DisplayQuestion()
     {
-        DisplayRandomQuestion(QuestionType.Division);
+        QuestionType randomType = (QuestionType)Random.Range(0, 4);
+        DisplayRandomQuestion(randomType);
     }
 
     private void DisplayRandomQuestion(QuestionType questionType = QuestionType.Addition)
@@ -169,12 +171,6 @@ public class MathManager : MonoBehaviour
         Alternative2.GetComponentInChildren<TextMeshProUGUI>().text = shuffledAlternatives[1].ToString();
         Alternative3.GetComponentInChildren<TextMeshProUGUI>().text = shuffledAlternatives[2].ToString();
         Alternative4.GetComponentInChildren<TextMeshProUGUI>().text = shuffledAlternatives[3].ToString();
-
-        // Reset all colors to white
-        /*Alternative1.GetComponent<Image>().color = Color.white;
-        Alternative2.GetComponent<Image>().color = Color.white;
-        Alternative3.GetComponent<Image>().color = Color.white;
-        Alternative4.GetComponent<Image>().color = Color.white;*/
     }
 
     public void TestingCorrectAnswerCircleDivision(Button clickedButton)
