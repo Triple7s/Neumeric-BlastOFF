@@ -100,7 +100,12 @@ public class MathManager : MonoBehaviour
         }
     }
 
-    public void DisplayRandomQuestion(QuestionType questionType = QuestionType.Subtraction)
+    public void DisplayQuestion()
+    {
+        DisplayRandomQuestion(QuestionType.Division);
+    }
+
+    private void DisplayRandomQuestion(QuestionType questionType = QuestionType.Addition)
     {
         ResetButtonColors();
 
