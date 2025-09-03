@@ -32,9 +32,13 @@ public class BarycentricCoordinateVisual : MonoBehaviour
         int[] triangles = mesh.triangles;
 
         // Extract local space normals of the triangle we hit
-        Vector3 n0 = vertices[triangles[hit.triangleIndex * 3 + 0]];
-        Vector3 n1 = vertices[triangles[hit.triangleIndex * 3 + 1]];
-        Vector3 n2 = vertices[triangles[hit.triangleIndex * 3 + 2]];
+        Vector3 n0 = normals[triangles[hit.triangleIndex * 3 + 0]];
+        Vector3 n1 = normals[triangles[hit.triangleIndex * 3 + 1]];
+        Vector3 n2 = normals[triangles[hit.triangleIndex * 3 + 2]];
+        
+        Vector3 v0 = vertices[triangles[hit.triangleIndex * 3 + 0]];
+        Vector3 v1= vertices[triangles[hit.triangleIndex * 3 + 1]];
+        Vector3 v2 = vertices[triangles[hit.triangleIndex * 3 + 2]];
 
         // interpolate using the barycentric coordinate of the hitpoint
         Vector3 baryCenter = hit.barycentricCoordinate;
@@ -47,16 +51,15 @@ public class BarycentricCoordinateVisual : MonoBehaviour
         // Transform local space normals to world space
         Transform hitTransform = hit.collider.transform;
         interpolatedNormal = hitTransform.TransformDirection(interpolatedNormal);
-        n0 = hitTransform.TransformPoint(n0);
-        n1 = hitTransform.TransformPoint(n1);
-        n2 = hitTransform.TransformPoint(n2);
-        
+        v0 = hitTransform.TransformPoint(v0);
+        v1 = hitTransform.TransformPoint(v1);
+        v2 = hitTransform.TransformPoint(v2);
 
         // Display with Debug.DrawLine
         Debug.DrawRay(hit.point, interpolatedNormal, Color.brown);
-        Debug.DrawLine(n0, n1);
-        Debug.DrawLine(n1, n2);
-        Debug.DrawLine(n2, n0);
+        Debug.DrawLine(v0, v1);
+        Debug.DrawLine(v1, v2);
+        Debug.DrawLine(v2, v0);
         
        
     }

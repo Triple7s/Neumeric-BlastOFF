@@ -1,6 +1,5 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class S_PlayerBehaviour : MonoBehaviour
 {
@@ -14,20 +13,21 @@ public class S_PlayerBehaviour : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     
     
+    [FormerlySerializedAs("playerInteraction")]
     [Header("Scripts")]
-    [SerializeField] private S_PlayerInteraction playerInteraction;
+    [SerializeField] private S_PlayerInputRegister playerInputRegister;
 
     private bool _isTurning, _isBraking;
     private int _turnDirection;
 
     private void Awake()
     {
-        playerInteraction.LeftPressed += TurnLeft;
-        playerInteraction.RightPressed += TurnRight;
-        playerInteraction.TurnReleased += StopTurning;
+        playerInputRegister.LeftPressed += TurnLeft;
+        playerInputRegister.RightPressed += TurnRight;
+        playerInputRegister.TurnReleased += StopTurning;
 
-        playerInteraction.BrakePressed += StartBrake;
-        playerInteraction.BrakeReleased += StopBrake;
+        playerInputRegister.BrakePressed += StartBrake;
+        playerInputRegister.BrakeReleased += StopBrake;
     }
 
     void FixedUpdate()

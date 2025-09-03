@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class S_CarHover : MonoBehaviour
+public class S_CarHoverWithPhysics : MonoBehaviour
 {
     [SerializeField] private Transform[] hoverPoints;
     [SerializeField] private float length, strength, dampening, maxRotation;
