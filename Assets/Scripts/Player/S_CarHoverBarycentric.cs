@@ -4,11 +4,20 @@ public class S_CarHoverBarycentric : MonoBehaviour
 {
     [SerializeField] private float rayLength = 5f;
     [SerializeField] private float rotationSpeed = 5f;
+    [SerializeField] private float heightChangeSpeed = 5f;
+
+    
+    private RaycastHit hit;
     // Attach Script to base car
     
     public void HoverOverGround(float carHeight)
     {
         Vector3 normal = FindNormal();
+
+        if (normal == Vector3.zero)
+        {
+            return;
+        }
 
         RotateCar(normal);
 
@@ -17,12 +26,12 @@ public class S_CarHoverBarycentric : MonoBehaviour
 
     private void SetCarHeight(Vector3 normal, float targetHeight)
     {
-        
+        // Make car go up or down so that the length from ground is same in every direction
+        transform.position = Vector3.Lerp(transform.position, hit.point + normal * targetHeight, Time.deltaTime * heightChangeSpeed);
     }
 
     private void RotateCar(Vector3 normal)
     {
-        //transform.rotation = Quaternion.FromToRotation(transform.up, normal) * transform.rotation;
         // Compute target rotation
         Quaternion targetRotation = Quaternion.FromToRotation(transform.up, normal) * transform.rotation;
 
@@ -32,8 +41,6 @@ public class S_CarHoverBarycentric : MonoBehaviour
 
     private Vector3 FindNormal()
     {
-        RaycastHit hit;
-        
         if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, rayLength))
         {
             return Vector3.zero;
@@ -56,7 +63,7 @@ public class S_CarHoverBarycentric : MonoBehaviour
         Vector3 beta = normals[triangles[hit.triangleIndex * 3 + 1]];
         Vector3 omega = normals[triangles[hit.triangleIndex * 3 + 2]];
         
-        // interpolate using the barycentric coordinate of the hitpoint
+        // interpolate using the barycentric coordinate of the hit-point
         Vector3 baryCenter = hit.barycentricCoordinate;
         
         Vector3 normal = alpha * baryCenter.x + beta * baryCenter.y + omega * baryCenter.z;
@@ -69,6 +76,7 @@ public class S_CarHoverBarycentric : MonoBehaviour
         normal = hitTransform.TransformDirection(normal);
         
         Debug.DrawRay(hit.point, normal, Color.brown);
+        Debug.Log(normal);
 
         return normal;
     }
