@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="168bda94-79bb-411a-9428-ca01b7f1bd2e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PrototypeCarScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PrototypeCarScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/S_CarHoverBarycentric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/S_CarHoverBarycentric.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +97,7 @@
       <workItem from="1756454751240" duration="11782000" />
       <workItem from="1756883425619" duration="4087000" />
       <workItem from="1756891827280" duration="11899000" />
+      <workItem from="1756970594385" duration="556000" />
     </task>
     <servers />
   </component>

@@ -6,6 +6,7 @@ public class S_CarHoverBarycentric : MonoBehaviour
     [SerializeField] private float rayLength = 5f;
     [SerializeField] private float rotationSpeed = 5f;
     [SerializeField] private float heightChangeSpeed = 5f;
+    [SerializeField] private float fallingSpeed = 5f;
 
     private Rigidbody rb;
     private RaycastHit hit;
@@ -22,12 +23,18 @@ public class S_CarHoverBarycentric : MonoBehaviour
         if (normal == Vector3.zero)
         {
             rb.angularVelocity = Vector3.zero;
+            MakeCarFall();
             return;
         }
 
         RotateCar(normal);
 
         SetCarHeight(normal, carHeight);
+    }
+
+    private void MakeCarFall()
+    {
+        rb.AddForce(-transform.up * fallingSpeed, ForceMode.Acceleration);
     }
 
     private void SetCarHeight(Vector3 normal, float targetHeight)
