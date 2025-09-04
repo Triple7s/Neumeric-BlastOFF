@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class S_PlayerInteraction : MonoBehaviour
+public class S_PlayerInputRegister : MonoBehaviour
 {
     public event Action LeftPressed, RightPressed, TurnReleased, BrakePressed, BrakeReleased;
     
