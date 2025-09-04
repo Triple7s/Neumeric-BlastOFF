@@ -64,8 +64,23 @@ public class S_PlayerBehaviour : MonoBehaviour
 
         if (rb.linearVelocity.magnitude > data.MaxSpeed)
         {
-            rb.linearVelocity = rb.linearVelocity.normalized * data.MaxSpeed;
+            var newSpeed = rb.linearVelocity.normalized * data.MaxSpeed;
+            rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, newSpeed, Time.fixedDeltaTime);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("SpeedBoost"))
+        {
+            Boost();
+        }
+    }
+
+    public void Boost()
+    {
+        Vector3 direction = rb.linearVelocity.normalized;
+        rb.AddForce(direction * data.BoostPower, ForceMode.Impulse);
     }
 
     private void Turn()
@@ -99,6 +114,4 @@ public class S_PlayerBehaviour : MonoBehaviour
     {
         isBraking = false;
     }
-
-    
 }

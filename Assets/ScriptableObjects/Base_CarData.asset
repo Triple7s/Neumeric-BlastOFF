@@ -19,4 +19,5 @@ MonoBehaviour:
   maxSpeed: 100
   brakeAcceleration: 250
   turningSpeed: 10
+  boostPower: 600
   baseFloatingHeight: 1
