@@ -1,8 +1,10 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class C_QuestionTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject questionUI;
+    [SerializeField] private MathManager mathManager;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -12,8 +14,10 @@ public class C_QuestionTrigger : MonoBehaviour
 
             if (questionUI != null)
                 questionUI.SetActive(true);
+
+            mathManager.DisplayQuestion();
         }
 
-        
+
     }
 }

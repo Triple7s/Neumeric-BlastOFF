@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class MathManager : MonoBehaviour
 {
+    [SerializeField] private GameObject questionUI;
+
     public TextMeshProUGUI questionText;
     public List<Question> mathQuestionsAddition = new List<Question>();
     public List<Question> mathQuestionsSubtraction = new List<Question>();
@@ -202,7 +204,9 @@ public class MathManager : MonoBehaviour
     private IEnumerator HideQuestionUIAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        gameObject.SetActive(false);
+
+        if (questionUI != null)
+            questionUI.SetActive(false);
     }
 
     public void ResetButtonColors()
