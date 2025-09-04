@@ -5,21 +5,15 @@ using UnityEngine.Serialization;
 public class S_PlayerBehaviour : MonoBehaviour
 {
     [Header("Player Variables")]
-    [SerializeField] private float acceleration = 10f;
-    [SerializeField] private float maxSpeed = 100f;
-    [SerializeField] private float brakeAcceleration = 5f;
-    [SerializeField] private float turningSpeed = 10f;
-    [SerializeField] private float baseFloatingHeight = 2f;
-    
-    
-    [Header("Player Components")]
-    [SerializeField] private Rigidbody rb;
+    [SerializeField] private S_CarData data;
     
     
     [Header("Scripts")]
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
     [SerializeField] private S_CarHoverBarycentric carHoverBarycentric;
 
+    private Rigidbody rb;
+    
     private bool isTurning, isBraking;
     private int turnDirection;
     private float currentSpeed, currentAcceleration, currentFloatingHeight;
@@ -32,11 +26,17 @@ public class S_PlayerBehaviour : MonoBehaviour
 
         playerInputRegister.BrakePressed += StartBrake;
         playerInputRegister.BrakeReleased += StopBrake;
+
+        rb = GetComponent<Rigidbody>();
     }
 
     private void Start()
     {
-        currentFloatingHeight = baseFloatingHeight;
+        currentFloatingHeight = data.BaseFloatingHeight;
+
+        rb.mass = data.Mass;
+        rb.linearDamping = data.LinearDamping;
+        rb.angularDamping = data.AngularDamping;
     }
 
     void FixedUpdate()
@@ -55,17 +55,22 @@ public class S_PlayerBehaviour : MonoBehaviour
     {
         if (isBraking)
         {
-            rb.AddForce(transform.forward * (-brakeAcceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
+            rb.AddForce(transform.forward * (-data.BrakeAcceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
         }
         else
         {
-            rb.AddForce(transform.forward * (acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
+            rb.AddForce(transform.forward * (data.Acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
+        }
+
+        if (rb.linearVelocity.magnitude > data.MaxSpeed)
+        {
+            rb.linearVelocity = rb.linearVelocity.normalized * data.MaxSpeed;
         }
     }
 
     private void Turn()
     {
-        rb.AddTorque(transform.TransformDirection(Vector3.up) * (Time.deltaTime * turningSpeed * turnDirection), ForceMode.Impulse);
+        rb.AddTorque(transform.TransformDirection(Vector3.up) * (Time.deltaTime * data.TurningSpeed * turnDirection), ForceMode.Impulse);
     }
 
     private void TurnLeft()
