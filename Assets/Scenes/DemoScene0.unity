@@ -197,7 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 74576467}
   - component: {fileID: 74576469}
-  - component: {fileID: 74576468}
+  - component: {fileID: 74576470}
   m_Layer: 0
   m_Name: Score
   m_TagString: Untagged
@@ -220,45 +220,11 @@ RectTransform:
   - {fileID: 94570035}
   m_Father: {fileID: 1593275547}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 246.29881, y: 170.11655}
-  m_SizeDelta: {x: 176.1977, y: 31.767}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &74576468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 74576466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Score:'
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 176.19775, y: 31.767029}
+  m_Pivot: {x: 1, y: 1}
 --- !u!222 &74576469
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -267,6 +233,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74576466}
   m_CullTransparentMesh: 1
+--- !u!114 &74576470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74576466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Score:'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &94570034
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58.599, y: -0.54177}
+  m_AnchoredPosition: {x: 58.599, y: -0.54177856}
   m_SizeDelta: {x: 58.999, y: 30.684}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &94570036
@@ -543,7 +600,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1759100439}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MathManager, Assembly-CSharp
         m_MethodName: DisplayQuestion
         m_Mode: 1
@@ -827,23 +884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215b21c73bda93343a7d8b8f056d3adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HelloWorld
-  questionUI: {fileID: 0}
-  questionText: {fileID: 0}
-  mathQuestionsAddition: []
-  mathQuestionsSubtraction: []
-  mathQuestionsMultiplication: []
-  mathQuestionsDivision: []
-  circleDivision1: {fileID: 0}
-  circleDivision2: {fileID: 0}
-  circleDivision3: {fileID: 0}
-  circleDivision4: {fileID: 0}
-  Alternative1: {fileID: 0}
-  Alternative2: {fileID: 0}
-  Alternative3: {fileID: 0}
-  Alternative4: {fileID: 0}
-  score: 0
-  qtmPoints: 5
-  winPoints: 1900000014000000120000000f0000000c0000000a0000000800000005000000
 --- !u!1 &239147465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,8 +2010,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 886450292}
-          m_TargetAssemblyTypeName: S_PlayerInteraction, Assembly-CSharp
+        - m_Target: {fileID: 1697826850}
+          m_TargetAssemblyTypeName: S_PlayerInputRegister, Assembly-CSharp
           m_MethodName: OnBrake
           m_Mode: 1
           m_Arguments:
@@ -1986,8 +2026,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 886450292}
-          m_TargetAssemblyTypeName: S_PlayerInteraction, Assembly-CSharp
+        - m_Target: {fileID: 1697826850}
+          m_TargetAssemblyTypeName: S_PlayerInputRegister, Assembly-CSharp
           m_MethodName: OnBreakReleased
           m_Mode: 1
           m_Arguments:
@@ -2273,8 +2313,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 886450292}
-          m_TargetAssemblyTypeName: S_TurnButton, Assembly-CSharp
+        - m_Target: {fileID: 1697826850}
+          m_TargetAssemblyTypeName: S_PlayerInputRegister, Assembly-CSharp
           m_MethodName: TurnRight
           m_Mode: 1
           m_Arguments:
@@ -2289,8 +2329,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 886450292}
-          m_TargetAssemblyTypeName: S_TurnButton, Assembly-CSharp
+        - m_Target: {fileID: 1697826850}
+          m_TargetAssemblyTypeName: S_PlayerInputRegister, Assembly-CSharp
           m_MethodName: OnRelease
           m_Mode: 1
           m_Arguments:
@@ -2403,7 +2443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &886450292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2428,9 +2468,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d532bac93a06eea489f8361e6c6f61c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_PlayerBehaviour
-  driveSpeed: 5
-  turningSpeed: 5
-  playerInteraction: {fileID: 886450292}
+  data: {fileID: 11400000, guid: 89999c0d1257d96438aa27b37ff8ec5a, type: 2}
+  playerInputRegister: {fileID: 886450292}
+  carHoverBarycentric: {fileID: 0}
 --- !u!4 &886450294
 Transform:
   m_ObjectHideFlags: 0
@@ -2444,7 +2484,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1216910958}
   - {fileID: 1898031017}
   - {fileID: 822731509}
   m_Father: {fileID: 0}
@@ -2509,7 +2548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d5cd00806389e4ebbad29afe44cd94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::C_FinishLineDetector
-  mathManager: {fileID: 1759100439}
+  mathManager: {fileID: 0}
   isOpponent: 0
   pointsText: {fileID: 94570036}
 --- !u!1 &887651263
@@ -2568,8 +2607,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 886450292}
-          m_TargetAssemblyTypeName: S_TurnButton, Assembly-CSharp
+        - m_Target: {fileID: 1697826850}
+          m_TargetAssemblyTypeName: S_PlayerInputRegister, Assembly-CSharp
           m_MethodName: TurnLeft
           m_Mode: 1
           m_Arguments:
@@ -2584,8 +2623,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 886450292}
-          m_TargetAssemblyTypeName: S_TurnButton, Assembly-CSharp
+        - m_Target: {fileID: 1697826850}
+          m_TargetAssemblyTypeName: S_PlayerInputRegister, Assembly-CSharp
           m_MethodName: OnRelease
           m_Mode: 1
           m_Arguments:
@@ -3109,7 +3148,7 @@ RectTransform:
   - {fileID: 887651264}
   - {fileID: 880718221}
   - {fileID: 811119567}
-  m_Father: {fileID: 886450294}
+  m_Father: {fileID: 1697826851}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3532,23 +3571,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215b21c73bda93343a7d8b8f056d3adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HelloWorld
-  questionUI: {fileID: 0}
-  questionText: {fileID: 0}
-  mathQuestionsAddition: []
-  mathQuestionsSubtraction: []
-  mathQuestionsMultiplication: []
-  mathQuestionsDivision: []
-  circleDivision1: {fileID: 0}
-  circleDivision2: {fileID: 0}
-  circleDivision3: {fileID: 0}
-  circleDivision4: {fileID: 0}
-  Alternative1: {fileID: 0}
-  Alternative2: {fileID: 0}
-  Alternative3: {fileID: 0}
-  Alternative4: {fileID: 0}
-  score: 0
-  qtmPoints: 5
-  winPoints: 1900000014000000120000000f0000000c0000000a0000000800000005000000
 --- !u!114 &1396792834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3712,10 +3734,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -4085,6 +4107,113 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25e5c01865542e449bf00fcc40da6a11, type: 3}
+--- !u!1001 &1697826848
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3476167950482654714, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_Name
+      value: Player (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476167950482654714, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: 89999c0d1257d96438aa27b37ff8ec5a, type: 2}
+    - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -88.677
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1216910958}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3476167950482654714, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1697826852}
+  m_SourcePrefab: {fileID: 100100000, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+--- !u!1 &1697826849 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3476167950482654714, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+  m_PrefabInstance: {fileID: 1697826848}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1697826850 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3559611923804874376, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+  m_PrefabInstance: {fileID: 1697826848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697826849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 698fc4b61ddcb434e915a6e07bd9bb9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_TurnButton
+--- !u!4 &1697826851 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+  m_PrefabInstance: {fileID: 1697826848}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1697826852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697826849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d5cd00806389e4ebbad29afe44cd94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::C_FinishLineDetector
+  mathManager: {fileID: 1759100439}
+  isOpponent: 0
+  pointsText: {fileID: 94570036}
 --- !u!1 &1759100437
 GameObject:
   m_ObjectHideFlags: 0
@@ -4128,7 +4257,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1759100437}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215b21c73bda93343a7d8b8f056d3adf, type: 3}
+  m_Script: {fileID: 11500000, guid: d77df7c3da163c54aa68062020b539aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MathManager
   questionUI: {fileID: 988468330}
@@ -4420,23 +4549,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215b21c73bda93343a7d8b8f056d3adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HelloWorld
-  questionUI: {fileID: 0}
-  questionText: {fileID: 0}
-  mathQuestionsAddition: []
-  mathQuestionsSubtraction: []
-  mathQuestionsMultiplication: []
-  mathQuestionsDivision: []
-  circleDivision1: {fileID: 0}
-  circleDivision2: {fileID: 0}
-  circleDivision3: {fileID: 0}
-  circleDivision4: {fileID: 0}
-  Alternative1: {fileID: 0}
-  Alternative2: {fileID: 0}
-  Alternative3: {fileID: 0}
-  Alternative4: {fileID: 0}
-  score: 0
-  qtmPoints: 5
-  winPoints: 1900000014000000120000000f0000000c0000000a0000000800000005000000
 --- !u!1 &1898031016
 GameObject:
   m_ObjectHideFlags: 0
@@ -4950,23 +5062,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215b21c73bda93343a7d8b8f056d3adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HelloWorld
-  questionUI: {fileID: 0}
-  questionText: {fileID: 0}
-  mathQuestionsAddition: []
-  mathQuestionsSubtraction: []
-  mathQuestionsMultiplication: []
-  mathQuestionsDivision: []
-  circleDivision1: {fileID: 0}
-  circleDivision2: {fileID: 0}
-  circleDivision3: {fileID: 0}
-  circleDivision4: {fileID: 0}
-  Alternative1: {fileID: 0}
-  Alternative2: {fileID: 0}
-  Alternative3: {fileID: 0}
-  Alternative4: {fileID: 0}
-  score: 0
-  qtmPoints: 5
-  winPoints: 1900000014000000120000000f0000000c0000000a0000000800000005000000
 --- !u!1 &2038164973
 GameObject:
   m_ObjectHideFlags: 0
@@ -5289,6 +5384,7 @@ SceneRoots:
   - {fileID: 1038755883}
   - {fileID: 1759100438}
   - {fileID: 420196723}
+  - {fileID: 1697826848}
   - {fileID: 886450294}
   - {fileID: 70186286}
   - {fileID: 1905827392}
