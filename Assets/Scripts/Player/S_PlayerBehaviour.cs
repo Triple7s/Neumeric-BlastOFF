@@ -1,37 +1,51 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class S_PlayerBehaviour : MonoBehaviour
 {
     [Header("Player Variables")]
-    [SerializeField] private float driveSpeed = 10f;
-    [SerializeField] private float turningSpeed = 10f;
+    [SerializeField] private S_CarData data;
+    
     
     [Header("Scripts")]
-    [SerializeField] private S_PlayerInteraction playerInteraction;
+    [SerializeField] private S_PlayerInputRegister playerInputRegister;
+    [SerializeField] private S_CarHoverBarycentric carHoverBarycentric;
 
-    private bool _isTurning, _isBraking;
-    private int _turnDirection;
+    private Rigidbody rb;
+    
+    private bool isTurning, isBraking;
+    private int turnDirection;
+    private float currentSpeed, currentAcceleration, currentFloatingHeight;
 
     private void Awake()
     {
-        playerInteraction.LeftPressed += TurnLeft;
-        playerInteraction.RightPressed += TurnRight;
-        playerInteraction.TurnReleased += StopTurning;
+        playerInputRegister.LeftPressed += TurnLeft;
+        playerInputRegister.RightPressed += TurnRight;
+        playerInputRegister.TurnReleased += StopTurning;
 
-        playerInteraction.BrakePressed += StartBrake;
-        playerInteraction.BrakeReleased += StopBrake;
+        playerInputRegister.BrakePressed += StartBrake;
+        playerInputRegister.BrakeReleased += StopBrake;
+
+        rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    private void Start()
     {
-        if (!_isBraking)
-        {
-            Drive();
-        }
+        currentFloatingHeight = data.BaseFloatingHeight;
+
+        rb.mass = data.Mass;
+        rb.linearDamping = data.LinearDamping;
+        rb.angularDamping = data.AngularDamping;
+    }
+
+    void FixedUpdate()
+    {
+        carHoverBarycentric.HoverOverGround(currentFloatingHeight);
+
+        Drive();
         
-        if (_isTurning)
+        if (isTurning)
         {
             Turn();
         }
@@ -39,39 +53,51 @@ public class S_PlayerBehaviour : MonoBehaviour
 
     private void Drive()
     {
-        transform.Translate(Vector3.forward * (Time.deltaTime * driveSpeed));
+        if (isBraking)
+        {
+            rb.AddForce(transform.forward * (-data.BrakeAcceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
+        }
+        else
+        {
+            rb.AddForce(transform.forward * (data.Acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
+        }
+
+        if (rb.linearVelocity.magnitude > data.MaxSpeed)
+        {
+            rb.linearVelocity = rb.linearVelocity.normalized * data.MaxSpeed;
+        }
     }
 
     private void Turn()
     {
-        transform.Rotate(Vector3.up, turningSpeed * _turnDirection * Time.deltaTime);
+        rb.AddTorque(transform.TransformDirection(Vector3.up) * (Time.deltaTime * data.TurningSpeed * turnDirection), ForceMode.Impulse);
     }
 
     private void TurnLeft()
     {
-        _isTurning = true;
-        _turnDirection = -1;
+        isTurning = true;
+        turnDirection = -1;
     }
 
     private void TurnRight()
     {
-        _isTurning = true;
-        _turnDirection = 1;
+        isTurning = true;
+        turnDirection = 1;
     }
 
     private void StopTurning()
     {
-        _isTurning = false;
+        isTurning = false;
     }
     
     private void StartBrake()
     {
-        _isBraking = true;
+        isBraking = true;
     }
     
     private void StopBrake()
     {
-        _isBraking = false;
+        isBraking = false;
     }
 
     
