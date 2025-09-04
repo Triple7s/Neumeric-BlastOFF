@@ -1,10 +1,13 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
 
 public class MathManager : MonoBehaviour
 {
+    [SerializeField] private GameObject questionUI;
+
     public TextMeshProUGUI questionText;
     public List<Question> mathQuestionsAddition = new List<Question>();
     public List<Question> mathQuestionsSubtraction = new List<Question>();
@@ -22,6 +25,10 @@ public class MathManager : MonoBehaviour
     [SerializeField] private GameObject Alternative2;
     [SerializeField] private GameObject Alternative3;
     [SerializeField] private GameObject Alternative4;
+
+    [SerializeField] private int score;
+    [SerializeField] private int qtmPoints = 5;
+    [SerializeField] private int[] winPoints = { 25, 20, 18, 15, 12, 10, 8, 5 };
 
     public enum QuestionType
     {
@@ -42,6 +49,11 @@ public class MathManager : MonoBehaviour
         QuestionSetup();
         QuestionType randomType = (QuestionType)Random.Range(0, 4);
         DisplayRandomQuestion(randomType);
+    }
+
+    public void Update()
+    {
+        GetScore();
     }
 
     private void QuestionSetup()
@@ -184,12 +196,26 @@ public class MathManager : MonoBehaviour
         {
             // Correct -> Green
             clickedAlternative.GetComponent<Image>().color = Color.green;
+
+            // Hide question UI after correct answer with a short delay
+            StartCoroutine(HideQuestionUIAfterDelay(0.5f));
         }
         else
         {
             // Wrong -> Red
             clickedAlternative.GetComponent<Image>().color = Color.red;
+
+            // Hide question UI after wrong answer with a short delay
+            StartCoroutine(HideQuestionUIAfterDelay(0.5f));
         }
+    }
+
+    private IEnumerator HideQuestionUIAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (questionUI != null)
+            questionUI.SetActive(false);
     }
 
     public void ResetButtonColors()
@@ -202,6 +228,21 @@ public class MathManager : MonoBehaviour
             circleDivision3.GetComponent<Image>().color = Color.white;
         if (circleDivision4.GetComponent<Image>().color != Color.white)
             circleDivision4.GetComponent<Image>().color = Color.white;
+    }
+
+    public int RaceFinish(int playerPosition)
+    {
+        if (playerPosition >= 1 && playerPosition <= winPoints.Length)
+        {
+            score += winPoints[playerPosition - 1];
+        }
+
+        return score;
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 }
 
