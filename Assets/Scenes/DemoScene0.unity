@@ -4262,6 +4262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MathManager
   questionUI: {fileID: 988468330}
   questionText: {fileID: 1660104364}
+  pointsText: {fileID: 94570036}
   mathQuestionsAddition: []
   mathQuestionsSubtraction: []
   mathQuestionsMultiplication: []

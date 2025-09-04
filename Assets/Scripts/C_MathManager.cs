@@ -9,6 +9,8 @@ public class MathManager : MonoBehaviour
     [SerializeField] private GameObject questionUI;
 
     public TextMeshProUGUI questionText;
+    public TextMeshProUGUI pointsText;
+
     public List<Question> mathQuestionsAddition = new List<Question>();
     public List<Question> mathQuestionsSubtraction = new List<Question>();
     public List<Question> mathQuestionsMultiplication = new List<Question>();
@@ -196,6 +198,8 @@ public class MathManager : MonoBehaviour
         {
             // Correct -> Green
             clickedAlternative.GetComponent<Image>().color = Color.green;
+            score += qtmPoints;
+            pointsText.text = score.ToString();
 
             // Hide question UI after correct answer with a short delay
             StartCoroutine(HideQuestionUIAfterDelay(0.5f));
