@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
@@ -184,12 +185,24 @@ public class MathManager : MonoBehaviour
         {
             // Correct -> Green
             clickedAlternative.GetComponent<Image>().color = Color.green;
+
+            // Hide question UI after correct answer with a short delay
+            StartCoroutine(HideQuestionUIAfterDelay(0.5f));
         }
         else
         {
             // Wrong -> Red
             clickedAlternative.GetComponent<Image>().color = Color.red;
+
+            // Hide question UI after wrong answer with a short delay
+            StartCoroutine(HideQuestionUIAfterDelay(0.5f));
         }
+    }
+
+    private IEnumerator HideQuestionUIAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        gameObject.SetActive(false);
     }
 
     public void ResetButtonColors()
