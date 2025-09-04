@@ -6,8 +6,28 @@
   <component name="ChangeListManager">
     <list default="true" id="168bda94-79bb-411a-9428-ca01b7f1bd2e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/BrokenVector/LowPolyRoadPack/Demo/Materials/Grass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/BrokenVector/LowPolyRoadPack/Demo/Materials/Grass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/BrokenVector/LowPolyRoadPack/Materials/Old/Car Colorscheme 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/BrokenVector/LowPolyRoadPack/Materials/Old/Car Colorscheme 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Boost.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Boost.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Body.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Body.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Spoiler.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Spoiler.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Window.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Window.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/BarycentricCoordinateTest.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/BarycentricCoordinateTest.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/CameraFollowCar.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/CameraFollowCar.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/PrototypeCarScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/PrototypeCarScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Testing/BarycentricCoordinateVisual.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Testing/S_BarycentricCoordinateVisual.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Testing/BarycentricCoordinateVisual.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Testing/S_BarycentricCoordinateVisual.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

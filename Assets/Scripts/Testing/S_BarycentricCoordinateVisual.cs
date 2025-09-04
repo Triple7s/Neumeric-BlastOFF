@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class BarycentricCoordinateVisual : MonoBehaviour
+public class S_BarycentricCoordinateVisual : MonoBehaviour
 {
     // Attach this script to a camera and it will
     // draw a debug line pointing outward from the normal
@@ -51,12 +51,18 @@ public class BarycentricCoordinateVisual : MonoBehaviour
         // Transform local space normals to world space
         Transform hitTransform = hit.collider.transform;
         interpolatedNormal = hitTransform.TransformDirection(interpolatedNormal);
+        n0 = hitTransform.TransformDirection(n0);
+        n1 = hitTransform.TransformDirection(n1);
+        n2 = hitTransform.TransformDirection(n2);
         v0 = hitTransform.TransformPoint(v0);
         v1 = hitTransform.TransformPoint(v1);
         v2 = hitTransform.TransformPoint(v2);
 
         // Display with Debug.DrawLine
         Debug.DrawRay(hit.point, interpolatedNormal, Color.brown);
+        Debug.DrawRay(v0, n0, Color.magenta);
+        Debug.DrawRay(v1, n1, Color.magenta);
+        Debug.DrawRay(v2, n2, Color.magenta);
         Debug.DrawLine(v0, v1);
         Debug.DrawLine(v1, v2);
         Debug.DrawLine(v2, v0);
