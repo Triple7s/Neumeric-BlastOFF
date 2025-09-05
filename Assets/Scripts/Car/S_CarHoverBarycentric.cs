@@ -7,7 +7,7 @@ public class S_CarHoverBarycentric : MonoBehaviour
     [SerializeField] private float rotationSpeed = 5f;
     [SerializeField] private float heightChangeSpeed = 5f;
     [SerializeField] private float fallingSpeed = 9.81f;
-
+    [SerializeField] private string targetLayerMask = "DrivableGround";
     private Rigidbody rb;
     private RaycastHit hit;
 
@@ -68,8 +68,10 @@ public class S_CarHoverBarycentric : MonoBehaviour
 
     private Vector3 FindNormal()
     {
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, rayLength))
+        LayerMask mask = LayerMask.GetMask(targetLayerMask);
+        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, rayLength, mask))
         {
+            Debug.LogWarning("Ray does not hit mesh with " + targetLayerMask + " layer");
             return Vector3.zero;
         }
         

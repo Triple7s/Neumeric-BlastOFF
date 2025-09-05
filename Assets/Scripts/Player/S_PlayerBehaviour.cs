@@ -12,6 +12,7 @@ public class S_PlayerBehaviour : MonoBehaviour
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
     [SerializeField] private S_CarHoverBarycentric carHoverBarycentric;
     [SerializeField] private S_PlayerCameraController cameraController;
+    [SerializeField] private S_CameraStabilizer cameraStabilizer;
 
     private Rigidbody rb;
     
@@ -60,6 +61,7 @@ public class S_PlayerBehaviour : MonoBehaviour
         }
         
         cameraController.SetFOV(rb.linearVelocity.magnitude / data.MaxSpeed);
+        cameraStabilizer.StabilizeCamera();
     }
 
     private void BrakeOrDrift()

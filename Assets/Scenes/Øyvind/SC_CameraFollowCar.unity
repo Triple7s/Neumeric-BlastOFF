@@ -136,6 +136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Cross Freeway
       objectReference: {fileID: 0}
+    - target: {fileID: 182438, guid: 67b75b5f8253ef64c9aaab70b17ec06e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 429754, guid: 67b75b5f8253ef64c9aaab70b17ec06e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -186,6 +190,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 453832, guid: 6373f7d3f749b254081c2c8c9372face, type: 3}
   m_PrefabInstance: {fileID: 663651311}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &455510879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 170948592e761914faf3456e3b557eed, type: 3}
+  m_PrefabInstance: {fileID: 2046899039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &455510880
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455510879}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2212009239438826721, guid: 170948592e761914faf3456e3b557eed, type: 3}
+--- !u!4 &455510883 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 170948592e761914faf3456e3b557eed, type: 3}
+  m_PrefabInstance: {fileID: 2046899039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &530729082
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,7 +234,7 @@ GameObject:
   - component: {fileID: 530729085}
   - component: {fileID: 530729084}
   - component: {fileID: 530729087}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,11 +306,11 @@ Transform:
   m_GameObject: {fileID: 530729082}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.80509764, w: 0.5931423}
-  m_LocalPosition: {x: -49.8, y: -9.6, z: -2.83144}
-  m_LocalScale: {x: 13.259, y: 13.259, z: 13.259}
+  m_LocalPosition: {x: -49.8, y: -9.6, z: -207.83144}
+  m_LocalScale: {x: 13.259001, y: 13.259001, z: 13.259}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1655322742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 107.239}
 --- !u!64 &530729087
 MeshCollider:
@@ -355,6 +391,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FBX_road_Long
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 22b0b85e489ad8445b844186cdc2d84d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 22b0b85e489ad8445b844186cdc2d84d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -374,6 +418,10 @@ PrefabInstance:
     - target: {fileID: 184002, guid: b21431263a66fd84ebb8c5a9f3e51709, type: 3}
       propertyPath: m_Name
       value: Freeway S-Curve
+      objectReference: {fileID: 0}
+    - target: {fileID: 184002, guid: b21431263a66fd84ebb8c5a9f3e51709, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 475188, guid: b21431263a66fd84ebb8c5a9f3e51709, type: 3}
       propertyPath: m_LocalPosition.x
@@ -437,6 +485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Lift Highway (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 168972, guid: 401d27194e0344948b125cf0483f7637, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 459074, guid: 401d27194e0344948b125cf0483f7637, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.5
@@ -493,6 +545,10 @@ PrefabInstance:
     - target: {fileID: 121254, guid: ad182cc030f80d2418924040efeaaedb, type: 3}
       propertyPath: m_Name
       value: Freeway Straight 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 121254, guid: ad182cc030f80d2418924040efeaaedb, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 423198, guid: ad182cc030f80d2418924040efeaaedb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -551,6 +607,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Lift Highway
       objectReference: {fileID: 0}
+    - target: {fileID: 168972, guid: 401d27194e0344948b125cf0483f7637, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 459074, guid: 401d27194e0344948b125cf0483f7637, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -608,6 +668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1
       objectReference: {fileID: 0}
+    - target: {fileID: 127220, guid: 6373f7d3f749b254081c2c8c9372face, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 453832, guid: 6373f7d3f749b254081c2c8c9372face, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -653,6 +717,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6373f7d3f749b254081c2c8c9372face, type: 3}
+--- !u!1 &673845354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 673845355}
+  - component: {fileID: 673845356}
+  m_Layer: 0
+  m_Name: CameraStabilize
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &673845355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673845354}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1726853637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &673845356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673845354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 926ae43613ece3546b22f620f2ab0a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_Camerastabilizer
+  stabilizeSpeed: 0
 --- !u!1 &753563669 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 22b0b85e489ad8445b844186cdc2d84d, type: 3}
@@ -851,6 +960,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Highway Bridge 1
       objectReference: {fileID: 0}
+    - target: {fileID: 157490, guid: 8d7240f2f0843e442b11595c5465dbf7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 455828, guid: 8d7240f2f0843e442b11595c5465dbf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -911,6 +1024,10 @@ PrefabInstance:
     - target: {fileID: 127220, guid: 6373f7d3f749b254081c2c8c9372face, type: 3}
       propertyPath: m_Name
       value: Freeway Curve 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 127220, guid: 6373f7d3f749b254081c2c8c9372face, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 453832, guid: 6373f7d3f749b254081c2c8c9372face, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1048,6 +1165,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Lift Highway (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 168972, guid: 401d27194e0344948b125cf0483f7637, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 459074, guid: 401d27194e0344948b125cf0483f7637, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.52
@@ -1109,6 +1230,10 @@ PrefabInstance:
     - target: {fileID: 184002, guid: b21431263a66fd84ebb8c5a9f3e51709, type: 3}
       propertyPath: m_Name
       value: Freeway S-Curve (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 184002, guid: b21431263a66fd84ebb8c5a9f3e51709, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 475188, guid: b21431263a66fd84ebb8c5a9f3e51709, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1187,6 +1312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway S-Curve (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 184002, guid: b21431263a66fd84ebb8c5a9f3e51709, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 475188, guid: b21431263a66fd84ebb8c5a9f3e51709, type: 3}
       propertyPath: m_LocalPosition.x
       value: -52.5
@@ -1244,6 +1373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway S-Curve
       objectReference: {fileID: 0}
+    - target: {fileID: 184002, guid: b21431263a66fd84ebb8c5a9f3e51709, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 475188, guid: b21431263a66fd84ebb8c5a9f3e51709, type: 3}
       propertyPath: m_LocalPosition.x
       value: -72.5
@@ -1300,6 +1433,10 @@ PrefabInstance:
     - target: {fileID: 168972, guid: 401d27194e0344948b125cf0483f7637, type: 3}
       propertyPath: m_Name
       value: Freeway Lift Highway (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 168972, guid: 401d27194e0344948b125cf0483f7637, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 459074, guid: 401d27194e0344948b125cf0483f7637, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1690,7 +1827,7 @@ GameObject:
   - component: {fileID: 1565594485}
   - component: {fileID: 1565594484}
   - component: {fileID: 1565594483}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: r (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1784,11 +1921,11 @@ Transform:
   m_GameObject: {fileID: 1565594482}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.9955654, w: -0.09407189}
-  m_LocalPosition: {x: 40.68, y: 51.47, z: -5.84}
+  m_LocalPosition: {x: 40.68, y: 51.47, z: -210.84}
   m_LocalScale: {x: 13.259, y: 13.259, z: 13.259}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1655322742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 190.796}
 --- !u!1 &1655322741
 GameObject:
@@ -1835,6 +1972,9 @@ Transform:
   - {fileID: 84591843}
   - {fileID: 1839822425}
   - {fileID: 753563673}
+  - {fileID: 455510883}
+  - {fileID: 530729086}
+  - {fileID: 1565594486}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1726853630 stripped
@@ -1848,6 +1988,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698fc4b61ddcb434e915a6e07bd9bb9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_TurnButton
+--- !u!4 &1726853637 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+  m_PrefabInstance: {fileID: 8462246056676852602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1738077067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2458,6 +2603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Straight 2
       objectReference: {fileID: 0}
+    - target: {fileID: 110814, guid: ea8ec36c7f9b40f4faa40bf80afec5a3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 494338, guid: ea8ec36c7f9b40f4faa40bf80afec5a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.5
@@ -2503,6 +2652,70 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea8ec36c7f9b40f4faa40bf80afec5a3, type: 3}
+--- !u!1001 &2046899039
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1655322742}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 170948592e761914faf3456e3b557eed, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 33.75652
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 170948592e761914faf3456e3b557eed, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 170948592e761914faf3456e3b557eed, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -253.33002
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 170948592e761914faf3456e3b557eed, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 170948592e761914faf3456e3b557eed, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 170948592e761914faf3456e3b557eed, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.49999997
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 170948592e761914faf3456e3b557eed, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 170948592e761914faf3456e3b557eed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 170948592e761914faf3456e3b557eed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 170948592e761914faf3456e3b557eed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 170948592e761914faf3456e3b557eed, type: 3}
+      propertyPath: m_Name
+      value: FBX_Test_map
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 170948592e761914faf3456e3b557eed, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 170948592e761914faf3456e3b557eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 455510880}
+  m_SourcePrefab: {fileID: 100100000, guid: 170948592e761914faf3456e3b557eed, type: 3}
 --- !u!1 &2071303042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2681,6 +2894,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Lift Highway (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 168972, guid: 401d27194e0344948b125cf0483f7637, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 459074, guid: 401d27194e0344948b125cf0483f7637, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.9
@@ -2739,6 +2956,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 247563300170859371, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.98884153
+      objectReference: {fileID: 0}
+    - target: {fileID: 247563300170859371, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.14897144
+      objectReference: {fileID: 0}
+    - target: {fileID: 247563300170859371, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0000000010052381
+      objectReference: {fileID: 0}
+    - target: {fileID: 247563300170859371, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -5.5354815e-10
+      objectReference: {fileID: 0}
     - target: {fileID: 1290961879054346791, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2755,21 +2988,37 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4885159968352739220, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.98884153
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885159968352739220, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.14897144
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885159968352739220, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0000000010052381
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885159968352739220, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -5.5354815e-10
+      objectReference: {fileID: 0}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.8520966
+      value: -39.23
       objectReference: {fileID: 0}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.237
+      value: 7.45
       objectReference: {fileID: 0}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.72171
+      value: -63.81
       objectReference: {fileID: 0}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99991214
+      value: 0.059420045
       objectReference: {fileID: 0}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2777,7 +3026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.01326165
+      value: -0.9982331
       objectReference: {fileID: 0}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2789,7 +3038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 1.52
+      value: -173.187
       objectReference: {fileID: 0}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -2798,6 +3047,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 673845355}
     - targetCorrespondingSourceObject: {fileID: 3469067444408727541, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
       insertIndex: 3
       addedObject: {fileID: 1799049674}
@@ -2812,8 +3064,6 @@ SceneRoots:
   - {fileID: 2018984928}
   - {fileID: 8462246056676852602}
   - {fileID: 1655322742}
-  - {fileID: 530729086}
-  - {fileID: 1565594486}
   - {fileID: 808979319}
   - {fileID: 1773903018}
   - {fileID: 1738077072}
