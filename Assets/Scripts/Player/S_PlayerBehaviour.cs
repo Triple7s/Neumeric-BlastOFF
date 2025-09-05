@@ -15,7 +15,7 @@ public class S_PlayerBehaviour : MonoBehaviour
 
     private Rigidbody rb;
     
-    private bool isTurning, isBraking;
+    private bool isTurning, isBraking, isDrifting;
     private int turnDirection;
     private float currentAcceleration, currentFloatingHeight;
     
@@ -52,7 +52,7 @@ public class S_PlayerBehaviour : MonoBehaviour
         
         if (isBraking)
         {
-            
+            BrakeOrDrift();
         }
         else
         {
@@ -65,11 +65,11 @@ public class S_PlayerBehaviour : MonoBehaviour
     private void BrakeOrDrift()
     {
         // Drift if turning and enough speed
-        if (isTurning && rb.linearVelocity.magnitude >= data.MinDriftSpeed)
+        if ((isDrifting || isTurning) && rb.linearVelocity.magnitude >= data.MinDriftSpeed)
         {
-            
+            isDrifting = true;
         }
-        else
+        else       // Break
         {
             rb.AddForce(transform.forward * (-data.BrakeAcceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
         }
@@ -155,5 +155,6 @@ public class S_PlayerBehaviour : MonoBehaviour
     private void StopBrake()
     {
         isBraking = false;
+        isDrifting = false;
     }
 }
