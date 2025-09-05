@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="168bda94-79bb-411a-9428-ca01b7f1bd2e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/P_Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/P_Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_BarycentricCoordinateTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_BarycentricCoordinateTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_CameraFollowCar.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_CameraFollowCar.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base_CarData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base_CarData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarHoverBarycentric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarHoverBarycentric.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Cockpit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Cockpit.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Engine.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Engine.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Lights.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Lights.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Lights1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Lights1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Thingys.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Thingys.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Top.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Top.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/standardSurface11.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/standardSurface11.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +101,7 @@
       <workItem from="1756883425619" duration="4087000" />
       <workItem from="1756891827280" duration="11899000" />
       <workItem from="1756970594385" duration="4755000" />
-      <workItem from="1757057461484" duration="3583000" />
+      <workItem from="1757057461484" duration="4558000" />
     </task>
     <servers />
   </component>

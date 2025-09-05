@@ -14,6 +14,7 @@ public class S_CarData : ScriptableObject
     [SerializeField] private float turningSpeed = 10f;
     [SerializeField] private float boostPower = 800f;
     [Header("Limits")]
+    [SerializeField] private float minDriftSpeed = 50f;
     [SerializeField] private float maxSpeed = 100f;
     [SerializeField] private float maxBoostSpeed = 100f;
     [SerializeField] private float baseFloatingHeight = 1f;
@@ -30,5 +31,6 @@ public class S_CarData : ScriptableObject
     public float BoostPower => boostPower;
     public float MaxBoostSpeed => maxBoostSpeed;
     public float BaseFloatingHeight => baseFloatingHeight;
+    public float MinDriftSpeed => minDriftSpeed;
     
 }
