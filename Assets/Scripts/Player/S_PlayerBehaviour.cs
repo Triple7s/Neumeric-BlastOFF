@@ -19,7 +19,7 @@ public class S_PlayerBehaviour : MonoBehaviour
     private int turnDirection;
     private float currentAcceleration, currentFloatingHeight;
     
-    private bool isEngineRunning;
+    private bool isEngineRunning = false;
 
     private void Awake()
     {
