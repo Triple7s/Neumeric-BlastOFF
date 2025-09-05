@@ -1,7 +1,7 @@
 using Unity.Mathematics;
 using UnityEngine;
 
-public class C_QuestionTrigger : MonoBehaviour
+public class S_QuestionTrigger : MonoBehaviour
 {
     [SerializeField] private string triggerID = "Question Trigger";
 
@@ -11,7 +11,7 @@ public class C_QuestionTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            MathManager.Instance.OnTriggerEntered(triggerID);
+            S_MathManager.Instance.OnTriggerEntered(triggerID);
         }
     }
 }
