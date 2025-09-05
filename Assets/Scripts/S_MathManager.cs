@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 
-public class MathManager : MonoBehaviour
+public class S_MathManager : MonoBehaviour
 {
     [SerializeField] private GameObject questionUI;
 
@@ -15,7 +15,7 @@ public class MathManager : MonoBehaviour
     public TextMeshProUGUI multiplierText;
 
     // Some variable instantiation for triggers
-    public static MathManager Instance;
+    public static S_MathManager Instance;
     private string currentTriggerID;
 
     public List<Question> mathQuestionsAddition = new List<Question>();

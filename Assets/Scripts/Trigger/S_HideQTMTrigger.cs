@@ -10,7 +10,7 @@ public class S_HideQTMTrigger : MonoBehaviour
     { 
         if (other.CompareTag("Player"))
         {
-            MathManager.Instance.OnTriggerEntered(triggerID);
+            S_MathManager.Instance.OnTriggerEntered(triggerID);
         }
     }
 }

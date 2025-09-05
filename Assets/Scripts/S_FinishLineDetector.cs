@@ -1,9 +1,9 @@
 using TMPro;
 using UnityEngine;
 
-public class C_FinishLineDetector : MonoBehaviour
+public class S_FinishLineDetector : MonoBehaviour
 {
-    [SerializeField] private MathManager mathManager;
+    [SerializeField] private S_MathManager mathManager;
 
     public bool isOpponent = false;
     public TextMeshProUGUI pointsText;

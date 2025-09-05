@@ -9,11 +9,11 @@ public class S_MultipleQTMsTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        MathManager.Instance.OnTriggerEntered(triggerID);
+        S_MathManager.Instance.OnTriggerEntered(triggerID);
     }
     
     void OnTriggerExit(Collider other)
     {
-        MathManager.Instance.OnTriggerExited(triggerID);
+        S_MathManager.Instance.OnTriggerExited(triggerID);
     }
 }
