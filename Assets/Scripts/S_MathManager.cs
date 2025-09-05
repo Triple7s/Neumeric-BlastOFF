@@ -16,7 +16,7 @@ public class S_MathManager : MonoBehaviour
 
     // Some variable instantiation for triggers
     public static S_MathManager Instance;
-    private string currentTriggerID;
+    private S_TriggerVersion currentTriggerID = S_TriggerVersion.None;
 
     public List<Question> mathQuestionsAddition = new List<Question>();
     public List<Question> mathQuestionsSubtraction = new List<Question>();
@@ -70,12 +70,37 @@ public class S_MathManager : MonoBehaviour
         GetScore();
     }
 
-    public string OnTriggerEntered(string triggerID)
+    public void OnTriggerEntered(S_TriggerVersion triggerID)
     {
         currentTriggerID = triggerID;
         Debug.Log($"Player entered question trigger with ID: {triggerID}");
 
-        if (triggerID == "Question Trigger")
+        switch (currentTriggerID)
+        {
+            case S_TriggerVersion.QTMTrigger:
+                if (questionUI)
+                    questionUI.SetActive(true);
+
+                numberOfCorrectAnswerInRow = 0;
+                DisplayQuestion();
+                break;
+            case S_TriggerVersion.HideQTMTrigger:
+                if (questionUI)
+                {
+                    questionUI.SetActive(false);
+                    multiplier.SetActive(false);   
+                }
+
+                break;
+            case S_TriggerVersion.MultipleQTMsTrigger:
+                if (questionUI)
+                    questionUI.SetActive(true);
+
+                DisplayQuestion();
+                break;
+        }
+        
+        /*if (triggerID == "Question Trigger")
         {
             if (questionUI != null)
                 questionUI.SetActive(true);
@@ -97,17 +122,17 @@ public class S_MathManager : MonoBehaviour
                 questionUI.SetActive(true);
 
             DisplayQuestion();
-        }
+        }*/
 
-        return currentTriggerID;
+        
     }
 
-    public void OnTriggerExited(string triggerID)
+    public void OnTriggerExited(S_TriggerVersion triggerID)
     {
         if (currentTriggerID == triggerID)
         {
             Debug.Log($"Exited trigger {triggerID}");
-            currentTriggerID = null;
+            currentTriggerID = S_TriggerVersion.None;
         }
     }
 
@@ -284,7 +309,7 @@ public class S_MathManager : MonoBehaviour
                 Combo(numberOfCorrectAnswerInRow);
             }
 
-            if (currentTriggerID == "MultipleQTMsTrigger") { StartCoroutine(ShowNextQuestionAfterDelay(0.5f)); }
+            if (currentTriggerID == S_TriggerVersion.MultipleQTMsTrigger) { StartCoroutine(ShowNextQuestionAfterDelay(0.5f)); }
             else { StartCoroutine(HideQuestionUIAfterDelay(0.5f)); }
         }
         else
@@ -294,7 +319,7 @@ public class S_MathManager : MonoBehaviour
             numberOfCorrectAnswerInRow = 0;
             multiplier.SetActive(false);
 
-            if (currentTriggerID == "MultipleQTMsTrigger") { StartCoroutine(ShowNextQuestionAfterDelay(0.5f)); }
+            if (currentTriggerID == S_TriggerVersion.MultipleQTMsTrigger) { StartCoroutine(ShowNextQuestionAfterDelay(0.5f)); }
             else { StartCoroutine(HideQuestionUIAfterDelay(0.5f)); }
         }
     }

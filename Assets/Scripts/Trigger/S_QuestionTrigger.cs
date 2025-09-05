@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class S_QuestionTrigger : MonoBehaviour
 {
-    [SerializeField] private string triggerID = "Question Trigger";
+    [SerializeField] private S_TriggerVersion triggerID;
 
     [SerializeField] private GameObject questionUI;
 

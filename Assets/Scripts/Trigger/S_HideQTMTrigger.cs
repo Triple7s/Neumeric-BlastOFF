@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class S_HideQTMTrigger : MonoBehaviour
 {
-    [SerializeField] private string triggerID = "HideQTMTrigger";
+    //[SerializeField] private string triggerID = "HideQTMTrigger";
 
     [SerializeField] private GameObject questionUI;
 
@@ -10,7 +10,7 @@ public class S_HideQTMTrigger : MonoBehaviour
     { 
         if (other.CompareTag("Player"))
         {
-            S_MathManager.Instance.OnTriggerEntered(triggerID);
+            //S_MathManager.Instance.OnTriggerEntered(triggerID);
         }
     }
 }
