@@ -52,7 +52,7 @@ public class S_PlayerBehaviour : MonoBehaviour
         
         if (isBraking)
         {
-            
+            BrakeOrDrift();
         }
         else
         {
