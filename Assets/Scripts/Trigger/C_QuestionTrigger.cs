@@ -3,21 +3,15 @@ using UnityEngine;
 
 public class C_QuestionTrigger : MonoBehaviour
 {
+    [SerializeField] private string triggerID = "Question Trigger";
+
     [SerializeField] private GameObject questionUI;
-    [SerializeField] private MathManager mathManager;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-        {   
-            Debug.Log("Player entered question trigger");
-
-            if (questionUI != null)
-                questionUI.SetActive(true);
-
-            mathManager.DisplayQuestion();
+        {
+            MathManager.Instance.OnTriggerEntered(triggerID);
         }
-
-
     }
 }

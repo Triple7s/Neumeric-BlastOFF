@@ -3,12 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class MathManager : MonoBehaviour
 {
     [SerializeField] private GameObject questionUI;
 
+    public GameObject multiplier;
     public TextMeshProUGUI questionText;
+    public TextMeshProUGUI pointsText;
+    public TextMeshProUGUI multiplierText;
+
+    // Some variable instantiation for triggers
+    public static MathManager Instance;
+    private string currentTriggerID;
+
     public List<Question> mathQuestionsAddition = new List<Question>();
     public List<Question> mathQuestionsSubtraction = new List<Question>();
     public List<Question> mathQuestionsMultiplication = new List<Question>();
@@ -26,9 +35,12 @@ public class MathManager : MonoBehaviour
     [SerializeField] private GameObject Alternative3;
     [SerializeField] private GameObject Alternative4;
 
+    private int numberOfCorrectAnswerInRow = 0;
     [SerializeField] private int score;
     [SerializeField] private int qtmPoints = 5;
     [SerializeField] private int[] winPoints = { 25, 20, 18, 15, 12, 10, 8, 5 };
+
+    private int lastCorrectSlot = -1;
 
     public enum QuestionType
     {
@@ -37,6 +49,8 @@ public class MathManager : MonoBehaviour
         Multiplication,
         Division
     }
+
+    void Awake() => Instance = this;
 
     public void Start()
     {
@@ -54,6 +68,47 @@ public class MathManager : MonoBehaviour
     public void Update()
     {
         GetScore();
+    }
+
+    public string OnTriggerEntered(string triggerID)
+    {
+        currentTriggerID = triggerID;
+        Debug.Log($"Player entered question trigger with ID: {triggerID}");
+
+        if (triggerID == "Question Trigger")
+        {
+            if (questionUI != null)
+                questionUI.SetActive(true);
+
+            numberOfCorrectAnswerInRow = 0;
+            DisplayQuestion();
+        }
+        else if (triggerID == "HideQTMTrigger")
+        {
+            if (questionUI != null)
+            {
+                questionUI.SetActive(false);
+                multiplier.SetActive(false);   
+            }   
+        }
+        else if (triggerID == "MultipleQTMsTrigger")
+        {
+            if (questionUI != null)
+                questionUI.SetActive(true);
+
+            DisplayQuestion();
+        }
+
+        return currentTriggerID;
+    }
+
+    public void OnTriggerExited(string triggerID)
+    {
+        if (currentTriggerID == triggerID)
+        {
+            Debug.Log($"Exited trigger {triggerID}");
+            currentTriggerID = null;
+        }
     }
 
     private void QuestionSetup()
@@ -171,6 +226,23 @@ public class MathManager : MonoBehaviour
         }
 
         List<int> shuffledAlternatives = new List<int>(alternatives);
+
+        /*int newCorrectSlot;
+        do
+        {
+            newCorrectSlot = Random.Range(0, shuffledAlternatives.Count);
+        } while (newCorrectSlot == lastCorrectSlot);
+
+        // Swap correct answer into chosen slot
+        int correctIndex = shuffledAlternatives.IndexOf(currentQuestion.CorrectAnswer);
+        int temp = shuffledAlternatives[newCorrectSlot];
+        shuffledAlternatives[newCorrectSlot] = shuffledAlternatives[correctIndex];
+        shuffledAlternatives[correctIndex] = temp;
+
+        // Remember this slot for next round
+        lastCorrectSlot = newCorrectSlot;*/
+
+
         for (int i = 0; i < shuffledAlternatives.Count; i++)
         {
             int rand = Random.Range(i, shuffledAlternatives.Count);
@@ -197,17 +269,40 @@ public class MathManager : MonoBehaviour
             // Correct -> Green
             clickedAlternative.GetComponent<Image>().color = Color.green;
 
-            // Hide question UI after correct answer with a short delay
-            StartCoroutine(HideQuestionUIAfterDelay(0.5f));
+            if (numberOfCorrectAnswerInRow == 0)
+            {
+                score += qtmPoints;
+                numberOfCorrectAnswerInRow++;
+                pointsText.text = score.ToString();
+
+                multiplier.SetActive(true);
+            }
+            else
+            {
+                numberOfCorrectAnswerInRow++;
+                multiplierText.text = numberOfCorrectAnswerInRow.ToString();
+                Combo(numberOfCorrectAnswerInRow);
+            }
+
+            if (currentTriggerID == "MultipleQTMsTrigger") { StartCoroutine(ShowNextQuestionAfterDelay(0.5f)); }
+            else { StartCoroutine(HideQuestionUIAfterDelay(0.5f)); }
         }
         else
         {
             // Wrong -> Red
             clickedAlternative.GetComponent<Image>().color = Color.red;
+            numberOfCorrectAnswerInRow = 0;
+            multiplier.SetActive(false);
 
-            // Hide question UI after wrong answer with a short delay
-            StartCoroutine(HideQuestionUIAfterDelay(0.5f));
+            if (currentTriggerID == "MultipleQTMsTrigger") { StartCoroutine(ShowNextQuestionAfterDelay(0.5f)); }
+            else { StartCoroutine(HideQuestionUIAfterDelay(0.5f)); }
         }
+    }
+
+    private IEnumerator ShowNextQuestionAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        DisplayQuestion();
     }
 
     private IEnumerator HideQuestionUIAfterDelay(float delay)
@@ -238,6 +333,15 @@ public class MathManager : MonoBehaviour
         }
 
         return score;
+    }
+
+    public void Combo(int correctAnswersInRow)
+    {
+        if (correctAnswersInRow > 5)
+            correctAnswersInRow = 5;
+
+        score += qtmPoints + correctAnswersInRow;
+        pointsText.text = score.ToString();
     }
 
     public int GetScore()
