@@ -6,28 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="168bda94-79bb-411a-9428-ca01b7f1bd2e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/BrokenVector/LowPolyRoadPack/Demo/Materials/Grass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/BrokenVector/LowPolyRoadPack/Demo/Materials/Grass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/BrokenVector/LowPolyRoadPack/Materials/Old/Car Colorscheme 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/BrokenVector/LowPolyRoadPack/Materials/Old/Car Colorscheme 2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Boost.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Boost.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Body.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Body.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Spoiler.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Spoiler.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Window.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Window.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/BarycentricCoordinateTest.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/BarycentricCoordinateTest.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/CameraFollowCar.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/CameraFollowCar.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/PrototypeCarScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/PrototypeCarScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Testing/BarycentricCoordinateVisual.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Testing/S_BarycentricCoordinateVisual.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Testing/BarycentricCoordinateVisual.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Testing/S_BarycentricCoordinateVisual.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/P_Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/P_Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_BarycentricCoordinateTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_BarycentricCoordinateTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_CameraFollowCar.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_CameraFollowCar.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base_CarData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base_CarData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarHoverBarycentric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarHoverBarycentric.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Cockpit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Cockpit.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Engine.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Engine.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Lights.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Lights.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Lights1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Lights1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Thingys.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Thingys.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Top.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/Top.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/standardSurface11.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/standardSurface11.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +32,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Car/S_CarData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerCameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.adaptiveperformance@c227e20f7558/Runtime/Management/AdaptivePerformanceManagerSettings.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -51,19 +45,19 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Car-Camera",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Car-Camera&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.2.2f1\Editor\Unity.exe" />
@@ -121,6 +115,7 @@
       <workItem from="1756883425619" duration="4087000" />
       <workItem from="1756891827280" duration="11899000" />
       <workItem from="1756970594385" duration="4755000" />
+      <workItem from="1757057461484" duration="3583000" />
     </task>
     <servers />
   </component>
