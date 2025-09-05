@@ -888,16 +888,17 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 357251973}
+  - component: {fileID: 357251974}
   - component: {fileID: 357251972}
   - component: {fileID: 357251971}
   - component: {fileID: 357251970}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: StartMenuCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &357251970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1016,6 +1017,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &357251974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357251969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c060744cafff54e738d12203809d1326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpinMotion.StartMenuCamera
+  gameEvents: {fileID: 11400000, guid: 53a3a1c43dafc4df88b337434e1a6d28, type: 2}
 --- !u!4 &385565487 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3756142865909741593, guid: 2efff4e89b6e549768c1c54f7d0e1dc4,
@@ -1655,7 +1669,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2054532401}
+  - {fileID: 2144382912}
   - {fileID: 2042060049}
   - {fileID: 135124735}
   - {fileID: 956101023}
@@ -3260,7 +3274,13 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2042060048}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2054532400
+--- !u!4 &2124330882 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 475188, guid: b21431263a66fd84ebb8c5a9f3e51709,
+    type: 3}
+  m_PrefabInstance: {fileID: 554235171}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2144382911
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3271,17 +3291,17 @@ PrefabInstance:
     - target: {fileID: 4906394266063099825, guid: e43926026f17943eea93828564a5b299,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.5
+      value: 6.25
       objectReference: {fileID: 0}
     - target: {fileID: 4906394266063099825, guid: e43926026f17943eea93828564a5b299,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.42657
+      value: 2.56343
       objectReference: {fileID: 0}
     - target: {fileID: 4906394266063099825, guid: e43926026f17943eea93828564a5b299,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.4
+      value: 6.14
       objectReference: {fileID: 0}
     - target: {fileID: 4906394266063099825, guid: e43926026f17943eea93828564a5b299,
         type: 3}
@@ -3328,21 +3348,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 6.64
       objectReference: {fileID: 0}
-    - target: {fileID: 8039562330398340748, guid: e43926026f17943eea93828564a5b299,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8039562330398340748, guid: e43926026f17943eea93828564a5b299,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 8039562330398340748, guid: e43926026f17943eea93828564a5b299,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.26
-      objectReference: {fileID: 0}
     - target: {fileID: 8163874544947697111, guid: e43926026f17943eea93828564a5b299,
         type: 3}
       propertyPath: m_ActiveFontFeatures.Array.size
@@ -3353,28 +3358,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Race Finish Checkpoint Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 9106651226441440013, guid: e43926026f17943eea93828564a5b299,
-        type: 3}
-      propertyPath: 'normalCheckpointVisuals.Array.data[0]'
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 6459464198779204497, guid: e43926026f17943eea93828564a5b299, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e43926026f17943eea93828564a5b299, type: 3}
---- !u!4 &2054532401 stripped
+--- !u!4 &2144382912 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4906394266063099825, guid: e43926026f17943eea93828564a5b299,
     type: 3}
-  m_PrefabInstance: {fileID: 2054532400}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2124330882 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 475188, guid: b21431263a66fd84ebb8c5a9f3e51709,
-    type: 3}
-  m_PrefabInstance: {fileID: 554235171}
+  m_PrefabInstance: {fileID: 2144382911}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
