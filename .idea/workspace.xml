@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="33f12704-07d4-4234-a45c-a3268b4ae60d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Material/M_Boost.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Material/M_Boost.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Car_Re_Make (1).fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Car_Re_Make (1).fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/FBX_CarREMAKE.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/FBX_CarREMAKE.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/FBX_FirstCar.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/FBX_FirstCar.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/FBX_flat_road.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/FBX_flat_road.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/FBX_road.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/FBX_road.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/FBX_road_Long.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/FBX_road_Long.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Materials/ActualLights.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Materials/ActualLights.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Materials/BackLights.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Materials/BackLights.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Materials/CockPit.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Materials/CockPit.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Materials/Wings.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Materials/Wings.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Materials/standardSurface1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Materials/standardSurface1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Materials/standardSurface6.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Materials/standardSurface6.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_CameraFollowCar.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_CameraFollowCar.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/S_AutoTurnOnEngine.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/S_AutoTurnOnEngine.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerCameraController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerCameraController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_ActualLights_BaseMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_ActualLights_BaseMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_ActualLights_Emissive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_ActualLights_Emissive.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_ActualLights_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_ActualLights_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_ActualLights_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_ActualLights_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_BackLights_BaseMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_BackLights_BaseMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_BackLights_Emissive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_BackLights_Emissive.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_BackLights_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_BackLights_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_BackLights_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_BackLights_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_CockPit_BaseMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_CockPit_BaseMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_CockPit_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_CockPit_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_CockPit_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_CockPit_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Materials/ActualLights.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Materials/ActualLights.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Materials/BackLights.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Materials/BackLights.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Materials/CockPit.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Materials/CockPit.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Materials/Wings.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Materials/Wings.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Materials/standardSurface1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Materials/standardSurface1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Materials/standardSurface6.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Materials/standardSurface6.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Wings_BaseMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Wings_BaseMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Wings_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Wings_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Wings_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_Wings_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_standardSurface1_BaseMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_standardSurface1_BaseMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_standardSurface1_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_standardSurface1_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_standardSurface1_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_standardSurface1_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_standardSurface6_BaseMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_standardSurface6_BaseMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_standardSurface6_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_standardSurface6_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_standardSurface6_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Car_ForUV_Wings_MaskMap/Car_ForUV_standardSurface6_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Cockpit_BaseMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Cockpit_BaseMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Cockpit_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Cockpit_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Cockpit_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Cockpit_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Engine_BaseMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Engine_BaseMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Engine_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Engine_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Engine_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Engine_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Lights1_BaseMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Lights1_BaseMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Lights1_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Lights1_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Lights1_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Lights1_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Lights_BaseMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Lights_BaseMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Lights_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Lights_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Lights_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Lights_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Material_BaseMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Material_BaseMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Material_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Material_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Material_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Material_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/Cockpit.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/Cockpit.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/Engine.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/Engine.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/Lights.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/Lights.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/Lights1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/Lights1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/Material.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/Material.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/Thingys.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/Thingys.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/Top.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/Top.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/standardSurface11.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Materials/standardSurface11.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Thingys_BaseMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Thingys_BaseMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Thingys_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Thingys_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Thingys_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Thingys_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Top_BaseMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Top_BaseMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Top_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Top_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Top_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_Top_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_standardSurface11_BaseMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_standardSurface11_BaseMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_standardSurface11_MaskMap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_standardSurface11_MaskMap.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_standardSurface11_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Textures_FirstCar/vroooooom_standardSurface11_Normal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/BrokenVector/LowPolyRoadPack/Demo/Materials/Grass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/BrokenVector/LowPolyRoadPack/Demo/Materials/Grass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/BrokenVector/LowPolyRoadPack/Materials/Old/Car Colorscheme 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/BrokenVector/LowPolyRoadPack/Materials/Old/Car Colorscheme 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Car/M_Car_Body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Body.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Car/M_Car_Body.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Spoiler.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Car/M_Car_Spoiler.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Spoiler.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Car/M_Car_Spoiler.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Window.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Car/M_Car_Window.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Car/Car_Window.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Car/M_Car_Window.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/P_Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/P_Player.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BarycentricCoordinateTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_BarycentricCoordinateTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BarycentricCoordinateTest.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_BarycentricCoordinateTest.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PrototypeCarScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_PrototypeCarScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PrototypeCarScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_PrototypeCarScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base_CarData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base_CarData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarHoverBarycentric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarHoverBarycentric.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Testing/BarycentricCoordinateVisual.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Testing/S_BarycentricCoordinateVisual.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Testing/BarycentricCoordinateVisual.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Testing/S_BarycentricCoordinateVisual.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="32HIY6fW4vBe0hv5NbUvtPs1Ke0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Merging main",
+    "ignore.virus.scanning.warn.message": "true",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PS-243.26053.13" />
+        <option value="bundled-php-predefined-a98d8de5180a-1ec7b7818973-com.jetbrains.php.sharedIndexes-PS-243.26053.13" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33f12704-07d4-4234-a45c-a3268b4ae60d" name="Changes" comment="" />
+      <created>1757071116754</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1757071116754</updated>
+      <workItem from="1757071119942" duration="92000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
