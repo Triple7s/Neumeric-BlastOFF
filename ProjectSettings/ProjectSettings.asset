@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: a8b739bc0dfc5c44680ecbc79c56155c
+  productGUID: 471d421f050bfc64ca380ec8e4c34f6c
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -55,7 +55,7 @@ PlayerSettings:
   mipStripping: 0
   numberOfMipsStripped: 0
   numberOfMipsStrippedPerMipmapLimitGroup: {}
-  m_StackTraceTypes: 010000000100000001000000000000000100000001000000
+  m_StackTraceTypes: 010000000100000001000000010000000100000001000000
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
   iosUseCustomAppBackgroundBehavior: 0
@@ -69,20 +69,20 @@ PlayerSettings:
   disableDepthAndStencilBuffers: 0
   androidStartInFullscreen: 1
   androidRenderOutsideSafeArea: 1
-  androidUseSwappy: 1
-  androidBlitType: 2
-  androidResizeableActivity: 0
+  androidUseSwappy: 0
+  androidBlitType: 0
+  androidResizeableActivity: 1
   androidDefaultWindowWidth: 1920
   androidDefaultWindowHeight: 1080
   androidMinimumWindowWidth: 400
   androidMinimumWindowHeight: 300
   androidFullscreenMode: 1
   androidAutoRotationBehavior: 1
-  androidPredictiveBackSupport: 0
+  androidPredictiveBackSupport: 1
   androidApplicationEntry: 2
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
-  runInBackground: 1
+  runInBackground: 0
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
   Force IOS Speakers When Recording: 0
@@ -135,17 +135,14 @@ PlayerSettings:
   switchGraphicsJobsSyncAfterKick: 1
   vulkanNumSwapchainBuffers: 3
   vulkanEnableSetSRGBWrite: 0
-  vulkanEnablePreTransform: 0
+  vulkanEnablePreTransform: 1
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.1
-  preloadedAssets:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  bundleVersion: 3.0
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -167,9 +164,9 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.Tripple7GAMES.NeumericBlastOFFRECalculated
-    Standalone: com.UnityTechnologies.UniversalMobile3DTemplate
-    iPhone: com.UnityTechnologies.UniversalMobile3DTemplate
+    Android: com.UnityTechnologies.com.unity.template.urpblank
+    Standalone: com.spinmotion.racingstarterkit
+    iPhone: com.Unity-Technologies.com.unity.template.urp-blank
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -189,7 +186,7 @@ PlayerSettings:
   CreateWallpaper: 0
   androidSplitApplicationBinary: 0
   keepLoadedShadersAlive: 0
-  StripUnusedMeshComponents: 1
+  StripUnusedMeshComponents: 0
   strictShaderVariantMatching: 0
   VertexChannelCompressionMask: 4054
   iPhoneSdkVersion: 988
@@ -256,8 +253,8 @@ PlayerSettings:
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
   shaderPrecisionModel: 0
-  clonedFromGUID: 3df0038eaa8740a438c96d5b01ba661e
-  templatePackageId: com.unity.template.mobile3d@6.1.2
+  clonedFromGUID: 6d389c251a154402eb0217b4af0b8ed4
+  templatePackageId: 
   templateDefaultScene: Assets/Scenes/SampleScene.unity
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
@@ -270,8 +267,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 2
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/oyvin/Documents/keys/user.keystore
-  AndroidKeyaliasName: key
+  AndroidKeystoreName: 
+  AndroidKeyaliasName: 
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidEnableArm64MTE: 0
   AndroidBuildApkPerCpuArchitecture: 0
@@ -299,7 +296,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: c975dc85e64790c40b2561cb2c3ba471, type: 3}
+      m_Icon: {fileID: 2800000, guid: 3610ff834a0ab254982db3a867bf9e93, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -530,10 +527,7 @@ PlayerSettings:
       m_Height: 720
       m_Kind: 1
       m_SubKind: 
-  m_BuildTargetBatching:
-  - m_BuildTarget: Android
-    m_StaticBatching: 1
-    m_DynamicBatching: 0
+  m_BuildTargetBatching: []
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []
@@ -543,7 +537,7 @@ PlayerSettings:
     m_Automatic: 1
   - m_BuildTarget: AndroidPlayer
     m_APIs: 150000000b000000
-    m_Automatic: 0
+    m_Automatic: 1
   m_BuildTargetVRSettings: []
   m_DefaultShaderChunkSizeInMB: 16
   m_DefaultShaderChunkCount: 0
@@ -720,7 +714,7 @@ PlayerSettings:
   switchNetworkInterfaceManagerInitializeEnabled: 1
   switchDisableHTCSPlayerConnection: 0
   switchUseNewStyleFilepaths: 0
-  switchUseLegacyFmodPriorities: 0
+  switchUseLegacyFmodPriorities: 1
   switchUseMicroSleepForYield: 1
   switchEnableRamDiskSupport: 0
   switchMicroSleepForYieldTime: 25
@@ -757,7 +751,7 @@ PlayerSettings:
   ps4RemotePlayKeyAssignment: -1
   ps4RemotePlayKeyMappingDir: 
   ps4PlayTogetherPlayerCount: 0
-  ps4EnterButtonAssignment: 1
+  ps4EnterButtonAssignment: 2
   ps4ApplicationParam1: 0
   ps4ApplicationParam2: 0
   ps4ApplicationParam3: 0
@@ -780,7 +774,7 @@ PlayerSettings:
   ps4UseAudio3dBackend: 0
   ps4UseLowGarlicFragmentationMode: 1
   ps4SocialScreenEnabled: 0
-  ps4ScriptOptimizationLevel: 0
+  ps4ScriptOptimizationLevel: 2
   ps4Audio3dVirtualSpeakerCount: 14
   ps4attribCpuUsage: 0
   ps4PatchPkgPath: 
@@ -806,7 +800,7 @@ PlayerSettings:
   splashScreenBackgroundSourcePortrait: {fileID: 0}
   blurSplashScreenBackground: 1
   spritePackerPolicy: 
-  webGLMemorySize: 16
+  webGLMemorySize: 32
   webGLExceptionSupport: 1
   webGLNameFilesAsHashes: 0
   webGLShowDiagnostics: 0
@@ -817,7 +811,7 @@ PlayerSettings:
   webGLTemplate: APPLICATION:Default
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
-  webGLCompressionFormat: 1
+  webGLCompressionFormat: 0
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
@@ -834,7 +828,8 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Android: MOBILE_INPUT;USE_MOBILE_INPUT
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -842,14 +837,27 @@ PlayerSettings:
   il2cppCompilerConfiguration: {}
   il2cppCodeGeneration: {}
   il2cppStacktraceInformation: {}
-  managedStrippingLevel: {}
+  managedStrippingLevel:
+    EmbeddedLinux: 1
+    GameCoreScarlett: 1
+    GameCoreXboxOne: 1
+    Lumin: 1
+    Nintendo Switch: 1
+    PS4: 1
+    PS5: 1
+    Stadia: 1
+    WebGL: 1
+    Windows Store Apps: 1
+    XboxOne: 1
+    iPhone: 1
+    tvOS: 1
   incrementalIl2cppBuild: {}
   suppressCommonWarnings: 1
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
-  gcIncremental: 1
+  gcIncremental: 0
   gcWBarrierValidation: 0
   apiCompatibilityLevelPerPlatform: {}
   editorAssembliesCompatibilityLevel: 1
@@ -874,7 +882,8 @@ PlayerSettings:
   metroDefaultTileSize: 1
   metroTileForegroundText: 2
   metroTileBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21568628, a: 0}
-  metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628, a: 1}
+  metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628,
+    a: 1}
   metroSplashScreenUseBackgroundColor: 0
   syncCapabilities: 0
   platformCapabilities: {}
@@ -911,8 +920,7 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled:
-    UNet: 1
+  cloudServicesEnabled: {}
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -925,14 +933,14 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   hmiPlayerDataPath: 
-  hmiForceSRGBBlit: 0
+  hmiForceSRGBBlit: 1
   embeddedLinuxEnableGamepadInput: 0
   hmiCpuConfiguration: 
   hmiLogStartupTiming: 0
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0

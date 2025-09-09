@@ -6,7 +6,7 @@ public class S_CarHoverBarycentric : MonoBehaviour
     [SerializeField] private float rayLength = 5f;
     [SerializeField] private float rotationSpeed = 5f;
     [SerializeField] private float heightChangeSpeed = 5f;
-    [SerializeField] private float fallingSpeed = 5f;
+    [SerializeField] private float fallingSpeed = 9.81f;
 
     private Rigidbody rb;
     private RaycastHit hit;

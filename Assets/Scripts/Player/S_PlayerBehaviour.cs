@@ -11,12 +11,15 @@ public class S_PlayerBehaviour : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
     [SerializeField] private S_CarHoverBarycentric carHoverBarycentric;
+    [SerializeField] private S_PlayerCameraController cameraController;
 
     private Rigidbody rb;
     
     private bool isTurning, isBraking;
     private int turnDirection;
-    private float currentSpeed, currentAcceleration, currentFloatingHeight;
+    private float currentAcceleration, currentFloatingHeight;
+    
+    private bool isEngineRunning = false;
 
     private void Awake()
     {
@@ -28,6 +31,7 @@ public class S_PlayerBehaviour : MonoBehaviour
         playerInputRegister.BrakeReleased += StopBrake;
 
         rb = GetComponent<Rigidbody>();
+        
     }
 
     private void Start()
@@ -41,31 +45,84 @@ public class S_PlayerBehaviour : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!isEngineRunning)   return;
+        
+        
         carHoverBarycentric.HoverOverGround(currentFloatingHeight);
+        
+        if (isBraking)
+        {
+            BrakeOrDrift();
+        }
+        else
+        {
+            Drive();
+        }
+        
+        cameraController.SetFOV(rb.linearVelocity.magnitude / data.MaxSpeed);
+    }
 
-        Drive();
+    private void BrakeOrDrift()
+    {
+        // Drift if turning and enough speed
+        if (isTurning && rb.linearVelocity.magnitude >= data.MinDriftSpeed)
+        {
+            
+        }
+        else
+        {
+            rb.AddForce(transform.forward * (-data.BrakeAcceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
+        }
+    }
+    
+    private void Drive()
+    {
+        
+        rb.AddForce(transform.forward * (data.Acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
+        
+
+        if (rb.linearVelocity.magnitude > data.MaxSpeed)
+        {
+            var newSpeed = rb.linearVelocity.normalized * data.MaxSpeed;
+            rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, newSpeed, Time.fixedDeltaTime * 5);
+
+            if (rb.linearVelocity.magnitude > data.MaxBoostSpeed)
+            {
+                var maxSpeed = rb.linearVelocity.normalized * data.MaxBoostSpeed;
+                rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, maxSpeed, Time.fixedDeltaTime / 10);
+            }
+        }
+        
         
         if (isTurning)
         {
             Turn();
         }
+
     }
 
-    private void Drive()
+    private void OnTriggerEnter(Collider other)
     {
-        if (isBraking)
+        if (other.CompareTag("SpeedBoost"))
         {
-            rb.AddForce(transform.forward * (-data.BrakeAcceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
+            Boost();
         }
-        else
-        {
-            rb.AddForce(transform.forward * (data.Acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
-        }
+    }
 
-        if (rb.linearVelocity.magnitude > data.MaxSpeed)
-        {
-            rb.linearVelocity = rb.linearVelocity.normalized * data.MaxSpeed;
-        }
+    public void Boost()
+    {
+        Vector3 direction = rb.linearVelocity.normalized;
+        rb.AddForce(direction * data.BoostPower, ForceMode.Impulse);
+    }
+
+    public void TurnOnEngine()
+    {
+        isEngineRunning = true;
+    }
+
+    public void TurnOffEngine()
+    {
+        isEngineRunning = false;
     }
 
     private void Turn()
@@ -99,6 +156,4 @@ public class S_PlayerBehaviour : MonoBehaviour
     {
         isBraking = false;
     }
-
-    
 }
