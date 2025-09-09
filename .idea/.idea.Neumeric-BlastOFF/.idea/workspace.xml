@@ -5,13 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="168bda94-79bb-411a-9428-ca01b7f1bd2e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/S_CameraStabilizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/S_CameraStabilizer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/M_Boost.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/M_Boost.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Math/Math Manager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Math/Math Manager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/P_Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/P_Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/P_PlayerWithFreeze.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/P_PlayerWithFreeze.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerWithCheckpointTracking.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerWithCheckpointTracking.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base_CarData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base_CarData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarHoverBarycentric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarHoverBarycentric.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/S_MathManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/S_MathManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -20,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Car/S_CarData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/S_CameraStabilizer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/S_RaceManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.adaptiveperformance@c227e20f7558/Runtime/Management/AdaptivePerformanceManagerSettings.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -36,7 +51,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Car-Drift&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Build&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -89,6 +104,14 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PS-243.26053.13" />
+        <option value="bundled-php-predefined-a98d8de5180a-1ec7b7818973-com.jetbrains.php.sharedIndexes-PS-243.26053.13" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -104,6 +127,7 @@
       <workItem from="1756970594385" duration="4755000" />
       <workItem from="1757057461484" duration="4871000" />
       <workItem from="1757414758053" duration="440000" />
+      <workItem from="1757415386360" duration="20000" />
     </task>
     <servers />
   </component>

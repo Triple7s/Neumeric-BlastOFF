@@ -18,7 +18,7 @@ MonoBehaviour:
   acceleration: 800
   brakeAcceleration: 250
   turningSpeed: 15
-  boostPower: 500
+  boostPower: 400
   minDriftSpeed: 50
   maxSpeed: 300
   maxBoostSpeed: 500

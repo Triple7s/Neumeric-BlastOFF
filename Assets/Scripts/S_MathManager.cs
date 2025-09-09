@@ -39,6 +39,8 @@ public class S_MathManager : MonoBehaviour
     [SerializeField] private int score;
     [SerializeField] private int qtmPoints = 5;
     [SerializeField] private int[] winPoints = { 25, 20, 18, 15, 12, 10, 8, 5 };
+    
+    [SerializeField] private S_PlayerBehaviour player;
 
     private int lastCorrectSlot = -1;
 
@@ -309,6 +311,8 @@ public class S_MathManager : MonoBehaviour
                 Combo(numberOfCorrectAnswerInRow);
             }
 
+            player.Boost();
+            
             if (currentTriggerID == S_TriggerVersion.MultipleQTMsTrigger) { StartCoroutine(ShowNextQuestionAfterDelay(0.5f)); }
             else { StartCoroutine(HideQuestionUIAfterDelay(0.5f)); }
         }
