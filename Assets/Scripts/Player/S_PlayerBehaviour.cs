@@ -61,7 +61,7 @@ public class S_PlayerBehaviour : MonoBehaviour
         }
         
         cameraController.SetFOV(rb.linearVelocity.magnitude / data.MaxSpeed);
-        cameraStabilizer.StabilizeCamera();
+        cameraStabilizer.StabilizeCamera(transform);
     }
 
     private void BrakeOrDrift()

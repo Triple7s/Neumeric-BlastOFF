@@ -761,7 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 926ae43613ece3546b22f620f2ab0a9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_Camerastabilizer
-  stabilizeSpeed: 0
+  stabilizeSpeed: 0.1
 --- !u!1 &753563669 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 22b0b85e489ad8445b844186cdc2d84d, type: 3}
@@ -2976,6 +2976,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2335383963157103456, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: Target.TrackingTarget
+      value: 
+      objectReference: {fileID: 673845355}
     - target: {fileID: 2909340294871678947, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -3004,6 +3008,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -5.5354815e-10
       objectReference: {fileID: 0}
+    - target: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
+      propertyPath: cameraStabilizer
+      value: 
+      objectReference: {fileID: 673845356}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.23
