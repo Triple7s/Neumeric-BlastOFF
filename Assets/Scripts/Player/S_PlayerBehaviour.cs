@@ -12,10 +12,11 @@ public class S_PlayerBehaviour : MonoBehaviour
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
     [SerializeField] private S_CarHoverBarycentric carHoverBarycentric;
     [SerializeField] private S_PlayerCameraController cameraController;
+    [SerializeField] private S_CameraStabilizer cameraStabilizer;
 
     private Rigidbody rb;
     
-    private bool isTurning, isBraking;
+    private bool isTurning, isBraking, isDrifting;
     private int turnDirection;
     private float currentAcceleration, currentFloatingHeight;
     
@@ -60,16 +61,17 @@ public class S_PlayerBehaviour : MonoBehaviour
         }
         
         cameraController.SetFOV(rb.linearVelocity.magnitude / data.MaxSpeed);
+        cameraStabilizer.StabilizeCamera();
     }
 
     private void BrakeOrDrift()
     {
         // Drift if turning and enough speed
-        if (isTurning && rb.linearVelocity.magnitude >= data.MinDriftSpeed)
+        if ((isDrifting || isTurning) && rb.linearVelocity.magnitude >= data.MinDriftSpeed)
         {
-            
+            isDrifting = true;
         }
-        else
+        else       // Break
         {
             rb.AddForce(transform.forward * (-data.BrakeAcceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
         }
@@ -155,5 +157,6 @@ public class S_PlayerBehaviour : MonoBehaviour
     private void StopBrake()
     {
         isBraking = false;
+        isDrifting = false;
     }
 }
