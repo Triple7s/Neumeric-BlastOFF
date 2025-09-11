@@ -6,15 +6,17 @@ using UnityEngine;
 public class S_StartTimer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] private float visibleDuration, fadeDuration;
+    [SerializeField] private float countDown, visibleDuration, fadeDuration;
+    [SerializeField] private GameObject qtmWheel;
     
     private float timer;
+    private bool isQtmSpawned;
     
     public event Action OnTimerEnd;
     public void StartTimer()
     {
 
-        timer = 3;
+        timer = countDown;
 
         StartCoroutine(CountDown());
     }
@@ -27,13 +29,18 @@ public class S_StartTimer : MonoBehaviour
             if (timer > 0)
             {
                 timerText.text = timer.ToString("F2");
-
+                if (Mathf.Approximately(Mathf.Ceil(timer), 2) && !isQtmSpawned)
+                {
+                    isQtmSpawned = true;
+                    qtmWheel.SetActive(true);
+                }
             }
             else if (timer <= 0)
             {
             
                 OnTimerEnd?.Invoke();
                 timerText.text = "GO!";
+                qtmWheel.SetActive(false);
                 break;
             }
             timer -= Time.deltaTime;

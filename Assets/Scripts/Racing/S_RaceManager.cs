@@ -4,17 +4,17 @@ using UnityEngine.SceneManagement;
 public class S_RaceManager : MonoBehaviour
 {
     [SerializeField] private S_PlayerBehaviour player;
+    [SerializeField] private S_MathManager mathManager;
     [SerializeField] private S_StartTimer startTimer;
 
+    private bool answerdCorrectly;
     private void Awake()
     {
         startTimer.OnTimerEnd += StartRace;
+        mathManager.OnCorrectAnswer += BoostStart;
     }
 
-    private void StartRace()
-    {
-        player.TurnOnEngine();
-    }
+    
 
     private void Start()
     {
@@ -22,6 +22,19 @@ public class S_RaceManager : MonoBehaviour
     }
 
 
+    private void StartRace()
+    {
+        player.TurnOnEngine();
+        if (answerdCorrectly)
+        {
+            player.Boost();
+        }
+    }
+
+    private void BoostStart()
+    {
+        answerdCorrectly = true;
+    }
     public void RestartRace()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

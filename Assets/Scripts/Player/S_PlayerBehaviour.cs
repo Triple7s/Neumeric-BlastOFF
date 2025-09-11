@@ -13,6 +13,7 @@ public class S_PlayerBehaviour : MonoBehaviour
     [SerializeField] private S_CarHoverBarycentric carHoverBarycentric;
     [SerializeField] private S_PlayerCameraController cameraController;
     [SerializeField] private S_CameraStabilizer cameraStabilizer;
+    [SerializeField] private S_MathManager mathManager;
 
     private Rigidbody rb;
     
@@ -31,6 +32,8 @@ public class S_PlayerBehaviour : MonoBehaviour
         playerInputRegister.BrakePressed += StartBrake;
         playerInputRegister.BrakeReleased += StopBrake;
 
+        mathManager.OnCorrectAnswer += Boost;
+        
         rb = GetComponent<Rigidbody>();
         
     }
@@ -113,7 +116,13 @@ public class S_PlayerBehaviour : MonoBehaviour
 
     public void Boost()
     {
+        if (!isEngineRunning) return;
+            
         Vector3 direction = rb.linearVelocity.normalized;
+        if (direction == Vector3.zero)
+        {
+            direction = transform.forward;
+        }
         rb.AddForce(direction * data.BoostPower, ForceMode.Impulse);
     }
 

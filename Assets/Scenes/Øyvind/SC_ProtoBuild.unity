@@ -167,6 +167,7 @@ MonoBehaviour:
   timerText: {fileID: 1596441893}
   visibleDuration: 2
   fadeDuration: 0.5
+  qtmWheel: {fileID: 1977213869}
 --- !u!114 &182427811 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3285797595188685211, guid: eeb962853cde93c479699abfd65b4d30,
@@ -1201,6 +1202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_RaceManager
   player: {fileID: 861636954}
+  mathManager: {fileID: 182427811}
   startTimer: {fileID: 175512481}
 --- !u!4 &1104501519
 Transform:
@@ -1718,9 +1720,9 @@ MonoBehaviour:
   m_fontSize: 450
   m_fontSizeBase: 450
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 450
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -2340,6 +2342,24 @@ PrefabInstance:
       addedObject: {fileID: 1448267020}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 032d3cd42db9dbb40a5034d2279dc31f, type: 3}
+--- !u!1 &1977213869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3095920047910347308, guid: eeb962853cde93c479699abfd65b4d30,
+    type: 3}
+  m_PrefabInstance: {fileID: 2105694814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1977213874
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977213869}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1991125855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2629,7 +2649,7 @@ PrefabInstance:
     - target: {fileID: 3095920047910347308, guid: eeb962853cde93c479699abfd65b4d30,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3208749892261613304, guid: eeb962853cde93c479699abfd65b4d30,
         type: 3}
@@ -2641,6 +2661,12 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 861636954}
+    - target: {fileID: 3285797595188685211, guid: eeb962853cde93c479699abfd65b4d30,
+        type: 3}
+      propertyPath: equations
+      value: 
+      objectReference: {fileID: 11400000, guid: 4026b0dd06996254f998e331cd9db116,
+        type: 2}
     - target: {fileID: 5242678789434094711, guid: eeb962853cde93c479699abfd65b4d30,
         type: 3}
       propertyPath: m_Color.a
@@ -2744,7 +2770,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3095920047910347308, guid: eeb962853cde93c479699abfd65b4d30,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1977213874}
   m_SourcePrefab: {fileID: 100100000, guid: eeb962853cde93c479699abfd65b4d30, type: 3}
 --- !u!1001 &6914276400142233970
 PrefabInstance:
@@ -2764,6 +2794,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
+        type: 3}
+      propertyPath: mathManager
+      value: 
+      objectReference: {fileID: 182427811}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2892,6 +2927,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1104501518}
+    - target: {fileID: 4244626216165779754, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1104501518}
+    - target: {fileID: 4244626216165779754, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartRace
+      objectReference: {fileID: 0}
     - target: {fileID: 5656962175493778753, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
         type: 3}
       propertyPath: m_Pivot.x
