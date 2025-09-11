@@ -13,6 +13,7 @@ public class S_MathManager : MonoBehaviour
 
     [SerializeField] private GameObject questionUI;
     [SerializeField] private SO_Equations equations;
+    [SerializeField] private ParticleSystem targetParticleSystem;
 
     public GameObject multiplier;
     public TextMeshProUGUI questionText;
@@ -68,6 +69,11 @@ public class S_MathManager : MonoBehaviour
         if (canvasGroup == null)
         {
             canvasGroup = questionUI.GetComponent<CanvasGroup>();
+        }
+
+        if (targetParticleSystem == null)
+        {
+            targetParticleSystem = GetComponent<ParticleSystem>();
         }
 
         DisplayQuestion();
@@ -186,8 +192,14 @@ public class S_MathManager : MonoBehaviour
         if (chosenAnswer == currentQuestion.CorrectAnswer)
         {
             OnCorrectAnswer?.Invoke();
+
+
             // Correct -> Green
             clickedAlternative.GetComponent<Image>().color = Color.green;
+
+            targetParticleSystem.Play();
+            var em = targetParticleSystem.emission;
+            em.enabled = true;
 
             if (numberOfCorrectAnswerInRow == 0)
             {
