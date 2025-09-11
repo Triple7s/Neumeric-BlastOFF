@@ -3,10 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
+using System;
 //using System.Linq;
 
 public class S_MathManager : MonoBehaviour
 {
+
+    public event Action OnCorrectAnswer;
+
     [SerializeField] private GameObject questionUI;
     [SerializeField] private SO_Equations equations;
 
@@ -43,6 +47,8 @@ public class S_MathManager : MonoBehaviour
 
     private int lastCorrectSlot = -1;
 
+    private CanvasGroup canvasGroup;
+
     void Awake() => Instance = this;
 
     public void Start()
@@ -57,6 +63,11 @@ public class S_MathManager : MonoBehaviour
         {
             Debug.LogError("SO_Equations has no questions assigned!");
             return;
+        }
+
+        if (canvasGroup == null)
+        {
+            canvasGroup = questionUI.GetComponent<CanvasGroup>();
         }
 
         DisplayQuestion();
@@ -112,6 +123,7 @@ public class S_MathManager : MonoBehaviour
 
     private void DisplayQuestion()
     {
+        canvasGroup.interactable = true;
         ResetButtonColors();
 
         if (equations == null || equations.questions.Count == 0)
@@ -121,7 +133,7 @@ public class S_MathManager : MonoBehaviour
         }
 
         // Pick a random question
-        int randomIndex = Random.Range(0, equations.questions.Count);
+        int randomIndex = UnityEngine.Random.Range(0, equations.questions.Count);
         currentQuestion = equations.questions[randomIndex];
 
         // Display question text
@@ -139,7 +151,7 @@ public class S_MathManager : MonoBehaviour
         // Generating 3 wrong answers
         while (alternatives.Count < 4)
         {
-            int wrongAnswer = question.CorrectAnswer + Random.Range(-10, 11);
+            int wrongAnswer = question.CorrectAnswer + UnityEngine.Random.Range(-10, 11);
             if (wrongAnswer < 0) wrongAnswer = Mathf.Abs(wrongAnswer);
             //if (wrongAnswer != currentQuestion.CorrectAnswer)
             if (!alternatives.Contains(wrongAnswer))
@@ -152,7 +164,7 @@ public class S_MathManager : MonoBehaviour
         List<int> shuffledAlternatives = new List<int>(alternatives);
         for (int i = 0; i < shuffledAlternatives.Count; i++)
         {
-            int rand = Random.Range(i, shuffledAlternatives.Count);
+            int rand = UnityEngine.Random.Range(i, shuffledAlternatives.Count);
             int temp = shuffledAlternatives[i];
             shuffledAlternatives[i] = shuffledAlternatives[rand];
             shuffledAlternatives[rand] = temp;
@@ -173,6 +185,7 @@ public class S_MathManager : MonoBehaviour
 
         if (chosenAnswer == currentQuestion.CorrectAnswer)
         {
+            OnCorrectAnswer?.Invoke();
             // Correct -> Green
             clickedAlternative.GetComponent<Image>().color = Color.green;
 
@@ -191,7 +204,12 @@ public class S_MathManager : MonoBehaviour
                 Combo(numberOfCorrectAnswerInRow);
             }
 
-            if (currentTriggerID == S_TriggerVersion.MultipleQTMsTrigger) { StartCoroutine(ShowNextQuestionAfterDelay(0.2f)); }
+            canvasGroup.interactable = false;
+
+            if (currentTriggerID == S_TriggerVersion.MultipleQTMsTrigger)
+            {
+                StartCoroutine(ShowNextQuestionAfterDelay(0.2f));
+            }
             else { StartCoroutine(HideQuestionUIAfterDelay(0.2f)); }
         }
         else
@@ -201,7 +219,12 @@ public class S_MathManager : MonoBehaviour
             numberOfCorrectAnswerInRow = 0;
             multiplier.SetActive(false);
 
-            if (currentTriggerID == S_TriggerVersion.MultipleQTMsTrigger) { StartCoroutine(ShowNextQuestionAfterDelay(0.2f)); }
+            canvasGroup.interactable = false;
+
+            if (currentTriggerID == S_TriggerVersion.MultipleQTMsTrigger)
+            {
+                StartCoroutine(ShowNextQuestionAfterDelay(0.2f));
+            }
             else { StartCoroutine(HideQuestionUIAfterDelay(0.2f)); }
         }
     }
