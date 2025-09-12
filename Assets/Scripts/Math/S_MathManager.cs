@@ -13,7 +13,6 @@ public class S_MathManager : MonoBehaviour
 
     [SerializeField] private GameObject questionUI;
     [SerializeField] private SO_Equations equations;
-    [SerializeField] private ParticleSystem targetParticleSystem;
 
     public GameObject multiplier;
     public TextMeshProUGUI questionText;
@@ -89,11 +88,6 @@ public class S_MathManager : MonoBehaviour
         circleImage3 = circleDivision3.GetComponent<Image>();
         circleImage4 = circleDivision4.GetComponent<Image>();
 
-        if (targetParticleSystem == null)
-        {
-            targetParticleSystem = GetComponent<ParticleSystem>();
-        }
-
         DisplayQuestion();
     }
 
@@ -130,11 +124,6 @@ public class S_MathManager : MonoBehaviour
         }
         
     }
-
-    /*public void ButtonDisplayQuestion()
-    {
-        DisplayQuestion();
-    }*/
 
     private void DisplayQuestion()
     {
@@ -203,10 +192,6 @@ public class S_MathManager : MonoBehaviour
 
             // Correct -> Green
             clickedAlternative.GetComponent<Image>().color = greenSeeThroughColor;
-
-            targetParticleSystem.Play();
-            var em = targetParticleSystem.emission;
-            em.enabled = true;
 
             if (numberOfCorrectAnswerInRow == 0)
             {
