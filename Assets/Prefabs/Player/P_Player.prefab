@@ -369,6 +369,7 @@ MonoBehaviour:
   carHoverBarycentric: {fileID: 5356555243972702356}
   cameraController: {fileID: 2544049755536184592}
   cameraStabilizer: {fileID: 3662819425711860441}
+  mathManager: {fileID: 0}
 --- !u!114 &3559611923804874376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,7 +422,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3476167950482654714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e7c9911a5bb84d4d8c1355fd8b0c085, type: 3}
   m_Name: 

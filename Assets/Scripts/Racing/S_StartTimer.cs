@@ -29,7 +29,7 @@ public class S_StartTimer : MonoBehaviour
             if (timer > 0)
             {
                 timerText.text = timer.ToString("F2");
-                if (Mathf.Approximately(Mathf.Ceil(timer), 2) && !isQtmSpawned)
+                if (Mathf.Approximately(Mathf.Ceil(timer), visibleDuration) && !isQtmSpawned)
                 {
                     isQtmSpawned = true;
                     qtmWheel.SetActive(true);
@@ -47,7 +47,7 @@ public class S_StartTimer : MonoBehaviour
             yield return null;
         }
         // Let text be visible for time
-        yield return new WaitForSeconds(fadeDuration);
+        yield return new WaitForSeconds(2);
         
         timer = 0f;
         // Fade out text
