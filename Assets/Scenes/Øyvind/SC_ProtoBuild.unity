@@ -165,7 +165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_StartTimer
   timerText: {fileID: 1596441893}
-  visibleDuration: 2
+  countDown: 5
+  visibleDuration: 3
   fadeDuration: 0.5
   qtmWheel: {fileID: 1977213869}
 --- !u!114 &182427811 stripped
@@ -1204,6 +1205,7 @@ MonoBehaviour:
   player: {fileID: 861636954}
   mathManager: {fileID: 182427811}
   startTimer: {fileID: 175512481}
+  controls: []
 --- !u!4 &1104501519
 Transform:
   m_ObjectHideFlags: 0
@@ -2872,6 +2874,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1505109495414177934, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.178
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505109495414177934, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.9480001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505109495414177934, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505109495414177934, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505109495414177934, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505109495414177934, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.39996338
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505109495414177934, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2280379163844699907, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
