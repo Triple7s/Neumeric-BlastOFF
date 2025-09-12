@@ -11,8 +11,9 @@ public class S_CameraStabilizer : MonoBehaviour
         transform.parent = null;
     }
 
-    public void StabilizeCamera()
+    public void StabilizeCamera(Transform target)
     {
-        
+        transform.position = target.position;
+        transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, stabilizeSpeed);
     }
 }
