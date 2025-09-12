@@ -125,11 +125,6 @@ public class S_MathManager : MonoBehaviour
         
     }
 
-    /*public void ButtonDisplayQuestion()
-    {
-        DisplayQuestion();
-    }*/
-
     private void DisplayQuestion()
     {
         canvasGroup.interactable = true;
@@ -193,6 +188,8 @@ public class S_MathManager : MonoBehaviour
         if (chosenAnswer == currentQuestion.CorrectAnswer)
         {
             OnCorrectAnswer?.Invoke();
+
+
             // Correct -> Green
             clickedAlternative.GetComponent<Image>().color = greenSeeThroughColor;
 
