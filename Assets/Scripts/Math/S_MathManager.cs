@@ -23,12 +23,6 @@ public class S_MathManager : MonoBehaviour
     public static S_MathManager Instance;
     private S_TriggerVersion currentTriggerID = S_TriggerVersion.None;
 
-    public List<Question> mathQuestionsAddition = new List<Question>();
-    public List<Question> mathQuestionsSubtraction = new List<Question>();
-    public List<Question> mathQuestionsMultiplication = new List<Question>();
-    public List<Question> mathQuestionsDivision = new List<Question>();
-    private System.Random rng = new System.Random();
-
     private Question currentQuestion;
     [SerializeField] private GameObject circleDivision1;
     [SerializeField] private GameObject circleDivision2;
@@ -49,26 +43,50 @@ public class S_MathManager : MonoBehaviour
 
     private CanvasGroup canvasGroup;
 
+    private TextMeshProUGUI alternative1Text;
+    private TextMeshProUGUI alternative2Text;
+    private TextMeshProUGUI alternative3Text;
+    private TextMeshProUGUI alternative4Text;
+    
+    private Image circleImage1;
+    private Image circleImage2;
+    private Image circleImage3;
+    private Image circleImage4;
+    
+    private Color whiteSeeThroughColor = new Color(1, 1, 1, 0.4f);
+    private Color greenSeeThroughColor = new Color(0, 1, 0, 0.4f);
+    private Color redSeeThroughColor = new Color(1, 0, 0, 0.4f);
+
     void Awake() => Instance = this;
 
     public void Start()
     {
-        if (questionText == null)
+        if (!questionText)
         {
             Debug.LogError("Question Text is not assigned in the Inspector!");
             return;
         }
 
-        if (equations == null || equations.questions.Count == 0)
+        if (!equations || equations.questions.Count == 0)
         {
             Debug.LogError("SO_Equations has no questions assigned!");
             return;
         }
 
-        if (canvasGroup == null)
+        if (!canvasGroup)
         {
             canvasGroup = questionUI.GetComponent<CanvasGroup>();
         }
+        
+        alternative1Text = Alternative1.GetComponentInChildren<TextMeshProUGUI>();
+        alternative2Text = Alternative2.GetComponentInChildren<TextMeshProUGUI>();
+        alternative3Text = Alternative3.GetComponentInChildren<TextMeshProUGUI>();
+        alternative4Text = Alternative4.GetComponentInChildren<TextMeshProUGUI>();
+        
+        circleImage1 = circleDivision1.GetComponent<Image>();
+        circleImage2 = circleDivision2.GetComponent<Image>();
+        circleImage3 = circleDivision3.GetComponent<Image>();
+        circleImage4 = circleDivision4.GetComponent<Image>();
 
         DisplayQuestion();
     }
@@ -107,19 +125,10 @@ public class S_MathManager : MonoBehaviour
         
     }
 
-    public void OnTriggerExited(S_TriggerVersion triggerID)
-    {
-        if (currentTriggerID == triggerID)
-        {
-            Debug.Log($"Exited trigger {triggerID}");
-            currentTriggerID = S_TriggerVersion.None;
-        }
-    }
-
-    public void ButtonDisplayQuestion()
+    /*public void ButtonDisplayQuestion()
     {
         DisplayQuestion();
-    }
+    }*/
 
     private void DisplayQuestion()
     {
@@ -165,15 +174,13 @@ public class S_MathManager : MonoBehaviour
         for (int i = 0; i < shuffledAlternatives.Count; i++)
         {
             int rand = UnityEngine.Random.Range(i, shuffledAlternatives.Count);
-            int temp = shuffledAlternatives[i];
-            shuffledAlternatives[i] = shuffledAlternatives[rand];
-            shuffledAlternatives[rand] = temp;
+            (shuffledAlternatives[i], shuffledAlternatives[rand]) = (shuffledAlternatives[rand], shuffledAlternatives[i]);
         }
 
-        Alternative1.GetComponentInChildren<TextMeshProUGUI>().text = shuffledAlternatives[0].ToString();
-        Alternative2.GetComponentInChildren<TextMeshProUGUI>().text = shuffledAlternatives[1].ToString();
-        Alternative3.GetComponentInChildren<TextMeshProUGUI>().text = shuffledAlternatives[2].ToString();
-        Alternative4.GetComponentInChildren<TextMeshProUGUI>().text = shuffledAlternatives[3].ToString();
+        alternative1Text.text = shuffledAlternatives[0].ToString();
+        alternative2Text.text = shuffledAlternatives[1].ToString();
+        alternative3Text.text = shuffledAlternatives[2].ToString();
+        alternative4Text.text = shuffledAlternatives[3].ToString();
     }
 
     public void TestingCorrectAnswerCircleDivision(Button clickedButton)
@@ -187,7 +194,7 @@ public class S_MathManager : MonoBehaviour
         {
             OnCorrectAnswer?.Invoke();
             // Correct -> Green
-            clickedAlternative.GetComponent<Image>().color = Color.green;
+            clickedAlternative.GetComponent<Image>().color = greenSeeThroughColor;
 
             if (numberOfCorrectAnswerInRow == 0)
             {
@@ -206,26 +213,22 @@ public class S_MathManager : MonoBehaviour
 
             canvasGroup.interactable = false;
 
-            if (currentTriggerID == S_TriggerVersion.MultipleQTMsTrigger)
-            {
-                StartCoroutine(ShowNextQuestionAfterDelay(0.2f));
-            }
-            else { StartCoroutine(HideQuestionUIAfterDelay(0.2f)); }
+            StartCoroutine(currentTriggerID == S_TriggerVersion.MultipleQTMsTrigger
+                ? ShowNextQuestionAfterDelay(0.2f)
+                : HideQuestionUIAfterDelay(0.2f));
         }
         else
         {
             // Wrong -> Red
-            clickedAlternative.GetComponent<Image>().color = Color.red;
+            clickedAlternative.GetComponent<Image>().color = redSeeThroughColor;
             numberOfCorrectAnswerInRow = 0;
             multiplier.SetActive(false);
 
             canvasGroup.interactable = false;
 
-            if (currentTriggerID == S_TriggerVersion.MultipleQTMsTrigger)
-            {
-                StartCoroutine(ShowNextQuestionAfterDelay(0.2f));
-            }
-            else { StartCoroutine(HideQuestionUIAfterDelay(0.2f)); }
+            StartCoroutine(currentTriggerID == S_TriggerVersion.MultipleQTMsTrigger
+                ? ShowNextQuestionAfterDelay(0.2f)
+                : HideQuestionUIAfterDelay(0.2f));
         }
     }
 
@@ -243,16 +246,16 @@ public class S_MathManager : MonoBehaviour
             questionUI.SetActive(false);
     }
 
-    public void ResetButtonColors()
+    private void ResetButtonColors()
     {
-        if (circleDivision1.GetComponent<Image>().color != Color.white)
-            circleDivision1.GetComponent<Image>().color = Color.white;
-        if (circleDivision2.GetComponent<Image>().color != Color.white)
-            circleDivision2.GetComponent<Image>().color = Color.white;
-        if (circleDivision3.GetComponent<Image>().color != Color.white)
-            circleDivision3.GetComponent<Image>().color = Color.white;
-        if (circleDivision4.GetComponent<Image>().color != Color.white)
-            circleDivision4.GetComponent<Image>().color = Color.white;
+        if (circleImage1.color != whiteSeeThroughColor)
+            circleImage1.color = whiteSeeThroughColor;
+        if (circleImage2.color != whiteSeeThroughColor)
+            circleImage2.color = whiteSeeThroughColor;
+        if (circleImage3.color != whiteSeeThroughColor)
+            circleImage3.color = whiteSeeThroughColor;
+        if (circleImage4.color != whiteSeeThroughColor)
+            circleImage4.color = whiteSeeThroughColor;
     }
 
     public int RaceFinish(int playerPosition)
@@ -265,7 +268,7 @@ public class S_MathManager : MonoBehaviour
         return score;
     }
 
-    public void Combo(int correctAnswersInRow)
+    private void Combo(int correctAnswersInRow)
     {
         if (correctAnswersInRow > 5)
             correctAnswersInRow = 5;
