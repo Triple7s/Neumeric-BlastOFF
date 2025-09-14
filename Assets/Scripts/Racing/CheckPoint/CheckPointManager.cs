@@ -1,9 +1,5 @@
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
-using Matrix4x4 = UnityEngine.Matrix4x4;
-using Quaternion = UnityEngine.Quaternion;
-using Vector3 = UnityEngine.Vector3;
 
 public class CheckPointManager : MonoBehaviour
 {
@@ -20,7 +16,7 @@ public class CheckPointManager : MonoBehaviour
 
 
 
-    private void CalculateDirOfCheckPoint(CheckPointEntity thisEntity)
+    private Quaternion CalculateDirOfCheckPoint(CheckPointEntity thisEntity)
     {
         int index = checkPointEntities.FindIndex((CheckPointEntity checkPointEntity) => checkPointEntity == thisEntity);
 
@@ -32,8 +28,8 @@ public class CheckPointManager : MonoBehaviour
         var dir2 = checkPointEntities[(index + 1)%checkPointEntities.Count].transform.position - thisEntity.transform.position;
         var targetDir = (dir1 + dir2).normalized;
         
-        Quaternion targetRotation =Quaternion.LookRotation(targetDir, Vector3.up);
-        thisEntity.transform.rotation = targetRotation;
+        Quaternion targetRotation = Quaternion.LookRotation(targetDir, Vector3.up);
+        return targetRotation;
     }
 
 
@@ -65,6 +61,7 @@ public class CheckPointManager : MonoBehaviour
         {
             var entity = checkPointEntities[i];
             Gizmos.matrix = Matrix4x4.identity;
+            
             // Draw Sphere at entity
             Gizmos.color = pointColor;
             var offset = new Vector3(0, pointRadius, 0);
@@ -89,7 +86,7 @@ public class CheckPointManager : MonoBehaviour
             Gizmos.matrix = entity.transform.localToWorldMatrix;
             Gizmos.color = areaColor;
             Gizmos.DrawCube(new Vector3(0, areaSize/4, 0), cubeSize);
-            CalculateDirOfCheckPoint(entity);
+            entity.transform.rotation = CalculateDirOfCheckPoint(entity);
             
             prevEntity = entity;
         }
