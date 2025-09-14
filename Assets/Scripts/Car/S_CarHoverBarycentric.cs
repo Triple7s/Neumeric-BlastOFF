@@ -105,7 +105,7 @@ public class S_CarHoverBarycentric : MonoBehaviour
         normal = hitTransform.TransformDirection(normal);
         
         Debug.DrawRay(hit.point, normal, Color.brown);
-        Debug.Log(normal);
+//        Debug.Log(normal);
 
         return normal;
     }
