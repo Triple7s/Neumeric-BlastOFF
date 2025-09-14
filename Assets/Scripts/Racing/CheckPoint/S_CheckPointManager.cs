@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckPointManager : MonoBehaviour
+public class S_CheckPointManager : MonoBehaviour
 {
     [Header("Entities are Automatically added to the List")]
-    [SerializeField] private List<CheckPointEntity> checkPointEntities = new List<CheckPointEntity>();
+    [SerializeField] private List<S_CheckPointEntity> checkPointEntities = new List<S_CheckPointEntity>();
 
     
     [Header("Gizmos Settings")]
@@ -16,9 +16,9 @@ public class CheckPointManager : MonoBehaviour
 
 
 
-    private Quaternion CalculateDirOfCheckPoint(CheckPointEntity thisEntity)
+    private Quaternion CalculateDirOfCheckPoint(S_CheckPointEntity thisEntity)
     {
-        int index = checkPointEntities.FindIndex((CheckPointEntity checkPointEntity) => checkPointEntity == thisEntity);
+        int index = checkPointEntities.FindIndex((S_CheckPointEntity checkPointEntity) => checkPointEntity == thisEntity);
 
         Vector3 dir1;
         if (index-1 == -1)
@@ -35,7 +35,7 @@ public class CheckPointManager : MonoBehaviour
 
     #region Registering Check Points
 
-    public void RegisterCheckpoint(CheckPointEntity entity)
+    public void RegisterCheckpoint(S_CheckPointEntity entity)
     {
         if (!checkPointEntities.Contains(entity))
         {
@@ -43,7 +43,7 @@ public class CheckPointManager : MonoBehaviour
         }
     }
 
-    public void UnregisterCheckpoint(CheckPointEntity entity)
+    public void UnregisterCheckpoint(S_CheckPointEntity entity)
     {
         if (checkPointEntities.Contains(entity))
         {
@@ -56,7 +56,7 @@ public class CheckPointManager : MonoBehaviour
     
     private void OnDrawGizmos()
     {
-        CheckPointEntity prevEntity = null;
+        S_CheckPointEntity prevEntity = null;
         for (int i = 0; i < checkPointEntities.Count; i++)
         {
             var entity = checkPointEntities[i];

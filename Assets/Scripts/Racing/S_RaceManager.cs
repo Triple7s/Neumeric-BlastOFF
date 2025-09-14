@@ -7,8 +7,7 @@ public class S_RaceManager : MonoBehaviour
     [SerializeField] private S_MathManager mathManager;
     [SerializeField] private S_StartTimer startTimer;
 
-    [Space] 
-    
+    [SerializeField] private S_Racer[] racers;
 
     private bool answerdCorrectly;
     private void Awake()
@@ -35,12 +34,11 @@ public class S_RaceManager : MonoBehaviour
     {
         answerdCorrectly = true;
     }
+    
     public void RestartRace()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
-    
 
     private void OnDisable()
     {
