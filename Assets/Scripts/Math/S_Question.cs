@@ -6,6 +6,7 @@ public class Question
     [SerializeField] private int x;
     [SerializeField] private int y;
     [SerializeField] private MathOperator operation;
+    public string Category; // addition, subtraction, multiplication, division
 
     public int X => x;
     public int Y => y;
