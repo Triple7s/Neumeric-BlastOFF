@@ -4,8 +4,8 @@ using UnityEngine;
 public class S_CarHoverBarycentric : MonoBehaviour
 {
     [SerializeField] private float rayLength = 5f;
-    [SerializeField] private float rotationSpeed = 5f;
-    [SerializeField] private float heightChangeSpeed = 5f;
+    [SerializeField] private float rotationSpeed = 20f;
+    [SerializeField] private float heightChangeSpeed = 25f;
     [SerializeField] private float fallingSpeed = 9.81f;
     [SerializeField] private LayerMask targetLayerMask;
     private Rigidbody rb;

@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54f596d98a5c0a44194371a709089e49, type: 3}
-  m_Name: Base_CarData
+  m_Name: Base_NPC_CarData
   m_EditorClassIdentifier: Assembly-CSharp::S_CarData
   mass: 10
   linearDamping: 1
   angularDamping: 5
-  acceleration: 900
+  acceleration: 600
   brakeAcceleration: 250
-  turningSpeed: 15
+  turningSpeed: 30
   boostPower: 500
   minDriftSpeed: 50
   maxSpeed: 400
   maxBoostSpeed: 600
-  baseFloatingHeight: 0.5
+  baseFloatingHeight: 1

@@ -34,10 +34,8 @@ public class S_Racer : MonoBehaviour
 
     private void HasPastCheckPoint()
     {
-        Vector3 dirTarget, dirNext;
-        
-        dirTarget = (targetCheckPoint.transform.position - transform.position).normalized;
-        dirNext = (nextCheckPoint.transform.position - transform.position).normalized;
+        var dirTarget = (targetCheckPoint.transform.position - transform.position).normalized;
+        var dirNext = (nextCheckPoint.transform.position - transform.position).normalized;
         
         var dotValue = Vector3.Dot(dirTarget, dirNext);
 
