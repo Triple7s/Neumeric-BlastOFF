@@ -14,6 +14,7 @@ public class S_PlayerBehaviour : MonoBehaviour
     [SerializeField] private S_PlayerCameraController cameraController;
     [SerializeField] private S_CameraStabilizer cameraStabilizer;
     [SerializeField] private S_MathManager mathManager;
+    [SerializeField] private S_Racer racer;
 
     private Rigidbody rb;
     
@@ -69,6 +70,8 @@ public class S_PlayerBehaviour : MonoBehaviour
 
     private void BrakeOrDrift()
     {
+        rb.AddForce(transform.forward * (-data.BrakeAcceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
+        return;
         // Drift if turning and enough speed
         if ((isDrifting || isTurning) && rb.linearVelocity.magnitude >= data.MinDriftSpeed)
         {

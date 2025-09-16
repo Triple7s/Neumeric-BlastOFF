@@ -1,37 +1,52 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class S_CheckPointManager : MonoBehaviour
 {
+    public static S_CheckPointManager Instance { get; private set; }
+    
     [Header("Entities are Automatically added to the List")]
-    [SerializeField] private List<S_CheckPointEntity> checkPointEntities = new List<S_CheckPointEntity>();
+    [SerializeField] private List<S_CheckPointEntity> checkPointEntities = new ();
 
     
     [Header("Gizmos Settings")]
+    [SerializeField] private bool hideGizmos;
     [SerializeField] private Color pointColor = Color.yellow;
     [SerializeField] private float pointRadius = 0.5f;
     [SerializeField] private Color lineColor = Color.red;
     [SerializeField] private Color areaColor = Color.green;
-    [SerializeField] private float areaSize = 0.5f;
+    [SerializeField] private float areaSize = 4f;
 
-
-
-    private Quaternion CalculateDirOfCheckPoint(S_CheckPointEntity thisEntity)
+    private void Awake()
     {
-        int index = checkPointEntities.FindIndex((S_CheckPointEntity checkPointEntity) => checkPointEntity == thisEntity);
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(this);
+    }
+
+    
+
+    private Vector3 CalculateDirectionOfCheckPoint(S_CheckPointEntity thisEntity)
+    {
+        int index = checkPointEntities.FindIndex((checkPointEntity) => checkPointEntity == thisEntity);
 
         Vector3 dir1;
         if (index-1 == -1)
             dir1 = thisEntity.transform.position - checkPointEntities[^1].transform.position;
         else
-            dir1 = thisEntity.transform.position - checkPointEntities[(index-1)].transform.position;
-        var dir2 = checkPointEntities[(index + 1)%checkPointEntities.Count].transform.position - thisEntity.transform.position;
+            dir1 = thisEntity.transform.position - GetCheckPoint(index-1).transform.position;
+        var dir2 = GetCheckPoint(index + 1).transform.position - thisEntity.transform.position;
         var targetDir = (dir1 + dir2).normalized;
-        
-        Quaternion targetRotation = Quaternion.LookRotation(targetDir, Vector3.up);
-        return targetRotation;
+        return targetDir;
     }
 
+
+    public S_CheckPointEntity GetCheckPoint(int index)
+    {
+        return checkPointEntities[index%checkPointEntities.Count];
+    }
 
     #region Registering Check Points
 
@@ -56,6 +71,8 @@ public class S_CheckPointManager : MonoBehaviour
     
     private void OnDrawGizmos()
     {
+        if (hideGizmos) return;
+        
         S_CheckPointEntity prevEntity = null;
         for (int i = 0; i < checkPointEntities.Count; i++)
         {
@@ -86,11 +103,19 @@ public class S_CheckPointManager : MonoBehaviour
             Gizmos.matrix = entity.transform.localToWorldMatrix;
             Gizmos.color = areaColor;
             Gizmos.DrawCube(new Vector3(0, areaSize/4, 0), cubeSize);
-            entity.transform.rotation = CalculateDirOfCheckPoint(entity);
+            entity.transform.rotation = CalculateRotationOfCheckPoint(entity);
             
             prevEntity = entity;
         }
         
+    }
+    private Quaternion CalculateRotationOfCheckPoint(S_CheckPointEntity thisEntity)
+    {
+
+        var targetDir = CalculateDirectionOfCheckPoint(thisEntity);
+
+        Quaternion targetRotation = Quaternion.LookRotation(targetDir, Vector3.up);
+        return targetRotation;
     }
     
 }

@@ -9,7 +9,7 @@ public class S_RaceManager : MonoBehaviour
 
     [SerializeField] private S_Racer[] racers;
 
-    private bool answerdCorrectly;
+    private bool answeredCorrectly;
     private void Awake()
     {
         startTimer.OnTimerEnd += StartRace;
@@ -24,7 +24,7 @@ public class S_RaceManager : MonoBehaviour
     private void StartRace()
     {
         player.TurnOnEngine();
-        if (answerdCorrectly)
+        if (answeredCorrectly)
         {
             player.Boost();
         }
@@ -32,7 +32,7 @@ public class S_RaceManager : MonoBehaviour
 
     private void BoostStart()
     {
-        answerdCorrectly = true;
+        answeredCorrectly = true;
     }
     
     public void RestartRace()
