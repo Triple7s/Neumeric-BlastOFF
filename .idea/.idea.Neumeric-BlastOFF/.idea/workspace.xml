@@ -7,10 +7,6 @@
     <list default="true" id="02b2abd1-4345-46b9-b20b-4cc4cc0dcf8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_WaypointSystem.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_WaypointSystem.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/S_PlayerBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racing/CheckPoint/S_CheckPointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Racing/CheckPoint/S_CheckPointManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racing/S_RaceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Racing/S_RaceManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racing/S_Racer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Racing/S_Racer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +17,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NPC/S_AIBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Racing/CheckPoint/S_CheckPointEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Racing/S_Racer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Racing/S_VisualManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -102,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1757838126174</updated>
       <workItem from="1757838128479" duration="12655000" />
-      <workItem from="1758007321207" duration="7610000" />
+      <workItem from="1758007321207" duration="8953000" />
     </task>
     <servers />
   </component>
