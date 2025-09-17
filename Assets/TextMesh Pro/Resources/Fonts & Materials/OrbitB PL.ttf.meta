@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 521661af3e0abdb4d9156ae5e81c004b
+guid: 83cbd1e7da37e2949a8f9c0e00d111c4
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Tarrget Condensed
+  - Orbit-B PL
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
