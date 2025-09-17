@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5e2c6b6324dbf2e448242d65e81354e6
+guid: 20989a1bb183a3746bd0f9535196e75c
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Tarrget Chrome
+  - Nimbus Sans
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

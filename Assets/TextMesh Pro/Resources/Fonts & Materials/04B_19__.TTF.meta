@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d8d80d88d43f2964fa6b3e56e75109c4
+guid: bcee0e064e2815a4b8b9ff453ee3a0ae
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Tarrget Platinum
+  - 04b_19
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
