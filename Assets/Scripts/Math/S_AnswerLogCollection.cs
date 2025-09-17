@@ -2,7 +2,8 @@ using System.Collections.Generic;
 using Unity.Multiplayer.Center.Common;
 using UnityEngine;
 
-public class S_AnswerLogCollection : MonoBehaviour
+[System.Serializable]
+public class S_AnswerLogCollection
 {
     public List<S_AnswerLog> addition = new List<S_AnswerLog>();
     public List<S_AnswerLog> subtraction = new List<S_AnswerLog>();

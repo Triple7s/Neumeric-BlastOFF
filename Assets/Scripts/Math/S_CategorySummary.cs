@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class S_CategorySummary : MonoBehaviour
+[System.Serializable]
+public class S_CategorySummary
 {
     public int correct;
     public int incorrect;

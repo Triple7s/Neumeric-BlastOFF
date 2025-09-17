@@ -13,6 +13,9 @@ public class S_MathManager : MonoBehaviour
     private string logFilePath;
     private S_AnswerLogCollection logs = new S_AnswerLogCollection();
 
+    private S_AnswerLogCollection sessionLogs = new S_AnswerLogCollection();
+    //private string json;
+
     public event Action OnCorrectAnswer;
 
     [SerializeField] private GameObject questionUI;
@@ -218,25 +221,41 @@ public class S_MathManager : MonoBehaviour
             case "addition":
                 logs.addition.Add(entry);
                 if (entry.isCorrect) logs.additionSummary.correct++;
-                else logs.addition.incorrect++;
+                else logs.additionSummary.incorrect++;
                 break;
             case "subtraction":
                 logs.subtraction.Add(entry);
                 if (entry.isCorrect) logs.subtractionSummary.correct++;
-                else logs.subtraction.incorrect++;
+                else logs.subtractionSummary.incorrect++;
                 break;
             case "multiplication":
                 logs.multiplication.Add(entry);
                 if (entry.isCorrect) logs.multiplicationSummary.correct++;
-                else logs.multiplication.incorrect++;
+                else logs.multiplicationSummary.incorrect++;
                 break;
             case "division":
                 logs.division.Add(entry);
                 if (entry.isCorrect) logs.divisionSummary.correct++;
-                else logs.division.isincorrect++;
+                else logs.divisionSummary.incorrect++;
                 break;
-            default: 
+            default:
                 Debug.LogWarning("Unknown category: " + entry.category);
+                break;
+        }
+
+        switch (entry.category.ToLower())
+        {
+            case "addition":
+                sessionLogs.addition.Add(entry);
+                break;
+            case "subtraction":
+                sessionLogs.subtraction.Add(entry);
+                break;
+            case "multiplication":
+                sessionLogs.multiplication.Add(entry);
+                break;
+            case "division":
+                sessionLogs.division.Add(entry);
                 break;
         }
 
@@ -347,10 +366,17 @@ public class S_MathManager : MonoBehaviour
         return score;
     }
 
+
+
     private void SaveLogs()
     {
         string json = JsonUtility.ToJson(logs, true);
         File.WriteAllText(logFilePath, json);
+    }
+
+    private void OnApplicationQuit()
+    {
+        S_AnswerLogLoader.PrintLogs(sessionLogs); // only current session
     }
 }
 
