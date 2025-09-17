@@ -54,8 +54,8 @@ public class S_Racer : MonoBehaviour
 
     public Vector3 GetDrivingDirection()
     {
-        var dirTarget = (targetCheckPoint.transform.position - transform.position).normalized;
-        var dirNext = (nextCheckPoint.transform.position - transform.position).normalized;
+        var dirTarget = (targetCheckPoint.transform.position - transform.position);
+        var dirNext = (nextCheckPoint.transform.position - transform.position);
         
         return (dirTarget + dirNext).normalized;
     }
