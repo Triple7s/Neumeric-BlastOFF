@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class S_CheckPointManager : MonoBehaviour
 {
@@ -68,6 +69,7 @@ public class S_CheckPointManager : MonoBehaviour
 
     #endregion
    
+    
     
     private void OnDrawGizmos()
     {

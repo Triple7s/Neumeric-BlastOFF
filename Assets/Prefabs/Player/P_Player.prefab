@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 2544049755536184592}
   - component: {fileID: 2909340294871678947}
   - component: {fileID: 9126587723103453095}
+  - component: {fileID: 920630926225535308}
   m_Layer: 0
   m_Name: P_Player
   m_TagString: Player
@@ -370,6 +371,7 @@ MonoBehaviour:
   cameraController: {fileID: 2544049755536184592}
   cameraStabilizer: {fileID: 3662819425711860441}
   mathManager: {fileID: 0}
+  racer: {fileID: 920630926225535308}
 --- !u!114 &3559611923804874376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,7 +424,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3476167950482654714}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e7c9911a5bb84d4d8c1355fd8b0c085, type: 3}
   m_Name: 
@@ -442,6 +444,22 @@ MonoBehaviour:
   mathManager: {fileID: 0}
   isOpponent: 0
   pointsText: {fileID: 0}
+--- !u!114 &920630926225535308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3476167950482654714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0193fca7e9eaa7e4c89de1b94a93f4d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_Racer
+  hideGizmos: 0
+  targetColor: {r: 0.9411765, g: 1, b: 0.9411765, a: 1}
+  nextColor: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
+  drivingDirection: {r: 1, g: 0.07843138, b: 0.5764706, a: 1}
 --- !u!1 &3478701134745462122
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3469067444408727541}
   m_Layer: 0
-  m_Name: PlayerArt
+  m_Name: PlayerVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
