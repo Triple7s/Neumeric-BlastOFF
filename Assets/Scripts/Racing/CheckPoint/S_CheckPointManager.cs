@@ -56,6 +56,7 @@ public class S_CheckPointManager : MonoBehaviour
         if (!checkPointEntities.Contains(entity))
         {
             checkPointEntities.Add(entity);
+            SortList();
         }
     }
 
@@ -64,9 +65,26 @@ public class S_CheckPointManager : MonoBehaviour
         if (checkPointEntities.Contains(entity))
         {
             checkPointEntities.Remove(entity);
+            SortList();
         }
     }
 
+    public void SortList()
+    {
+        Debug.Log("Checkpoint List has been sorted");
+        List<S_CheckPointEntity> sorted = new();
+
+        var entitiesParent = checkPointEntities[0].transform.parent;
+        
+        for (int i = 0; i < entitiesParent.childCount; i++)
+        {
+            var entity = entitiesParent.GetChild(i).GetComponent<S_CheckPointEntity>();
+            sorted.Add(entity);
+        }
+        
+        checkPointEntities.Clear();
+        checkPointEntities.AddRange(sorted);
+    }
     #endregion
    
     
