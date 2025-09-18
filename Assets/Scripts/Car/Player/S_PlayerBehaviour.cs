@@ -18,7 +18,7 @@ public class S_PlayerBehaviour : MonoBehaviour
 
     private Rigidbody rb;
     
-    private bool isTurning, isBraking, isDrifting;
+    private bool isTurning, isBraking, isDrifting, isQTM;
     private int turnDirection;
     private float currentAcceleration, currentFloatingHeight;
     
@@ -52,7 +52,6 @@ public class S_PlayerBehaviour : MonoBehaviour
     {
         if (!isEngineRunning)   return;
         
-        
         carHoverBarycentric.HoverOverGround(currentFloatingHeight);
         
         if (isBraking)
@@ -71,7 +70,7 @@ public class S_PlayerBehaviour : MonoBehaviour
     private void BrakeOrDrift()
     {
         rb.AddForce(transform.forward * (-data.BrakeAcceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
-        return;
+        /*
         // Drift if turning and enough speed
         if ((isDrifting || isTurning) && rb.linearVelocity.magnitude >= data.MinDriftSpeed)
         {
@@ -81,13 +80,12 @@ public class S_PlayerBehaviour : MonoBehaviour
         {
             rb.AddForce(transform.forward * (-data.BrakeAcceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
         }
+        */
     }
     
     private void Drive()
     {
-        
         rb.AddForce(transform.forward * (data.Acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
-        
 
         if (rb.linearVelocity.magnitude > data.MaxSpeed)
         {
@@ -100,13 +98,22 @@ public class S_PlayerBehaviour : MonoBehaviour
                 rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, maxSpeed, Time.fixedDeltaTime / 10);
             }
         }
-        
-        
-        if (isTurning)
+
+        if (isQTM)
+        {
+            AutoTurn(racer.GetDrivingDirection());
+        }
+        else if (isTurning)
         {
             Turn();
         }
-
+    }
+    
+    private void AutoTurn(Vector3 targetDirection)
+    {
+        Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
+        
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, data.TurningSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
