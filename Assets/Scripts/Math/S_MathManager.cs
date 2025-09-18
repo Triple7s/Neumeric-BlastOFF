@@ -69,6 +69,8 @@ public class S_MathManager : MonoBehaviour
     public void Start()
     {
         logFilePath = Application.persistentDataPath + "/answers.json";
+        //string baseFileName = "answers_race_map_";
+        //string[] existingFiles = Directory.GetFiles(Application.persistentDataPath, baseFileName + "*.json");
 
         // Log existing file if it exists
         if (System.IO.File.Exists(logFilePath))
