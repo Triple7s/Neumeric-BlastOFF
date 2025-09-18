@@ -10,12 +10,10 @@ public class S_Racer : MonoBehaviour
     [SerializeField] private Color nextColor = Color.cadetBlue;
     [SerializeField] private Color drivingDirection = Color.deepPink;
 
-
-
     private S_CheckPointEntity targetCheckPoint, nextCheckPoint;
     
+    public int targetCheckPointIndex { get; private set; }
     
-    private int targetCheckPointIndex;
     private void Start()
     {
         Init();
