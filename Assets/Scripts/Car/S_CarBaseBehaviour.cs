@@ -11,7 +11,6 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     
     protected Rigidbody rb;
     
-    private float currentFloatingHeight;
     private bool isEngineRunning = false;
 
 
@@ -22,7 +21,6 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
 
     protected virtual void Start()
     {
-        currentFloatingHeight = data.BaseFloatingHeight;
         
         rb.mass = data.Mass;
         rb.linearDamping = data.LinearDamping;
@@ -33,9 +31,12 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     {
         if (!isEngineRunning)   return;
         
-        carHoverBarycentric.HoverOverGround(currentFloatingHeight);
+        carHoverBarycentric.HoverOverGround(data.BaseFloatingHeight);
+        
+        BehaviourUpdate();
     }
-    
+
+    protected abstract void BehaviourUpdate();
     public void Boost()
     {
         if (!isEngineRunning) return;
@@ -48,7 +49,7 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         rb.AddForce(direction * data.BoostPower, ForceMode.Impulse);
     }
 
-    protected virtual void Drive()
+    protected void Drive()
     {
         rb.AddForce(transform.forward * (data.Acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
         
@@ -69,11 +70,12 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     {
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
         
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, data.TurningSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, data.AutoTurningSpeed * Time.deltaTime);
     }
     
     public void TurnOnEngine()
     {
+        print("Turning on engine");
         isEngineRunning = true;
     }
 

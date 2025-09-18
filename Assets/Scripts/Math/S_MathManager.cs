@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 using System.IO;
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 //using System.Linq;
 
@@ -16,7 +17,9 @@ public class S_MathManager : MonoBehaviour
     private S_AnswerLogCollection sessionLogs = new S_AnswerLogCollection();
     //private string json;
 
-    public event Action OnCorrectAnswer;
+    public static event Action OnCorrectAnswer;
+    public static event Action OnStartQTM;
+    public static event Action OnStopQTM;
 
     [SerializeField] private GameObject questionUI;
     [SerializeField] private SO_Equations equations;
@@ -45,8 +48,6 @@ public class S_MathManager : MonoBehaviour
     [SerializeField] private int score;
     [SerializeField] private int qtmPoints = 5;
     [SerializeField] private int[] winPoints = { 25, 20, 18, 15, 12, 10, 8, 5 };
-
-    private int lastCorrectSlot = -1;
 
     private CanvasGroup canvasGroup;
 
@@ -131,6 +132,7 @@ public class S_MathManager : MonoBehaviour
                 {
                     questionUI.SetActive(false);
                     multiplier.SetActive(false);
+                    OnStopQTM?.Invoke();
                 }
 
                 break;
@@ -161,6 +163,7 @@ public class S_MathManager : MonoBehaviour
         // Display question text
         questionText.text = currentQuestion.Text;
 
+        OnStartQTM?.Invoke();
 
         DisplayAlternatives(currentQuestion);
     }
@@ -265,7 +268,6 @@ public class S_MathManager : MonoBehaviour
         // Existing answer handling
         if (isCorrect)
         {
-            OnCorrectAnswer?.Invoke();
             clickedAlternative.GetComponent<Image>().color = greenSeeThroughColor;
         }
         else
@@ -327,6 +329,8 @@ public class S_MathManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
+        OnStopQTM?.Invoke();
+        
         if (questionUI != null)
             questionUI.SetActive(false);
     }

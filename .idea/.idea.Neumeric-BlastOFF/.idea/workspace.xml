@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="02b2abd1-4345-46b9-b20b-4cc4cc0dcf8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_WaypointSystem.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_WaypointSystem.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CarData/Player_CarData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/CarData/Player_CarData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/NPC/S_NpcBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/NPC/S_NpcBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/Player/S_PlayerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/Player/S_PlayerBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarBaseBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarBaseBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Math/S_MathManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Math/S_MathManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Particle System/S_NeumericRain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Particle System/S_NeumericRain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racing/S_RaceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Racing/S_RaceManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +112,7 @@
       <workItem from="1757838128479" duration="12655000" />
       <workItem from="1758007321207" duration="11528000" />
       <workItem from="1758101324302" duration="5095000" />
-      <workItem from="1758183328096" duration="6898000" />
+      <workItem from="1758183328096" duration="9891000" />
     </task>
     <servers />
   </component>

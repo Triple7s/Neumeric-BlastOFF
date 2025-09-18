@@ -119,18 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &53811841 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2303461308326805710, guid: 70ecdb29758fa924788212a523363e45,
-    type: 3}
-  m_PrefabInstance: {fileID: 1433288327045121480}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea555b24131260b47844f42314dc77d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::S_CarHoverBarycentric
 --- !u!1 &74696572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,18 +1776,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
---- !u!114 &850290006 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2303461308326805710, guid: 70ecdb29758fa924788212a523363e45,
-    type: 3}
-  m_PrefabInstance: {fileID: 903130497}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea555b24131260b47844f42314dc77d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::S_CarHoverBarycentric
 --- !u!4 &850290010 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3821017774730754886, guid: 70ecdb29758fa924788212a523363e45,
@@ -1838,41 +1814,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 765114384}
     m_Modifications:
-    - target: {fileID: 1933791326576520944, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1933791326576520944, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1933791326576520944, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: m_LinearDamping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1933791326576520944, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: m_AngularDamping
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2303461308326805710, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: rotationSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2303461308326805710, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: heightChangeSpeed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2303461308326805710, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: targetLayerMask.m_Bits
-      value: 128
-      objectReference: {fileID: 0}
     - target: {fileID: 3821017774730754886, guid: 70ecdb29758fa924788212a523363e45,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1923,24 +1864,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6614457023153908301, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: data
-      value: 
-      objectReference: {fileID: 11400000, guid: 8a5517b4cabb73448b166ace9add237e,
-        type: 2}
-    - target: {fileID: 6614457023153908301, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: carHoverBarycentric
-      value: 
-      objectReference: {fileID: 924213660}
     - target: {fileID: 9062037704372422282, guid: 70ecdb29758fa924788212a523363e45,
         type: 3}
       propertyPath: m_Name
       value: NPC_Car (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1202065571204546877, guid: 70ecdb29758fa924788212a523363e45, type: 3}
+    - target: {fileID: 9062037704372422282, guid: 70ecdb29758fa924788212a523363e45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2069,41 +2003,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 765114384}
     m_Modifications:
-    - target: {fileID: 1933791326576520944, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1933791326576520944, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1933791326576520944, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: m_LinearDamping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1933791326576520944, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: m_AngularDamping
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2303461308326805710, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: rotationSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2303461308326805710, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: heightChangeSpeed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2303461308326805710, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: targetLayerMask.m_Bits
-      value: 128
-      objectReference: {fileID: 0}
     - target: {fileID: 3821017774730754886, guid: 70ecdb29758fa924788212a523363e45,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2154,24 +2053,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6614457023153908301, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: data
-      value: 
-      objectReference: {fileID: 11400000, guid: 09d3916d901f44740b726fec3c8acbf6,
-        type: 2}
-    - target: {fileID: 6614457023153908301, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: carHoverBarycentric
-      value: 
-      objectReference: {fileID: 850290006}
     - target: {fileID: 9062037704372422282, guid: 70ecdb29758fa924788212a523363e45,
         type: 3}
       propertyPath: m_Name
       value: NPC_Car (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1202065571204546877, guid: 70ecdb29758fa924788212a523363e45, type: 3}
+    - target: {fileID: 9062037704372422282, guid: 70ecdb29758fa924788212a523363e45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2220,18 +2112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
---- !u!114 &924213660 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2303461308326805710, guid: 70ecdb29758fa924788212a523363e45,
-    type: 3}
-  m_PrefabInstance: {fileID: 864288293}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea555b24131260b47844f42314dc77d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::S_CarHoverBarycentric
 --- !u!4 &924213664 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3821017774730754886, guid: 70ecdb29758fa924788212a523363e45,
@@ -2596,10 +2476,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9ab23a9fef41043877ee987d906f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_RaceManager
-  player: {fileID: 861636954}
-  mathManager: {fileID: 182427811}
   startTimer: {fileID: 175512481}
-  racers: []
+  cars:
+  - {fileID: 861636954}
 --- !u!4 &1104501519
 Transform:
   m_ObjectHideFlags: 0
@@ -5152,41 +5031,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 765114384}
     m_Modifications:
-    - target: {fileID: 1933791326576520944, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1933791326576520944, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1933791326576520944, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: m_LinearDamping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1933791326576520944, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: m_AngularDamping
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2303461308326805710, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: rotationSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2303461308326805710, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: heightChangeSpeed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2303461308326805710, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: targetLayerMask.m_Bits
-      value: 128
-      objectReference: {fileID: 0}
     - target: {fileID: 3821017774730754886, guid: 70ecdb29758fa924788212a523363e45,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5237,24 +5081,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6614457023153908301, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: data
-      value: 
-      objectReference: {fileID: 11400000, guid: 51cc559ab085f234c91e886638c9922b,
-        type: 2}
-    - target: {fileID: 6614457023153908301, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: carHoverBarycentric
-      value: 
-      objectReference: {fileID: 53811841}
     - target: {fileID: 9062037704372422282, guid: 70ecdb29758fa924788212a523363e45,
         type: 3}
       propertyPath: m_Name
       value: NPC_Car
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1202065571204546877, guid: 70ecdb29758fa924788212a523363e45, type: 3}
+    - target: {fileID: 9062037704372422282, guid: 70ecdb29758fa924788212a523363e45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5280,7 +5117,7 @@ PrefabInstance:
     - target: {fileID: 3476167950482654714, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}

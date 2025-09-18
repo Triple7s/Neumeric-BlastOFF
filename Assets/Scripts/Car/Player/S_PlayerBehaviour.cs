@@ -8,13 +8,11 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
     [SerializeField] private S_PlayerCameraController cameraController;
     [SerializeField] private S_CameraStabilizer cameraStabilizer;
-    [SerializeField] private S_MathManager mathManager;
 
     
     
-    private bool isTurning, isBraking, isDrifting, isQTM;
+    private bool isTurning, isBraking, isDrifting, isQtm;
     private int turnDirection;
-    private float currentAcceleration, currentFloatingHeight;
     
 
     protected override void Awake()
@@ -28,7 +26,9 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         playerInputRegister.BrakePressed += StartBrake;
         playerInputRegister.BrakeReleased += StopBrake;
 
-        mathManager.OnCorrectAnswer += Boost;
+        S_MathManager.OnCorrectAnswer += Boost;
+        S_MathManager.OnStartQTM += TurnOnAutoSteering;
+        S_MathManager.OnStopQTM += TurnOffAutoSteering;
     }
 
     protected override void Start()
@@ -36,11 +36,8 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         base.Start();
     }
 
-    protected override void FixedUpdate()
+    protected override void BehaviourUpdate()
     {
-        base.FixedUpdate();
-        
-        
         if (isBraking)
         {
             BrakeOrDrift();
@@ -50,7 +47,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
             Drive();
         }
         
-        if (isQTM)
+        if (isQtm)
         {
             AutoTurn(racer.GetDrivingDirection());
         }
@@ -114,5 +111,32 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         isDrifting = false;
     }
 
+    private void TurnOnAutoSteering()
+    {
+        print("QTM is turning on");
+        isQtm = true;
+    }
+
+    private void TurnOffAutoSteering()
+    {
+        print("QTM is turning off");
+
+        isQtm = false;
+    }
+    
     #endregion
+
+    private void OnDisable()
+    {
+        playerInputRegister.LeftPressed -= TurnLeft;
+        playerInputRegister.RightPressed -= TurnRight;
+        playerInputRegister.TurnReleased -= StopTurning;
+
+        playerInputRegister.BrakePressed -= StartBrake;
+        playerInputRegister.BrakeReleased -= StopBrake;
+
+        S_MathManager.OnCorrectAnswer -= Boost;
+        S_MathManager.OnStartQTM -= TurnOnAutoSteering;
+        S_MathManager.OnStopQTM -= TurnOffAutoSteering;
+    }
 }

@@ -3,17 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class S_RaceManager : MonoBehaviour
 {
-    [SerializeField] private S_PlayerBehaviour player;
-    [SerializeField] private S_MathManager mathManager;
     [SerializeField] private S_StartTimer startTimer;
 
-    [SerializeField] private S_Racer[] racers;
+    [SerializeField] private S_CarBaseBehaviour[] cars;
 
     private bool answeredCorrectly;
     private void Awake()
     {
         startTimer.OnTimerEnd += StartRace;
-        mathManager.OnCorrectAnswer += BoostStart;
+        S_MathManager.OnCorrectAnswer += BoostStart;
     }
 
     private void Start()
@@ -23,11 +21,17 @@ public class S_RaceManager : MonoBehaviour
 
     private void StartRace()
     {
-        player.TurnOnEngine();
-        if (answeredCorrectly)
+        foreach (var car in cars)
         {
-            player.Boost();
+            car.TurnOnEngine();
+            
+            if (answeredCorrectly && car is S_PlayerBehaviour player)
+            {
+                player.Boost();
+            }
         }
+        
+        
     }
 
     private void BoostStart()
@@ -43,5 +47,6 @@ public class S_RaceManager : MonoBehaviour
     private void OnDisable()
     {
         startTimer.OnTimerEnd -= StartRace;
+        S_MathManager.OnCorrectAnswer -= BoostStart;
     }
 }

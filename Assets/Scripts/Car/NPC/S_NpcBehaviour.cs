@@ -14,10 +14,8 @@ public class S_NpcBehaviour : S_CarBaseBehaviour
         base.Start();
     }
 
-    protected override void FixedUpdate()
+    protected override void BehaviourUpdate()
     {
-        base.FixedUpdate();
-        
         Drive();
         
         AutoTurn(racer.GetDrivingDirection());

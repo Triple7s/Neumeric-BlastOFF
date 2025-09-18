@@ -17,7 +17,8 @@ MonoBehaviour:
   angularDamping: 5
   acceleration: 850
   brakeAcceleration: 250
-  turningSpeed: 40
+  turningSpeed: 20
+  autoTurningSpeed: 60
   boostPower: 500
   minDriftSpeed: 50
   maxSpeed: 400
