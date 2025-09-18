@@ -141,7 +141,6 @@ public class S_MathManager : MonoBehaviour
                 DisplayQuestion();
                 break;
         }
-
     }
 
     private void DisplayQuestion()

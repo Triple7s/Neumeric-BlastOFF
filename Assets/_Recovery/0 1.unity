@@ -942,6 +942,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1342258448979713443, guid: eeb962853cde93c479699abfd65b4d30,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -255
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749773331097296226, guid: eeb962853cde93c479699abfd65b4d30,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 255
+      objectReference: {fileID: 0}
+    - target: {fileID: 2603851237065393295, guid: eeb962853cde93c479699abfd65b4d30,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2603851237065393295, guid: eeb962853cde93c479699abfd65b4d30,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577578037421619904, guid: eeb962853cde93c479699abfd65b4d30,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7766478484596330770, guid: eeb962853cde93c479699abfd65b4d30,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -996,6 +1021,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Math Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8992701659258662312, guid: eeb962853cde93c479699abfd65b4d30,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8992701659258662312, guid: eeb962853cde93c479699abfd65b4d30,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 127
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
