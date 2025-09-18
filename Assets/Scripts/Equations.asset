@@ -58,6 +58,6 @@ MonoBehaviour:
   - x: 2
     y: 2
     operation: 3
-  - x: 2
-    y: 2
+  - x: 12
+    y: 4
     operation: 3

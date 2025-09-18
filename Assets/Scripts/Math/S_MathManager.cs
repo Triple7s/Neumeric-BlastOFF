@@ -4,10 +4,17 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using System.IO;
+using Unity.VisualScripting;
 //using System.Linq;
 
 public class S_MathManager : MonoBehaviour
 {
+    private string logFilePath;
+    private S_AnswerLogCollection logs = new S_AnswerLogCollection();
+
+    private S_AnswerLogCollection sessionLogs = new S_AnswerLogCollection();
+    //private string json;
 
     public event Action OnCorrectAnswer;
 
@@ -47,12 +54,12 @@ public class S_MathManager : MonoBehaviour
     private TextMeshProUGUI alternative2Text;
     private TextMeshProUGUI alternative3Text;
     private TextMeshProUGUI alternative4Text;
-    
+
     private Image circleImage1;
     private Image circleImage2;
     private Image circleImage3;
     private Image circleImage4;
-    
+
     private Color whiteSeeThroughColor = new Color(1, 1, 1, 0.4f);
     private Color greenSeeThroughColor = new Color(0, 1, 0, 0.4f);
     private Color redSeeThroughColor = new Color(1, 0, 0, 0.4f);
@@ -61,6 +68,18 @@ public class S_MathManager : MonoBehaviour
 
     public void Start()
     {
+        logFilePath = Application.persistentDataPath + "/answers.json";
+        //string baseFileName = "answers_race_map_";
+        //string[] existingFiles = Directory.GetFiles(Application.persistentDataPath, baseFileName + "*.json");
+
+        // Log existing file if it exists
+        if (System.IO.File.Exists(logFilePath))
+        {
+            string json = System.IO.File.ReadAllText(logFilePath);
+            logs = JsonUtility.FromJson<S_AnswerLogCollection>(json);
+            if (logs == null) logs = new S_AnswerLogCollection();
+        }
+
         if (!questionText)
         {
             Debug.LogError("Question Text is not assigned in the Inspector!");
@@ -77,12 +96,12 @@ public class S_MathManager : MonoBehaviour
         {
             canvasGroup = questionUI.GetComponent<CanvasGroup>();
         }
-        
+
         alternative1Text = Alternative1.GetComponentInChildren<TextMeshProUGUI>();
         alternative2Text = Alternative2.GetComponentInChildren<TextMeshProUGUI>();
         alternative3Text = Alternative3.GetComponentInChildren<TextMeshProUGUI>();
         alternative4Text = Alternative4.GetComponentInChildren<TextMeshProUGUI>();
-        
+
         circleImage1 = circleDivision1.GetComponent<Image>();
         circleImage2 = circleDivision2.GetComponent<Image>();
         circleImage3 = circleDivision3.GetComponent<Image>();
@@ -111,7 +130,7 @@ public class S_MathManager : MonoBehaviour
                 if (questionUI)
                 {
                     questionUI.SetActive(false);
-                    multiplier.SetActive(false);   
+                    multiplier.SetActive(false);
                 }
 
                 break;
@@ -122,13 +141,7 @@ public class S_MathManager : MonoBehaviour
                 DisplayQuestion();
                 break;
         }
-        
     }
-
-    /*public void ButtonDisplayQuestion()
-    {
-        DisplayQuestion();
-    }*/
 
     private void DisplayQuestion()
     {
@@ -190,9 +203,81 @@ public class S_MathManager : MonoBehaviour
         string chosenText = clickedAlternative.GetComponentInChildren<TextMeshProUGUI>().text;
         int chosenAnswer = int.Parse(chosenText);
 
+        bool isCorrect = chosenAnswer == currentQuestion.CorrectAnswer;
+
+        // Create a log entry
+        S_AnswerLog entry = new S_AnswerLog
+        {
+            category = currentQuestion.Category,
+            question = currentQuestion.Text,
+            correctAnswer = currentQuestion.CorrectAnswer,
+            chosenAnswer = chosenAnswer,
+            isCorrect = isCorrect,
+            timeStamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+        };
+
+        // Add to the right category list
+        switch (entry.category.ToLower())
+        {
+            case "addition":
+                logs.addition.Add(entry);
+                if (entry.isCorrect) logs.additionSummary.correct++;
+                else logs.additionSummary.incorrect++;
+                break;
+            case "subtraction":
+                logs.subtraction.Add(entry);
+                if (entry.isCorrect) logs.subtractionSummary.correct++;
+                else logs.subtractionSummary.incorrect++;
+                break;
+            case "multiplication":
+                logs.multiplication.Add(entry);
+                if (entry.isCorrect) logs.multiplicationSummary.correct++;
+                else logs.multiplicationSummary.incorrect++;
+                break;
+            case "division":
+                logs.division.Add(entry);
+                if (entry.isCorrect) logs.divisionSummary.correct++;
+                else logs.divisionSummary.incorrect++;
+                break;
+            default:
+                Debug.LogWarning("Unknown category: " + entry.category);
+                break;
+        }
+
+        switch (entry.category.ToLower())
+        {
+            case "addition":
+                sessionLogs.addition.Add(entry);
+                break;
+            case "subtraction":
+                sessionLogs.subtraction.Add(entry);
+                break;
+            case "multiplication":
+                sessionLogs.multiplication.Add(entry);
+                break;
+            case "division":
+                sessionLogs.division.Add(entry);
+                break;
+        }
+
+        SaveLogs(); // write to JSON
+
+        // Existing answer handling
+        if (isCorrect)
+        {
+            OnCorrectAnswer?.Invoke();
+            clickedAlternative.GetComponent<Image>().color = greenSeeThroughColor;
+        }
+        else
+        {
+            clickedAlternative.GetComponent<Image>().color = redSeeThroughColor;
+        }
+
         if (chosenAnswer == currentQuestion.CorrectAnswer)
         {
             OnCorrectAnswer?.Invoke();
+
+
             // Correct -> Green
             clickedAlternative.GetComponent<Image>().color = greenSeeThroughColor;
 
@@ -280,6 +365,19 @@ public class S_MathManager : MonoBehaviour
     public int GetScore()
     {
         return score;
+    }
+
+
+
+    private void SaveLogs()
+    {
+        string json = JsonUtility.ToJson(logs, true);
+        File.WriteAllText(logFilePath, json);
+    }
+
+    private void OnApplicationQuit()
+    {
+        S_AnswerLogLoader.PrintLogs(sessionLogs); // only current session
     }
 }
 
