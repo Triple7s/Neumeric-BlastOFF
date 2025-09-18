@@ -2769,18 +2769,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8552134717624371188, guid: 0a7f962eb197bb54c8db822b06f3e24a, type: 3}
---- !u!114 &1290303889 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3208749892261613304, guid: eeb962853cde93c479699abfd65b4d30,
-    type: 3}
-  m_PrefabInstance: {fileID: 2105694814}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &1305189129
 GameObject:
   m_ObjectHideFlags: 0
@@ -4841,11 +4829,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1901489227}
     m_Modifications:
-    - target: {fileID: 2759165758129414897, guid: eeb962853cde93c479699abfd65b4d30,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7766478484596330770, guid: eeb962853cde93c479699abfd65b4d30,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4896,16 +4879,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7843726693224359045, guid: eeb962853cde93c479699abfd65b4d30,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -134.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7843726693224359045, guid: eeb962853cde93c479699abfd65b4d30,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -38.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8729470789501332242, guid: eeb962853cde93c479699abfd65b4d30,
         type: 3}
       propertyPath: m_Name
@@ -4913,13 +4886,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8864479576064102627, guid: eeb962853cde93c479699abfd65b4d30,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -9.900024
-      objectReference: {fileID: 0}
-    - target: {fileID: 8864479576064102627, guid: eeb962853cde93c479699abfd65b4d30,
-        type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -8.100006
+      value: -8.099976
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5081,7 +5049,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pointsText
       value: 
-      objectReference: {fileID: 1290303889}
+      objectReference: {fileID: 0}
     - target: {fileID: 9126587723103453095, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: mathManager
