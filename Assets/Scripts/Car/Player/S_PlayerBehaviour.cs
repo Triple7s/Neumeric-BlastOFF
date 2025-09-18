@@ -27,8 +27,8 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         playerInputRegister.BrakeReleased += StopBrake;
 
         S_MathManager.OnCorrectAnswer += Boost;
-        S_MathManager.OnStartQTM += TurnOnAutoSteering;
-        S_MathManager.OnStopQTM += TurnOffAutoSteering;
+        S_MathManager.OnStartQtm += TurnOnAutoSteering;
+        S_MathManager.OnStopQtm += TurnOffAutoSteering;
     }
 
     protected override void Start()
@@ -136,7 +136,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         playerInputRegister.BrakeReleased -= StopBrake;
 
         S_MathManager.OnCorrectAnswer -= Boost;
-        S_MathManager.OnStartQTM -= TurnOnAutoSteering;
-        S_MathManager.OnStopQTM -= TurnOffAutoSteering;
+        S_MathManager.OnStartQtm -= TurnOnAutoSteering;
+        S_MathManager.OnStopQtm -= TurnOffAutoSteering;
     }
 }
