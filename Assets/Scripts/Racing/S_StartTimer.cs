@@ -7,7 +7,7 @@ public class S_StartTimer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private float countDown, visibleDuration, fadeDuration;
-    [SerializeField] private GameObject qtmWheel;
+    [SerializeField] private S_MathManager qtmWheel;
     
     private float timer;
     private bool isQtmSpawned;
@@ -32,7 +32,7 @@ public class S_StartTimer : MonoBehaviour
                 if (Mathf.Approximately(Mathf.Ceil(timer), visibleDuration) && !isQtmSpawned)
                 {
                     isQtmSpawned = true;
-                    qtmWheel.SetActive(true);
+                    qtmWheel.gameObject.SetActive(true);
                 }
             }
             else if (timer <= 0)
@@ -40,7 +40,7 @@ public class S_StartTimer : MonoBehaviour
             
                 OnTimerEnd?.Invoke();
                 timerText.text = "GO!";
-                qtmWheel.SetActive(false);
+                qtmWheel.RaceStart();
                 break;
             }
             timer -= Time.deltaTime;

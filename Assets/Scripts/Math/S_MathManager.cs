@@ -299,6 +299,11 @@ public class S_MathManager : MonoBehaviour
         }
     }
 
+    public void RaceStart()
+    {
+        StartCoroutine(HideQuestionUIAfterDelay(0));
+    }
+    
     private IEnumerator ShowNextQuestionAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
