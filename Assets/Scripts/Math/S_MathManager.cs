@@ -24,10 +24,10 @@ public class S_MathManager : MonoBehaviour
     [SerializeField] private GameObject questionUI;
     [SerializeField] private SO_Equations equations;
 
-    public GameObject multiplier;
-    public TextMeshProUGUI questionText;
-    public TextMeshProUGUI pointsText;
-    public TextMeshProUGUI multiplierText;
+    [SerializeField] private GameObject multiplier;
+    [SerializeField] private TextMeshProUGUI questionText;
+    [SerializeField] private TextMeshProUGUI pointsText;
+    [SerializeField] private TextMeshProUGUI multiplierText;
 
     // Some variable instantiation for triggers
     public static S_MathManager Instance;
@@ -267,14 +267,14 @@ public class S_MathManager : MonoBehaviour
             {
                 score += qtmPoints;
                 numberOfCorrectAnswerInRow++;
-                pointsText.text = score.ToString();
+                pointsText.text = "Score: " + score;
 
                 multiplier.SetActive(true);
             }
             else
             {
                 numberOfCorrectAnswerInRow++;
-                multiplierText.text = numberOfCorrectAnswerInRow.ToString();
+                multiplierText.text = "Multiplier: X" + numberOfCorrectAnswerInRow;
                 Combo(numberOfCorrectAnswerInRow);
             }
 
@@ -343,7 +343,7 @@ public class S_MathManager : MonoBehaviour
             correctAnswersInRow = 5;
 
         score += qtmPoints + correctAnswersInRow;
-        pointsText.text = score.ToString();
+        pointsText.text = "Score: " + score;
     }
 
     public int GetScore()
