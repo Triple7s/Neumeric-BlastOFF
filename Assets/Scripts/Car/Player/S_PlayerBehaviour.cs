@@ -2,30 +2,25 @@ using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class S_PlayerBehaviour : MonoBehaviour
+public class S_PlayerBehaviour : S_CarBaseBehaviour
 {
-    [Header("Player Variables")]
-    [SerializeField] private S_CarData data;
-    
-    
     [Header("Scripts")]
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
-    [SerializeField] private S_CarHoverBarycentric carHoverBarycentric;
     [SerializeField] private S_PlayerCameraController cameraController;
     [SerializeField] private S_CameraStabilizer cameraStabilizer;
     [SerializeField] private S_MathManager mathManager;
-    [SerializeField] private S_Racer racer;
 
-    private Rigidbody rb;
+    
     
     private bool isTurning, isBraking, isDrifting, isQTM;
     private int turnDirection;
     private float currentAcceleration, currentFloatingHeight;
     
-    private bool isEngineRunning = false;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+        
         playerInputRegister.LeftPressed += TurnLeft;
         playerInputRegister.RightPressed += TurnRight;
         playerInputRegister.TurnReleased += StopTurning;
@@ -34,25 +29,17 @@ public class S_PlayerBehaviour : MonoBehaviour
         playerInputRegister.BrakeReleased += StopBrake;
 
         mathManager.OnCorrectAnswer += Boost;
-        
-        rb = GetComponent<Rigidbody>();
-        
     }
 
-    private void Start()
+    protected override void Start()
     {
-        currentFloatingHeight = data.BaseFloatingHeight;
-
-        rb.mass = data.Mass;
-        rb.linearDamping = data.LinearDamping;
-        rb.angularDamping = data.AngularDamping;
+        base.Start();
     }
 
-    void FixedUpdate()
+    protected override void FixedUpdate()
     {
-        if (!isEngineRunning)   return;
+        base.FixedUpdate();
         
-        carHoverBarycentric.HoverOverGround(currentFloatingHeight);
         
         if (isBraking)
         {
@@ -61,6 +48,15 @@ public class S_PlayerBehaviour : MonoBehaviour
         else
         {
             Drive();
+        }
+        
+        if (isQTM)
+        {
+            AutoTurn(racer.GetDrivingDirection());
+        }
+        else if (isTurning)
+        {
+            Turn();
         }
         
         cameraController.SetFOV(rb.linearVelocity.magnitude / data.MaxSpeed);
@@ -83,73 +79,12 @@ public class S_PlayerBehaviour : MonoBehaviour
         */
     }
     
-    private void Drive()
-    {
-        rb.AddForce(transform.forward * (data.Acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
-
-        if (rb.linearVelocity.magnitude > data.MaxSpeed)
-        {
-            var newSpeed = rb.linearVelocity.normalized * data.MaxSpeed;
-            rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, newSpeed, Time.fixedDeltaTime * 5);
-
-            if (rb.linearVelocity.magnitude > data.MaxBoostSpeed)
-            {
-                var maxSpeed = rb.linearVelocity.normalized * data.MaxBoostSpeed;
-                rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, maxSpeed, Time.fixedDeltaTime / 10);
-            }
-        }
-
-        if (isQTM)
-        {
-            AutoTurn(racer.GetDrivingDirection());
-        }
-        else if (isTurning)
-        {
-            Turn();
-        }
-    }
-    
-    private void AutoTurn(Vector3 targetDirection)
-    {
-        Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
-        
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, data.TurningSpeed * Time.deltaTime);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("SpeedBoost"))
-        {
-            Boost();
-        }
-    }
-
-    public void Boost()
-    {
-        if (!isEngineRunning) return;
-            
-        Vector3 direction = rb.linearVelocity.normalized;
-        if (direction == Vector3.zero)
-        {
-            direction = transform.forward;
-        }
-        rb.AddForce(direction * data.BoostPower, ForceMode.Impulse);
-    }
-
-    public void TurnOnEngine()
-    {
-        isEngineRunning = true;
-    }
-
-    public void TurnOffEngine()
-    {
-        isEngineRunning = false;
-    }
-
     private void Turn()
     {
         rb.AddTorque(transform.TransformDirection(Vector3.up) * (Time.deltaTime * data.TurningSpeed * turnDirection), ForceMode.Impulse);
     }
+
+    #region Event Actions
 
     private void TurnLeft()
     {
@@ -178,4 +113,6 @@ public class S_PlayerBehaviour : MonoBehaviour
         isBraking = false;
         isDrifting = false;
     }
+
+    #endregion
 }

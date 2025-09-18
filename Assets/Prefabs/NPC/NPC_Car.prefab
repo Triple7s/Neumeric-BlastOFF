@@ -256,9 +256,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9062037704372422282}
   serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 10
+  m_LinearDamping: 1
+  m_AngularDamping: 5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -270,7 +270,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -310,9 +310,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55066077607c7e94397fadc4b1bb71c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_AIBehaviour
-  data: {fileID: 0}
-  carHoverBarycentric: {fileID: 2303461308326805710}
+  data: {fileID: 11400000, guid: 51cc559ab085f234c91e886638c9922b, type: 2}
   racer: {fileID: 2636353213146717478}
+  carHoverBarycentric: {fileID: 2303461308326805710}
 --- !u!114 &2303461308326805710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,12 +326,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_CarHoverBarycentric
   rayLength: 5
-  rotationSpeed: 5
-  heightChangeSpeed: 5
+  rotationSpeed: 10
+  heightChangeSpeed: 25
   fallingSpeed: 9.81
   targetLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &2636353213146717478
 MonoBehaviour:
   m_ObjectHideFlags: 0
