@@ -87,8 +87,6 @@ public class S_MathManager : MonoBehaviour
         {
             canvasGroup = questionUI.GetComponent<CanvasGroup>();
         }
-
-        DisplayQuestion();
     }
 
     public void Update() => GetScore();
@@ -101,8 +99,6 @@ public class S_MathManager : MonoBehaviour
         switch (currentTriggerID)
         {
             case S_TriggerVersion.QTMTrigger:
-                if (questionUI)
-                    questionUI.SetActive(true);
 
                 numberOfCorrectAnswerInRow = 0;
                 DisplayQuestion();
@@ -117,16 +113,17 @@ public class S_MathManager : MonoBehaviour
 
                 break;
             case S_TriggerVersion.MultipleQTMsTrigger:
-                if (questionUI)
-                    questionUI.SetActive(true);
+                
 
                 DisplayQuestion();
                 break;
         }
     }
 
-    private void DisplayQuestion()
+    public void DisplayQuestion()
     {
+        if (questionUI)
+            questionUI.SetActive(true);
         canvasGroup.interactable = true;
         ResetButtonColors();
 
@@ -148,7 +145,7 @@ public class S_MathManager : MonoBehaviour
         DisplayAlternatives(currentQuestion);
     }
 
-    public void DisplayAlternatives(Question question)
+    protected void DisplayAlternatives(Question question)
     {
         HashSet<int> alternatives = new HashSet<int>();
         alternatives.Add(currentQuestion.CorrectAnswer);
