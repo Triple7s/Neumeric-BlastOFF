@@ -28,8 +28,9 @@ public class S_StartTimer : MonoBehaviour
         {
             if (timer > 0)
             {
-                timerText.text = timer.ToString("F2");
-                if (Mathf.Approximately(Mathf.Ceil(timer), visibleDuration) && !isQtmSpawned)
+                var timeCeil = Mathf.Ceil(timer);
+                timerText.text = timeCeil.ToString();
+                if (Mathf.Approximately(timeCeil, visibleDuration) && !isQtmSpawned)
                 {
                     isQtmSpawned = true;
                     mathManager.DisplayQuestion();

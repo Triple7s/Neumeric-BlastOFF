@@ -2552,6 +2552,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2212009239438826721, guid: 9636c94670245b84291a6fb77d12615c, type: 3}
+--- !u!114 &1162019833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162019827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1172658920
 GameObject:
   m_ObjectHideFlags: 0
@@ -3962,6 +3974,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1162019829}
+    - targetCorrespondingSourceObject: {fileID: -1599826595754709761, guid: 9636c94670245b84291a6fb77d12615c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1162019833}
   m_SourcePrefab: {fileID: 100100000, guid: 9636c94670245b84291a6fb77d12615c, type: 3}
 --- !u!1 &1772850627
 GameObject:
