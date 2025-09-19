@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="02b2abd1-4345-46b9-b20b-4cc4cc0dcf8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarHoverBarycentric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarHoverBarycentric.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racing/S_RaceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Racing/S_RaceManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racing/S_Racer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Racing/S_Racer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/S_DrivableSurface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/S_DrivableSurface.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

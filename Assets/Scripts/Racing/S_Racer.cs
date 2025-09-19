@@ -50,6 +50,11 @@ public class S_Racer : MonoBehaviour
         nextCheckPoint = S_CheckPointManager.Instance.GetCheckPoint(targetCheckPointIndex + 1);
     }
 
+    public float GetDistanceFromCheckPoint()
+    {
+        return Vector3.Distance(transform.position, targetCheckPoint.transform.position);
+    }
+
     public Vector3 GetDrivingDirection()
     {
         var dirTarget = (targetCheckPoint.transform.position - transform.position);

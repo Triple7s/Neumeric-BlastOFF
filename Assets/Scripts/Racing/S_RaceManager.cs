@@ -51,17 +51,20 @@ public class S_RaceManager : MonoBehaviour
 
     private void CalculatePlacement()
     {
-        racers = racers.OrderBy(x => x.targetCheckPointIndex).ToList();
-        racers.Reverse();
+        racers = racers.OrderByDescending(x => x.targetCheckPointIndex).ThenBy(DistToTarget).ToList();
         for (int i = 0; i < racers.Count; i++)
         {
-            if (racers[i].TryGetComponent(out S_PlayerBehaviour player))
+            if (racers[i].TryGetComponent(out S_PlayerBehaviour _))
             {
                 visualManager.UpdatePlaceText(i+1);
             }
         }
     }
-    
+
+    private float DistToTarget(S_Racer r)
+    {
+        return r.GetDistanceFromCheckPoint();
+    }
 
     private void BoostStart()
     {

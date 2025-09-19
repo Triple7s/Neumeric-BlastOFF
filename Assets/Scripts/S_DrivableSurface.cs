@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshCollider))]
@@ -12,6 +11,10 @@ public class S_DrivableSurface : MonoBehaviour
         if (mc && mc.sharedMesh) {
             Normals = mc.sharedMesh.normals;
             Triangles = mc.sharedMesh.triangles;
+        }
+        else
+        {
+            Debug.LogError("Mesh is missing a MeshCollider");
         }
     }
 }
