@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class S_CheckPointManager : MonoBehaviour
 {
@@ -42,7 +40,6 @@ public class S_CheckPointManager : MonoBehaviour
         var targetDir = (dir1 + dir2).normalized;
         return targetDir;
     }
-
 
     public S_CheckPointEntity GetCheckPoint(int index)
     {
@@ -87,8 +84,6 @@ public class S_CheckPointManager : MonoBehaviour
     }
     #endregion
    
-    
-    
     private void OnDrawGizmos()
     {
         if (hideGizmos) return;
@@ -112,6 +107,7 @@ public class S_CheckPointManager : MonoBehaviour
                 Gizmos.DrawLine(prevEntity.transform.position + offset, 
                     entityOffset);
             }
+            
             if (i == checkPointEntities.Count -1)
             {
                 Gizmos.DrawLine(entity.transform.position + new Vector3(0, pointRadius, 0), 
@@ -127,11 +123,9 @@ public class S_CheckPointManager : MonoBehaviour
             
             prevEntity = entity;
         }
-        
     }
     private Quaternion CalculateRotationOfCheckPoint(S_CheckPointEntity thisEntity)
     {
-
         var targetDir = CalculateDirectionOfCheckPoint(thisEntity);
 
         Quaternion targetRotation = Quaternion.LookRotation(targetDir, Vector3.up);

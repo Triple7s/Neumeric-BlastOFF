@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="02b2abd1-4345-46b9-b20b-4cc4cc0dcf8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/P_PlayerCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/P_PlayerCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_WaypointSystem.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_WaypointSystem.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racing/CheckPoint/S_CheckPointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Racing/CheckPoint/S_CheckPointManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racing/S_RaceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Racing/S_RaceManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racing/S_Racer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Racing/S_Racer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Trigger/S_MultipleQTMsTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Trigger/S_MultipleQTMsTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/AmalgamA SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/AmalgamA SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +109,8 @@
       <workItem from="1757838128479" duration="12655000" />
       <workItem from="1758007321207" duration="11528000" />
       <workItem from="1758101324302" duration="5095000" />
-      <workItem from="1758183328096" duration="16947000" />
+      <workItem from="1758183328096" duration="16978000" />
+      <workItem from="1758267328647" duration="2377000" />
     </task>
     <servers />
   </component>

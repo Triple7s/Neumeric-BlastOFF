@@ -1,22 +1,24 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class S_RaceManager : MonoBehaviour
 {
     [SerializeField] private S_StartTimer startTimer;
     [SerializeField] private List<S_Racer> racers;
-
-    private List<S_CarBaseBehaviour> cars;
+    
+    [SerializeField] private S_VisualManager visualManager;
+    
+    private List<S_CarBaseBehaviour> cars = new ();
     private bool answeredCorrectly;
     
     private void Awake()
     {
         startTimer.OnTimerEnd += StartRace;
         S_MathManager.OnCorrectAnswer += BoostStart;
-
-        
     }
 
     private void Start()
@@ -27,8 +29,6 @@ public class S_RaceManager : MonoBehaviour
         {
             cars.Add(racer.GetComponent<S_CarBaseBehaviour>());
         }
-        
-        CalculatePlacement();
     }
 
     private void StartRace()
@@ -43,17 +43,22 @@ public class S_RaceManager : MonoBehaviour
             }
         }
     }
-    
+
+    private void Update()
+    {
+        CalculatePlacement();
+    }
+
     private void CalculatePlacement()
     {
-        foreach (var racer in racers)
-        {
-            print(racer.name);
-        }
         racers = racers.OrderBy(x => x.targetCheckPointIndex).ToList();
-        foreach (var racer in racers)
+        racers.Reverse();
+        for (int i = 0; i < racers.Count; i++)
         {
-            print(racer.name);
+            if (racers[i].TryGetComponent(out S_PlayerBehaviour player))
+            {
+                visualManager.UpdatePlaceText(i+1);
+            }
         }
     }
     
