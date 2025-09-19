@@ -26,6 +26,20 @@ public class S_VisualManager : MonoBehaviour
 
     public void UpdatePlaceText(int place)
     {
-        placeText.text = "Place " + place;
+        var endingStr = "th";
+        switch (place)
+        {
+            case 1:
+                endingStr = "st";
+                break;
+            case 2:
+                endingStr = "nd";
+                break;
+            case 3:
+                endingStr = "rd";
+                break;
+        }
+        
+        placeText.text = "Place " + place + endingStr;
     }
 }
