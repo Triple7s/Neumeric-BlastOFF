@@ -21,11 +21,11 @@ public class S_VisualManager : MonoBehaviour
 
     public void UpdateLapText(int lapNumber)
     {
-        lapText.text = "LAP " + lapNumber;
+        //lapText.text = "LAP " + lapNumber;
     }
 
     public void UpdatePlaceText(int place)
     {
-        placeText.text = "Place " + place;
+        //placeText.text = "Place " + place;
     }
 }
