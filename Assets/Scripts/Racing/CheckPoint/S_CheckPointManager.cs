@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using SpinMotion;
 using UnityEngine;
 
 public class S_CheckPointManager : MonoBehaviour
@@ -24,28 +25,14 @@ public class S_CheckPointManager : MonoBehaviour
         else
             Destroy(this);
     }
-
     
-
-    private Vector3 CalculateDirectionOfCheckPoint(S_CheckPointEntity thisEntity)
-    {
-        int index = checkPointEntities.FindIndex((checkPointEntity) => checkPointEntity == thisEntity);
-
-        Vector3 dir1;
-        if (index-1 == -1)
-            dir1 = thisEntity.transform.position - checkPointEntities[^1].transform.position;
-        else
-            dir1 = thisEntity.transform.position - GetCheckPoint(index-1).transform.position;
-        var dir2 = GetCheckPoint(index + 1).transform.position - thisEntity.transform.position;
-        var targetDir = (dir1 + dir2).normalized;
-        return targetDir;
-    }
-
     public S_CheckPointEntity GetCheckPoint(int index)
     {
-        return checkPointEntities[index%checkPointEntities.Count];
+        var checkPointEntity = checkPointEntities[index%checkPointEntities.Count];
+        
+        return checkPointEntity;
     }
-
+    
     #region Registering Check Points
 
     public void RegisterCheckpoint(S_CheckPointEntity entity)
@@ -83,8 +70,10 @@ public class S_CheckPointManager : MonoBehaviour
         checkPointEntities.AddRange(sorted);
     }
     #endregion
-   
-    private void OnDrawGizmos()
+
+    #region Gizmos
+
+     private void OnDrawGizmos()
     {
         if (hideGizmos) return;
         
@@ -131,5 +120,20 @@ public class S_CheckPointManager : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(targetDir, Vector3.up);
         return targetRotation;
     }
+    private Vector3 CalculateDirectionOfCheckPoint(S_CheckPointEntity thisEntity)
+    {
+        int index = checkPointEntities.FindIndex((checkPointEntity) => checkPointEntity == thisEntity);
+
+        Vector3 dir1;
+        if (index-1 == -1)
+            dir1 = thisEntity.transform.position - checkPointEntities[^1].transform.position;
+        else
+            dir1 = thisEntity.transform.position - GetCheckPoint(index-1).transform.position;
+        var dir2 = GetCheckPoint(index + 1).transform.position - thisEntity.transform.position;
+        var targetDir = (dir1 + dir2).normalized;
+        return targetDir;
+    }
+
+    #endregion
     
 }
