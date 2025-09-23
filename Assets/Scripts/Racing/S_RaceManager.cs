@@ -51,7 +51,7 @@ public class S_RaceManager : MonoBehaviour
 
     private void CalculatePlacement()
     {
-        racers = racers.OrderByDescending(x => x.targetCheckPointIndex).ThenBy(DistToTarget).ToList();
+        racers = racers.OrderByDescending(x => x.TargetCheckPointIndex).ThenBy(DistToTarget).ToList();
         for (int i = 0; i < racers.Count; i++)
         {
             if (racers[i].TryGetComponent(out S_PlayerBehaviour _))

@@ -78,7 +78,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     
     private void Turn()
     {
-        rb.AddTorque(transform.TransformDirection(Vector3.up) * (Time.deltaTime * data.TurningSpeed * turnDirection), ForceMode.Impulse);
+        rb.AddTorque(transform.TransformDirection(Vector3.up) * (Time.deltaTime * turningSpeed * turnDirection), ForceMode.Impulse);
     }
 
     #region Event Actions

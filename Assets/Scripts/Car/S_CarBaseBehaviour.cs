@@ -8,6 +8,7 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     [SerializeField] protected S_Racer racer;
     [SerializeField] protected S_CarHoverBarycentric carHoverBarycentric;
     
+    protected float acceleration, turningSpeed, autoTurningSpeed;
     
     protected Rigidbody rb;
     
@@ -25,6 +26,10 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         rb.mass = data.Mass;
         rb.linearDamping = data.LinearDamping;
         rb.angularDamping = data.AngularDamping;
+        
+        acceleration = data.Acceleration;
+        turningSpeed = data.TurningSpeed;
+        autoTurningSpeed = data.AutoTurningSpeed;
     }
 
     protected virtual void FixedUpdate()
@@ -51,7 +56,7 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
 
     protected void Drive()
     {
-        rb.AddForce(transform.forward * (data.Acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
+        rb.AddForce(transform.forward * (acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
         
         if (rb.linearVelocity.magnitude > data.MaxSpeed)
         {
@@ -70,7 +75,7 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     {
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
         
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, data.AutoTurningSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, autoTurningSpeed * Time.deltaTime);
     }
     
     public void TurnOnEngine()

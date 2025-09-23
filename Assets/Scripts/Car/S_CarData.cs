@@ -19,8 +19,10 @@ public class S_CarData : ScriptableObject
     [SerializeField] private float maxSpeed = 100f;
     [SerializeField] private float maxBoostSpeed = 100f;
     [SerializeField] private float baseFloatingHeight = 1f;
-    
-    
+    [Header("NPC Only")] 
+    [SerializeField] private float distBeforeSpeedChange = 100f;
+    [SerializeField] private float accelerationFluctuating = 100f; 
+    [SerializeField] private float autoTurningSpeedFluctuating = 10f;
     public float Mass => mass;
     public float LinearDamping => linearDamping;
     public float AngularDamping => angularDamping;
@@ -34,5 +36,8 @@ public class S_CarData : ScriptableObject
     public float MaxBoostSpeed => maxBoostSpeed;
     public float BaseFloatingHeight => baseFloatingHeight;
     public float MinDriftSpeed => minDriftSpeed;
+    public float DistBeforeSpeedChange => distBeforeSpeedChange;
+    public float AccelerationFluctuating => accelerationFluctuating;
+    public float AutoTurningSpeedFluctuating => autoTurningSpeedFluctuating;
     
 }

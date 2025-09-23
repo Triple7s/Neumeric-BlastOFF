@@ -14,7 +14,7 @@ public class S_Racer : MonoBehaviour
     private S_CheckPointEntity targetCheckPoint, nextCheckPoint;
     private Vector3 targetPosition, nextPosition;
     
-    public int targetCheckPointIndex { get; private set; }
+    public int TargetCheckPointIndex { get; private set; }
     
     private void Start()
     {
@@ -23,7 +23,7 @@ public class S_Racer : MonoBehaviour
 
     private void Init()
     {
-        targetCheckPointIndex = 0;
+        TargetCheckPointIndex = 0;
         GetNextCheckPoint();
     }
 
@@ -41,15 +41,15 @@ public class S_Racer : MonoBehaviour
 
         if (dotValue < 0)
         {
-            targetCheckPointIndex++;
+            TargetCheckPointIndex++;
             GetNextCheckPoint();
         }
     }
 
     private void GetNextCheckPoint()
     {
-        targetCheckPoint = S_CheckPointManager.Instance.GetCheckPoint(targetCheckPointIndex);
-        nextCheckPoint = S_CheckPointManager.Instance.GetCheckPoint(targetCheckPointIndex + 1);
+        targetCheckPoint = S_CheckPointManager.Instance.GetCheckPoint(TargetCheckPointIndex);
+        nextCheckPoint = S_CheckPointManager.Instance.GetCheckPoint(TargetCheckPointIndex + 1);
         
         
         targetPosition = targetCheckPoint.transform.position;
