@@ -20,7 +20,7 @@ public class S_NpcBehaviour : S_CarBaseBehaviour
 
     private IEnumerator ComparePlayerPos()
     {
-        var secToWait = new WaitForSeconds(5f); 
+        var secToWait = new WaitForSeconds(3f); 
 
         while (true)
         {
@@ -29,14 +29,14 @@ public class S_NpcBehaviour : S_CarBaseBehaviour
             if (data.DistBeforeSpeedChange < Vector3.Distance(player.transform.position, transform.position))
             {
                 // Decrease as player is behind
-                FluctuatingAcceleration(1);
-                FluctuatingTurning(1);
+                FluctuatingAcceleration(-1);
+                FluctuatingTurning(-1);
             }
             else if (-data.DistBeforeSpeedChange > Vector3.Distance(player.transform.position, transform.position))
             {
                 // Increase as player is ahead
-                FluctuatingAcceleration(-1);
-                FluctuatingTurning(-1);
+                FluctuatingAcceleration(1);
+                FluctuatingTurning(1);
             }
         }
     }
