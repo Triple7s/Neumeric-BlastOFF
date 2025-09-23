@@ -33,7 +33,9 @@ public class S_StartTimer : MonoBehaviour
                 if (Mathf.Approximately(timeCeil, visibleDuration) && !isQtmSpawned)
                 {
                     isQtmSpawned = true;
-                    mathManager.DisplayQuestion();
+                    if (mathManager.isActiveAndEnabled)
+                        mathManager.DisplayQuestion();
+                    
                 }
             }
             else if (timer <= 0)
@@ -41,7 +43,8 @@ public class S_StartTimer : MonoBehaviour
             
                 OnTimerEnd?.Invoke();
                 timerText.text = "GO!";
-                mathManager.RaceStart();
+                if (mathManager.isActiveAndEnabled)
+                    mathManager.RaceStart();
                 break;
             }
             timer -= Time.deltaTime;
