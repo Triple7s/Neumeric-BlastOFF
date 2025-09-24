@@ -10,8 +10,6 @@ public class S_RaceManager : MonoBehaviour
     [SerializeField] private S_StartTimer startTimer;
     [SerializeField] private List<S_Racer> racers;
     
-    [SerializeField] private S_VisualManager visualManager;
-    
     private List<S_CarBaseBehaviour> cars = new ();
     private bool answeredCorrectly;
     
@@ -56,7 +54,7 @@ public class S_RaceManager : MonoBehaviour
         {
             if (racers[i].TryGetComponent(out S_PlayerBehaviour _))
             {
-                visualManager.UpdatePlaceText(i+1);
+                S_VisualManager.Instance.UpdatePlaceText(i+1);
             }
         }
     }
