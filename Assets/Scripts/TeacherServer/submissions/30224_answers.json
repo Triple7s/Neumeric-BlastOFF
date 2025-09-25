@@ -1,0 +1,53 @@
+{
+    "student_id": "30224",
+    "student_name": "Tywoo",
+    "answers": {
+        "answers": {
+            "addition": [],
+            "subtraction": [],
+            "multiplication": [
+                {
+                    "category": "multiplication",
+                    "question": "4 \u00d7 1 = ?",
+                    "correctAnswer": 4,
+                    "chosenAnswer": 4,
+                    "isCorrect": true,
+                    "timeStamp": "2025-09-24 21:57:53"
+                },
+                {
+                    "category": "multiplication",
+                    "question": "3 \u00d7 2 = ?",
+                    "correctAnswer": 6,
+                    "chosenAnswer": 6,
+                    "isCorrect": true,
+                    "timeStamp": "2025-09-24 21:57:55"
+                },
+                {
+                    "category": "multiplication",
+                    "question": "9 \u00d7 0 = ?",
+                    "correctAnswer": 0,
+                    "chosenAnswer": 0,
+                    "isCorrect": true,
+                    "timeStamp": "2025-09-24 21:57:56"
+                }
+            ],
+            "division": [],
+            "additionSummary": {
+                "correct": 0,
+                "incorrect": 0
+            },
+            "subtractionSummary": {
+                "correct": 0,
+                "incorrect": 0
+            },
+            "multiplicationSummary": {
+                "correct": 3,
+                "incorrect": 0
+            },
+            "divisionSummary": {
+                "correct": 0,
+                "incorrect": 0
+            }
+        }
+    }
+}

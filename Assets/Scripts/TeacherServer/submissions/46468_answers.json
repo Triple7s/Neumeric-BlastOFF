@@ -1,0 +1,55 @@
+{
+    "student_id": "46468",
+    "student_name": "Lambda",
+    "answers": {
+        "answers": {
+            "addition": [
+                {
+                    "category": "addition",
+                    "question": "2 + 2 = ?",
+                    "correctAnswer": 4,
+                    "chosenAnswer": 4,
+                    "isCorrect": true,
+                    "timeStamp": "2025-09-24 22:12:46"
+                }
+            ],
+            "subtraction": [
+                {
+                    "category": "subtraction",
+                    "question": "70 - 60 = ?",
+                    "correctAnswer": 10,
+                    "chosenAnswer": 10,
+                    "isCorrect": true,
+                    "timeStamp": "2025-09-24 22:12:45"
+                }
+            ],
+            "multiplication": [
+                {
+                    "category": "multiplication",
+                    "question": "2 \u00d7 6 = ?",
+                    "correctAnswer": 12,
+                    "chosenAnswer": 12,
+                    "isCorrect": true,
+                    "timeStamp": "2025-09-24 22:12:48"
+                }
+            ],
+            "division": [],
+            "additionSummary": {
+                "correct": 1,
+                "incorrect": 0
+            },
+            "subtractionSummary": {
+                "correct": 1,
+                "incorrect": 0
+            },
+            "multiplicationSummary": {
+                "correct": 1,
+                "incorrect": 0
+            },
+            "divisionSummary": {
+                "correct": 0,
+                "incorrect": 0
+            }
+        }
+    }
+}
