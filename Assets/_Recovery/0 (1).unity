@@ -472,14 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b06757ba27f110478a91da84bd0b07c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  mainMenuUXML: {fileID: 9197481963319205126, guid: 7fe62289aa93fb941a04b5abd5ee754d,
-    type: 3}
-  levelSelectUXML: {fileID: 9197481963319205126, guid: dafa0ec2dc3f6b841a27d60ac4c60ddc,
-    type: 3}
-  optionsUXML: {fileID: 9197481963319205126, guid: 43399a56c7df7d943b8d472a1d68b413,
-    type: 3}
-  transferDataUXML: {fileID: 9197481963319205126, guid: 46d76292825a35a43a4e3d6adab4e407,
-    type: 3}
+  uiDocument: {fileID: 1005614629}
 --- !u!1 &1532240914
 GameObject:
   m_ObjectHideFlags: 0
