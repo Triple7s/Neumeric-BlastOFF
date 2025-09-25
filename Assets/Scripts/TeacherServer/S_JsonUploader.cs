@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Collections;
 using System.IO;
@@ -9,6 +10,9 @@ public class S_JsonUploader : MonoBehaviour
     [Header("Teacher Server")]
     public string teacherIP = "192.168.10.162";
     public int teacherPort = 5000;
+
+    [Header("UI References")]
+    public InputField ipAddressInput;
 
     private string logFilePath;
 
@@ -21,6 +25,11 @@ public class S_JsonUploader : MonoBehaviour
     // Called by S_StudentManager
     public void UploadFromButton(string studentID, string studentName)
     {
+        if (ipAddressInput != null && !string.IsNullOrEmpty(ipAddressInput.text))
+        {
+            teacherIP = ipAddressInput.text;
+        }
+
         StartCoroutine(UploadJson(studentID, studentName));
     }
 

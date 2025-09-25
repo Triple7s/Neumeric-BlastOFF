@@ -497,6 +497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_JsonUploader
   teacherIP: 172.28.89.88
   teacherPort: 5000
+  ipAddressInput: {fileID: 0}
 --- !u!114 &2136067720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,56 +623,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6162465625312815393, guid: 5261c544f85e23c488234176a2e28f5e,
+    - target: {fileID: 6442147187517057587, guid: 5261c544f85e23c488234176a2e28f5e,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -5
+      propertyPath: m_text
+      value: 0.0.0.0
       objectReference: {fileID: 0}
-    - target: {fileID: 6162465625312815393, guid: 5261c544f85e23c488234176a2e28f5e,
+    - target: {fileID: 6442147187517057587, guid: 5261c544f85e23c488234176a2e28f5e,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 37
-      objectReference: {fileID: 0}
-    - target: {fileID: 7338546943407831802, guid: 5261c544f85e23c488234176a2e28f5e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7338546943407831802, guid: 5261c544f85e23c488234176a2e28f5e,
+    - target: {fileID: 6867268748487410940, guid: 5261c544f85e23c488234176a2e28f5e,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      propertyPath: m_Text
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7338546943407831802, guid: 5261c544f85e23c488234176a2e28f5e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2136067719}
-    - target: {fileID: 7338546943407831802, guid: 5261c544f85e23c488234176a2e28f5e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7338546943407831802, guid: 5261c544f85e23c488234176a2e28f5e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UploadFromButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 7338546943407831802, guid: 5261c544f85e23c488234176a2e28f5e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: S_JsonUploader, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7338546943407831802, guid: 5261c544f85e23c488234176a2e28f5e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7596006843059057774, guid: 5261c544f85e23c488234176a2e28f5e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -52
-      objectReference: {fileID: 0}
     - target: {fileID: 9026222222558946206, guid: 5261c544f85e23c488234176a2e28f5e,
         type: 3}
       propertyPath: m_Name

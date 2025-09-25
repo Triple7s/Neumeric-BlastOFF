@@ -19,12 +19,12 @@ public class S_StudentManager : MonoBehaviour
     void Start()
     {
         if (submitButton != null)
-            submitButton.onClick.AddListener(OnSubmitName);
+            submitButton.onClick.AddListener(OnSubmit);
         else
             Debug.LogWarning("Submit button not assigned in the Inspector!");
     }
 
-    void OnSubmitName()
+    void OnSubmit()
     {
         studentName = nameInputField.text;
 
@@ -33,6 +33,7 @@ public class S_StudentManager : MonoBehaviour
             Debug.LogWarning("Name field is empty!");
             return;
         }
+    
 
         studentID = GenerateStudentID();
 

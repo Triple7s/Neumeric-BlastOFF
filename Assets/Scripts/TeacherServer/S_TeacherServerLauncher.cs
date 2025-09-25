@@ -63,7 +63,7 @@ public class S_TeacherServerLauncher : MonoBehaviour
         serverProcess.StartInfo.CreateNoWindow = true;
 
         serverProcess.OutputDataReceived += (sender, args) => { if (args.Data != null) UnityEngine.Debug.Log("[Server] " + args.Data); };
-        serverProcess.ErrorDataReceived += (sender, args) => { if (args.Data != null) UnityEngine.Debug.LogError("[Server] " + args.Data); };
+        serverProcess.ErrorDataReceived += (sender, args) => { if (args.Data != null) UnityEngine.Debug.LogWarning("[Server] " + args.Data); };
 
         try
         {
