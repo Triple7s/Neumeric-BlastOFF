@@ -4,6 +4,7 @@ using UnityEngine.Networking;
 using System.Collections;
 using System.IO;
 using System.Text;
+using TMPro;
 
 public class S_JsonUploader : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class S_JsonUploader : MonoBehaviour
     public int teacherPort = 5000;
 
     [Header("UI References")]
-    public InputField ipAddressInput;
+    public TMP_InputField ipAddressInput;
 
     private string logFilePath;
 

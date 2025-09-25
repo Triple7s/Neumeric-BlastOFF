@@ -7,6 +7,7 @@ public class S_StudentManager : MonoBehaviour
 {
     [Header("UI References")]
     public TMP_InputField nameInputField;       // Input for student name
+    public TMP_InputField ipAddressInputField;
     public Button submitButton;                 // Button for submit
 
     [Header("Uploader")]
@@ -14,6 +15,7 @@ public class S_StudentManager : MonoBehaviour
 
     [Header("Student Info")]
     public string studentName;
+    public string ipAddress;
     public string studentID;
 
     void Start()
@@ -33,7 +35,14 @@ public class S_StudentManager : MonoBehaviour
             Debug.LogWarning("Name field is empty!");
             return;
         }
-    
+
+        ipAddress = ipAddressInputField.text;
+
+        if (string.IsNullOrEmpty(ipAddress))
+        {
+            Debug.LogWarning("IP field is empty!");
+            return;
+        }
 
         studentID = GenerateStudentID();
 
@@ -47,6 +56,8 @@ public class S_StudentManager : MonoBehaviour
         {
             Debug.LogWarning("Uploader not assigned!");
         }
+
+
     }
 
     string GenerateStudentID()
