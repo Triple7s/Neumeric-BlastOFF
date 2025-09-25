@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public abstract class S_CarBaseBehaviour : MonoBehaviour
@@ -8,7 +9,7 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     [SerializeField] protected S_Racer racer;
     [SerializeField] protected S_CarHoverBarycentric carHoverBarycentric;
     
-    protected float acceleration, turningSpeed, autoTurningSpeed;
+    protected float acceleration, turningSpeed, autoTurningSpeed, maxSpeed;
     
     protected Rigidbody rb;
     
@@ -30,6 +31,7 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         acceleration = data.Acceleration;
         turningSpeed = data.TurningSpeed;
         autoTurningSpeed = data.AutoTurningSpeed;
+        maxSpeed = data.MaxSpeed;
     }
 
     protected virtual void FixedUpdate()
@@ -54,14 +56,29 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         rb.AddForce(direction * data.BoostPower, ForceMode.Impulse);
     }
 
+    protected void SlowDown()
+    {
+        if (!isEngineRunning) return;
+
+        maxSpeed = data.MaxSlowDownSpeed;
+
+        StartCoroutine(ResetSpeed());
+    }
+
+    private IEnumerator ResetSpeed()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        maxSpeed = data.MaxSpeed;
+    }
+
     protected void Drive()
     {
         rb.AddForce(transform.forward * (acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
         
-        if (rb.linearVelocity.magnitude > data.MaxSpeed)
+        if (rb.linearVelocity.magnitude > maxSpeed)
         {
-            var newSpeed = rb.linearVelocity.normalized * data.MaxSpeed;
-            rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, newSpeed, Time.fixedDeltaTime * 5);
+            var newSpeed = rb.linearVelocity.normalized * maxSpeed;
+            rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, newSpeed, Time.fixedDeltaTime);
 
             if (rb.linearVelocity.magnitude > data.MaxBoostSpeed)
             {
