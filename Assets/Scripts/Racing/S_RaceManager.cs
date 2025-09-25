@@ -84,11 +84,6 @@ public class S_RaceManager : MonoBehaviour
     {
         answeredCorrectly = true;
     }
-    
-    public void RestartRace()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
 
     private void OnDisable()
     {

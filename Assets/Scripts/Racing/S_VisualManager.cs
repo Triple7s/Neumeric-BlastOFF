@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class S_VisualManager : MonoBehaviour
 {
@@ -75,5 +76,10 @@ public class S_VisualManager : MonoBehaviour
             default:
                 return "th";
         }
+    }
+    
+    public void RestartRace()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
