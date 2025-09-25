@@ -12,6 +12,7 @@ public class S_RaceManager : MonoBehaviour
     
     private List<S_CarBaseBehaviour> cars = new ();
     private bool answeredCorrectly;
+    private int lapCounter;
     
     private void Awake()
     {
@@ -27,6 +28,8 @@ public class S_RaceManager : MonoBehaviour
         {
             cars.Add(racer.GetComponent<S_CarBaseBehaviour>());
         }
+
+        lapCounter = 1;
     }
 
     private void StartRace()
@@ -55,6 +58,7 @@ public class S_RaceManager : MonoBehaviour
             if (racers[i].TryGetComponent(out S_PlayerBehaviour _))
             {
                 S_VisualManager.Instance.UpdatePlaceText(i+1);
+                S_VisualManager.Instance.UpdateLapText(lapCounter + S_CheckPointManager.Instance.GetLap(racers[i].TargetCheckPointIndex));
             }
         }
     }

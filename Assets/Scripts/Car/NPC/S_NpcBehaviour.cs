@@ -1,21 +1,32 @@
 using System.Collections;
 using UnityEngine;
 
+
 public class S_NpcBehaviour : S_CarBaseBehaviour
 {
-    S_PlayerBehaviour player;
+    private enum NpcPlacement
+    {
+        BehindPlayer,
+        EqualPlayer,
+        FrontPlayer,
+    }
+    
+    private S_PlayerBehaviour player;
+    private NpcPlacement placement;
     protected override void Awake()
     {
         base.Awake();
         
         player = FindAnyObjectByType<S_PlayerBehaviour>();
+        
+        placement = NpcPlacement.FrontPlayer;
     }
 
     protected override void Start()
     {
         base.Start();
 
-        StartCoroutine(ComparePlayerPos());
+        //StartCoroutine(ComparePlayerPos());
     }
 
     private IEnumerator ComparePlayerPos()
@@ -27,17 +38,29 @@ public class S_NpcBehaviour : S_CarBaseBehaviour
             yield return secToWait;
             
             if (data.DistBeforeSpeedChange < Vector3.Distance(player.transform.position, transform.position))
-            {
-                // Decrease as player is behind
-                FluctuatingAcceleration(-1);
-                FluctuatingTurning(-1);
-            }
+                placement = NpcPlacement.FrontPlayer;
             else if (-data.DistBeforeSpeedChange > Vector3.Distance(player.transform.position, transform.position))
-            {
-                // Increase as player is ahead
-                FluctuatingAcceleration(1);
-                FluctuatingTurning(1);
-            }
+                placement = NpcPlacement.BehindPlayer;
+            else
+                placement = NpcPlacement.EqualPlayer;
+
+            SetNpcStats();
+        }
+    }
+
+    private void SetNpcStats()
+    {
+        switch (placement)
+        {
+            case NpcPlacement.FrontPlayer:
+                // Decrease stats so player can catch up
+                break;
+            case NpcPlacement.EqualPlayer:
+                // Set stats to default
+                break;
+            case NpcPlacement.BehindPlayer:
+                // Increase stats so NPC can catch up
+                break;
         }
     }
 
@@ -46,15 +69,5 @@ public class S_NpcBehaviour : S_CarBaseBehaviour
         Drive();
         
         AutoTurn(racer.GetDrivingDirection());
-    }
-
-    private void FluctuatingAcceleration(float value)
-    {
-        acceleration += data.AccelerationFluctuating * value;
-    }
-
-    private void FluctuatingTurning(float value)
-    {
-        autoTurningSpeed += data.AutoTurningSpeedFluctuating * value;
     }
 }

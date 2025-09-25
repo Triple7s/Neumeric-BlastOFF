@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696651865292562746}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10572808, y: 0.7177598, z: -0.111749664, w: 0.6790836}
-  m_LocalPosition: {x: -47.594654, y: 0.1713674, z: 3.129547}
+  m_LocalRotation: {x: 0.14897148, y: 0.000000066978785, z: -0.000000010065, w: 0.98884153}
+  m_LocalPosition: {x: -0.00000020861626, y: 1.5, z: -3.2199993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -779,7 +779,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9041932598008035803}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14896461, y: -0.0005823646, z: -0.003865139, w: 0.98883486}
+  m_LocalRotation: {x: 0.14897148, y: 0.000000066978785, z: -0.000000010065, w: 0.98884153}
   m_LocalPosition: {x: 0, y: 1.5, z: -3.220001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1162,11 +1162,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8541761749437028038, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
