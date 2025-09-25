@@ -408,15 +408,3 @@ public class S_MathManager : MonoBehaviour
         S_AnswerLogLoader.PrintLogs(sessionLogs); // only current session
     }
 }
-
-    private void SaveLogs()
-    {
-        string json = JsonUtility.ToJson(logs, true);
-        File.WriteAllText(logFilePath, json);
-    }
-
-    private void OnApplicationQuit()
-    {
-        S_AnswerLogLoader.PrintLogs(sessionLogs); // only current session
-    }
-}
