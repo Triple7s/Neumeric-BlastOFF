@@ -9,6 +9,11 @@ using Random = UnityEngine.Random;
 
 //using System.Linq;
 
+public class AnswerLogCollectionWrapper
+{
+    public S_AnswerLogCollection answers;
+}
+
 public class S_MathManager : MonoBehaviour
 {
     private string logFilePath;
@@ -51,6 +56,7 @@ public class S_MathManager : MonoBehaviour
 
     private CanvasGroup canvasGroup;
 
+
     private Color whiteSeeThroughColor = new Color(1, 1, 1, 0.4f);
     private Color greenSeeThroughColor = new Color(0, 1, 0, 0.4f);
     private Color redSeeThroughColor = new Color(1, 0, 0, 0.4f);
@@ -59,16 +65,28 @@ public class S_MathManager : MonoBehaviour
 
     public void Start()
     {
-        logFilePath = Application.persistentDataPath + "/answers.json";
-        //string baseFileName = "answers_race_map_";
-        //string[] existingFiles = Directory.GetFiles(Application.persistentDataPath, baseFileName + "*.json");
 
-        // Log existing file if it exists
-        if (System.IO.File.Exists(logFilePath))
+        /*logs = new S_AnswerLogCollection();
+        File.WriteAllText(logFilePath, JsonUtility.ToJson(logs, true));*/
+
+        logFilePath = Application.persistentDataPath + "/answers.json";
+
+        // Always start with a fresh log:
+        logs = new S_AnswerLogCollection();
+        SaveLogs();
+
+        if (File.Exists(logFilePath))
         {
-            string json = System.IO.File.ReadAllText(logFilePath);
-            logs = JsonUtility.FromJson<S_AnswerLogCollection>(json);
-            if (logs == null) logs = new S_AnswerLogCollection();
+            string json = File.ReadAllText(logFilePath);
+            AnswerLogCollectionWrapper wrapper = JsonUtility.FromJson<AnswerLogCollectionWrapper>(json);
+            if (wrapper != null && wrapper.answers != null)
+                logs = wrapper.answers;
+            else
+                logs = new S_AnswerLogCollection();
+        }
+        else
+        {
+            logs = new S_AnswerLogCollection();
         }
 
         if (!questionText)
@@ -245,6 +263,7 @@ public class S_MathManager : MonoBehaviour
         // Existing answer handling
         if (isCorrect)
         {
+            OnCorrectAnswer?.Invoke();
             clickedAlternative.GetComponent<Image>().color = greenSeeThroughColor;
         }
         else
@@ -352,6 +371,43 @@ public class S_MathManager : MonoBehaviour
     {
         return score;
     }
+
+
+
+    private void SaveLogs()
+    {
+        AnswerLogCollectionWrapper wrapper = new AnswerLogCollectionWrapper
+        {
+            answers = logs // logs contains the current session answers
+        };
+
+        string json = JsonUtility.ToJson(wrapper, true);
+
+        File.WriteAllText(logFilePath, json);
+        Debug.Log("Saved logs to: " + logFilePath);
+
+        //UploadingToServer();
+    }
+
+    /*private void UploadingToServer()
+    {
+        S_JsonUploader uploader = FindObjectOfType<S_JsonUploader>();
+        if (uploader != null)
+        {
+            uploader.StartCoroutine(uploader.UploadJson());
+            Debug.Log("Upload triggered right after saving answers.json");
+        }
+        else
+        {
+            Debug.LogWarning("S_JsonUploader not found in scene!");
+        }
+    }*/
+
+    private void OnApplicationQuit()
+    {
+        S_AnswerLogLoader.PrintLogs(sessionLogs); // only current session
+    }
+}
 
     private void SaveLogs()
     {

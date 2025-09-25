@@ -1,0 +1,54 @@
+{
+    "student_id": "68642",
+    "student_name": "Anatoli",
+    "answers": {
+        "answers": {
+            "addition": [],
+            "subtraction": [],
+            "multiplication": [
+                {
+                    "category": "multiplication",
+                    "question": "9 \u00d7 0 = ?",
+                    "correctAnswer": 0,
+                    "chosenAnswer": 0,
+                    "isCorrect": true,
+                    "timeStamp": "2025-09-25 11:25:53"
+                }
+            ],
+            "division": [
+                {
+                    "category": "division",
+                    "question": "4 \u00f7 2 = ?",
+                    "correctAnswer": 2,
+                    "chosenAnswer": 2,
+                    "isCorrect": true,
+                    "timeStamp": "2025-09-25 11:25:56"
+                },
+                {
+                    "category": "division",
+                    "question": "8 \u00f7 2 = ?",
+                    "correctAnswer": 4,
+                    "chosenAnswer": 4,
+                    "isCorrect": true,
+                    "timeStamp": "2025-09-25 11:25:57"
+                }
+            ],
+            "additionSummary": {
+                "correct": 0,
+                "incorrect": 0
+            },
+            "subtractionSummary": {
+                "correct": 0,
+                "incorrect": 0
+            },
+            "multiplicationSummary": {
+                "correct": 1,
+                "incorrect": 0
+            },
+            "divisionSummary": {
+                "correct": 2,
+                "incorrect": 0
+            }
+        }
+    }
+}

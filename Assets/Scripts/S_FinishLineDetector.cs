@@ -1,5 +1,7 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class S_FinishLineDetector : MonoBehaviour
 {
@@ -28,6 +30,7 @@ public class S_FinishLineDetector : MonoBehaviour
             else
             {
                 Instantiate(Resources.Load("Win UI"));
+                FindFirstObjectByType<LoadFinalScore>().LoadFinalScoreScene();
             }
         }
     }
