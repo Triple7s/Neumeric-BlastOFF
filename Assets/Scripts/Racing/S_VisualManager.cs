@@ -10,6 +10,11 @@ public class S_VisualManager : MonoBehaviour
     
     [SerializeField] private TextMeshProUGUI lapText, placeText;
 
+    [Header("Finish UI")] 
+    [SerializeField] private GameObject[] canvasesToHide;
+    [SerializeField] private GameObject finishUI;
+    [SerializeField] private TextMeshProUGUI finalPlaceText;
+
     private void Awake()
     {
         if (Instance == null)
@@ -44,20 +49,31 @@ public class S_VisualManager : MonoBehaviour
 
     public void UpdatePlaceText(int place)
     {
-        var endingStr = "th";
+        placeText.text = "Place " + place + EndingNumber(place);
+    }
+
+    public void EndRace(int place)
+    {
+        foreach (var canvas in canvasesToHide)
+        {
+            canvas.SetActive(false);
+        }
+        finishUI.SetActive(true);
+        finalPlaceText.text = "Place " + place + EndingNumber(place);
+    }
+
+    private string EndingNumber(int place)
+    {
         switch (place)
         {
             case 1:
-                endingStr = "st";
-                break;
+                return "st";
             case 2:
-                endingStr = "nd";
-                break;
+                return "nd";
             case 3:
-                endingStr = "rd";
-                break;
+                return "rd";
+            default:
+                return "th";
         }
-        
-        placeText.text = "Place " + place + endingStr;
     }
 }

@@ -7,8 +7,10 @@ public class S_RaceManager : MonoBehaviour
 {
     [SerializeField] private S_StartTimer startTimer;
     [SerializeField] private List<S_Racer> racers;
+    [SerializeField] private int raceLaps;
     
     private List<S_CarBaseBehaviour> cars = new ();
+    private bool isRacing;
     private bool answeredCorrectly;
     private int lapCounter;
     
@@ -16,6 +18,8 @@ public class S_RaceManager : MonoBehaviour
     {
         startTimer.OnTimerEnd += StartRace;
         S_MathManager.OnCorrectAnswer += BoostStart;
+        
+        isRacing = true;
     }
 
     private void Start()
@@ -45,6 +49,8 @@ public class S_RaceManager : MonoBehaviour
 
     private void Update()
     {
+        if (!isRacing)
+            return;
         CalculatePlacement();
     }
 
@@ -53,10 +59,18 @@ public class S_RaceManager : MonoBehaviour
         racers = racers.OrderByDescending(x => x.TargetCheckPointIndex).ThenBy(DistToTarget).ToList();
         for (int i = 0; i < racers.Count; i++)
         {
-            if (racers[i].TryGetComponent(out S_PlayerBehaviour _))
+            if (racers[i].TryGetComponent(out S_PlayerBehaviour player))
             {
+                int thisLap = lapCounter + S_CheckPointManager.Instance.GetLap(racers[i].TargetCheckPointIndex);
                 S_VisualManager.Instance.UpdatePlaceText(i+1);
-                S_VisualManager.Instance.UpdateLapText(lapCounter + S_CheckPointManager.Instance.GetLap(racers[i].TargetCheckPointIndex));
+                S_VisualManager.Instance.UpdateLapText(thisLap);
+
+                if (thisLap == raceLaps)
+                {
+                    S_VisualManager.Instance.EndRace(i+1);
+                    player.EndRace();
+                    isRacing = false;
+                }
             }
         }
     }

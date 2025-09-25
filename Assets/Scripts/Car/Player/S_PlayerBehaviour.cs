@@ -36,6 +36,11 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         base.Start();
     }
 
+    public void EndRace()
+    {
+        alwaysUseAutoSteering = true;
+    }
+    
     protected override void BehaviourUpdate()
     {
         if (alwaysUseAutoSteering)
