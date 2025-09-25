@@ -246,6 +246,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eeb962853cde93c479699abfd65b4d30, type: 3}
+--- !u!1 &306193151 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6821075739749948, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2029708422}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &397952402 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 707055343029349790, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
@@ -1317,7 +1323,7 @@ MonoBehaviour:
   startTimer: {fileID: 1091770912}
   racers:
   - {fileID: 1927137699}
-  raceLaps: 0
+  raceLaps: 3
 --- !u!1 &1407903543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,7 +1612,9 @@ MonoBehaviour:
   controls: {fileID: 397952402}
   lapText: {fileID: 565197683}
   placeText: {fileID: 736400949}
-  canvasesToHide: []
+  canvasesToHide:
+  - {fileID: 1254792541}
+  - {fileID: 306193151}
   finishUI: {fileID: 2015672118}
   finalPlaceText: {fileID: 451962281}
 --- !u!1 &1720394098
@@ -1991,7 +1999,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2015672119
 RectTransform:
   m_ObjectHideFlags: 0
