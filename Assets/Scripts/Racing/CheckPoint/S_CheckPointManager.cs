@@ -102,6 +102,15 @@ public class S_CheckPointManager : MonoBehaviour
      private void OnDrawGizmos()
     {
         if (hideGizmos) return;
+
+        foreach (var entity in checkPointEntities)
+        {
+            if (!entity)
+            {
+                Debug.LogError("Empty Check Point Entity in List");
+                return;
+            }
+        }
         
         S_CheckPointEntity prevEntity = null;
         for (int i = 0; i < checkPointEntities.Count; i++)
@@ -143,6 +152,11 @@ public class S_CheckPointManager : MonoBehaviour
     {
         var targetDir = CalculateDirectionOfCheckPoint(thisEntity);
 
+        if (targetDir == Vector3.zero)
+        {
+            Debug.LogError("Missing Target Direction");
+            return Quaternion.identity;
+        }
         Quaternion targetRotation = Quaternion.LookRotation(targetDir, Vector3.up);
         return targetRotation;
     }
