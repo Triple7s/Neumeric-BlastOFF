@@ -32,6 +32,11 @@ public class S_CheckPointManager : MonoBehaviour
         
         return checkPointEntity;
     }
+
+    public int GetLap(int index)
+    {
+        return checkPointEntities.Count - index;
+    }
     
     #region Registering Check Points
 
