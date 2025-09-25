@@ -14,18 +14,13 @@ public class S_UI_Elements : MonoBehaviour
 
     private void Awake()
     {
-        
         uiDocument = GetComponent<UIDocument>();
-
-       
         ShowMainMenu();
     }
 
     private void RegisterCallbacks(VisualElement root)
     {
-        
 
-        // Main Menu Buttons
         if (root.Q<Button>("PlayBtn") != null)
         {
             root.Q<Button>("PlayBtn").clicked += ShowLevelSelect;
@@ -34,57 +29,51 @@ public class S_UI_Elements : MonoBehaviour
             root.Q<Button>("QuitBtn").clicked += QuitGame;
         }
 
-        // Level Select Buttons
-        if (root.Q<Button>("LevelSelectBackBtn") != null)
+        // --- Back Buttons ---
+        if (root.Q<Button>("BackToMainBtn") != null)
         {
-            root.Q<Button>("LevelSelectBackBtn").clicked += ShowMainMenu;
+            root.Q<Button>("BackToMainBtn").clicked += ShowMainMenu;
         }
 
-        var level1Btn = root.Q<Button>("Level1Btn");
-        if (level1Btn != null)
-        {
-            
-            level1Btn.clicked += () => LoadScene("Level1");
-        }
+        // --- Level Selection Buttons ---
 
-        // Options Buttons
-        if (root.Q<Button>("OptionsBackBtn") != null)
+        root.Query<Button>().ForEach(button =>
         {
-            root.Q<Button>("OptionsBackBtn").clicked += ShowMainMenu;
-        }
 
-        // Transfer Data Buttons
-        if (root.Q<Button>("TransferDataBackBtn") != null)
-        {
-            root.Q<Button>("TransferDataBackBtn").clicked += ShowMainMenu;
-        }
+            if (button.name.StartsWith("Level_"))
+            {
+                string sceneName = button.name.Substring("Level_".Length);
+
+
+                button.clicked += () => LoadScene(sceneName);
+            }
+        });
     }
 
     private void LoadAndShowMenu(VisualTreeAsset newUXML)
-    {       
+    {
         uiDocument.visualTreeAsset = newUXML;
-
         var root = uiDocument.rootVisualElement;
-
-        // Register button callbacks for the newly loaded menu.
         RegisterCallbacks(root);
     }
 
-    // Public methods to be called by buttons
+    // --- Scene Navigation Methods ---
     private void ShowMainMenu() => LoadAndShowMenu(mainMenuUXML);
     private void ShowLevelSelect() => LoadAndShowMenu(levelSelectUXML);
     private void ShowOptions() => LoadAndShowMenu(optionsUXML);
     private void ShowTransferData() => LoadAndShowMenu(transferDataUXML);
 
+    // --- Game Actions ---
+    private void LoadScene(string sceneName)
+    {
+        // The scene must be in File > Build Settings!
+        Debug.Log($"Loading scene: {sceneName}");
+        SceneManager.LoadScene(sceneName);
+    }
+
     private void QuitGame()
     {
         Debug.Log("Quitting game...");
         Application.Quit();
-    }
-
-    private void LoadScene(string sceneName)
-    {
-        Debug.Log($"Loading scene: {sceneName}");
-        SceneManager.LoadScene(sceneName);
     }
 }
