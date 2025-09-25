@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class S_CheckPointEntity : MonoBehaviour
 {
+
+    [Header("Checkpoint Settings")] public bool qtmStateStatus;
+    
     
 #if UNITY_EDITOR
     private void OnValidate()
