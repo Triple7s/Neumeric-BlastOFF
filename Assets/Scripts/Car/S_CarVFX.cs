@@ -26,12 +26,12 @@ public class S_CarVFX : MonoBehaviour
         {
             foreach (var render in carRenderers)
             {
-                render.material.color = Color.Lerp(render.material.color, blinkColor, 0.5f);
+                render.material.color = blinkColor;
             }
             yield return new WaitForSeconds(0.5f);
             foreach (var render in carRenderers)
             {
-                render.material.color = Color.Lerp(render.material.color, originalColor, 0.5f);
+                render.material.color = originalColor;
             }
             yield return new WaitForSeconds(0.5f);
         }

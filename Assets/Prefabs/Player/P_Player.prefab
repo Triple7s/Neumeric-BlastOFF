@@ -459,7 +459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bedd81184089004dbb2c749ba5f831b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_CarVFX
-  carRenderers: []
+  carRenderers:
+  - {fileID: 2093796422761843890}
   correctColor: {r: 0, g: 1, b: 0, a: 1}
   wrongColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &3478701134745462122

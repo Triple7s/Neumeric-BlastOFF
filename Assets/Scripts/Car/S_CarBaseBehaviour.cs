@@ -85,12 +85,12 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         if (rb.linearVelocity.magnitude > maxSpeed)
         {
             var newSpeed = rb.linearVelocity.normalized * maxSpeed;
-            rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, newSpeed, Time.fixedDeltaTime);
+            rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, newSpeed, 1 * Time.deltaTime);
 
             if (rb.linearVelocity.magnitude > data.MaxBoostSpeed)
             {
-                var maxSpeed = rb.linearVelocity.normalized * data.MaxBoostSpeed;
-                rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, maxSpeed, Time.fixedDeltaTime / 10);
+                var speed = rb.linearVelocity.normalized * data.MaxBoostSpeed;
+                rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, speed, 0.1f * Time.deltaTime);
             }
         }
     }
