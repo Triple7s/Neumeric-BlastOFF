@@ -31,13 +31,13 @@ public class S_NeumericRain : MonoBehaviour
     void OnEnable()
     {
         if (mathManager != null)
-            mathManager.OnCorrectAnswer += PlayAllParticles;
+            S_MathManager.OnCorrectAnswer += PlayAllParticles;
     }
 
     void OnDisable()
     {
         if (mathManager != null)
-            mathManager.OnCorrectAnswer -= PlayAllParticles;
+            S_MathManager.OnCorrectAnswer -= PlayAllParticles;
     }
 
     void PlayAllParticles()
