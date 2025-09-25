@@ -67,6 +67,9 @@ public class S_TeacherServerLauncher : MonoBehaviour
 
         try
         {
+            UnityEngine.Debug.Log("Using Python executable: " + pythonExecutable);
+            UnityEngine.Debug.Log("Starting Python server...");
+
             serverProcess.Start();
             serverProcess.BeginOutputReadLine();
             serverProcess.BeginErrorReadLine();

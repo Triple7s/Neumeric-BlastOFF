@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716dc7eabbaa4354bbc97031ceef69bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_JsonUploader
-  teacherIP: 192.168.10.162
+  teacherIP: 172.28.89.88
   teacherPort: 5000
 --- !u!114 &2136067720
 MonoBehaviour:
