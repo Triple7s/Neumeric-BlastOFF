@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 518059ea33ffb654cb109838e3f3aedf, type: 3}
+  m_Script: {fileID: 11500000, guid: a1f2211acdb949e409d190479305ffff, type: 3}
   m_Name: Equations
   m_EditorClassIdentifier: Assembly-CSharp::SO_Equations
   questions:
@@ -41,22 +41,22 @@ MonoBehaviour:
     y: 0
     operation: 2
   - x: 3
-    y: 2
+    y: 4
     operation: 2
   - x: 4
     y: 1
     operation: 2
-  - x: 2
-    y: 6
-    operation: 2
-  - x: 4
+  - x: 8
     y: 2
-    operation: 3
+    operation: 2
   - x: 8
     y: 2
     operation: 3
-  - x: 2
+  - x: 4
     y: 2
+    operation: 3
+  - x: 24
+    y: 6
     operation: 3
   - x: 12
     y: 4

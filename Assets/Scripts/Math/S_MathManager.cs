@@ -5,7 +5,8 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 using System.IO;
-using Unity.VisualScripting;
+using Random = UnityEngine.Random;
+
 //using System.Linq;
 
 public class AnswerLogCollectionWrapper
@@ -21,49 +22,40 @@ public class S_MathManager : MonoBehaviour
     private S_AnswerLogCollection sessionLogs = new S_AnswerLogCollection();
     //private string json;
 
-    public event Action OnCorrectAnswer;
+    public static event Action OnCorrectAnswer;
+    public static event Action OnStartQtm;
+    public static event Action OnStopQtm;
 
     [SerializeField] private GameObject questionUI;
     [SerializeField] private SO_Equations equations;
 
-    public GameObject multiplier;
-    public TextMeshProUGUI questionText;
-    public TextMeshProUGUI pointsText;
-    public TextMeshProUGUI multiplierText;
+    [SerializeField] private GameObject multiplier;
+    [SerializeField] private TextMeshProUGUI questionText;
+    [SerializeField] private TextMeshProUGUI pointsText;
+    [SerializeField] private TextMeshProUGUI multiplierText;
 
     // Some variable instantiation for triggers
     public static S_MathManager Instance;
     private S_TriggerVersion currentTriggerID = S_TriggerVersion.None;
 
     private Question currentQuestion;
-    [SerializeField] private GameObject circleDivision1;
-    [SerializeField] private GameObject circleDivision2;
-    [SerializeField] private GameObject circleDivision3;
-    [SerializeField] private GameObject circleDivision4;
+    [SerializeField] private Image circleImage1;
+    [SerializeField] private Image circleImage2;
+    [SerializeField] private Image circleImage3;
+    [SerializeField] private Image circleImage4;
 
-    [SerializeField] private GameObject Alternative1;
-    [SerializeField] private GameObject Alternative2;
-    [SerializeField] private GameObject Alternative3;
-    [SerializeField] private GameObject Alternative4;
+    [SerializeField] private TextMeshProUGUI alternative1Text;
+    [SerializeField] private TextMeshProUGUI alternative2Text;
+    [SerializeField] private TextMeshProUGUI alternative3Text;
+    [SerializeField] private TextMeshProUGUI alternative4Text;
 
     private int numberOfCorrectAnswerInRow = 0;
     [SerializeField] private int score;
     [SerializeField] private int qtmPoints = 5;
     [SerializeField] private int[] winPoints = { 25, 20, 18, 15, 12, 10, 8, 5 };
 
-    private int lastCorrectSlot = -1;
-
     private CanvasGroup canvasGroup;
 
-    private TextMeshProUGUI alternative1Text;
-    private TextMeshProUGUI alternative2Text;
-    private TextMeshProUGUI alternative3Text;
-    private TextMeshProUGUI alternative4Text;
-
-    private Image circleImage1;
-    private Image circleImage2;
-    private Image circleImage3;
-    private Image circleImage4;
 
     private Color whiteSeeThroughColor = new Color(1, 1, 1, 0.4f);
     private Color greenSeeThroughColor = new Color(0, 1, 0, 0.4f);
@@ -73,6 +65,7 @@ public class S_MathManager : MonoBehaviour
 
     public void Start()
     {
+
         /*logs = new S_AnswerLogCollection();
         File.WriteAllText(logFilePath, JsonUtility.ToJson(logs, true));*/
 
@@ -112,18 +105,6 @@ public class S_MathManager : MonoBehaviour
         {
             canvasGroup = questionUI.GetComponent<CanvasGroup>();
         }
-
-        alternative1Text = Alternative1.GetComponentInChildren<TextMeshProUGUI>();
-        alternative2Text = Alternative2.GetComponentInChildren<TextMeshProUGUI>();
-        alternative3Text = Alternative3.GetComponentInChildren<TextMeshProUGUI>();
-        alternative4Text = Alternative4.GetComponentInChildren<TextMeshProUGUI>();
-
-        circleImage1 = circleDivision1.GetComponent<Image>();
-        circleImage2 = circleDivision2.GetComponent<Image>();
-        circleImage3 = circleDivision3.GetComponent<Image>();
-        circleImage4 = circleDivision4.GetComponent<Image>();
-
-        DisplayQuestion();
     }
 
     public void Update() => GetScore();
@@ -136,8 +117,6 @@ public class S_MathManager : MonoBehaviour
         switch (currentTriggerID)
         {
             case S_TriggerVersion.QTMTrigger:
-                if (questionUI)
-                    questionUI.SetActive(true);
 
                 numberOfCorrectAnswerInRow = 0;
                 DisplayQuestion();
@@ -147,20 +126,22 @@ public class S_MathManager : MonoBehaviour
                 {
                     questionUI.SetActive(false);
                     multiplier.SetActive(false);
+                    OnStopQtm?.Invoke();
                 }
 
                 break;
             case S_TriggerVersion.MultipleQTMsTrigger:
-                if (questionUI)
-                    questionUI.SetActive(true);
+                
 
                 DisplayQuestion();
                 break;
         }
     }
 
-    private void DisplayQuestion()
+    public void DisplayQuestion()
     {
+        if (questionUI)
+            questionUI.SetActive(true);
         canvasGroup.interactable = true;
         ResetButtonColors();
 
@@ -171,17 +152,18 @@ public class S_MathManager : MonoBehaviour
         }
 
         // Pick a random question
-        int randomIndex = UnityEngine.Random.Range(0, equations.questions.Count);
+        int randomIndex = Random.Range(0, equations.questions.Count);
         currentQuestion = equations.questions[randomIndex];
 
         // Display question text
         questionText.text = currentQuestion.Text;
 
+        OnStartQtm?.Invoke();
 
         DisplayAlternatives(currentQuestion);
     }
 
-    public void DisplayAlternatives(Question question)
+    protected void DisplayAlternatives(Question question)
     {
         HashSet<int> alternatives = new HashSet<int>();
         alternatives.Add(currentQuestion.CorrectAnswer);
@@ -189,7 +171,7 @@ public class S_MathManager : MonoBehaviour
         // Generating 3 wrong answers
         while (alternatives.Count < 4)
         {
-            int wrongAnswer = question.CorrectAnswer + UnityEngine.Random.Range(-10, 11);
+            int wrongAnswer = question.CorrectAnswer + Random.Range(-10, 11);
             if (wrongAnswer < 0) wrongAnswer = Mathf.Abs(wrongAnswer);
             //if (wrongAnswer != currentQuestion.CorrectAnswer)
             if (!alternatives.Contains(wrongAnswer))
@@ -202,7 +184,7 @@ public class S_MathManager : MonoBehaviour
         List<int> shuffledAlternatives = new List<int>(alternatives);
         for (int i = 0; i < shuffledAlternatives.Count; i++)
         {
-            int rand = UnityEngine.Random.Range(i, shuffledAlternatives.Count);
+            int rand = Random.Range(i, shuffledAlternatives.Count);
             (shuffledAlternatives[i], shuffledAlternatives[rand]) = (shuffledAlternatives[rand], shuffledAlternatives[i]);
         }
 
@@ -301,14 +283,14 @@ public class S_MathManager : MonoBehaviour
             {
                 score += qtmPoints;
                 numberOfCorrectAnswerInRow++;
-                pointsText.text = score.ToString();
+                pointsText.text = "Score: " + score;
 
                 multiplier.SetActive(true);
             }
             else
             {
                 numberOfCorrectAnswerInRow++;
-                multiplierText.text = numberOfCorrectAnswerInRow.ToString();
+                multiplierText.text = "Multiplier: X" + numberOfCorrectAnswerInRow;
                 Combo(numberOfCorrectAnswerInRow);
             }
 
@@ -333,6 +315,11 @@ public class S_MathManager : MonoBehaviour
         }
     }
 
+    public void RaceStart()
+    {
+        StartCoroutine(HideQuestionUIAfterDelay(0));
+    }
+    
     private IEnumerator ShowNextQuestionAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
@@ -343,6 +330,8 @@ public class S_MathManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
+        OnStopQtm?.Invoke();
+        
         if (questionUI != null)
             questionUI.SetActive(false);
     }
@@ -375,7 +364,7 @@ public class S_MathManager : MonoBehaviour
             correctAnswersInRow = 5;
 
         score += qtmPoints + correctAnswersInRow;
-        pointsText.text = score.ToString();
+        pointsText.text = "Score: " + score;
     }
 
     public int GetScore()
@@ -420,3 +409,14 @@ public class S_MathManager : MonoBehaviour
     }
 }
 
+    private void SaveLogs()
+    {
+        string json = JsonUtility.ToJson(logs, true);
+        File.WriteAllText(logFilePath, json);
+    }
+
+    private void OnApplicationQuit()
+    {
+        S_AnswerLogLoader.PrintLogs(sessionLogs); // only current session
+    }
+}
