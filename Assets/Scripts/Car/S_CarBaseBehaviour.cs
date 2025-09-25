@@ -2,12 +2,15 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(S_Racer), typeof(S_CarHoverBarycentric), typeof(S_CarVFX))]
+
 public abstract class S_CarBaseBehaviour : MonoBehaviour
 {
     [SerializeField] protected S_CarData data;
-    
+    [Header("Scripts")]
     [SerializeField] protected S_Racer racer;
     [SerializeField] protected S_CarHoverBarycentric carHoverBarycentric;
+    [SerializeField] protected S_CarVFX carVfx;
     
     protected float acceleration, turningSpeed, autoTurningSpeed, maxSpeed;
     
@@ -47,7 +50,9 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     public void Boost()
     {
         if (!isEngineRunning) return;
-            
+        
+        carVfx.CorrectAnswerVisual();
+        
         Vector3 direction = rb.linearVelocity.normalized;
         if (direction == Vector3.zero)
         {
@@ -60,6 +65,8 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     {
         if (!isEngineRunning) return;
 
+        carVfx.WrongAnswerVisual();
+        
         maxSpeed = data.MaxSlowDownSpeed;
 
         StartCoroutine(ResetSpeed());
