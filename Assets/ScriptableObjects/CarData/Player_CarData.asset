@@ -20,7 +20,11 @@ MonoBehaviour:
   turningSpeed: 20
   autoTurningSpeed: 100
   boostPower: 500
+  slowDownPower: 125
   minDriftSpeed: 50
   maxSpeed: 400
   maxBoostSpeed: 600
   baseFloatingHeight: 0.5
+  distBeforeSpeedChange: 100
+  accelerationFluctuating: 100
+  autoTurningSpeedFluctuating: 10
