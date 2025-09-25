@@ -4,6 +4,7 @@ using UnityEngine.Serialization;
 
 public class S_PlayerBehaviour : S_CarBaseBehaviour
 {
+    [SerializeField] private bool alwaysUseAutoSteering;
     [Header("Scripts")]
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
     [SerializeField] private S_PlayerCameraController cameraController;
@@ -37,6 +38,14 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
 
     protected override void BehaviourUpdate()
     {
+        if (alwaysUseAutoSteering)
+        {
+            Drive();
+            AutoTurn(racer.GetDrivingDirection());
+            cameraStabilizer.StabilizeCamera(transform);
+            return;
+        }
+        
         if (isBraking)
         {
             BrakeOrDrift();

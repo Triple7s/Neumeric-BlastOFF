@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using SpinMotion;
 using UnityEngine;
 
 public class S_CheckPointManager : MonoBehaviour
@@ -8,7 +7,6 @@ public class S_CheckPointManager : MonoBehaviour
     
     [Header("Entities are Automatically added to the List")]
     [SerializeField] private List<S_CheckPointEntity> checkPointEntities = new ();
-
     
     [Header("Gizmos Settings")]
     [SerializeField] private bool hideGizmos;
@@ -35,7 +33,7 @@ public class S_CheckPointManager : MonoBehaviour
 
     public int GetLap(int index)
     {
-        return checkPointEntities.Count - index;
+        return Mathf.FloorToInt(index / checkPointEntities.Count);
     }
     
     #region Registering Check Points
@@ -60,7 +58,15 @@ public class S_CheckPointManager : MonoBehaviour
 
     public void SortList()
     {
+        CheckListForEmptyNullObjects();
+        if (checkPointEntities.Count < 2)
+        {
+            Debug.LogWarning("Not enough check points in scene");
+            return;
+        }
+        
         Debug.Log("Checkpoint List has been sorted");
+        
         List<S_CheckPointEntity> sorted = new();
 
         var entitiesParent = checkPointEntities[0].transform.parent;
@@ -74,6 +80,21 @@ public class S_CheckPointManager : MonoBehaviour
         checkPointEntities.Clear();
         checkPointEntities.AddRange(sorted);
     }
+
+    private void CheckListForEmptyNullObjects()
+    {
+        var tempList = new List<S_CheckPointEntity>();
+        
+        tempList.AddRange(checkPointEntities);
+        foreach (var entity in tempList)
+        {
+            if (!entity)
+            {
+                checkPointEntities.Remove(entity);
+            }
+        }
+    }
+
     #endregion
 
     #region Gizmos

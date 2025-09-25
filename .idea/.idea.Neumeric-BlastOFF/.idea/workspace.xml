@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="02b2abd1-4345-46b9-b20b-4cc4cc0dcf8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/P_Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/P_Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/P_PlayerCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/P_PlayerCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/NPC/S_NpcBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/NPC/S_NpcBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_WaypointSystem.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_WaypointSystem.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/Player/S_PlayerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/Player/S_PlayerBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarHoverBarycentric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarHoverBarycentric.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racing/CheckPoint/S_CheckPointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Racing/CheckPoint/S_CheckPointManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racing/S_RaceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Racing/S_RaceManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +111,7 @@
       <workItem from="1758267328647" duration="2377000" />
       <workItem from="1758615716774" duration="3520000" />
       <workItem from="1758702190602" duration="3278000" />
-      <workItem from="1758789087209" duration="1123000" />
+      <workItem from="1758789087209" duration="3163000" />
     </task>
     <servers />
   </component>
@@ -124,4 +125,23 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Racing/CheckPoint/S_CheckPointManager.cs</url>
+          <line>107</line>
+          <properties documentPath="D:\unity project\Github\Neumeric-BlastOFF\Assets\Scripts\Racing\CheckPoint\S_CheckPointManager.cs" containingFunctionPresentation="Method 'OnDrawGizmos'">
+            <startOffsets>
+              <option value="2895" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2896" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
 </project>

@@ -85,6 +85,7 @@ public class S_CarHoverBarycentric : MonoBehaviour
         Mesh mesh = meshCollider.sharedMesh;
         if (!hit.transform.TryGetComponent(out S_DrivableSurface cache))
         {
+            Debug.LogWarning("Ray does not hit mesh with S_DrivableSurface Class");
             return Vector3.zero;
         }
         
