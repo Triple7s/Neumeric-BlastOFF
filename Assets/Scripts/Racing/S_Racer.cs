@@ -50,10 +50,10 @@ public class S_Racer : MonoBehaviour
 
             if (_isPlayer)
             {
-                var check = S_CheckPointManager.Instance.GetCheckPoint(targetCheckPointIndex);
+                var check = S_CheckPointManager.Instance.GetCheckPoint(TargetCheckPointIndex);
                 OnQtmStateChange?.Invoke(check.qtmStateStatus ? S_QtmState.QtmState.On : S_QtmState.QtmState.Off);
             }
-            targetCheckPointIndex++;
+            TargetCheckPointIndex++;
 
             GetNextCheckPoint();
         }
