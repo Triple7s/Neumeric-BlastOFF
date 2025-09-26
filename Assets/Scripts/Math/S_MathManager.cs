@@ -22,9 +22,7 @@ public class S_MathManager : MonoBehaviour
     private S_AnswerLogCollection sessionLogs = new S_AnswerLogCollection();
     //private string json;
 
-    public static event Action OnCorrectAnswer;
-    public static event Action OnStartQtm;
-    public static event Action OnStopQtm;
+    public static event Action OnCorrectAnswer, OnWrongAnswer, OnStartQtm, OnStopQtm;
 
     [SerializeField] private GameObject questionUI;
     [SerializeField] private SO_Equations equations;
@@ -302,6 +300,7 @@ public class S_MathManager : MonoBehaviour
         }
         else
         {
+            OnWrongAnswer?.Invoke();
             // Wrong -> Red
             clickedAlternative.GetComponent<Image>().color = redSeeThroughColor;
             numberOfCorrectAnswerInRow = 0;
