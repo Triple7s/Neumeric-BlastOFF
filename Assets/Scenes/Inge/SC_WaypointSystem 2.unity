@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 18713456}
   - component: {fileID: 18713455}
   - component: {fileID: 18713454}
+  - component: {fileID: 18713457}
   m_Layer: 7
   m_Name: Turn (2)
   m_TagString: Untagged
@@ -231,6 +232,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18713452}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &18713457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18713452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &18821028
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,6 +256,7 @@ GameObject:
   - component: {fileID: 18821032}
   - component: {fileID: 18821031}
   - component: {fileID: 18821030}
+  - component: {fileID: 18821033}
   m_Layer: 7
   m_Name: Turn (5)
   m_TagString: Untagged
@@ -343,6 +357,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18821028}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &18821033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18821028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &52415260
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +426,7 @@ GameObject:
   - component: {fileID: 70628346}
   - component: {fileID: 70628345}
   - component: {fileID: 70628344}
+  - component: {fileID: 70628347}
   m_Layer: 7
   m_Name: Road (27)
   m_TagString: Untagged
@@ -500,6 +527,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70628342}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &70628347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70628342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &74051102
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +551,7 @@ GameObject:
   - component: {fileID: 74051106}
   - component: {fileID: 74051105}
   - component: {fileID: 74051104}
+  - component: {fileID: 74051107}
   m_Layer: 7
   m_Name: Turn (0)
   m_TagString: Untagged
@@ -612,6 +652,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74051102}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &74051107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74051102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &121274084
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +676,7 @@ GameObject:
   - component: {fileID: 121274088}
   - component: {fileID: 121274087}
   - component: {fileID: 121274086}
+  - component: {fileID: 121274089}
   m_Layer: 7
   m_Name: Turn (0)
   m_TagString: Untagged
@@ -724,6 +777,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121274084}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &121274089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121274084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &126638375
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +846,7 @@ GameObject:
   - component: {fileID: 150699163}
   - component: {fileID: 150699162}
   - component: {fileID: 150699161}
+  - component: {fileID: 150699164}
   m_Layer: 7
   m_Name: Road (1)
   m_TagString: Untagged
@@ -881,6 +947,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150699159}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &150699164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150699159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &175512479
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +1008,6 @@ MonoBehaviour:
   countDown: 5
   visibleDuration: 3
   fadeDuration: 0.5
-  mathManager: {fileID: 182427811}
 --- !u!114 &182427811 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3285797595188685211, guid: eeb962853cde93c479699abfd65b4d30,
@@ -955,6 +1032,7 @@ GameObject:
   - component: {fileID: 187006159}
   - component: {fileID: 187006158}
   - component: {fileID: 187006157}
+  - component: {fileID: 187006160}
   m_Layer: 7
   m_Name: Turn (3)
   m_TagString: Untagged
@@ -1055,6 +1133,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187006155}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &187006160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187006155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &188987264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,6 +1157,7 @@ GameObject:
   - component: {fileID: 188987268}
   - component: {fileID: 188987267}
   - component: {fileID: 188987266}
+  - component: {fileID: 188987269}
   m_Layer: 7
   m_Name: Road (17)
   m_TagString: Untagged
@@ -1167,6 +1258,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188987264}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &188987269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188987264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &204913215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,6 +1509,7 @@ GameObject:
   - component: {fileID: 233369476}
   - component: {fileID: 233369475}
   - component: {fileID: 233369474}
+  - component: {fileID: 233369477}
   m_Layer: 7
   m_Name: Turn (5)
   m_TagString: Untagged
@@ -1506,6 +1610,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233369472}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &233369477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233369472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &240352037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,6 +1634,7 @@ GameObject:
   - component: {fileID: 240352041}
   - component: {fileID: 240352040}
   - component: {fileID: 240352039}
+  - component: {fileID: 240352042}
   m_Layer: 7
   m_Name: Turn (7)
   m_TagString: Untagged
@@ -1618,6 +1735,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240352037}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &240352042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240352037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1001 &246406691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1708,6 +1837,7 @@ GameObject:
   - component: {fileID: 253063227}
   - component: {fileID: 253063226}
   - component: {fileID: 253063225}
+  - component: {fileID: 253063228}
   m_Layer: 7
   m_Name: Road (8)
   m_TagString: Untagged
@@ -1808,6 +1938,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253063223}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &253063228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253063223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &261787530
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,6 +2242,7 @@ GameObject:
   - component: {fileID: 333566012}
   - component: {fileID: 333566011}
   - component: {fileID: 333566010}
+  - component: {fileID: 333566013}
   m_Layer: 7
   m_Name: Turn (6)
   m_TagString: Untagged
@@ -2200,6 +2343,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 333566008}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &333566013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333566008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &350217009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2212,6 +2367,7 @@ GameObject:
   - component: {fileID: 350217013}
   - component: {fileID: 350217012}
   - component: {fileID: 350217011}
+  - component: {fileID: 350217014}
   m_Layer: 7
   m_Name: Road (26)
   m_TagString: Untagged
@@ -2312,6 +2468,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350217009}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &350217014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350217009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &380236713
 GameObject:
   m_ObjectHideFlags: 0
@@ -2356,11 +2524,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 080f3f1ac5bc7d5478d593a45c3a9939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_VisualManager
-  controls:
-  - {fileID: 1518134565}
-  - {fileID: 1388104600}
+  controls: {fileID: 0}
   lapText: {fileID: 204913218}
   placeText: {fileID: 1714539633}
+  canvasesToHide: []
+  finishUI: {fileID: 0}
+  finalPlaceText: {fileID: 0}
 --- !u!1 &390394173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2426,6 +2595,7 @@ GameObject:
   - component: {fileID: 396274300}
   - component: {fileID: 396274299}
   - component: {fileID: 396274298}
+  - component: {fileID: 396274301}
   m_Layer: 7
   m_Name: Turn (4)
   m_TagString: Untagged
@@ -2526,6 +2696,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396274296}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &396274301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396274296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &418291242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2634,6 +2816,7 @@ GameObject:
   - component: {fileID: 458781591}
   - component: {fileID: 458781590}
   - component: {fileID: 458781589}
+  - component: {fileID: 458781592}
   m_Layer: 7
   m_Name: Road (29)
   m_TagString: Untagged
@@ -2734,6 +2917,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458781587}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &458781592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458781587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1001 &492486924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2814,6 +3009,7 @@ GameObject:
   - component: {fileID: 495958882}
   - component: {fileID: 495958881}
   - component: {fileID: 495958880}
+  - component: {fileID: 495958883}
   m_Layer: 7
   m_Name: Turn (2)
   m_TagString: Untagged
@@ -2914,6 +3110,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495958878}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &495958883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495958878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &502481899
 GameObject:
   m_ObjectHideFlags: 0
@@ -2926,6 +3134,7 @@ GameObject:
   - component: {fileID: 502481903}
   - component: {fileID: 502481902}
   - component: {fileID: 502481901}
+  - component: {fileID: 502481904}
   m_Layer: 7
   m_Name: Road (9)
   m_TagString: Untagged
@@ -3026,6 +3235,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502481899}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &502481904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502481899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &507164282
 GameObject:
   m_ObjectHideFlags: 0
@@ -3038,6 +3259,7 @@ GameObject:
   - component: {fileID: 507164286}
   - component: {fileID: 507164285}
   - component: {fileID: 507164284}
+  - component: {fileID: 507164287}
   m_Layer: 7
   m_Name: Turn (4)
   m_TagString: Untagged
@@ -3138,6 +3360,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507164282}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &507164287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507164282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &531623939
 GameObject:
   m_ObjectHideFlags: 0
@@ -3254,6 +3488,7 @@ GameObject:
   - component: {fileID: 606704846}
   - component: {fileID: 606704845}
   - component: {fileID: 606704844}
+  - component: {fileID: 606704847}
   m_Layer: 7
   m_Name: Road (7)
   m_TagString: Untagged
@@ -3354,6 +3589,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606704842}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &606704847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606704842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &608660129
 GameObject:
   m_ObjectHideFlags: 0
@@ -3366,6 +3613,7 @@ GameObject:
   - component: {fileID: 608660133}
   - component: {fileID: 608660132}
   - component: {fileID: 608660131}
+  - component: {fileID: 608660134}
   m_Layer: 7
   m_Name: Road (3)
   m_TagString: Untagged
@@ -3466,6 +3714,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608660129}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &608660134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608660129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &611705168
 GameObject:
   m_ObjectHideFlags: 0
@@ -3478,6 +3738,7 @@ GameObject:
   - component: {fileID: 611705172}
   - component: {fileID: 611705171}
   - component: {fileID: 611705170}
+  - component: {fileID: 611705173}
   m_Layer: 7
   m_Name: Turn (5)
   m_TagString: Untagged
@@ -3578,6 +3839,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611705168}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &611705173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611705168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &623910854
 GameObject:
   m_ObjectHideFlags: 0
@@ -3679,6 +3952,7 @@ GameObject:
   - component: {fileID: 655611694}
   - component: {fileID: 655611693}
   - component: {fileID: 655611692}
+  - component: {fileID: 655611695}
   m_Layer: 7
   m_Name: Turn (1)
   m_TagString: Untagged
@@ -3779,12 +4053,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655611690}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
---- !u!224 &660314321 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3281079721641657573, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-    type: 3}
-  m_PrefabInstance: {fileID: 8434153278322339977}
+--- !u!114 &655611695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655611690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &668134251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3797,6 +4077,7 @@ GameObject:
   - component: {fileID: 668134255}
   - component: {fileID: 668134254}
   - component: {fileID: 668134253}
+  - component: {fileID: 668134256}
   m_Layer: 7
   m_Name: Road (14)
   m_TagString: Untagged
@@ -3897,6 +4178,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668134251}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &668134256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668134251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &673505715 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 170948592e761914faf3456e3b557eed,
@@ -3943,6 +4236,7 @@ GameObject:
   - component: {fileID: 676133668}
   - component: {fileID: 676133667}
   - component: {fileID: 676133666}
+  - component: {fileID: 676133669}
   m_Layer: 7
   m_Name: Turn (6)
   m_TagString: Untagged
@@ -4043,6 +4337,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676133664}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &676133669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676133664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!4 &680861915 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0a7f962eb197bb54c8db822b06f3e24a,
@@ -4152,6 +4458,7 @@ GameObject:
   - component: {fileID: 688517023}
   - component: {fileID: 688517022}
   - component: {fileID: 688517021}
+  - component: {fileID: 688517024}
   m_Layer: 7
   m_Name: Road (13)
   m_TagString: Untagged
@@ -4252,6 +4559,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688517019}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &688517024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688517019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &688693074
 GameObject:
   m_ObjectHideFlags: 0
@@ -4343,6 +4662,7 @@ GameObject:
   - component: {fileID: 733090431}
   - component: {fileID: 733090430}
   - component: {fileID: 733090429}
+  - component: {fileID: 733090432}
   m_Layer: 7
   m_Name: Turn (6)
   m_TagString: Untagged
@@ -4443,6 +4763,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733090427}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &733090432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733090427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &744710259
 GameObject:
   m_ObjectHideFlags: 0
@@ -4500,6 +4832,7 @@ GameObject:
   - component: {fileID: 750473796}
   - component: {fileID: 750473795}
   - component: {fileID: 750473794}
+  - component: {fileID: 750473797}
   m_Layer: 7
   m_Name: Turn (3)
   m_TagString: Untagged
@@ -4600,6 +4933,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750473792}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &750473797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750473792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &751012363
 GameObject:
   m_ObjectHideFlags: 0
@@ -4870,6 +5215,7 @@ GameObject:
   - component: {fileID: 809473570}
   - component: {fileID: 809473569}
   - component: {fileID: 809473568}
+  - component: {fileID: 809473571}
   m_Layer: 7
   m_Name: Turn (2)
   m_TagString: Untagged
@@ -4970,6 +5316,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 809473566}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &809473571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809473566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &824380214
 GameObject:
   m_ObjectHideFlags: 0
@@ -4982,6 +5340,7 @@ GameObject:
   - component: {fileID: 824380218}
   - component: {fileID: 824380217}
   - component: {fileID: 824380216}
+  - component: {fileID: 824380219}
   m_Layer: 7
   m_Name: Turn (0)
   m_TagString: Untagged
@@ -5082,6 +5441,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824380214}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &824380219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824380214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &826685439
 GameObject:
   m_ObjectHideFlags: 0
@@ -5094,6 +5465,7 @@ GameObject:
   - component: {fileID: 826685443}
   - component: {fileID: 826685442}
   - component: {fileID: 826685441}
+  - component: {fileID: 826685444}
   m_Layer: 7
   m_Name: Turn (2)
   m_TagString: Untagged
@@ -5194,6 +5566,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826685439}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &826685444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826685439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1001 &830886352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5335,18 +5719,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698fc4b61ddcb434e915a6e07bd9bb9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_TurnButton
---- !u!114 &861636954 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-    type: 3}
-  m_PrefabInstance: {fileID: 6914276400142233970}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d532bac93a06eea489f8361e6c6f61c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::S_PlayerBehaviour
 --- !u!1001 &864288293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5504,6 +5876,7 @@ GameObject:
   - component: {fileID: 875151190}
   - component: {fileID: 875151189}
   - component: {fileID: 875151188}
+  - component: {fileID: 875151191}
   m_Layer: 7
   m_Name: Road (18)
   m_TagString: Untagged
@@ -5604,6 +5977,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875151186}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &875151191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875151186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &877838989
 GameObject:
   m_ObjectHideFlags: 0
@@ -5760,6 +6145,7 @@ GameObject:
   - component: {fileID: 928233913}
   - component: {fileID: 928233912}
   - component: {fileID: 928233911}
+  - component: {fileID: 928233914}
   m_Layer: 7
   m_Name: Turn (7)
   m_TagString: Untagged
@@ -5860,94 +6246,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928233909}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
---- !u!1 &934154755
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 934154756}
-  - component: {fileID: 934154758}
-  - component: {fileID: 934154757}
-  - component: {fileID: 934154759}
-  m_Layer: 5
-  m_Name: Visual
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &934154756
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934154755}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1218738509}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -114, y: -78}
-  m_SizeDelta: {x: 228, y: 156}
-  m_Pivot: {x: 1, y: 0.5}
---- !u!114 &934154757
+--- !u!114 &928233914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934154755}
+  m_GameObject: {fileID: 928233909}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3d2138c4ac7804f57a631d583ac50e87, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &934154758
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934154755}
-  m_CullTransparentMesh: 1
---- !u!225 &934154759
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934154755}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1001 &941957929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6155,6 +6465,7 @@ GameObject:
   - component: {fileID: 976367594}
   - component: {fileID: 976367593}
   - component: {fileID: 976367592}
+  - component: {fileID: 976367595}
   m_Layer: 7
   m_Name: Turn (1)
   m_TagString: Untagged
@@ -6255,6 +6566,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976367590}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &976367595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976367590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &990944620
 GameObject:
   m_ObjectHideFlags: 0
@@ -6312,6 +6635,7 @@ GameObject:
   - component: {fileID: 993170277}
   - component: {fileID: 993170276}
   - component: {fileID: 993170275}
+  - component: {fileID: 993170278}
   m_Layer: 7
   m_Name: Road (15)
   m_TagString: Untagged
@@ -6412,6 +6736,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993170273}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &993170278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993170273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &993831309
 GameObject:
   m_ObjectHideFlags: 0
@@ -6661,6 +6997,7 @@ GameObject:
   - component: {fileID: 1067600498}
   - component: {fileID: 1067600497}
   - component: {fileID: 1067600496}
+  - component: {fileID: 1067600499}
   m_Layer: 7
   m_Name: Road (22)
   m_TagString: Untagged
@@ -6761,6 +7098,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067600494}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1067600499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067600494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!4 &1075663427 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4644828375434862011, guid: f0b453fa7e358724d93fafcd51b86b4c,
@@ -6842,8 +7191,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_RaceManager
   startTimer: {fileID: 175512481}
-  cars:
-  - {fileID: 861636954}
+  racers: []
+  raceLaps: 0
 --- !u!4 &1104501519
 Transform:
   m_ObjectHideFlags: 0
@@ -6866,94 +7215,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1306280610}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1114995160
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1114995161}
-  - component: {fileID: 1114995163}
-  - component: {fileID: 1114995162}
-  - component: {fileID: 1114995164}
-  m_Layer: 5
-  m_Name: Visual
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1114995161
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114995160}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 660314321}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 114, y: -78}
-  m_SizeDelta: {x: 228, y: 156}
-  m_Pivot: {x: 0, y: 0.5}
---- !u!114 &1114995162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114995160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3d2138c4ac7804f57a631d583ac50e87, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1114995163
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114995160}
-  m_CullTransparentMesh: 1
---- !u!225 &1114995164
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114995160}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
 --- !u!1 &1143097149
 GameObject:
   m_ObjectHideFlags: 0
@@ -6966,6 +7227,7 @@ GameObject:
   - component: {fileID: 1143097153}
   - component: {fileID: 1143097152}
   - component: {fileID: 1143097151}
+  - component: {fileID: 1143097154}
   m_Layer: 7
   m_Name: Road (12)
   m_TagString: Untagged
@@ -7066,6 +7328,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143097149}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1143097154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143097149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1162019827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1599826595754709761, guid: 9636c94670245b84291a6fb77d12615c,
@@ -7112,6 +7386,7 @@ GameObject:
   - component: {fileID: 1171782855}
   - component: {fileID: 1171782854}
   - component: {fileID: 1171782853}
+  - component: {fileID: 1171782856}
   m_Layer: 7
   m_Name: Turn (0)
   m_TagString: Untagged
@@ -7212,6 +7487,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171782851}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1171782856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171782851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1172658920
 GameObject:
   m_ObjectHideFlags: 0
@@ -7293,12 +7580,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   qtmStateStatus: 0
---- !u!224 &1218738509 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5428412542479269451, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-    type: 3}
-  m_PrefabInstance: {fileID: 8434153278322339977}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1237537209
 GameObject:
   m_ObjectHideFlags: 0
@@ -7384,6 +7665,7 @@ GameObject:
   - component: {fileID: 1277179951}
   - component: {fileID: 1277179950}
   - component: {fileID: 1277179949}
+  - component: {fileID: 1277179952}
   m_Layer: 7
   m_Name: Road (4)
   m_TagString: Untagged
@@ -7484,6 +7766,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277179947}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1277179952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277179947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1279516370
 GameObject:
   m_ObjectHideFlags: 0
@@ -7496,6 +7790,7 @@ GameObject:
   - component: {fileID: 1279516374}
   - component: {fileID: 1279516373}
   - component: {fileID: 1279516372}
+  - component: {fileID: 1279516375}
   m_Layer: 7
   m_Name: Road (25)
   m_TagString: Untagged
@@ -7596,6 +7891,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279516370}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1279516375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279516370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1295891681
 GameObject:
   m_ObjectHideFlags: 0
@@ -7766,6 +8073,7 @@ GameObject:
   - component: {fileID: 1312788867}
   - component: {fileID: 1312788866}
   - component: {fileID: 1312788865}
+  - component: {fileID: 1312788868}
   m_Layer: 7
   m_Name: Road (10)
   m_TagString: Untagged
@@ -7866,6 +8174,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312788863}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1312788868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312788863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1314017667
 GameObject:
   m_ObjectHideFlags: 0
@@ -7878,6 +8198,7 @@ GameObject:
   - component: {fileID: 1314017671}
   - component: {fileID: 1314017670}
   - component: {fileID: 1314017669}
+  - component: {fileID: 1314017672}
   m_Layer: 7
   m_Name: Turn (7)
   m_TagString: Untagged
@@ -7978,6 +8299,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314017667}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1314017672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314017667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1315432620
 GameObject:
   m_ObjectHideFlags: 0
@@ -8245,6 +8578,7 @@ GameObject:
   - component: {fileID: 1353464413}
   - component: {fileID: 1353464412}
   - component: {fileID: 1353464411}
+  - component: {fileID: 1353464414}
   m_Layer: 7
   m_Name: Road (28)
   m_TagString: Untagged
@@ -8345,6 +8679,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353464409}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1353464414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353464409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!4 &1366476650 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3821017774730754886, guid: 70ecdb29758fa924788212a523363e45,
@@ -8369,6 +8715,7 @@ GameObject:
   - component: {fileID: 1379057571}
   - component: {fileID: 1379057570}
   - component: {fileID: 1379057569}
+  - component: {fileID: 1379057572}
   m_Layer: 7
   m_Name: Road (6)
   m_TagString: Untagged
@@ -8469,12 +8816,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379057567}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
---- !u!1 &1388104600 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6953070474972902523, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-    type: 3}
-  m_PrefabInstance: {fileID: 8434153278322339977}
+--- !u!114 &1379057572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379057567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1389748191
 GameObject:
   m_ObjectHideFlags: 0
@@ -8487,6 +8840,7 @@ GameObject:
   - component: {fileID: 1389748195}
   - component: {fileID: 1389748194}
   - component: {fileID: 1389748193}
+  - component: {fileID: 1389748196}
   m_Layer: 7
   m_Name: Turn (3)
   m_TagString: Untagged
@@ -8587,6 +8941,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389748191}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1389748196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389748191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1401376762
 GameObject:
   m_ObjectHideFlags: 0
@@ -8644,6 +9010,7 @@ GameObject:
   - component: {fileID: 1410330041}
   - component: {fileID: 1410330040}
   - component: {fileID: 1410330039}
+  - component: {fileID: 1410330042}
   m_Layer: 7
   m_Name: Road (23)
   m_TagString: Untagged
@@ -8744,6 +9111,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410330037}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1410330042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410330037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1441965562
 GameObject:
   m_ObjectHideFlags: 0
@@ -8968,6 +9347,7 @@ GameObject:
   - component: {fileID: 1497399873}
   - component: {fileID: 1497399872}
   - component: {fileID: 1497399871}
+  - component: {fileID: 1497399874}
   m_Layer: 7
   m_Name: Road (16)
   m_TagString: Untagged
@@ -9068,12 +9448,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497399869}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
---- !u!1 &1518134565 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7902689334377432443, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-    type: 3}
-  m_PrefabInstance: {fileID: 8434153278322339977}
+--- !u!114 &1497399874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497399869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1524274362
 GameObject:
   m_ObjectHideFlags: 0
@@ -9086,6 +9472,7 @@ GameObject:
   - component: {fileID: 1524274366}
   - component: {fileID: 1524274365}
   - component: {fileID: 1524274364}
+  - component: {fileID: 1524274367}
   m_Layer: 7
   m_Name: Road (11)
   m_TagString: Untagged
@@ -9186,6 +9573,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524274362}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1524274367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524274362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1542119153
 GameObject:
   m_ObjectHideFlags: 0
@@ -9456,6 +9855,7 @@ GameObject:
   - component: {fileID: 1561049422}
   - component: {fileID: 1561049421}
   - component: {fileID: 1561049420}
+  - component: {fileID: 1561049423}
   m_Layer: 7
   m_Name: Turn (4)
   m_TagString: Untagged
@@ -9556,6 +9956,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561049418}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1561049423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561049418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1568866749
 GameObject:
   m_ObjectHideFlags: 0
@@ -9568,6 +9980,7 @@ GameObject:
   - component: {fileID: 1568866753}
   - component: {fileID: 1568866752}
   - component: {fileID: 1568866751}
+  - component: {fileID: 1568866754}
   m_Layer: 7
   m_Name: Turn (7)
   m_TagString: Untagged
@@ -9668,6 +10081,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568866749}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1568866754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568866749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1583801220
 GameObject:
   m_ObjectHideFlags: 0
@@ -9847,7 +10272,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 384.5
+  m_fontSize: 432
   m_fontSizeBase: 450
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9930,6 +10355,7 @@ GameObject:
   - component: {fileID: 1597320252}
   - component: {fileID: 1597320251}
   - component: {fileID: 1597320250}
+  - component: {fileID: 1597320253}
   m_Layer: 7
   m_Name: Turn (6)
   m_TagString: Untagged
@@ -10030,6 +10456,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597320248}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1597320253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597320248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1610019036
 GameObject:
   m_ObjectHideFlags: 0
@@ -10195,6 +10633,7 @@ GameObject:
   - component: {fileID: 1665706098}
   - component: {fileID: 1665706097}
   - component: {fileID: 1665706096}
+  - component: {fileID: 1665706099}
   m_Layer: 7
   m_Name: Road
   m_TagString: Untagged
@@ -10295,6 +10734,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665706094}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1665706099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665706094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1666115569
 GameObject:
   m_ObjectHideFlags: 0
@@ -10307,6 +10758,7 @@ GameObject:
   - component: {fileID: 1666115573}
   - component: {fileID: 1666115572}
   - component: {fileID: 1666115571}
+  - component: {fileID: 1666115574}
   m_Layer: 7
   m_Name: Road (2)
   m_TagString: Untagged
@@ -10407,6 +10859,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666115569}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1666115574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666115569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1699245057
 GameObject:
   m_ObjectHideFlags: 0
@@ -10419,6 +10883,7 @@ GameObject:
   - component: {fileID: 1699245061}
   - component: {fileID: 1699245060}
   - component: {fileID: 1699245059}
+  - component: {fileID: 1699245062}
   m_Layer: 7
   m_Name: Turn (5)
   m_TagString: Untagged
@@ -10519,6 +10984,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699245057}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1699245062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699245057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1704314180
 GameObject:
   m_ObjectHideFlags: 0
@@ -10531,6 +11008,7 @@ GameObject:
   - component: {fileID: 1704314184}
   - component: {fileID: 1704314183}
   - component: {fileID: 1704314182}
+  - component: {fileID: 1704314185}
   m_Layer: 7
   m_Name: Turn (1)
   m_TagString: Untagged
@@ -10631,6 +11109,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704314180}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1704314185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704314180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1714539632
 GameObject:
   m_ObjectHideFlags: 0
@@ -10941,6 +11431,7 @@ GameObject:
   - component: {fileID: 1745906138}
   - component: {fileID: 1745906137}
   - component: {fileID: 1745906136}
+  - component: {fileID: 1745906139}
   m_Layer: 7
   m_Name: Road (5)
   m_TagString: Untagged
@@ -11041,6 +11532,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745906134}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1745906139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745906134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1760728322
 GameObject:
   m_ObjectHideFlags: 0
@@ -11169,6 +11672,7 @@ GameObject:
   - component: {fileID: 1841673738}
   - component: {fileID: 1841673737}
   - component: {fileID: 1841673736}
+  - component: {fileID: 1841673739}
   m_Layer: 7
   m_Name: Road (21)
   m_TagString: Untagged
@@ -11269,6 +11773,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841673734}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1841673739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841673734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1001 &1854565360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11445,6 +11961,7 @@ GameObject:
   - component: {fileID: 1891224481}
   - component: {fileID: 1891224480}
   - component: {fileID: 1891224479}
+  - component: {fileID: 1891224482}
   m_Layer: 7
   m_Name: Turn (4)
   m_TagString: Untagged
@@ -11545,6 +12062,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891224477}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1891224482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891224477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1901489226
 GameObject:
   m_ObjectHideFlags: 0
@@ -11681,6 +12210,7 @@ GameObject:
   - component: {fileID: 1913240464}
   - component: {fileID: 1913240463}
   - component: {fileID: 1913240462}
+  - component: {fileID: 1913240465}
   m_Layer: 7
   m_Name: Road (20)
   m_TagString: Untagged
@@ -11781,6 +12311,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913240460}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1913240465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913240460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1916175745
 GameObject:
   m_ObjectHideFlags: 0
@@ -11904,6 +12446,7 @@ GameObject:
   - component: {fileID: 1956401733}
   - component: {fileID: 1956401732}
   - component: {fileID: 1956401731}
+  - component: {fileID: 1956401734}
   m_Layer: 7
   m_Name: Road (19)
   m_TagString: Untagged
@@ -12004,6 +12547,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956401729}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &1956401734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956401729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &1980194320
 GameObject:
   m_ObjectHideFlags: 0
@@ -12133,6 +12688,7 @@ GameObject:
   - component: {fileID: 2009021779}
   - component: {fileID: 2009021778}
   - component: {fileID: 2009021777}
+  - component: {fileID: 2009021780}
   m_Layer: 7
   m_Name: Turn (3)
   m_TagString: Untagged
@@ -12233,6 +12789,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009021775}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &2009021780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009021775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &2013122934
 GameObject:
   m_ObjectHideFlags: 0
@@ -12362,6 +12930,7 @@ GameObject:
   - component: {fileID: 2061626234}
   - component: {fileID: 2061626233}
   - component: {fileID: 2061626232}
+  - component: {fileID: 2061626235}
   m_Layer: 7
   m_Name: Turn (1)
   m_TagString: Untagged
@@ -12462,6 +13031,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061626230}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &2061626235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061626230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1 &2061722155
 GameObject:
   m_ObjectHideFlags: 0
@@ -12890,6 +13471,7 @@ GameObject:
   - component: {fileID: 2106346485}
   - component: {fileID: 2106346484}
   - component: {fileID: 2106346483}
+  - component: {fileID: 2106346486}
   m_Layer: 7
   m_Name: Road (24)
   m_TagString: Untagged
@@ -12990,6 +13572,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106346481}
   m_Mesh: {fileID: -5495902117074765545, guid: 47b21f8d68100ec419b297707dcfe004, type: 3}
+--- !u!114 &2106346486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106346481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c6d37ce4c7824c99f8c43d56ddb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_DrivableSurface
 --- !u!1001 &1433288327045121480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13084,22 +13678,22 @@ PrefabInstance:
     - target: {fileID: 247563300170859371, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98884153
+      value: 0.9997015
       objectReference: {fileID: 0}
     - target: {fileID: 247563300170859371, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.14897145
+      value: 0.011450788
       objectReference: {fileID: 0}
     - target: {fileID: 247563300170859371, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.0002472234
       objectReference: {fileID: 0}
     - target: {fileID: 247563300170859371, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.021583632
       objectReference: {fileID: 0}
     - target: {fileID: 2909340294871678947, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
@@ -13119,37 +13713,37 @@ PrefabInstance:
     - target: {fileID: 4885159968352739220, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -47.477608
       objectReference: {fileID: 0}
     - target: {fileID: 4885159968352739220, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 2.1713674
       objectReference: {fileID: 0}
     - target: {fileID: 4885159968352739220, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.2200012
+      value: -11.47971
       objectReference: {fileID: 0}
     - target: {fileID: 4885159968352739220, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98884153
+      value: 0.9990939
       objectReference: {fileID: 0}
     - target: {fileID: 4885159968352739220, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.14897145
+      value: 0.016537724
       objectReference: {fileID: 0}
     - target: {fileID: 4885159968352739220, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.039211113
       objectReference: {fileID: 0}
     - target: {fileID: 4885159968352739220, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.00064905063
       objectReference: {fileID: 0}
     - target: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
@@ -13307,17 +13901,22 @@ PrefabInstance:
     - target: {fileID: 3281079721641657573, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 230
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3281079721641657573, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 115
+      value: 0.000015258789
+      objectReference: {fileID: 0}
+    - target: {fileID: 3418906657464815867, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3418906657464815867, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -13.36499
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3582931386117132936, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
         type: 3}
@@ -13336,8 +13935,13 @@ PrefabInstance:
       objectReference: {fileID: 1104501518}
     - target: {fileID: 3918860686169113753, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3918860686169113753, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -13.36499
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4244626216165779754, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
         type: 3}
@@ -13357,12 +13961,12 @@ PrefabInstance:
     - target: {fileID: 5428412542479269451, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 230
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5428412542479269451, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -115
+      value: 0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 5656962175493778753, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
         type: 3}
@@ -13474,6 +14078,16 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 861636953}
+    - target: {fileID: 6618066030451087960, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -180.921
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618066030451087960, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 73.460526
+      objectReference: {fileID: 0}
     - target: {fileID: 7919357350578607299, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -13535,14 +14149,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1714539635}
-    - targetCorrespondingSourceObject: {fileID: 3281079721641657573, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1114995161}
-    - targetCorrespondingSourceObject: {fileID: 5428412542479269451, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 934154756}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 692b9f0a2046f924fb761fa9e1cdcea9, type: 3}
 --- !u!1660057539 &9223372036854775807
