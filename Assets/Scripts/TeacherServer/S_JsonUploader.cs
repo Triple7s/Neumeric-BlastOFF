@@ -4,6 +4,7 @@ using UnityEngine.Networking;
 using System.Collections;
 using System.IO;
 using System.Text;
+using TMPro;
 
 public class S_JsonUploader : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class S_JsonUploader : MonoBehaviour
     public int teacherPort = 5000;
 
     [Header("UI References")]
-    public InputField ipAddressInput;
+    public TMP_InputField ipAddressInput;
 
     private string logFilePath;
 
@@ -29,6 +30,8 @@ public class S_JsonUploader : MonoBehaviour
         {
             teacherIP = ipAddressInput.text;
         }
+
+        Debug.Log($"[Uploader] Using IP from input field: {teacherIP}:{teacherPort}");
 
         StartCoroutine(UploadJson(studentID, studentName));
     }
@@ -50,7 +53,8 @@ public class S_JsonUploader : MonoBehaviour
         }
 
         // Wrap JSON to match teacher_server.py
-        string wrappedJson = $"{{\"student_id\":\"{studentID}\",\"student_name\":\"{studentName}\",\"answers\":{jsonFileContent}}}";
+        //string wrappedJson = $"{{\"student_id\":\"{studentID}\",\"student_name\":\"{studentName}\",\"answers\":{jsonFileContent}}}";
+        string wrappedJson = $"{{\"student_id\":\"{studentID}\",\"student_name\":\"{studentName}\",\"package_name\":\"{Application.identifier}\",\"answers\":{jsonFileContent}}}";
 
         byte[] bodyRaw = Encoding.UTF8.GetBytes(wrappedJson);
 

@@ -119,18 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &94570036 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3208749892261613304, guid: eeb962853cde93c479699abfd65b4d30,
-    type: 3}
-  m_PrefabInstance: {fileID: 7905342872561974837}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &109099209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20631,11 +20619,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_PlayerBehaviour
   data: {fileID: 11400000, guid: 89999c0d1257d96438aa27b37ff8ec5a, type: 2}
-  playerInputRegister: {fileID: 886450292}
+  racer: {fileID: 0}
   carHoverBarycentric: {fileID: 0}
+  playerInputRegister: {fileID: 886450292}
   cameraController: {fileID: 0}
   cameraStabilizer: {fileID: 0}
-  mathManager: {fileID: 0}
 --- !u!4 &886450294
 Transform:
   m_ObjectHideFlags: 0
@@ -20715,7 +20703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::C_FinishLineDetector
   mathManager: {fileID: 0}
   isOpponent: 0
-  pointsText: {fileID: 94570036}
+  pointsText: {fileID: 0}
 --- !u!1 &887651263
 GameObject:
   m_ObjectHideFlags: 0
@@ -41058,7 +41046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::C_FinishLineDetector
   mathManager: {fileID: 1759100439}
   isOpponent: 0
-  pointsText: {fileID: 94570036}
+  pointsText: {fileID: 0}
 --- !u!114 &1759100439 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3285797595188685211, guid: eeb962853cde93c479699abfd65b4d30,
@@ -51303,15 +51291,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3285797595188685211, guid: eeb962853cde93c479699abfd65b4d30,
         type: 3}
-      propertyPath: equations
-      value: 
-      objectReference: {fileID: 11400000, guid: 4026b0dd06996254f998e331cd9db116,
-        type: 2}
-    - target: {fileID: 3285797595188685211, guid: eeb962853cde93c479699abfd65b4d30,
-        type: 3}
       propertyPath: targetParticleSystem
       value: 
       objectReference: {fileID: 324594233}
+    - target: {fileID: 6999930967503858602, guid: eeb962853cde93c479699abfd65b4d30,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 7766478484596330770, guid: eeb962853cde93c479699abfd65b4d30,
         type: 3}
       propertyPath: m_LocalPosition.x
