@@ -1,0 +1,295 @@
+fileFormatVersion: 2
+guid: 6dca123df1f2eea4d89ca0db488f4355
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeAntigravity
+    second: {fileID: 2100000, guid: 2fafc515c6cdb4b409e5978f9a4aa07d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeAntigravity.002
+    second: {fileID: 2100000, guid: c2e51cbfb8c3a644d894261f73ddafde, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeBattery
+    second: {fileID: 2100000, guid: ee44fed63f7c257469e02dfe6e5f2f10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeCircleWallGreenjoge
+    second: {fileID: 2100000, guid: 1aa3b0a6b9c1c2c4f88fbf5f3bd0e13b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubePipering
+    second: {fileID: 2100000, guid: 05175e7a3f072fd49b9c5068955ee881, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeRoadEnergy
+    second: {fileID: 2100000, guid: 8cd85903f49882d42b9d7f7d72e66d0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeRoadMainEmmJoge
+    second: {fileID: 2100000, guid: feb819966f029164c90078e7b42adc29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeRoadMainMesh
+    second: {fileID: 2100000, guid: 46d586e729f10434892c1b5fea294569, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeRoadPipe
+    second: {fileID: 2100000, guid: ed15313df72b29a499381772ec615016, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeRoadVectorClear
+    second: {fileID: 2100000, guid: f5e5782a8b4db0649be73921fdc2d8a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeRoadVectorEmm
+    second: {fileID: 2100000, guid: 77f3a5911d6504a4e907e5048115b53e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeSpinturbobar
+    second: {fileID: 2100000, guid: a15905b72427ea044847f463a544440c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeWallEmm
+    second: {fileID: 2100000, guid: 1f928203f3096e849b71d82e89ccae87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeWallEmmjoge
+    second: {fileID: 2100000, guid: da555b41ea47df446b6f0c514fbf3e96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CubeWallPipeCap
+    second: {fileID: 2100000, guid: 7e4f4ece898cae44d92f93008572b028, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_Battery
+    second: {fileID: 2100000, guid: 0228299b4a533e140a9ad198468411a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_BigWallBar
+    second: {fileID: 2100000, guid: 4108068819054d14e96b55c071ba022d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_BldgBLack_Tire
+    second: {fileID: 2100000, guid: e3fb7099ade23e1468da4cef7a04e267, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_DartLine
+    second: {fileID: 2100000, guid: 6f4519bb702fb0f4baac82f4de891c74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_Enkei_BillBody_Tire
+    second: {fileID: 2100000, guid: 622d3281fedcf1c42b6664fa04eb7192, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_GoalgateClear
+    second: {fileID: 2100000, guid: 7975793ffa658234a99fe94f4cb5bdd6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_PipeGold
+    second: {fileID: 2100000, guid: 71969c3e20d0dd6439bb230099b38973, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_RoadEnd
+    second: {fileID: 2100000, guid: 8adbcb2abb66a15478b543edf545b461, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_RoadEnergy
+    second: {fileID: 2100000, guid: e1aec42dd8a53424096a1a889c5d6dd7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_RoadJunp
+    second: {fileID: 2100000, guid: 859208d17aa42384e9f8634b8a879c0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_RoadMain
+    second: {fileID: 2100000, guid: d6729e2b67d95ce4e80fc9ca3cb63b75, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_RoadMainEmm
+    second: {fileID: 2100000, guid: 1dd694af93185184282f6a5a12d8fe68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_RoadMainMesh
+    second: {fileID: 2100000, guid: 65d7a0a78fc23c049bff72fcdf92b490, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_RoadPipe
+    second: {fileID: 2100000, guid: 63c58be03ff4675488f2b96c5a59b407, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_RoadPipeCap
+    second: {fileID: 2100000, guid: 51f957fab68631d4f8b34515cec25fb9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_RoadSide
+    second: {fileID: 2100000, guid: e528de19914b33f45b45ff23eb7fea33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_RoadVectorClear
+    second: {fileID: 2100000, guid: 13a1638573bd39b4a849a622b3f4d1b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_RoadVectorEmm
+    second: {fileID: 2100000, guid: 6ad43032a8641fe408c093f103a4388f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_WallMain
+    second: {fileID: 2100000, guid: 1ab41a68b9995194eab99f8b0537baf2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fz_WallPipeCap
+    second: {fileID: 2100000, guid: 17b12484d308d7742ba5413b2ebebee6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ef_dashboard
+    second: {fileID: 2100000, guid: 870e81325cffa504dafe3e5eb491a255, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ef_dashboard03
+    second: {fileID: 2100000, guid: 48d021d0018f70c4da6269d17fa1cd73, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 0
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

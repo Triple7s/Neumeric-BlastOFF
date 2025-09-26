@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea555b24131260b47844f42314dc77d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_CarHoverBarycentric
-  rayLength: 5
+  rayLength: 2
   rotationSpeed: 10
   heightChangeSpeed: 25
   fallingSpeed: 9.81
