@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="02b2abd1-4345-46b9-b20b-4cc4cc0dcf8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Inge/SC_WaypointSystem 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Inge/SC_WaypointSystem 1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Att__Only__access__Qtm__from__behind",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -113,6 +114,7 @@
       <workItem from="1758101324302" duration="5095000" />
       <workItem from="1758183328096" duration="13337000" />
       <workItem from="1758798033646" duration="31000" />
+      <workItem from="1758805308630" duration="2298000" />
     </task>
     <servers />
   </component>
