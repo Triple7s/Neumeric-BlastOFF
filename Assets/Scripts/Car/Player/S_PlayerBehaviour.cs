@@ -4,12 +4,12 @@ using UnityEngine.Serialization;
 
 public class S_PlayerBehaviour : S_CarBaseBehaviour
 {
+    [SerializeField] private bool alwaysUseAutoSteering;
     [Header("Scripts")]
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
     [SerializeField] private S_PlayerCameraController cameraController;
     [SerializeField] private S_CameraStabilizer cameraStabilizer;
-
-    
+        
     
     private bool isTurning, isBraking, isDrifting, isQtm;
     private int turnDirection;
@@ -27,6 +27,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         playerInputRegister.BrakeReleased += StopBrake;
 
         S_MathManager.OnCorrectAnswer += Boost;
+        S_MathManager.OnWrongAnswer += SlowDown;
         S_MathManager.OnStartQtm += TurnOnAutoSteering;
         S_MathManager.OnStopQtm += TurnOffAutoSteering;
     }
@@ -36,8 +37,21 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         base.Start();
     }
 
+    public void EndRace()
+    {
+        alwaysUseAutoSteering = true;
+    }
+    
     protected override void BehaviourUpdate()
     {
+        if (alwaysUseAutoSteering)
+        {
+            Drive();
+            AutoTurn(racer.GetDrivingDirection());
+            cameraStabilizer.StabilizeCamera(transform);
+            return;
+        }
+        
         if (isBraking)
         {
             BrakeOrDrift();
@@ -78,7 +92,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     
     private void Turn()
     {
-        rb.AddTorque(transform.TransformDirection(Vector3.up) * (Time.deltaTime * data.TurningSpeed * turnDirection), ForceMode.Impulse);
+        rb.AddTorque(transform.TransformDirection(Vector3.up) * (Time.deltaTime * turningSpeed * turnDirection), ForceMode.Impulse);
     }
 
     #region Event Actions
@@ -114,13 +128,14 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     private void TurnOnAutoSteering()
     {
         print("QTM is turning on");
+        S_VisualManager.Instance.ToggleControls(false);
         isQtm = true;
     }
 
     private void TurnOffAutoSteering()
     {
         print("QTM is turning off");
-
+        S_VisualManager.Instance.ToggleControls(true);
         isQtm = false;
     }
     

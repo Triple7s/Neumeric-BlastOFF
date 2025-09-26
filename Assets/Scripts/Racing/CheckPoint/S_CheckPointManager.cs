@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class S_CheckPointManager : MonoBehaviour
 {
@@ -9,7 +7,6 @@ public class S_CheckPointManager : MonoBehaviour
     
     [Header("Entities are Automatically added to the List")]
     [SerializeField] private List<S_CheckPointEntity> checkPointEntities = new ();
-
     
     [Header("Gizmos Settings")]
     [SerializeField] private bool hideGizmos;
@@ -26,29 +23,19 @@ public class S_CheckPointManager : MonoBehaviour
         else
             Destroy(this);
     }
-
     
-
-    private Vector3 CalculateDirectionOfCheckPoint(S_CheckPointEntity thisEntity)
-    {
-        int index = checkPointEntities.FindIndex((checkPointEntity) => checkPointEntity == thisEntity);
-
-        Vector3 dir1;
-        if (index-1 == -1)
-            dir1 = thisEntity.transform.position - checkPointEntities[^1].transform.position;
-        else
-            dir1 = thisEntity.transform.position - GetCheckPoint(index-1).transform.position;
-        var dir2 = GetCheckPoint(index + 1).transform.position - thisEntity.transform.position;
-        var targetDir = (dir1 + dir2).normalized;
-        return targetDir;
-    }
-
-
     public S_CheckPointEntity GetCheckPoint(int index)
     {
-        return checkPointEntities[index%checkPointEntities.Count];
+        var checkPointEntity = checkPointEntities[index%checkPointEntities.Count];
+        
+        return checkPointEntity;
     }
 
+    public int GetLap(int index)
+    {
+        return Mathf.FloorToInt(index / checkPointEntities.Count);
+    }
+    
     #region Registering Check Points
 
     public void RegisterCheckpoint(S_CheckPointEntity entity)
@@ -71,7 +58,15 @@ public class S_CheckPointManager : MonoBehaviour
 
     public void SortList()
     {
+        CheckListForEmptyNullObjects();
+        if (checkPointEntities.Count < 2)
+        {
+            Debug.LogWarning("Not enough check points in scene");
+            return;
+        }
+        
         Debug.Log("Checkpoint List has been sorted");
+        
         List<S_CheckPointEntity> sorted = new();
 
         var entitiesParent = checkPointEntities[0].transform.parent;
@@ -85,13 +80,37 @@ public class S_CheckPointManager : MonoBehaviour
         checkPointEntities.Clear();
         checkPointEntities.AddRange(sorted);
     }
+
+    private void CheckListForEmptyNullObjects()
+    {
+        var tempList = new List<S_CheckPointEntity>();
+        
+        tempList.AddRange(checkPointEntities);
+        foreach (var entity in tempList)
+        {
+            if (!entity)
+            {
+                checkPointEntities.Remove(entity);
+            }
+        }
+    }
+
     #endregion
-   
-    
-    
-    private void OnDrawGizmos()
+
+    #region Gizmos
+
+     private void OnDrawGizmos()
     {
         if (hideGizmos) return;
+
+        foreach (var entity in checkPointEntities)
+        {
+            if (!entity)
+            {
+                Debug.LogError("Empty Check Point Entity in List");
+                return;
+            }
+        }
         
         S_CheckPointEntity prevEntity = null;
         for (int i = 0; i < checkPointEntities.Count; i++)
@@ -112,6 +131,7 @@ public class S_CheckPointManager : MonoBehaviour
                 Gizmos.DrawLine(prevEntity.transform.position + offset, 
                     entityOffset);
             }
+            
             if (i == checkPointEntities.Count -1)
             {
                 Gizmos.DrawLine(entity.transform.position + new Vector3(0, pointRadius, 0), 
@@ -127,15 +147,33 @@ public class S_CheckPointManager : MonoBehaviour
             
             prevEntity = entity;
         }
-        
     }
     private Quaternion CalculateRotationOfCheckPoint(S_CheckPointEntity thisEntity)
     {
-
         var targetDir = CalculateDirectionOfCheckPoint(thisEntity);
 
+        if (targetDir == Vector3.zero)
+        {
+            Debug.LogError("Missing Target Direction");
+            return Quaternion.identity;
+        }
         Quaternion targetRotation = Quaternion.LookRotation(targetDir, Vector3.up);
         return targetRotation;
     }
+    private Vector3 CalculateDirectionOfCheckPoint(S_CheckPointEntity thisEntity)
+    {
+        int index = checkPointEntities.FindIndex((checkPointEntity) => checkPointEntity == thisEntity);
+
+        Vector3 dir1;
+        if (index-1 == -1)
+            dir1 = thisEntity.transform.position - checkPointEntities[^1].transform.position;
+        else
+            dir1 = thisEntity.transform.position - GetCheckPoint(index-1).transform.position;
+        var dir2 = GetCheckPoint(index + 1).transform.position - thisEntity.transform.position;
+        var targetDir = (dir1 + dir2).normalized;
+        return targetDir;
+    }
+
+    #endregion
     
 }

@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02b2abd1-4345-46b9-b20b-4cc4cc0dcf8f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racing/S_Racer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Racing/S_Racer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,13 +16,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Template/S_SceneTemplatePipeline.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Car/S_CarBaseBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Racing/CheckPoint/Editor/S_CheckPointManagerEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Racing/CheckPoint/S_CheckPointEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Racing/S_Racer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Racing/S_VisualManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../media jam/Rogue-AI/Rogue-AI/Assets/Scripts/ObjectDataScripts/Editor/AIActionDrawer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../media jam/Rogue-AI/Rogue-AI/Assets/Scripts/ObjectDataScripts/Editor/AIDataEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ai.generators@f55909672e13/Modules/Unity.AI.Generators.Redux/Thunks/BaseAsyncThunkCreator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mobile.notifications@ec0aacc640b7/Editor/NotificationSettingsProvider.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -55,9 +56,6 @@
       <option name="WORKING_DIRECTORY" value="D:\Unity Projects\GitHub\Neumeric-BlastOFF" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="ENV_FILE_PATHS" value="" />
-      <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
@@ -66,9 +64,6 @@
       <option name="WORKING_DIRECTORY" value="D:\Unity Projects\GitHub\Neumeric-BlastOFF" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="ENV_FILE_PATHS" value="" />
-      <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -82,7 +77,6 @@
       <option name="selectedOptions">
         <list />
       </option>
-      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -96,7 +90,6 @@
       <option name="selectedOptions">
         <list />
       </option>
-      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
   </component>
@@ -111,8 +104,11 @@
       <workItem from="1757838128479" duration="12655000" />
       <workItem from="1758007321207" duration="11528000" />
       <workItem from="1758101324302" duration="5095000" />
-      <workItem from="1758183328096" duration="13337000" />
-      <workItem from="1758798033646" duration="31000" />
+      <workItem from="1758183328096" duration="16978000" />
+      <workItem from="1758267328647" duration="2377000" />
+      <workItem from="1758615716774" duration="3520000" />
+      <workItem from="1758702190602" duration="3278000" />
+      <workItem from="1758789087209" duration="15662000" />
     </task>
     <servers />
   </component>

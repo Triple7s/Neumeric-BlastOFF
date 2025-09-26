@@ -1,4 +1,5 @@
 using System;
+using SpinMotion;
 using UnityEngine;
 
 public class S_Racer : MonoBehaviour
@@ -9,21 +10,26 @@ public class S_Racer : MonoBehaviour
     [SerializeField] private Color targetColor = Color.honeydew;
     [SerializeField] private Color nextColor = Color.cadetBlue;
     [SerializeField] private Color drivingDirection = Color.deepPink;
+    
 
-
+    public static Action<S_QtmState.QtmState> OnQtmStateChange;
+    private bool _isPlayer;
 
     private S_CheckPointEntity targetCheckPoint, nextCheckPoint;
+    private Vector3 targetPosition, nextPosition;
     
+    public int TargetCheckPointIndex { get; private set; }
     
-    private int targetCheckPointIndex;
     private void Start()
     {
         Init();
+
+        _isPlayer = GetComponent<S_PlayerBehaviour>();
     }
 
     private void Init()
     {
-        targetCheckPointIndex = 0;
+        TargetCheckPointIndex = 0;
         GetNextCheckPoint();
     }
 
@@ -34,28 +40,44 @@ public class S_Racer : MonoBehaviour
 
     private void HasPastCheckPoint()
     {
-        var dirTarget = (targetCheckPoint.transform.position - transform.position).normalized;
-        var dirNext = (nextCheckPoint.transform.position - transform.position).normalized;
+        var dirTarget = (targetPosition - transform.position).normalized;
+        var dirNext = (nextPosition - transform.position).normalized;
         
         var dotValue = Vector3.Dot(dirTarget, dirNext);
 
         if (dotValue < 0)
         {
-            targetCheckPointIndex++;
+
+            if (_isPlayer)
+            {
+                var check = S_CheckPointManager.Instance.GetCheckPoint(TargetCheckPointIndex);
+                OnQtmStateChange?.Invoke(check.qtmStateStatus ? S_QtmState.QtmState.On : S_QtmState.QtmState.Off);
+            }
+            TargetCheckPointIndex++;
+
             GetNextCheckPoint();
         }
     }
 
     private void GetNextCheckPoint()
     {
-        targetCheckPoint = S_CheckPointManager.Instance.GetCheckPoint(targetCheckPointIndex);
-        nextCheckPoint = S_CheckPointManager.Instance.GetCheckPoint(targetCheckPointIndex + 1);
+        targetCheckPoint = S_CheckPointManager.Instance.GetCheckPoint(TargetCheckPointIndex);
+        nextCheckPoint = S_CheckPointManager.Instance.GetCheckPoint(TargetCheckPointIndex + 1);
+        
+        
+        targetPosition = targetCheckPoint.transform.position;
+        nextPosition = nextCheckPoint.transform.position;
+    }
+
+    public float GetDistanceFromCheckPoint()
+    {
+        return Vector3.Distance(transform.position, targetPosition);
     }
 
     public Vector3 GetDrivingDirection()
     {
-        var dirTarget = (targetCheckPoint.transform.position - transform.position);
-        var dirNext = (nextCheckPoint.transform.position - transform.position);
+        var dirTarget = (targetPosition - transform.position);
+        var dirNext = (nextPosition - transform.position);
         
         return (dirTarget + dirNext).normalized;
     }
@@ -64,12 +86,14 @@ public class S_Racer : MonoBehaviour
     {
         if (hideGizmos) return;
 
-        if (!targetCheckPoint) return;
+        if (targetPosition.magnitude < 1) return;
         
         Gizmos.color = targetColor;
-        Gizmos.DrawLine(transform.position, targetCheckPoint.transform.position);
+        Gizmos.DrawWireSphere(targetPosition, 0.2f);
+        Gizmos.DrawLine(transform.position, targetPosition);
         Gizmos.color = nextColor;
-        Gizmos.DrawLine(transform.position, nextCheckPoint.transform.position);
+        Gizmos.DrawWireSphere(nextPosition, 0.2f);
+        Gizmos.DrawLine(transform.position, nextPosition);
         // Visualize the direction auto driving takes the Racer
         var dir = GetDrivingDirection();
         Gizmos.color = drivingDirection;

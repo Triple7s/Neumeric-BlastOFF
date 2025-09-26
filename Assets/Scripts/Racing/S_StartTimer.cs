@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Globalization;
 using TMPro;
 using UnityEngine;
 
@@ -7,7 +8,6 @@ public class S_StartTimer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private float countDown, visibleDuration, fadeDuration;
-    [SerializeField] private S_MathManager mathManager;
     
     private float timer;
     private bool isQtmSpawned;
@@ -28,11 +28,14 @@ public class S_StartTimer : MonoBehaviour
         {
             if (timer > 0)
             {
-                timerText.text = timer.ToString("F2");
-                if (Mathf.Approximately(Mathf.Ceil(timer), visibleDuration) && !isQtmSpawned)
+                var timeCeil = Mathf.Ceil(timer);
+                timerText.text = timeCeil.ToString(CultureInfo.InvariantCulture);
+                if (Mathf.Approximately(timeCeil, visibleDuration) && !isQtmSpawned)
                 {
                     isQtmSpawned = true;
-                    mathManager.DisplayQuestion();
+                    if (S_MathManager.Instance.isActiveAndEnabled)
+                        S_MathManager.Instance.DisplayQuestion();
+                    
                 }
             }
             else if (timer <= 0)
@@ -40,7 +43,8 @@ public class S_StartTimer : MonoBehaviour
             
                 OnTimerEnd?.Invoke();
                 timerText.text = "GO!";
-                mathManager.RaceStart();
+                if (S_MathManager.Instance.isActiveAndEnabled)
+                    S_MathManager.Instance.RaceStart();
                 break;
             }
             timer -= Time.deltaTime;
