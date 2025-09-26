@@ -43,9 +43,9 @@ public class S_VisualManager : MonoBehaviour
         }
     }
 
-    public void UpdateLapText(int lapNumber)
+    public void UpdateLapText(int lapNumber, int MaxLap)
     {
-        lapText.text = "LAP " + lapNumber;
+        lapText.text = "LAP " + lapNumber + " / " + MaxLap;
     }
 
     public void UpdatePlaceText(int place)

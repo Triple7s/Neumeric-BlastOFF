@@ -15,8 +15,13 @@ public class S_CheckPointEntity : MonoBehaviour
             case CheckPointType.Normal:
                 return;
             case CheckPointType.SingleQtm:
+                S_MathManager.Instance.OnTriggerEntered(S_TriggerVersion.QTMTrigger);
                 break;
             case CheckPointType.MultiQtm:
+                S_MathManager.Instance.OnTriggerEntered(S_TriggerVersion.MultipleQTMsTrigger);
+                break;
+            case CheckPointType.HideQtm:
+                S_MathManager.Instance.OnTriggerEntered(S_TriggerVersion.HideQTMTrigger);
                 break;
         }
     }

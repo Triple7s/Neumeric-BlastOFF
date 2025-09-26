@@ -6,6 +6,7 @@ public enum CheckPointType
     Normal,
     SingleQtm,
     MultiQtm,
+    HideQtm,
 }
 public class S_CheckPointManager : MonoBehaviour
 {

@@ -65,7 +65,10 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     {
         if (!isEngineRunning) return;
 
-        carVfx.WrongAnswerVisual();
+        if (!carVfx)
+        {
+            carVfx.WrongAnswerVisual();
+        }
         
         Vector3 direction = rb.linearVelocity.normalized;
         if (direction == Vector3.zero)
