@@ -1,6 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CheckPointType
+{
+    Normal,
+    SingleQtm,
+    MultiQtm,
+}
 public class S_CheckPointManager : MonoBehaviour
 {
     public static S_CheckPointManager Instance { get; private set; }

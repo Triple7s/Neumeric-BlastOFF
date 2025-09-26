@@ -5,7 +5,21 @@ using UnityEngine;
 public class S_CheckPointEntity : MonoBehaviour
 {
 
-    [Header("Checkpoint Settings")] public bool qtmStateStatus;
+    [Header("Checkpoint Settings")] 
+    [SerializeField] private CheckPointType checkPointType;
+
+    public void PerformAction()
+    {
+        switch (checkPointType)
+        {
+            case CheckPointType.Normal:
+                return;
+            case CheckPointType.SingleQtm:
+                break;
+            case CheckPointType.MultiQtm:
+                break;
+        }
+    }
     
     
 #if UNITY_EDITOR
