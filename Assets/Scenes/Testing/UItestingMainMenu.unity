@@ -413,6 +413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1005614630}
   - component: {fileID: 1005614629}
+  - component: {fileID: 1005614631}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -459,6 +460,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1005614631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005614628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b06757ba27f110478a91da84bd0b07c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  mainMenuUXML: {fileID: 9197481963319205126, guid: 7fe62289aa93fb941a04b5abd5ee754d,
+    type: 3}
+  levelSelectUXML: {fileID: 9197481963319205126, guid: dafa0ec2dc3f6b841a27d60ac4c60ddc,
+    type: 3}
+  optionsUXML: {fileID: 9197481963319205126, guid: 43399a56c7df7d943b8d472a1d68b413,
+    type: 3}
+  transferDataUXML: {fileID: 9197481963319205126, guid: 46d76292825a35a43a4e3d6adab4e407,
+    type: 3}
 --- !u!1 &1532240914
 GameObject:
   m_ObjectHideFlags: 0

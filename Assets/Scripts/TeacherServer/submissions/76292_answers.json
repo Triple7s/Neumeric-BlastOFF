@@ -1,0 +1,55 @@
+{
+    "student_id": "76292",
+    "student_name": "Bob",
+    "answers": {
+        "answers": {
+            "addition": [],
+            "subtraction": [
+                {
+                    "category": "subtraction",
+                    "question": "6 - 2 = ?",
+                    "correctAnswer": 4,
+                    "chosenAnswer": 6,
+                    "isCorrect": false,
+                    "timeStamp": "2025-09-25 10:40:17"
+                }
+            ],
+            "multiplication": [
+                {
+                    "category": "multiplication",
+                    "question": "4 \u00d7 1 = ?",
+                    "correctAnswer": 4,
+                    "chosenAnswer": 4,
+                    "isCorrect": true,
+                    "timeStamp": "2025-09-25 10:40:20"
+                }
+            ],
+            "division": [
+                {
+                    "category": "division",
+                    "question": "4 \u00f7 2 = ?",
+                    "correctAnswer": 2,
+                    "chosenAnswer": 4,
+                    "isCorrect": false,
+                    "timeStamp": "2025-09-25 10:40:18"
+                }
+            ],
+            "additionSummary": {
+                "correct": 0,
+                "incorrect": 0
+            },
+            "subtractionSummary": {
+                "correct": 0,
+                "incorrect": 1
+            },
+            "multiplicationSummary": {
+                "correct": 1,
+                "incorrect": 0
+            },
+            "divisionSummary": {
+                "correct": 0,
+                "incorrect": 1
+            }
+        }
+    }
+}

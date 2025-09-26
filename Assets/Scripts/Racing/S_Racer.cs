@@ -10,6 +10,10 @@ public class S_Racer : MonoBehaviour
     [SerializeField] private Color targetColor = Color.honeydew;
     [SerializeField] private Color nextColor = Color.cadetBlue;
     [SerializeField] private Color drivingDirection = Color.deepPink;
+    
+
+    public static Action<S_QtmState.QtmState> OnQtmStateChange;
+    private bool _isPlayer;
 
     private S_CheckPointEntity targetCheckPoint, nextCheckPoint;
     private Vector3 targetPosition, nextPosition;
@@ -19,6 +23,8 @@ public class S_Racer : MonoBehaviour
     private void Start()
     {
         Init();
+
+        _isPlayer = GetComponent<S_PlayerBehaviour>();
     }
 
     private void Init()
@@ -41,7 +47,14 @@ public class S_Racer : MonoBehaviour
 
         if (dotValue < 0)
         {
+
+            if (_isPlayer)
+            {
+                var check = S_CheckPointManager.Instance.GetCheckPoint(TargetCheckPointIndex);
+                OnQtmStateChange?.Invoke(check.qtmStateStatus ? S_QtmState.QtmState.On : S_QtmState.QtmState.Off);
+            }
             TargetCheckPointIndex++;
+
             GetNextCheckPoint();
         }
     }
