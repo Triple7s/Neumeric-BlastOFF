@@ -48,6 +48,8 @@ public class S_MathManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI alternative4Text;
 
     private int numberOfCorrectAnswerInRow = 0;
+
+    private float questionStartTime;
     [SerializeField] private int score;
     [SerializeField] private int qtmPoints = 5;
     [SerializeField] private int[] winPoints = { 25, 20, 18, 15, 12, 10, 8, 5 };
@@ -155,6 +157,8 @@ public class S_MathManager : MonoBehaviour
 
         // Display question text
         questionText.text = currentQuestion.Text;
+
+        questionStartTime = S_GameTimerManager.Instance.GetTime();
 
         OnStartQtm?.Invoke();
 
@@ -279,7 +283,11 @@ public class S_MathManager : MonoBehaviour
 
             if (numberOfCorrectAnswerInRow == 0)
             {
-                score += qtmPoints;
+                float timeTaken = S_GameTimerManager.Instance.GetTime() - questionStartTime;
+
+                int timeBasedPoints = Mathf.Max(1, qtmPoints - Mathf.RoundToInt(timeTaken));
+
+                score += timeBasedPoints;
                 numberOfCorrectAnswerInRow++;
                 pointsText.text = "Score: " + score;
 

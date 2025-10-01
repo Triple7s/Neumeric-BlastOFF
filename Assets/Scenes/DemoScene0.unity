@@ -119,18 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &94570036 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3208749892261613304, guid: eeb962853cde93c479699abfd65b4d30,
-    type: 3}
-  m_PrefabInstance: {fileID: 7905342872561974837}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &109099209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20599,6 +20587,9 @@ GameObject:
   - component: {fileID: 886450297}
   - component: {fileID: 886450296}
   - component: {fileID: 886450295}
+  - component: {fileID: 886450300}
+  - component: {fileID: 886450299}
+  - component: {fileID: 886450298}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -20631,11 +20622,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_PlayerBehaviour
   data: {fileID: 11400000, guid: 89999c0d1257d96438aa27b37ff8ec5a, type: 2}
-  playerInputRegister: {fileID: 886450292}
+  racer: {fileID: 0}
   carHoverBarycentric: {fileID: 0}
+  carVfx: {fileID: 0}
+  alwaysUseAutoSteering: 0
+  playerInputRegister: {fileID: 886450292}
   cameraController: {fileID: 0}
   cameraStabilizer: {fileID: 0}
-  mathManager: {fileID: 0}
 --- !u!4 &886450294
 Transform:
   m_ObjectHideFlags: 0
@@ -20715,7 +20708,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::C_FinishLineDetector
   mathManager: {fileID: 0}
   isOpponent: 0
-  pointsText: {fileID: 94570036}
+  pointsText: {fileID: 0}
+--- !u!114 &886450298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886450291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bedd81184089004dbb2c749ba5f831b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_CarVFX
+  carRenderers: []
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  wrongColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &886450299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886450291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea555b24131260b47844f42314dc77d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_CarHoverBarycentric
+  rayLength: 5
+  rotationSpeed: 20
+  heightChangeSpeed: 25
+  fallingSpeed: 9.81
+  targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &886450300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886450291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0193fca7e9eaa7e4c89de1b94a93f4d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_Racer
+  hideGizmos: 0
+  targetColor: {r: 0.9411765, g: 1, b: 0.9411765, a: 1}
+  nextColor: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
+  drivingDirection: {r: 1, g: 0.07843138, b: 0.5764706, a: 1}
 --- !u!1 &887651263
 GameObject:
   m_ObjectHideFlags: 0
@@ -41058,7 +41101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::C_FinishLineDetector
   mathManager: {fileID: 1759100439}
   isOpponent: 0
-  pointsText: {fileID: 94570036}
+  pointsText: {fileID: 0}
 --- !u!114 &1759100439 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3285797595188685211, guid: eeb962853cde93c479699abfd65b4d30,
@@ -51283,12 +51326,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 384794603831608829, guid: fed928b3f9eb5d14e9762fe9ca77b177,
+        type: 3}
+      propertyPath: questionUI
+      value: 
+      objectReference: {fileID: 988468330}
     - target: {fileID: 5285317683758611722, guid: fed928b3f9eb5d14e9762fe9ca77b177,
         type: 3}
       propertyPath: m_Name
       value: Multiple QTMs Trigger
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 804563943347785930, guid: fed928b3f9eb5d14e9762fe9ca77b177, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -51305,13 +51354,18 @@ PrefabInstance:
         type: 3}
       propertyPath: equations
       value: 
-      objectReference: {fileID: 11400000, guid: 4026b0dd06996254f998e331cd9db116,
+      objectReference: {fileID: 11400000, guid: d7e453a575420a0408b5cdd24db03302,
         type: 2}
     - target: {fileID: 3285797595188685211, guid: eeb962853cde93c479699abfd65b4d30,
         type: 3}
       propertyPath: targetParticleSystem
       value: 
       objectReference: {fileID: 324594233}
+    - target: {fileID: 6999930967503858602, guid: eeb962853cde93c479699abfd65b4d30,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 7766478484596330770, guid: eeb962853cde93c479699abfd65b4d30,
         type: 3}
       propertyPath: m_LocalPosition.x
