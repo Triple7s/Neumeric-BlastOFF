@@ -64,11 +64,10 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     public void SlowDown()
     {
         if (!isEngineRunning) return;
-
-        if (!carVfx)
-        {
-            carVfx.WrongAnswerVisual();
-        }
+        
+        
+        carVfx.WrongAnswerVisual();
+        
         
         Vector3 direction = rb.linearVelocity.normalized;
         if (direction == Vector3.zero)
@@ -105,7 +104,6 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     
     public void TurnOnEngine()
     {
-        print("Turning on engine");
         isEngineRunning = true;
     }
 

@@ -7,7 +7,7 @@ public class S_CarVFX : MonoBehaviour
 
     [SerializeField] private Color correctColor = Color.green;
     [SerializeField] private Color wrongColor = Color.red;
-    private Color originalColor = Color.white;
+    private readonly Color originalColor = Color.white;
     
     public void CorrectAnswerVisual()
     {
@@ -27,12 +27,12 @@ public class S_CarVFX : MonoBehaviour
             {
                 render.material.color = blinkColor;
             }
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.25f);
             foreach (var render in carRenderers)
             {
                 render.material.color = originalColor;
             }
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.25f);
         }
     }
 } 

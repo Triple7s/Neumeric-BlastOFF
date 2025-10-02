@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -8,9 +10,12 @@ public class S_QtmAnswer : MonoBehaviour
     
     private bool isCorrectAnswer;
 
+    public event Action RequestNewQuestion;
+
     public void SetAnswer(string answer, bool isCorrect)
     {
         answerText.text = answer;
+        isCorrectAnswer = isCorrect;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,6 +30,18 @@ public class S_QtmAnswer : MonoBehaviour
             {
                 car.SlowDown();
             }
+
+            if (car is S_PlayerBehaviour player)
+            {
+                StartCoroutine(GetNewQuestion());
+            }
         }
+    }
+
+    private IEnumerator GetNewQuestion()
+    {
+        yield return new WaitForSeconds(1.5f);
+        
+        RequestNewQuestion?.Invoke();
     }
 }
