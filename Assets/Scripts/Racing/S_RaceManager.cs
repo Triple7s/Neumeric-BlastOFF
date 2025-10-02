@@ -65,7 +65,7 @@ public class S_RaceManager : MonoBehaviour
                 S_VisualManager.Instance.UpdatePlaceText(i+1);
                 S_VisualManager.Instance.UpdateLapText(thisLap, raceLaps);
 
-                if (thisLap == raceLaps)
+                if (thisLap-1 == raceLaps)
                 {
                     S_VisualManager.Instance.EndRace(i+1);
                     player.EndRace();
