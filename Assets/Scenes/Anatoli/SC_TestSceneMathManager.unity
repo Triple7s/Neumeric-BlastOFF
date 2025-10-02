@@ -2948,7 +2948,7 @@ PrefabInstance:
     - target: {fileID: 3819641757830914736, guid: 6d6b7d0b3d84fe3488c7f03d2e6149d5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8874661363524109217, guid: 6d6b7d0b3d84fe3488c7f03d2e6149d5,
         type: 3}
@@ -4461,7 +4461,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 130.65
+  m_fontSize: 432
   m_fontSizeBase: 450
   m_fontWeight: 400
   m_enableAutoSizing: 1
