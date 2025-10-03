@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b06757ba27f110478a91da84bd0b07c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  mainMenuUXML: {fileID: 9197481963319205126, guid: 7fe62289aa93fb941a04b5abd5ee754d,
+  mainMenuUXML: {fileID: 9197481963319205126, guid: adc244a0334d0814594ea9a469570cef,
     type: 3}
   levelSelectUXML: {fileID: 9197481963319205126, guid: dafa0ec2dc3f6b841a27d60ac4c60ddc,
     type: 3}

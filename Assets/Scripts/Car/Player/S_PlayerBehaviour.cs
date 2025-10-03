@@ -129,6 +129,8 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     {
         print("QTM is turning on");
         S_VisualManager.Instance.ToggleControls(false);
+        StopTurning();
+        StopBrake();
         isQtm = true;
     }
 

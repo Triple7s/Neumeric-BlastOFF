@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Player_CarData
   m_EditorClassIdentifier: Assembly-CSharp::S_CarData
   mass: 10
-  linearDamping: 1
+  linearDamping: 2.5
   angularDamping: 5
-  acceleration: 1100
+  acceleration: 4000
   brakeAcceleration: 250
-  turningSpeed: 20
+  turningSpeed: 10
   autoTurningSpeed: 100
-  boostPower: 500
-  slowDownPower: 125
+  boostPower: 600
+  slowDownPower: 300
   minDriftSpeed: 50
   maxSpeed: 400
   maxBoostSpeed: 600
