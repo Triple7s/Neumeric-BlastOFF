@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class S_QtmGate : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI questionText;
+    [SerializeField] private TextMeshProUGUI[] questionText;
     [SerializeField] private S_QtmAnswer[] answerGates;
     
     private Question question;
@@ -27,8 +27,11 @@ public class S_QtmGate : MonoBehaviour
         int randIndex = Random.Range(0, answerGates.Length);
 
         print("Correct Answer: " + question.CorrectAnswer);
-        
-        questionText.text = question.Text;
+
+        foreach (var text in questionText)
+        {
+            text.text = question.Text;
+        }
         
         answerGates[randIndex].SetAnswer(question.CorrectAnswer.ToString(), true);
 

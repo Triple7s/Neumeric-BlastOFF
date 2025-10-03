@@ -97,7 +97,7 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     
     protected void AutoTurn(Vector3 targetDirection)
     {
-        Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
+        Quaternion targetRotation = Quaternion.LookRotation(targetDirection, transform.up);
         
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, autoTurningSpeed * Time.deltaTime);
     }

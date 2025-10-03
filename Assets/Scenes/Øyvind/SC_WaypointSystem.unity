@@ -2958,6 +2958,7 @@ MonoBehaviour:
   - {fileID: 924213665}
   - {fileID: 850290011}
   raceLaps: 3
+  usingUIQtm: 1
 --- !u!4 &1104501519
 Transform:
   m_ObjectHideFlags: 0
