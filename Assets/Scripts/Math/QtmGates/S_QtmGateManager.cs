@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using Random = UnityEngine.Random;
 
 public class S_QtmGateManager : MonoBehaviour
@@ -13,7 +14,9 @@ public class S_QtmGateManager : MonoBehaviour
             Instance = this;
         else
             Destroy(this);
+
         
+
     }
 
     public Question GetQuestion()

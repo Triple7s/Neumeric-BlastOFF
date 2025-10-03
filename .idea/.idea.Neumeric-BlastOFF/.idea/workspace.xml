@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02b2abd1-4345-46b9-b20b-4cc4cc0dcf8f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Material/QtmGateMaterials/M_QtmGate.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/QtmGateMaterials/M_QtmGate.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Template/SC_ForTemplate.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Template/SC_ForTemplate.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_GateQtm.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Øyvind/SC_GateQtm.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CarData/NPC_CarData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/CarData/NPC_CarData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CarData/Player_CarData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/CarData/Player_CarData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racing/S_RaceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Racing/S_RaceManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racing/CheckPoint/S_CheckPointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Racing/CheckPoint/S_CheckPointManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +115,8 @@
       <workItem from="1758615716774" duration="3520000" />
       <workItem from="1758702190602" duration="3278000" />
       <workItem from="1758789087209" duration="15662000" />
-      <workItem from="1759394543016" duration="9225000" />
+      <workItem from="1759394543016" duration="12995000" />
+      <workItem from="1759475799903" duration="992000" />
     </task>
     <servers />
   </component>

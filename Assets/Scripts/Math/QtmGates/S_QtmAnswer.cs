@@ -11,6 +11,9 @@ public class S_QtmAnswer : MonoBehaviour
     private bool isCorrectAnswer;
 
     public event Action RequestNewQuestion;
+    
+    public static event Action OnAnswerCorrect;
+    public static event Action OnAnswerWrong;
 
     public void SetAnswer(string answer, bool isCorrect)
     {
@@ -34,6 +37,14 @@ public class S_QtmAnswer : MonoBehaviour
             if (car is S_PlayerBehaviour player)
             {
                 StartCoroutine(GetNewQuestion());
+                if (isCorrectAnswer)
+                {
+                    OnAnswerCorrect?.Invoke();
+                }
+                else
+                {
+                    OnAnswerWrong?.Invoke();
+                }
             }
         }
     }
