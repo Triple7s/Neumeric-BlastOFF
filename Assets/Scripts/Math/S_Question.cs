@@ -57,7 +57,7 @@ public class Question
                 MathOperator.Division => "÷",
                 _ => "?"
             };
-            return $"{x} {opSymbol} {y} = ?";
+            return $"{x} {opSymbol} {y}";
         }
     }
 

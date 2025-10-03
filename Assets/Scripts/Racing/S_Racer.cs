@@ -13,7 +13,7 @@ public class S_Racer : MonoBehaviour
     
 
     public static Action<S_QtmState.QtmState> OnQtmStateChange;
-    private bool _isPlayer;
+    private bool isPlayer;
 
     private S_CheckPointEntity targetCheckPoint, nextCheckPoint;
     private Vector3 targetPosition, nextPosition;
@@ -24,7 +24,7 @@ public class S_Racer : MonoBehaviour
     {
         Init();
 
-        _isPlayer = GetComponent<S_PlayerBehaviour>();
+        isPlayer = GetComponent<S_PlayerBehaviour>();
     }
 
     private void Init()
@@ -40,23 +40,28 @@ public class S_Racer : MonoBehaviour
 
     private void HasPastCheckPoint()
     {
-        var dirTarget = (targetPosition - transform.position).normalized;
-        var dirNext = (nextPosition - transform.position).normalized;
+        Vector3 direction = (nextPosition - targetPosition).normalized;
+        Vector3 delta = (targetPosition - transform.position).normalized;
         
-        var dotValue = Vector3.Dot(dirTarget, dirNext);
-
-        if (dotValue < 0)
+        if (HasPassedCheckpoint(direction, delta))
         {
-
-            if (_isPlayer)
+            if (isPlayer)
             {
                 var check = S_CheckPointManager.Instance.GetCheckPoint(TargetCheckPointIndex);
-                OnQtmStateChange?.Invoke(check.qtmStateStatus ? S_QtmState.QtmState.On : S_QtmState.QtmState.Off);
+                check.PerformAction();
             }
+            
             TargetCheckPointIndex++;
 
             GetNextCheckPoint();
         }
+    }
+    
+    private bool HasPassedCheckpoint(Vector3 dir, Vector3 delta)
+    {
+       float d = Vector3.Dot(dir, delta);
+       
+       return d < 0.0f;
     }
 
     private void GetNextCheckPoint()

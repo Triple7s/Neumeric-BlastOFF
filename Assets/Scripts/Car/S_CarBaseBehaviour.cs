@@ -61,11 +61,13 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         rb.AddForce(direction * data.BoostPower, ForceMode.Impulse);
     }
 
-    protected void SlowDown()
+    public void SlowDown()
     {
         if (!isEngineRunning) return;
-
+        
+        
         carVfx.WrongAnswerVisual();
+        
         
         Vector3 direction = rb.linearVelocity.normalized;
         if (direction == Vector3.zero)
@@ -102,7 +104,6 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     
     public void TurnOnEngine()
     {
-        print("Turning on engine");
         isEngineRunning = true;
     }
 

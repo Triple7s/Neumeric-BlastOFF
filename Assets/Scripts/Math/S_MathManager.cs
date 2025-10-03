@@ -165,7 +165,7 @@ public class S_MathManager : MonoBehaviour
         DisplayAlternatives(currentQuestion);
     }
 
-    protected void DisplayAlternatives(Question question)
+    private void DisplayAlternatives(Question question)
     {
         HashSet<int> alternatives = new HashSet<int>();
         alternatives.Add(currentQuestion.CorrectAnswer);
