@@ -83,14 +83,16 @@ public class S_CarHoverBarycentric : MonoBehaviour
         }
 
         Mesh mesh = meshCollider.sharedMesh;
-        Vector3[] normals = mesh.normals;
-
-        int[] triangles = mesh.triangles;
+        if (!hit.transform.TryGetComponent(out S_DrivableSurface cache))
+        {
+            Debug.LogWarning("Ray does not hit mesh with S_DrivableSurface Class");
+            return Vector3.zero;
+        }
         
         // The three corners of the hit triangle
-        Vector3 alpha = normals[triangles[hit.triangleIndex * 3 + 0]];
-        Vector3 beta = normals[triangles[hit.triangleIndex * 3 + 1]];
-        Vector3 omega = normals[triangles[hit.triangleIndex * 3 + 2]];
+        Vector3 alpha = cache.Normals[cache.Triangles[hit.triangleIndex * 3 + 0]];
+        Vector3 beta  = cache.Normals[cache.Triangles[hit.triangleIndex * 3 + 1]];
+        Vector3 omega = cache.Normals[cache.Triangles[hit.triangleIndex * 3 + 2]];
         
         // interpolate using the barycentric coordinate of the hit-point
         Vector3 baryCenter = hit.barycentricCoordinate;

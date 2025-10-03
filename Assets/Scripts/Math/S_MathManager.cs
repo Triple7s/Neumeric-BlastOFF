@@ -22,9 +22,7 @@ public class S_MathManager : MonoBehaviour
     private S_AnswerLogCollection sessionLogs = new S_AnswerLogCollection();
     //private string json;
 
-    public static event Action OnCorrectAnswer;
-    public static event Action OnStartQtm;
-    public static event Action OnStopQtm;
+    public static event Action OnCorrectAnswer, OnWrongAnswer, OnStartQtm, OnStopQtm;
 
     [SerializeField] private GameObject questionUI;
     [SerializeField] private SO_Equations equations;
@@ -50,6 +48,8 @@ public class S_MathManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI alternative4Text;
 
     private int numberOfCorrectAnswerInRow = 0;
+
+    private float questionStartTime;
     [SerializeField] private int score;
     [SerializeField] private int qtmPoints = 5;
     [SerializeField] private int[] winPoints = { 25, 20, 18, 15, 12, 10, 8, 5 };
@@ -158,12 +158,14 @@ public class S_MathManager : MonoBehaviour
         // Display question text
         questionText.text = currentQuestion.Text;
 
+        questionStartTime = S_GameTimerManager.Instance.GetTime();
+
         OnStartQtm?.Invoke();
 
         DisplayAlternatives(currentQuestion);
     }
 
-    protected void DisplayAlternatives(Question question)
+    private void DisplayAlternatives(Question question)
     {
         HashSet<int> alternatives = new HashSet<int>();
         alternatives.Add(currentQuestion.CorrectAnswer);
@@ -281,7 +283,11 @@ public class S_MathManager : MonoBehaviour
 
             if (numberOfCorrectAnswerInRow == 0)
             {
-                score += qtmPoints;
+                float timeTaken = S_GameTimerManager.Instance.GetTime() - questionStartTime;
+
+                int timeBasedPoints = Mathf.Max(1, qtmPoints - Mathf.RoundToInt(timeTaken));
+
+                score += timeBasedPoints;
                 numberOfCorrectAnswerInRow++;
                 pointsText.text = "Score: " + score;
 
@@ -302,6 +308,7 @@ public class S_MathManager : MonoBehaviour
         }
         else
         {
+            OnWrongAnswer?.Invoke();
             // Wrong -> Red
             clickedAlternative.GetComponent<Image>().color = redSeeThroughColor;
             numberOfCorrectAnswerInRow = 0;

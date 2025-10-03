@@ -6,17 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/Scenes/\xD8yvind/SC_ProtoBuild.unity"
-    guid: 70042951d43ce1849be720be9978dfad
+    path: Assets/Scenes/Testing/UItestingMainMenu.unity
+    guid: 1f7a3a2d4a7cbe1499d37acf693a9294
   - enabled: 1
-    path: Assets/Scenes/DemoScene0.unity
-    guid: fda9cd007748d23438ce902cf384fdf0
-  - enabled: 1
-    path: Assets/Scenes/Final Score.unity
-    guid: 646a9b9d329b2434f9b3c741f3445df5
-  - enabled: 1
-    path: Assets/Scenes/Upload Results.unity
-    guid: e313d194d7e98a14db0fbeeef333be2a
+    path: "Assets/Scenes/\xD8yvind/SC_WaypointSystem.unity"
+    guid: cf2278d40e907f84db14e0ad8a753ae5
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
       guid: a69a577ac35ca9d43a72e5d64f51fded, type: 2}

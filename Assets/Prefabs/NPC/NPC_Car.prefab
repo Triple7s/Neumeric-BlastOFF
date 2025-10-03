@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 6614457023153908301}
   - component: {fileID: 2303461308326805710}
   - component: {fileID: 2636353213146717478}
+  - component: {fileID: 2499842445052097128}
   m_Layer: 0
   m_Name: NPC_Car
   m_TagString: Untagged
@@ -313,6 +314,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 51cc559ab085f234c91e886638c9922b, type: 2}
   racer: {fileID: 2636353213146717478}
   carHoverBarycentric: {fileID: 2303461308326805710}
+  carVfx: {fileID: 2499842445052097128}
 --- !u!114 &2303461308326805710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea555b24131260b47844f42314dc77d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_CarHoverBarycentric
-  rayLength: 5
+  rayLength: 2
   rotationSpeed: 10
   heightChangeSpeed: 25
   fallingSpeed: 9.81
@@ -348,3 +350,19 @@ MonoBehaviour:
   targetColor: {r: 0.9411765, g: 1, b: 0.9411765, a: 1}
   nextColor: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
   drivingDirection: {r: 1, g: 0.07843138, b: 0.5764706, a: 1}
+--- !u!114 &2499842445052097128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9062037704372422282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bedd81184089004dbb2c749ba5f831b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_CarVFX
+  carRenderers:
+  - {fileID: 5174655918060984743}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  wrongColor: {r: 1, g: 0, b: 0, a: 1}

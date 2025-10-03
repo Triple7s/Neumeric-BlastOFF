@@ -30,7 +30,7 @@ public class S_FinishLineDetector : MonoBehaviour
             else
             {
                 Instantiate(Resources.Load("Win UI"));
-                FindFirstObjectByType<LoadFinalScore>().LoadFinalScoreScene();
+                //FindFirstObjectByType<LoadFinalScore>().LoadFinalScoreScene();
             }
         }
     }

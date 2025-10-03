@@ -1,13 +1,18 @@
 using System;
+using System.Collections;
 using UnityEngine;
+
+[RequireComponent(typeof(S_Racer), typeof(S_CarHoverBarycentric), typeof(S_CarVFX))]
 
 public abstract class S_CarBaseBehaviour : MonoBehaviour
 {
     [SerializeField] protected S_CarData data;
-    
+    [Header("Scripts")]
     [SerializeField] protected S_Racer racer;
     [SerializeField] protected S_CarHoverBarycentric carHoverBarycentric;
+    [SerializeField] protected S_CarVFX carVfx;
     
+    protected float acceleration, turningSpeed, autoTurningSpeed, maxSpeed;
     
     protected Rigidbody rb;
     
@@ -25,6 +30,11 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         rb.mass = data.Mass;
         rb.linearDamping = data.LinearDamping;
         rb.angularDamping = data.AngularDamping;
+        
+        acceleration = data.Acceleration;
+        turningSpeed = data.TurningSpeed;
+        autoTurningSpeed = data.AutoTurningSpeed;
+        maxSpeed = data.MaxSpeed;
     }
 
     protected virtual void FixedUpdate()
@@ -40,7 +50,9 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     public void Boost()
     {
         if (!isEngineRunning) return;
-            
+        
+        carVfx.CorrectAnswerVisual();
+        
         Vector3 direction = rb.linearVelocity.normalized;
         if (direction == Vector3.zero)
         {
@@ -49,19 +61,36 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         rb.AddForce(direction * data.BoostPower, ForceMode.Impulse);
     }
 
+    public void SlowDown()
+    {
+        if (!isEngineRunning) return;
+        
+        
+        carVfx.WrongAnswerVisual();
+        
+        
+        Vector3 direction = rb.linearVelocity.normalized;
+        if (direction == Vector3.zero)
+        {
+            direction = transform.forward;
+        }
+        rb.AddForce(-direction * data.SlowDownPower, ForceMode.Impulse);
+    }
+    
+
     protected void Drive()
     {
-        rb.AddForce(transform.forward * (data.Acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
+        rb.AddForce(transform.forward * (acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
         
-        if (rb.linearVelocity.magnitude > data.MaxSpeed)
+        if (rb.linearVelocity.magnitude > maxSpeed)
         {
-            var newSpeed = rb.linearVelocity.normalized * data.MaxSpeed;
-            rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, newSpeed, Time.fixedDeltaTime * 5);
+            var newSpeed = rb.linearVelocity.normalized * maxSpeed;
+            rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, newSpeed, 100f * Time.deltaTime);
 
             if (rb.linearVelocity.magnitude > data.MaxBoostSpeed)
             {
-                var maxSpeed = rb.linearVelocity.normalized * data.MaxBoostSpeed;
-                rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, maxSpeed, Time.fixedDeltaTime / 10);
+                var speed = rb.linearVelocity.normalized * data.MaxBoostSpeed;
+                rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, speed, 1000 * Time.deltaTime);
             }
         }
     }
@@ -70,12 +99,11 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     {
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
         
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, data.AutoTurningSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, autoTurningSpeed * Time.deltaTime);
     }
     
     public void TurnOnEngine()
     {
-        print("Turning on engine");
         isEngineRunning = true;
     }
 
