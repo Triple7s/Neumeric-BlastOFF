@@ -28,9 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696651865292562746}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.011626635, y: 0.0000000066134507, z: -0.000000005584442,
-    w: 0.99993247}
-  m_LocalPosition: {x: -0.00000022351742, y: 1.5, z: -3.2200007}
+  m_LocalRotation: {x: 0.011626785, y: -3.1117525e-10, z: 1.0075009e-10, w: 0.9999324}
+  m_LocalPosition: {x: -0.0000031692907, y: 1.4999998, z: -3.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -371,6 +370,7 @@ MonoBehaviour:
   racer: {fileID: 920630926225535308}
   carHoverBarycentric: {fileID: 5356555243972702356}
   carVfx: {fileID: 5475132890906326534}
+  degreeTurnAway: 45
   alwaysUseAutoSteering: 0
   playerInputRegister: {fileID: 3559611923804874376}
   cameraController: {fileID: 2544049755536184592}
@@ -783,8 +783,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9041932598008035803}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.011626718, y: 0.000000063552775, z: -4.5211918e-10, w: 0.9999324}
-  m_LocalPosition: {x: 0, y: 1.5, z: -3.220001}
+  m_LocalRotation: {x: 0.011626785, y: -3.1117525e-10, z: 1.0075009e-10, w: 0.9999324}
+  m_LocalPosition: {x: -0.0000031692907, y: 1.4999998, z: -3.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

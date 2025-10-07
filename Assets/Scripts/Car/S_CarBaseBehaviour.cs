@@ -40,8 +40,13 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     protected virtual void FixedUpdate()
     {
         if (!isEngineRunning)   return;
+
+        if (carHoverBarycentric.HoverOverGround(data.BaseFloatingHeight) == false)
+        {
+            AutoTurn(racer.GetDrivingDirection());
+        }
+
         
-        carHoverBarycentric.HoverOverGround(data.BaseFloatingHeight);
         
         BehaviourUpdate();
     }
@@ -99,7 +104,9 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     {
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection, transform.up);
         
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, autoTurningSpeed * Time.deltaTime);
+        var targetRot = Quaternion.RotateTowards(transform.rotation, targetRotation, autoTurningSpeed * Time.deltaTime);
+        
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, autoTurningSpeed * Time.deltaTime);
     }
     
     public void TurnOnEngine()

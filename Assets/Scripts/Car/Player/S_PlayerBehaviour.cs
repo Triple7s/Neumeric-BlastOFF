@@ -1,9 +1,9 @@
-using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class S_PlayerBehaviour : S_CarBaseBehaviour
 {
+    [Header("Player Values")] 
+    [SerializeField] private float dotProductBeforeTurn = 0.2f;
     [SerializeField] private bool alwaysUseAutoSteering;
     [Header("Scripts")]
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
@@ -61,7 +61,16 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
             Drive();
         }
         
+        var targetDir = (racer.NextCheckPoint.transform.position - racer.TargetCheckPoint.transform.position).normalized;
+        var forwardDir = (transform.forward).normalized;
+        
+        var degreesFromTarget = Vector3.Dot(targetDir, forwardDir);
+        print(degreesFromTarget);
         if (isQtm)
+        {
+            AutoTurn(racer.GetDrivingDirection());
+        }
+        else if (degreesFromTarget <= dotProductBeforeTurn)
         {
             AutoTurn(racer.GetDrivingDirection());
         }
@@ -73,6 +82,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         cameraController.SetFOV(rb.linearVelocity.magnitude / data.MaxSpeed);
         cameraStabilizer.StabilizeCamera(transform);
     }
+    
 
     private void BrakeOrDrift()
     {
@@ -92,7 +102,10 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     
     private void Turn()
     {
+        
+        
         rb.AddTorque(transform.TransformDirection(Vector3.up) * (Time.deltaTime * turningSpeed * turnDirection), ForceMode.Impulse);
+        
     }
 
     #region Event Actions
