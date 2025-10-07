@@ -22,6 +22,11 @@ public class S_NamePlate : MonoBehaviour
         placementText.text = placement;
     }
     
+    public string GetPlacement()
+    {
+        return placementText.text;
+    }
+    
     public void SetName(string name)
     {
         nameText.text = name;

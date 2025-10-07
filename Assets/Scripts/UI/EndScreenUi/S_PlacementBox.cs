@@ -1,8 +1,13 @@
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class S_PlacementBox : MonoBehaviour
 {
+
+    [SerializeField] private TextMeshProUGUI placementText;
+    
     private readonly List<S_NamePlate> _namePlates = new List<S_NamePlate>();
 
     private void Start()
@@ -15,12 +20,12 @@ public class S_PlacementBox : MonoBehaviour
         }
     }
     
-    public void UpdatePlayerInfo(string playerName, string playerTime)
+    public void UpdatePlayerInfo(string playerTime)
     {
         foreach (var namePlate in _namePlates)
         {
             if (!namePlate.IsPlayerPlate()) continue;
-            namePlate.SetName(playerName);
+            namePlate.SetName(S_GameManager.Instance.GetPlayerName());
             namePlate.SetTime(playerTime);
             break;
         }
@@ -37,9 +42,12 @@ public class S_PlacementBox : MonoBehaviour
         
         UpdatePlacementsText();
         UpdatePointsText();
+        UpdateComputerNames();
+        UpdatePlayerInfo("1:38:50");
+        UpdatePlacementText();
     }
 
-    public void UpdatePlacementsText()
+    private void UpdatePlacementsText()
     {
         foreach (var namePlate in _namePlates)
         {
@@ -55,7 +63,7 @@ public class S_PlacementBox : MonoBehaviour
         }
     }
 
-    public void UpdatePointsText()
+    private void UpdatePointsText()
     {
         foreach (var namePlate in _namePlates)
         {
@@ -65,9 +73,34 @@ public class S_PlacementBox : MonoBehaviour
         }
     }
 
-    public void UpdateNames()
+    private void UpdateComputerNames()
     {
+        List<int> computerIdes = new List<int>();
+        for (int i = 0; i < _namePlates.Count - 1; i++)
+        {
+            computerIdes.Add(i);
+        }
         
+        computerIdes = ShuffleList(computerIdes);
+        
+        int computerIndex = 0;
+        foreach (var namePlate in _namePlates)
+        {
+            if (namePlate.IsPlayerPlate()) continue;
+            namePlate.SetName("CPU " + (computerIdes[computerIndex] + 1));
+            computerIndex++;
+        }
+    }
+
+    private void UpdatePlacementText()
+    {
+        foreach (var namePlate in _namePlates)
+        {
+            if (!namePlate.IsPlayerPlate()) continue;
+            string placement = namePlate.GetPlacement();
+            placementText.text = placement;
+            break;
+        }
     }
     
     public void UpdatePoints()
@@ -86,6 +119,12 @@ public class S_PlacementBox : MonoBehaviour
                 namePlate.SetPoints(aiPoints.ToString());
             }
         }*/
+    }
+    
+    private static List<int> ShuffleList(List<int> list)
+    {
+        var random = new System.Random();
+        return list.OrderBy(x => random.Next()).ToList();
     }
     
 }

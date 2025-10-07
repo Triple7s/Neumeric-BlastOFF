@@ -6,6 +6,8 @@ public class S_GameManager : MonoBehaviour
 
     [SerializeField] private SO_PointsForPlacement pointsForPlacement;
     
+    private static readonly string PlayerNameKey = "PlayerName";
+    
     private void Awake()
     {
         if (Instance && Instance != this)
@@ -19,6 +21,15 @@ public class S_GameManager : MonoBehaviour
         }
     }
 
+    public void SetPlayerName(string pName)
+    {
+        PlayerPrefs.SetString(PlayerNameKey, pName);
+    }
+    
+    public string GetPlayerName()
+    {
+        return PlayerPrefs.GetString(PlayerNameKey);
+    }
     
     
     public int GetPointsForPlacement(int placement)
