@@ -187,7 +187,8 @@ public class S_CheckPointManager : MonoBehaviour
 
         if (closetsGround != null)
         {
-            var upDir = thisEntity.transform.position - closetsGround.transform.position;
+            var rayDir = closetsGround.transform.position - thisEntity.transform.position;
+            return FindNormal(thisEntity, rayDir);
         }
         
         
@@ -210,26 +211,23 @@ public class S_CheckPointManager : MonoBehaviour
     }
     
     
-    private Vector3 FindNormal()
+    private Vector3 FindNormal(S_CheckPointEntity origin, Vector3 rayDirection)
     {
         LayerMask mask = LayerMask.GetMask("DrivableGround");
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out RaycastHit hit, 10, mask))
+        if (!Physics.Raycast(origin.transform.position, rayDirection, out RaycastHit hit, 0.5f, mask))
         {
-            Debug.LogWarning("Ray does not hit mesh with " + mask + " layer");
             return Vector3.zero;
         }
         
         MeshCollider meshCollider = hit.collider as MeshCollider;
         if (!meshCollider || !meshCollider.sharedMesh)
         {
-            Debug.Log("missing");
             return Vector3.zero;
         }
 
         Mesh mesh = meshCollider.sharedMesh;
         if (!hit.transform.TryGetComponent(out S_DrivableSurface cache))
         {
-            Debug.LogWarning("Ray does not hit mesh with S_DrivableSurface Class");
             return Vector3.zero;
         }
         

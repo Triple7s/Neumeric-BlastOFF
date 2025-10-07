@@ -11,7 +11,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     [SerializeField] private S_CameraStabilizer cameraStabilizer;
         
     
-    private bool isTurning, isBraking, isDrifting, isQtm;
+    private bool isTurning, isBraking, isQtm;
     private int turnDirection;
     
 
@@ -65,7 +65,6 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         var forwardDir = (transform.forward).normalized;
         
         var degreesFromTarget = Vector3.Dot(targetDir, forwardDir);
-        print(degreesFromTarget);
         if (isQtm)
         {
             AutoTurn(racer.GetDrivingDirection());
@@ -135,7 +134,6 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     private void StopBrake()
     {
         isBraking = false;
-        isDrifting = false;
     }
 
     private void TurnOnAutoSteering()
