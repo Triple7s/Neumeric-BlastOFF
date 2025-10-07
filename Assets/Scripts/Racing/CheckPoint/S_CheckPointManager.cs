@@ -124,12 +124,12 @@ public class S_CheckPointManager : MonoBehaviour
         {
             var entity = checkPointEntities[i];
             Gizmos.matrix = Matrix4x4.identity;
-            
+            entity.transform.rotation = CalculateRotationOfCheckPoint(entity);
+
             // Draw Sphere at entity
-            Gizmos.color = pointColor;
             var offset = new Vector3(0, pointRadius, 0);
             var entityOffset = entity.transform.position + offset;
-            Gizmos.DrawSphere(entityOffset, pointRadius);
+            
             
             // Draw Line between entities
             if (prevEntity)
@@ -148,9 +148,12 @@ public class S_CheckPointManager : MonoBehaviour
             // Draw Area to cross entity
             var cubeSize = new Vector3(areaSize, areaSize, 0.01f);
             Gizmos.matrix = entity.transform.localToWorldMatrix;
+            
+            Gizmos.color = pointColor;
+            Gizmos.DrawSphere(offset, pointRadius);
+            
             Gizmos.color = areaColor;
             Gizmos.DrawCube(new Vector3(0, areaSize/4, 0), cubeSize);
-            entity.transform.rotation = CalculateRotationOfCheckPoint(entity);
             
             prevEntity = entity;
         }
