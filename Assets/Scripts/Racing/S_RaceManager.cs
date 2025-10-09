@@ -5,9 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class S_RaceManager : MonoBehaviour
 {
+    public static S_RaceManager Instance;
+    
     [SerializeField] private S_StartTimer startTimer;
     [SerializeField] private List<S_Racer> racers;
     [SerializeField] private int raceLaps;
+
+    public bool usingUIQtm;
     
     private List<S_CarBaseBehaviour> cars = new ();
     private bool isRacing;
@@ -16,6 +20,11 @@ public class S_RaceManager : MonoBehaviour
     
     private void Awake()
     {
+        if (Instance == null)
+            Instance = this;
+        else 
+            Destroy(this);
+        
         startTimer.OnTimerEnd += StartRace;
         S_MathManager.OnCorrectAnswer += BoostStart;
         

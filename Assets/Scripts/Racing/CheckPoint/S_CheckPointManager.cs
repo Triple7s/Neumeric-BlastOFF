@@ -124,12 +124,12 @@ public class S_CheckPointManager : MonoBehaviour
         {
             var entity = checkPointEntities[i];
             Gizmos.matrix = Matrix4x4.identity;
-            
+            entity.transform.rotation = CalculateRotationOfCheckPoint(entity);
+
             // Draw Sphere at entity
-            Gizmos.color = pointColor;
             var offset = new Vector3(0, pointRadius, 0);
             var entityOffset = entity.transform.position + offset;
-            Gizmos.DrawSphere(entityOffset, pointRadius);
+            
             
             // Draw Line between entities
             if (prevEntity)
@@ -148,9 +148,12 @@ public class S_CheckPointManager : MonoBehaviour
             // Draw Area to cross entity
             var cubeSize = new Vector3(areaSize, areaSize, 0.01f);
             Gizmos.matrix = entity.transform.localToWorldMatrix;
+            
+            Gizmos.color = pointColor;
+            Gizmos.DrawSphere(offset, pointRadius);
+            
             Gizmos.color = areaColor;
             Gizmos.DrawCube(new Vector3(0, areaSize/4, 0), cubeSize);
-            entity.transform.rotation = CalculateRotationOfCheckPoint(entity);
             
             prevEntity = entity;
         }
@@ -187,7 +190,8 @@ public class S_CheckPointManager : MonoBehaviour
 
         if (closetsGround != null)
         {
-            var upDir = thisEntity.transform.position - closetsGround.transform.position;
+            var rayDir = closetsGround.transform.position - thisEntity.transform.position;
+            return FindNormal(thisEntity, rayDir);
         }
         
         
@@ -210,26 +214,23 @@ public class S_CheckPointManager : MonoBehaviour
     }
     
     
-    private Vector3 FindNormal()
+    private Vector3 FindNormal(S_CheckPointEntity origin, Vector3 rayDirection)
     {
         LayerMask mask = LayerMask.GetMask("DrivableGround");
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out RaycastHit hit, 10, mask))
+        if (!Physics.Raycast(origin.transform.position, rayDirection, out RaycastHit hit, 0.5f, mask))
         {
-            Debug.LogWarning("Ray does not hit mesh with " + mask + " layer");
             return Vector3.zero;
         }
         
         MeshCollider meshCollider = hit.collider as MeshCollider;
         if (!meshCollider || !meshCollider.sharedMesh)
         {
-            Debug.Log("missing");
             return Vector3.zero;
         }
 
         Mesh mesh = meshCollider.sharedMesh;
         if (!hit.transform.TryGetComponent(out S_DrivableSurface cache))
         {
-            Debug.LogWarning("Ray does not hit mesh with S_DrivableSurface Class");
             return Vector3.zero;
         }
         

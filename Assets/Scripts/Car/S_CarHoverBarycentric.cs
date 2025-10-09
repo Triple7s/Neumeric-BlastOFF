@@ -16,7 +16,7 @@ public class S_CarHoverBarycentric : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    public void HoverOverGround(float carHeight)
+    public bool HoverOverGround(float carHeight)
     {
         Vector3 normal = FindNormal();
 
@@ -24,12 +24,14 @@ public class S_CarHoverBarycentric : MonoBehaviour
         {
             rb.angularVelocity = Vector3.zero;
             MakeCarFall();
-            return;
+            return false;
         }
 
         RotateCar(normal);
 
         SetCarHeight(normal, carHeight);
+
+        return true;
     }
 
     private void MakeCarFall()
