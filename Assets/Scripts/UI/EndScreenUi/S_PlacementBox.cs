@@ -8,6 +8,8 @@ public class S_PlacementBox : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI placementText;
     
+    private S_MathManager _mathManager;
+    
     private readonly List<S_NamePlate> _namePlates = new List<S_NamePlate>();
 
     private void Start()
@@ -18,6 +20,8 @@ public class S_PlacementBox : MonoBehaviour
         {
             _namePlates.Add(transform.GetChild(i).GetComponent<S_NamePlate>());
         }
+        
+        _mathManager = FindAnyObjectByType<S_MathManager>();
     }
     
     public void UpdatePlayerInfo()
@@ -105,20 +109,19 @@ public class S_PlacementBox : MonoBehaviour
     
     public void UpdatePoints()
     {
-        /*foreach (var namePlate in _namePlates)
+        foreach (var namePlate in _namePlates)
         {
             if (namePlate.IsPlayerPlate())
             {
-                int playerPoints = S_GameManager.Instance.GetPlayerPoints();
+                int playerPoints = _mathManager.GetScore();
                 namePlate.SetPoints(playerPoints.ToString());
             }
             else
             {
                 int aiIndex = namePlate.transform.GetSiblingIndex() - 1;
-                int aiPoints = S_GameManager.Instance.GetAIPoints(aiIndex);
-                namePlate.SetPoints(aiPoints.ToString());
+                namePlate.SetPoints(300 - (aiIndex * 50) + "");
             }
-        }*/
+        }
     }
     
     private static List<int> ShuffleList(List<int> list)
