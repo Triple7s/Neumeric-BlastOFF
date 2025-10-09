@@ -12,6 +12,7 @@ public class S_QtmGate : MonoBehaviour
         foreach (var gate in answerGates)
         {
             gate.RequestNewQuestion += SetNewQuestion;
+            gate.Init(this);
         }
     }
 
@@ -41,6 +42,11 @@ public class S_QtmGate : MonoBehaviour
             
             answerGates[index].SetAnswer(RandomWrongAnswer(), false);
         }
+    }
+    
+    public MathOperator GetCurrentQuestionType()
+    {
+        return question.Operation;
     }
 
     private string RandomWrongAnswer()

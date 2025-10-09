@@ -7,10 +7,17 @@ using UnityEngine;
 public class S_QtmAnswer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI answerText;
+
+    private S_QtmGate _qtmGate;
     
     private bool isCorrectAnswer;
 
     public event Action RequestNewQuestion;
+
+    public void Init(S_QtmGate qtmGate)
+    {
+        _qtmGate = qtmGate;
+    }
 
     public void SetAnswer(string answer, bool isCorrect)
     {
@@ -35,7 +42,7 @@ public class S_QtmAnswer : MonoBehaviour
             {
                 StartCoroutine(GetNewQuestion());
 
-                S_QtmGateManager.Instance.HandleAnswer(isCorrectAnswer);
+                S_QtmGateManager.Instance.HandleAnswer(isCorrectAnswer, _qtmGate.GetCurrentQuestionType());
             }
         }
     }
