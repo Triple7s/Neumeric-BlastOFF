@@ -105,6 +105,18 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         rb.AddTorque(transform.TransformDirection(Vector3.up) * (Time.deltaTime * turningSpeed * turnDirection), ForceMode.Impulse);
     }
 
+    public void ReturnToLastCheckpoint()
+    {
+        var respawnPoint = S_CheckPointManager.Instance.GetCheckPoint(racer.TargetCheckPointIndex - 1);
+        
+        var respawnPos = respawnPoint.transform.position + respawnPoint.transform.up;
+        
+        var respawnRot = respawnPoint.transform.rotation;
+        
+        transform.rotation = respawnRot;
+        transform.position = respawnPos;
+    }
+
     public override void Boost()
     {
         base.Boost();

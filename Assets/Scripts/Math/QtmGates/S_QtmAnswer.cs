@@ -11,6 +11,7 @@ public class S_QtmAnswer : MonoBehaviour
     private List<S_CarBaseBehaviour> carsThatHaveAnswered = new ();
     
     private bool isCorrectAnswer;
+    private bool isOff;
 
     public event Action RequestNewQuestion;
 
@@ -22,6 +23,8 @@ public class S_QtmAnswer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (isOff) return;
+        
         if (other.TryGetComponent(out S_CarBaseBehaviour car))
         {
             if (carsThatHaveAnswered.Contains(car)) return;
@@ -52,5 +55,12 @@ public class S_QtmAnswer : MonoBehaviour
         
         RequestNewQuestion?.Invoke();
         carsThatHaveAnswered.Clear();
+    }
+
+    public void Hide()
+    {
+        isOff = true;
+        gameObject.SetActive(false);
+        answerText.text = "";
     }
 }
