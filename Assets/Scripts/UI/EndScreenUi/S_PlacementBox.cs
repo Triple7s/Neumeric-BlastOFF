@@ -43,7 +43,7 @@ public class S_PlacementBox : MonoBehaviour
         UpdatePlacementsText();
         UpdatePointsText();
         UpdateComputerNames();
-        UpdatePlayerInfo("1:38:50");
+        UpdatePlayerInfo(TimeConverter.ConvertSecondsToTimeString(124.1263f));
         UpdatePlacementText();
     }
 
