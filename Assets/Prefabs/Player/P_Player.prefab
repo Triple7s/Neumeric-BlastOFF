@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696651865292562746}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.008315627, y: 0.69884884, z: -0.008125798, w: 0.715175}
-  m_LocalPosition: {x: -35.825665, y: 0.13999987, z: -44.779102}
+  m_LocalRotation: {x: 0.011626718, y: 0.000000063552775, z: -4.5211918e-10, w: 0.9999324}
+  m_LocalPosition: {x: -0.00000020861626, y: 1.5, z: -3.2199993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -373,6 +373,7 @@ MonoBehaviour:
   carVfx: {fileID: 5475132890906326534}
   dotProductBeforeTurn: 0.8
   alwaysUseAutoSteering: 0
+  boostParticle: {fileID: 1410810174006598366}
   playerInputRegister: {fileID: 3559611923804874376}
   cameraController: {fileID: 2544049755536184592}
   cameraStabilizer: {fileID: 3662819425711860441}
@@ -940,6 +941,11 @@ PrefabInstance:
       propertyPath: lengthInSec
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2051846943791604453, guid: 661c89b0530763c47acd4a95294bcbbc,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6080669094586005892, guid: 661c89b0530763c47acd4a95294bcbbc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1000,6 +1006,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661c89b0530763c47acd4a95294bcbbc, type: 3}
+--- !u!198 &1410810174006598366 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2051846943791604453, guid: 661c89b0530763c47acd4a95294bcbbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1147762099863222331}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6597575401789079999 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6080669094586005892, guid: 661c89b0530763c47acd4a95294bcbbc,
@@ -1033,6 +1045,11 @@ PrefabInstance:
         type: 3}
       propertyPath: lengthInSec
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076256580177853081, guid: 6846dcb90ff8cd1489a58804539651b0,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7452242063303164292, guid: 6846dcb90ff8cd1489a58804539651b0,
         type: 3}

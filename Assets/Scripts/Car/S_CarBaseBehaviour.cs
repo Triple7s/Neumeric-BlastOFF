@@ -53,7 +53,7 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     }
 
     protected abstract void BehaviourUpdate();
-    public void Boost()
+    public virtual void Boost()
     {
         if (!isEngineRunning) return;
         
@@ -86,6 +86,14 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
 
     protected void Drive()
     {
+        var mask = LayerMask.GetMask("Wall");
+        if (Physics.Raycast(transform.position, transform.forward, 0.3f, mask))
+        {
+            rb.AddForce(-transform.forward * (acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
+            
+            return;
+        }
+        
         rb.AddForce(transform.forward * (acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
         
         if (rb.linearVelocity.magnitude > maxSpeed)

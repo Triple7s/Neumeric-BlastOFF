@@ -5,6 +5,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     [Header("Player Values")] 
     [SerializeField] private float dotProductBeforeTurn = 0.2f;
     [SerializeField] private bool alwaysUseAutoSteering;
+    [SerializeField] private ParticleSystem boostParticle;
     [Header("Scripts")]
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
     [SerializeField] private S_PlayerCameraController cameraController;
@@ -101,10 +102,14 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     
     private void Turn()
     {
-        
-        
         rb.AddTorque(transform.TransformDirection(Vector3.up) * (Time.deltaTime * turningSpeed * turnDirection), ForceMode.Impulse);
+    }
+
+    public override void Boost()
+    {
+        base.Boost();
         
+        boostParticle.Play();
     }
 
     #region Event Actions
