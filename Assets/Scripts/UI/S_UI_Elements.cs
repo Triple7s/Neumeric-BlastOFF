@@ -8,19 +8,27 @@ public class S_UI_Elements : MonoBehaviour
     [SerializeField] private VisualTreeAsset levelSelectUXML;
     [SerializeField] private VisualTreeAsset optionsUXML;
     [SerializeField] private VisualTreeAsset transferDataUXML;
+    [SerializeField] private VisualTreeAsset titlescreenUXML; // Renamed for consistency
 
-    
+
     private UIDocument uiDocument;
 
     private void Awake()
     {
         uiDocument = GetComponent<UIDocument>();
-        ShowMainMenu();
+        ShowTitleScreen();
     }
 
     private void RegisterCallbacks(VisualElement root)
     {
+        // --- Title Screen Button ---
 
+        if (root.Q<Button>("Hold-Here") != null)
+        {
+            root.Q<Button>("Hold-Here").clicked += ShowMainMenu;
+        }
+
+        // --- Main Menu Buttons ---
         if (root.Q<Button>("PlayBtn") != null)
         {
             root.Q<Button>("PlayBtn").clicked += ShowLevelSelect;
@@ -36,15 +44,11 @@ public class S_UI_Elements : MonoBehaviour
         }
 
         // --- Level Selection Buttons ---
-
         root.Query<Button>().ForEach(button =>
         {
-
             if (button.name.StartsWith("Level_"))
             {
                 string sceneName = button.name.Substring("Level_".Length);
-
-
                 button.clicked += () => LoadScene(sceneName);
             }
         });
@@ -58,6 +62,7 @@ public class S_UI_Elements : MonoBehaviour
     }
 
     // --- Scene Navigation Methods ---
+    private void ShowTitleScreen() => LoadAndShowMenu(titlescreenUXML);
     private void ShowMainMenu() => LoadAndShowMenu(mainMenuUXML);
     private void ShowLevelSelect() => LoadAndShowMenu(levelSelectUXML);
     private void ShowOptions() => LoadAndShowMenu(optionsUXML);
@@ -66,7 +71,6 @@ public class S_UI_Elements : MonoBehaviour
     // --- Game Actions ---
     private void LoadScene(string sceneName)
     {
-        // The scene must be in File > Build Settings!
         Debug.Log($"Loading scene: {sceneName}");
         SceneManager.LoadScene(sceneName);
     }
