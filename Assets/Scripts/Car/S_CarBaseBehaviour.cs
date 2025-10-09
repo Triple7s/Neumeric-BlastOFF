@@ -44,6 +44,7 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         if (carHoverBarycentric.HoverOverGround(data.BaseFloatingHeight) == false)
         {
             AutoTurn(racer.GetDrivingDirection());
+            RotateCar(racer.GetCheckpointRotation());
         }
 
         
@@ -107,6 +108,16 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         var targetRot = Quaternion.RotateTowards(transform.rotation, targetRotation, autoTurningSpeed * Time.deltaTime);
         
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, autoTurningSpeed * Time.deltaTime);
+    }
+    
+    private void RotateCar(Vector3 getCheckpointRotation)
+    {
+        var zRot = getCheckpointRotation.z;
+        var targetRot = transform.rotation;
+        targetRot.z = zRot;
+        
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, autoTurningSpeed * Time.deltaTime);
+
     }
     
     public void TurnOnEngine()

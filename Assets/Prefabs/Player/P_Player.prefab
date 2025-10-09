@@ -370,7 +370,7 @@ MonoBehaviour:
   racer: {fileID: 920630926225535308}
   carHoverBarycentric: {fileID: 5356555243972702356}
   carVfx: {fileID: 5475132890906326534}
-  degreeTurnAway: 45
+  dotProductBeforeTurn: 0.8
   alwaysUseAutoSteering: 0
   playerInputRegister: {fileID: 3559611923804874376}
   cameraController: {fileID: 2544049755536184592}

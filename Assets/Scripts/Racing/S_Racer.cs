@@ -89,6 +89,11 @@ public class S_Racer : MonoBehaviour
         return (dirTarget + dirNext).normalized;
     }
 
+    public Vector3 GetCheckpointRotation()
+    {
+        return nextCheckPoint.transform.eulerAngles;
+    }
+
     private void OnDrawGizmos()
     {
         if (hideGizmos) return;
