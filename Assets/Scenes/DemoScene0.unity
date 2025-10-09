@@ -2834,6 +2834,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Neumeric Rain
       objectReference: {fileID: 0}
+    - target: {fileID: 8847358434990468737, guid: 964efa449a4804f49abcefd2718f6f36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
