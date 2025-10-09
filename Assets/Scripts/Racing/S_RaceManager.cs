@@ -77,6 +77,7 @@ public class S_RaceManager : MonoBehaviour
                 if (thisLap-1 == raceLaps)
                 {
                     S_VisualManager.Instance.EndRace(i+1);
+                    S_GameTimerManager.Instance.StopRace();
                     player.EndRace();
                     isRacing = false;
                 }
