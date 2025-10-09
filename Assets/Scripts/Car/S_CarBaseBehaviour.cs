@@ -40,14 +40,20 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     protected virtual void FixedUpdate()
     {
         if (!isEngineRunning)   return;
+
+        if (carHoverBarycentric.HoverOverGround(data.BaseFloatingHeight) == false)
+        {
+            AutoTurn(racer.GetDrivingDirection());
+            RotateCar(racer.GetCheckpointRotation());
+        }
+
         
-        carHoverBarycentric.HoverOverGround(data.BaseFloatingHeight);
         
         BehaviourUpdate();
     }
 
     protected abstract void BehaviourUpdate();
-    public void Boost()
+    public virtual void Boost()
     {
         if (!isEngineRunning) return;
         
@@ -80,6 +86,14 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
 
     protected void Drive()
     {
+        var mask = LayerMask.GetMask("Wall");
+        if (Physics.Raycast(transform.position, transform.forward, 0.3f, mask))
+        {
+            rb.AddForce(-transform.forward * (acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
+            
+            return;
+        }
+        
         rb.AddForce(transform.forward * (acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
         
         if (rb.linearVelocity.magnitude > maxSpeed)
@@ -97,9 +111,21 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     
     protected void AutoTurn(Vector3 targetDirection)
     {
-        Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
+        Quaternion targetRotation = Quaternion.LookRotation(targetDirection, transform.up);
         
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, autoTurningSpeed * Time.deltaTime);
+        var targetRot = Quaternion.RotateTowards(transform.rotation, targetRotation, autoTurningSpeed * Time.deltaTime);
+        
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, autoTurningSpeed * Time.deltaTime);
+    }
+    
+    private void RotateCar(Vector3 getCheckpointRotation)
+    {
+        var zRot = getCheckpointRotation.z;
+        var targetRot = transform.rotation;
+        targetRot.z = zRot;
+        
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, autoTurningSpeed * Time.deltaTime);
+
     }
     
     public void TurnOnEngine()

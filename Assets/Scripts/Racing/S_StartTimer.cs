@@ -30,7 +30,7 @@ public class S_StartTimer : MonoBehaviour
             {
                 var timeCeil = Mathf.Ceil(timer);
                 timerText.text = timeCeil.ToString(CultureInfo.InvariantCulture);
-                if (Mathf.Approximately(timeCeil, visibleDuration) && !isQtmSpawned)
+                if (Mathf.Approximately(timeCeil, visibleDuration) && !isQtmSpawned && S_RaceManager.Instance.usingUIQtm)
                 {
                     isQtmSpawned = true;
                     if (S_MathManager.Instance.isActiveAndEnabled)
@@ -43,7 +43,7 @@ public class S_StartTimer : MonoBehaviour
             
                 OnTimerEnd?.Invoke();
                 timerText.text = "GO!";
-                if (S_MathManager.Instance.isActiveAndEnabled)
+                if (S_MathManager.Instance.isActiveAndEnabled && S_RaceManager.Instance.usingUIQtm)
                     S_MathManager.Instance.RaceStart();
                 break;
             }
