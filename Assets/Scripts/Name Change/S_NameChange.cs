@@ -6,13 +6,15 @@ using UnityEngine.SceneManagement;
 public class S_NameChange : MonoBehaviour
 {
     [SerializeField] private TMP_InputField nameInputField;
+    
+    [SerializeField] private string nextSceneName = "UItestingMainMenu";
 
     void Start()
     {
         if (S_GameManager.Instance.GetPlayerName() != "")
         {
             // Optionally, set the input field to the current player name if it exists
-            SceneManager.LoadScene("UItestingMainMenu");
+            SceneManager.LoadScene(nextSceneName);
         }
     }
 
@@ -26,11 +28,7 @@ public class S_NameChange : MonoBehaviour
             S_GameManager.Instance.SetPlayerName(playerName);
 
             // Then load the next scene
-            SceneManager.LoadScene("UItestingMainMenu");
-        }
-        else
-        {
-            Debug.LogWarning("Player name is empty. Please enter a name before submitting.");
+            SceneManager.LoadScene(nextSceneName);
         }
     }
 }
