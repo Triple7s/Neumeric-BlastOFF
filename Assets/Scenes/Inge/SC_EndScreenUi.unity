@@ -310,6 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 95419271}
   - component: {fileID: 95419272}
+  - component: {fileID: 95419273}
   m_Layer: 5
   m_Name: QTMResults
   m_TagString: Untagged
@@ -368,6 +369,28 @@ MonoBehaviour:
   m_Spacing: {x: -5, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &95419273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95419270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7363002962888cc46835778f45345ffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_QTMSummary
+  totalText: {fileID: 1869052347}
+  answerShowings:
+  - {fileID: 1926172214}
+  - {fileID: 1593354630}
+  - {fileID: 1681566101}
+  - {fileID: 244007074}
+  - {fileID: 115929201}
+  - {fileID: 1552049215}
+  - {fileID: 706026839}
+  - {fileID: 173086365}
 --- !u!1 &113150892
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,6 +477,7 @@ GameObject:
   - component: {fileID: 115929198}
   - component: {fileID: 115929200}
   - component: {fileID: 115929199}
+  - component: {fileID: 115929201}
   m_Layer: 5
   m_Name: FailedAddition
   m_TagString: Untagged
@@ -519,6 +543,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115929197}
   m_CullTransparentMesh: 1
+--- !u!114 &115929201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115929197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f56067bc72bb84e9def69d130cb8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_AnswerShowing
+  answerText: {fileID: 1343616872}
+  isCorrectAnswer: 0
+  mathOperator: 0
 --- !u!1 &121741450
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,6 +870,7 @@ GameObject:
   - component: {fileID: 173086362}
   - component: {fileID: 173086364}
   - component: {fileID: 173086363}
+  - component: {fileID: 173086365}
   m_Layer: 5
   m_Name: FailedDivision
   m_TagString: Untagged
@@ -896,6 +936,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173086361}
   m_CullTransparentMesh: 1
+--- !u!114 &173086365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173086361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f56067bc72bb84e9def69d130cb8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_AnswerShowing
+  answerText: {fileID: 313154880}
+  isCorrectAnswer: 0
+  mathOperator: 3
 --- !u!1001 &184946948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1216,6 +1271,7 @@ GameObject:
   - component: {fileID: 244007071}
   - component: {fileID: 244007073}
   - component: {fileID: 244007072}
+  - component: {fileID: 244007074}
   m_Layer: 5
   m_Name: CorrectDivision
   m_TagString: Untagged
@@ -1281,6 +1337,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244007070}
   m_CullTransparentMesh: 1
+--- !u!114 &244007074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244007070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f56067bc72bb84e9def69d130cb8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_AnswerShowing
+  answerText: {fileID: 256029863}
+  isCorrectAnswer: 1
+  mathOperator: 3
 --- !u!1 &256029861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2809,6 +2880,7 @@ GameObject:
   - component: {fileID: 706026836}
   - component: {fileID: 706026838}
   - component: {fileID: 706026837}
+  - component: {fileID: 706026839}
   m_Layer: 5
   m_Name: FailedMultiplication
   m_TagString: Untagged
@@ -2874,6 +2946,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706026835}
   m_CullTransparentMesh: 1
+--- !u!114 &706026839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706026835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f56067bc72bb84e9def69d130cb8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_AnswerShowing
+  answerText: {fileID: 1787930767}
+  isCorrectAnswer: 0
+  mathOperator: 2
 --- !u!1001 &771802600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5191,6 +5278,7 @@ GameObject:
   - component: {fileID: 1552049212}
   - component: {fileID: 1552049214}
   - component: {fileID: 1552049213}
+  - component: {fileID: 1552049215}
   m_Layer: 5
   m_Name: FailedSubtraction
   m_TagString: Untagged
@@ -5256,6 +5344,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552049211}
   m_CullTransparentMesh: 1
+--- !u!114 &1552049215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552049211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f56067bc72bb84e9def69d130cb8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_AnswerShowing
+  answerText: {fileID: 1801113526}
+  isCorrectAnswer: 0
+  mathOperator: 1
 --- !u!1 &1593354626
 GameObject:
   m_ObjectHideFlags: 0
@@ -5267,6 +5370,7 @@ GameObject:
   - component: {fileID: 1593354627}
   - component: {fileID: 1593354629}
   - component: {fileID: 1593354628}
+  - component: {fileID: 1593354630}
   m_Layer: 5
   m_Name: CorrectSubtraction
   m_TagString: Untagged
@@ -5332,6 +5436,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593354626}
   m_CullTransparentMesh: 1
+--- !u!114 &1593354630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593354626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f56067bc72bb84e9def69d130cb8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_AnswerShowing
+  answerText: {fileID: 1293303027}
+  isCorrectAnswer: 1
+  mathOperator: 1
 --- !u!1 &1606834682
 GameObject:
   m_ObjectHideFlags: 0
@@ -5570,6 +5689,7 @@ GameObject:
   - component: {fileID: 1681566098}
   - component: {fileID: 1681566100}
   - component: {fileID: 1681566099}
+  - component: {fileID: 1681566101}
   m_Layer: 5
   m_Name: CorrectMultiplication
   m_TagString: Untagged
@@ -5635,6 +5755,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681566097}
   m_CullTransparentMesh: 1
+--- !u!114 &1681566101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681566097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f56067bc72bb84e9def69d130cb8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_AnswerShowing
+  answerText: {fileID: 2064709137}
+  isCorrectAnswer: 1
+  mathOperator: 2
 --- !u!1 &1765395314
 GameObject:
   m_ObjectHideFlags: 0
@@ -6245,6 +6380,7 @@ GameObject:
   - component: {fileID: 1926172211}
   - component: {fileID: 1926172213}
   - component: {fileID: 1926172212}
+  - component: {fileID: 1926172214}
   m_Layer: 5
   m_Name: CorrectAddition
   m_TagString: Untagged
@@ -6310,6 +6446,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926172210}
   m_CullTransparentMesh: 1
+--- !u!114 &1926172214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926172210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f56067bc72bb84e9def69d130cb8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_AnswerShowing
+  answerText: {fileID: 1431742201}
+  isCorrectAnswer: 1
+  mathOperator: 0
 --- !u!1 &1930208660
 GameObject:
   m_ObjectHideFlags: 0

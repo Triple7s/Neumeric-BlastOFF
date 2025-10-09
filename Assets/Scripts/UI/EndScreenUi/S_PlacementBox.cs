@@ -8,8 +8,6 @@ public class S_PlacementBox : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI placementText;
     
-    private S_MathManager _mathManager;
-    
     private readonly List<S_NamePlate> _namePlates = new List<S_NamePlate>();
 
     private void Start()
@@ -20,8 +18,6 @@ public class S_PlacementBox : MonoBehaviour
         {
             _namePlates.Add(transform.GetChild(i).GetComponent<S_NamePlate>());
         }
-        
-        _mathManager = FindAnyObjectByType<S_MathManager>();
     }
     
     public void UpdatePlayerInfo()
@@ -113,7 +109,7 @@ public class S_PlacementBox : MonoBehaviour
         {
             if (namePlate.IsPlayerPlate())
             {
-                int playerPoints = _mathManager.GetScore();
+                int playerPoints = S_QtmGateManager.Instance.GetScore();
                 namePlate.SetPoints(playerPoints.ToString());
             }
             else
