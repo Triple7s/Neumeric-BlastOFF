@@ -20,13 +20,13 @@ public class S_PlacementBox : MonoBehaviour
         }
     }
     
-    public void UpdatePlayerInfo(string playerTime)
+    public void UpdatePlayerInfo()
     {
         foreach (var namePlate in _namePlates)
         {
             if (!namePlate.IsPlayerPlate()) continue;
             namePlate.SetName(S_GameManager.Instance.GetPlayerName());
-            namePlate.SetTime(playerTime);
+            namePlate.SetTime(TimeConverter.ConvertSecondsToTimeString(S_GameTimerManager.Instance.GetTime()));
             break;
         }
     }
@@ -43,7 +43,7 @@ public class S_PlacementBox : MonoBehaviour
         UpdatePlacementsText();
         UpdatePointsText();
         UpdateComputerNames();
-        UpdatePlayerInfo(TimeConverter.ConvertSecondsToTimeString(124.1263f));
+        UpdatePlayerInfo();
         UpdatePlacementText();
     }
 
