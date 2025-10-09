@@ -18,3 +18,10 @@ public class SO_PointsForPlacement : ScriptableObject
         return 0; // Default if placement not found
     }
 }
+
+[System.Serializable]
+public class PlacementPoints
+{
+    public int placement;
+    public int points;
+}
