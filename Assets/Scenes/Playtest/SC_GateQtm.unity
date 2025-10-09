@@ -144,7 +144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75670982}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.04181108, y: -0.14964774, z: -0.006333988, w: 0.98783463}
+  m_LocalRotation: {x: -0.0017009372, y: -0.19833493, z: -0.0003441934, w: 0.98013276}
   m_LocalPosition: {x: 59.3455, y: -4.8486166, z: -215.43492}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -163,7 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!198 &82690068 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1303130234088783379, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
@@ -214,7 +213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &258160901
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1001 &280741469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -420,7 +417,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1001 &381355434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -573,7 +569,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &546781780
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,7 +613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!4 &549213453 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9636c94670245b84291a6fb77d12615c,
@@ -669,7 +663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &620641607
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,7 +692,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!4 &620641609
 Transform:
   m_ObjectHideFlags: 0
@@ -750,7 +742,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!4 &686301341
 Transform:
   m_ObjectHideFlags: 0
@@ -819,8 +810,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709734898}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.021609476, y: -0.21891803, z: 0.0048495573, w: 0.97549194}
-  m_LocalPosition: {x: 23.96588, y: 3.10638, z: -141.4556}
+  m_LocalRotation: {x: -0.026985701, y: -0.16020536, z: -0.0043815062, w: 0.98670506}
+  m_LocalPosition: {x: 15.507366, y: -2.7807288, z: -140.28418}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -838,7 +829,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &750164028
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +873,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &765114383
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,8 +897,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765114383}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.68, y: 2.51, z: -43.08}
+  m_LocalRotation: {x: -0, y: 0.031757068, z: -0, w: 0.9994956}
+  m_LocalPosition: {x: -8.2, y: 2.51, z: -109.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -918,7 +907,155 @@ Transform:
   - {fileID: 924213664}
   - {fileID: 850290010}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 3.64, z: 0}
+--- !u!1001 &833003349
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1093135434157055397, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.47287482
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093135434157055397, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.47287482
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093135434157055397, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.47287482
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093135434157055397, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.802
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093135434157055397, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.607
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093135434157055397, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.366
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093135434157055397, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9907352
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093135434157055397, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.093784295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093135434157055397, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0971612
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093135434157055397, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.014421148
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093135434157055397, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 10.546
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093135434157055397, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 11.454
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093135434157055397, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 2.729
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523847496845670058, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2348467
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523847496845670058, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2348467
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523847496845670058, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2348467
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523847496845670058, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523847496845670058, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523847496845670058, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -30.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523847496845670058, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99925125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523847496845670058, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.016957184
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523847496845670058, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.034002423
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523847496845670058, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00729888
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523847496845670058, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -1.971
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523847496845670058, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -3.885
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523847496845670058, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753990512071022045, guid: 6682ccbd10262524eb80d5b95a75758f,
+        type: 3}
+      propertyPath: m_Name
+      value: QtmGate (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6682ccbd10262524eb80d5b95a75758f, type: 3}
 --- !u!1 &833230613
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +1100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!4 &850290010 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3821017774730754886, guid: 70ecdb29758fa924788212a523363e45,
@@ -1094,7 +1230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1001 &903130497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1188,7 +1323,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914618170}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0041535897, y: 0.955738, z: -0.013508066, w: -0.29387948}
+  m_LocalRotation: {x: -0.008160174, y: 0.9609518, z: -0.028501915, w: -0.27512303}
   m_LocalPosition: {x: -55.814808, y: 5.248464, z: 37.75611}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1207,7 +1342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!4 &924213664 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3821017774730754886, guid: 70ecdb29758fa924788212a523363e45,
@@ -1276,7 +1410,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &1023124804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1321,7 +1454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!4 &1031634210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
@@ -1384,7 +1516,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &1108722345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,7 +1560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &1113591589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,7 +1604,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1001 &1119843657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1583,8 +1712,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131228500}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.01766238, y: 0.88911307, z: 0.034434594, w: -0.45604867}
-  m_LocalPosition: {x: -41.796062, y: 5.357765, z: 54.09271}
+  m_LocalRotation: {x: -0.043760747, y: -0.8445108, z: -0.06983994, w: 0.5291588}
+  m_LocalPosition: {x: -40.24424, y: 5.0569563, z: 52.964733}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1602,7 +1731,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &1132942981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,7 +1775,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &1162019827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1599826595754709761, guid: 9636c94670245b84291a6fb77d12615c,
@@ -1884,7 +2011,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &1271427132 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 281855664364225751, guid: 0a7f962eb197bb54c8db822b06f3e24a,
@@ -1957,7 +2083,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &1313063112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2002,7 +2127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1001 &1320946779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2115,7 +2239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!4 &1366476650 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3821017774730754886, guid: 70ecdb29758fa924788212a523363e45,
@@ -2163,7 +2286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!4 &1435716182
 Transform:
   m_ObjectHideFlags: 0
@@ -2208,7 +2330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!4 &1485318002
 Transform:
   m_ObjectHideFlags: 0
@@ -2268,7 +2389,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1001 &1499267679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2504,7 +2624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630288823}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.035204496, y: -0.21062765, z: 0.007590357, w: 0.9769028}
+  m_LocalRotation: {x: -0.028208088, y: -0.12830536, z: -0.0036509144, w: 0.99132675}
   m_LocalPosition: {x: 9.461146, y: -1.4501269, z: -117.80767}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2523,7 +2643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &1707314949
 GameObject:
   m_ObjectHideFlags: 0
@@ -2549,8 +2668,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707314949}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.04713629, y: -0.22093962, z: -0.010691295, w: 0.9740891}
-  m_LocalPosition: {x: 36.788715, y: 1.3846345, z: -175.62666}
+  m_LocalRotation: {x: -0.011469802, y: -0.2609625, z: -0.0031008632, w: 0.9652758}
+  m_LocalPosition: {x: 30.229065, y: -5.043276, z: -180.0765}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2568,7 +2687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1001 &1742039184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2828,7 +2946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &1772850627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2858,6 +2975,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 686301341}
   - {fileID: 1485318002}
   - {fileID: 901632416}
   - {fileID: 1990209102}
@@ -2865,6 +2983,7 @@ Transform:
   - {fileID: 620641609}
   - {fileID: 1996738146}
   - {fileID: 1131228501}
+  - {fileID: 2116954921}
   - {fileID: 914618171}
   - {fileID: 750164029}
   - {fileID: 2098164455}
@@ -2894,7 +3013,6 @@ Transform:
   - {fileID: 1108722346}
   - {fileID: 1023124805}
   - {fileID: 1435716182}
-  - {fileID: 686301341}
   m_Father: {fileID: 1172658921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1791270763
@@ -2941,7 +3059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &1808997367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2986,7 +3103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &1969229689
 GameObject:
   m_ObjectHideFlags: 0
@@ -3031,7 +3147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &1990209101
 GameObject:
   m_ObjectHideFlags: 0
@@ -3076,7 +3191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &1996738145
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,7 +3216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996738145}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.039741583, y: -0.69243926, z: -0.038254093, w: 0.7193644}
+  m_LocalRotation: {x: -0.0375428, y: -0.70545465, z: -0.037473075, w: 0.7067673}
   m_LocalPosition: {x: -26.424269, y: 2.4412317, z: 58.86845}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3121,7 +3235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
 --- !u!1 &2098164454
 GameObject:
   m_ObjectHideFlags: 0
@@ -3166,7 +3279,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
-  checkPointType: 0
+--- !u!1 &2116954920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2116954921}
+  - component: {fileID: 2116954922}
+  m_Layer: 0
+  m_Name: CheckPointEntity (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2116954921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116954920}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0017073599, y: 0.9216047, z: 0.0040543443, w: -0.38810492}
+  m_LocalPosition: {x: -46.95, y: 6.239858, z: 48.92}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1772850628}
+  m_LocalEulerAnglesHint: {x: 0, y: -83.505, z: 0}
+--- !u!114 &2116954922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116954920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763144e96dfeeec41a09f7b492a7cca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckPointEntity
 --- !u!1 &489028775849231676
 GameObject:
   m_ObjectHideFlags: 0
@@ -3678,7 +3834,7 @@ Transform:
   m_GameObject: {fileID: 8277188695915395197}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.99813676, z: -0, w: -0.06101778}
-  m_LocalPosition: {x: 1.04, y: 0.66, z: -52.72}
+  m_LocalPosition: {x: -3, y: 0.66, z: -98.8}
   m_LocalScale: {x: 3.5094543, y: 0.7485253, z: 1.0795}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3701,3 +3857,4 @@ SceneRoots:
   - {fileID: 1747693778}
   - {fileID: 1119843657}
   - {fileID: 381355434}
+  - {fileID: 833003349}

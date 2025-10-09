@@ -128,6 +128,12 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
 
     }
     
+    protected void ChangeSpeed(float speedValue, float turnValue)
+    {
+        acceleration = data.Acceleration + speedValue;
+        turningSpeed = data.TurningSpeed + turnValue;
+    }
+    
     public void TurnOnEngine()
     {
         isEngineRunning = true;

@@ -21,7 +21,7 @@ public class S_CarData : ScriptableObject
     [SerializeField] private float maxBoostSpeed = 100f;
     [SerializeField] private float baseFloatingHeight = 1f;
     [Header("NPC Only")] 
-    [SerializeField] private float distBeforeSpeedChange = 100f;
+    [SerializeField] private int distBeforeSpeedChange = 3;
     [SerializeField] private float accelerationFluctuating = 100f; 
     [SerializeField] private float autoTurningSpeedFluctuating = 10f;
     public float Mass => mass;

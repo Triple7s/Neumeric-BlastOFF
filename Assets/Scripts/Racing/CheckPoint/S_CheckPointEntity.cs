@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class S_CheckPointEntity : MonoBehaviour
 {
-
+/*
     [Header("Checkpoint Settings")] 
     [SerializeField] private CheckPointType checkPointType;
 
@@ -26,7 +26,7 @@ public class S_CheckPointEntity : MonoBehaviour
         }
     }
     
-    
+    */
 #if UNITY_EDITOR
     private void OnValidate()
     {

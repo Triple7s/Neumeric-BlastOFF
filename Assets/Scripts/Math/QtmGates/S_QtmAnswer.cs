@@ -7,6 +7,8 @@ using UnityEngine;
 public class S_QtmAnswer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI answerText;
+
+    private List<S_CarBaseBehaviour> carsThatHaveAnswered = new ();
     
     private bool isCorrectAnswer;
 
@@ -22,6 +24,8 @@ public class S_QtmAnswer : MonoBehaviour
     {
         if (other.TryGetComponent(out S_CarBaseBehaviour car))
         {
+            if (carsThatHaveAnswered.Contains(car)) return;
+            
             if (isCorrectAnswer)
             {
                 car.Boost();
@@ -37,13 +41,16 @@ public class S_QtmAnswer : MonoBehaviour
 
                 S_QtmGateManager.Instance.HandleAnswer(isCorrectAnswer);
             }
+            
+            carsThatHaveAnswered.Add(car);
         }
     }
 
     private IEnumerator GetNewQuestion()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(5f);
         
         RequestNewQuestion?.Invoke();
+        carsThatHaveAnswered.Clear();
     }
 }
