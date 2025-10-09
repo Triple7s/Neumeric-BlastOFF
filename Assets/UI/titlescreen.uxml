@@ -1,0 +1,8 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/NewUSSFile.uss?fileID=7433441132597879392&amp;guid=4e00680a3f7c5744fa0622802db16e1d&amp;type=3#NewUSSFile" />
+    <ui:VisualElement style="flex-grow: 1;" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:Label text="NUMERIC BLASTOFF" style="font-size: 140px; -unity-font-definition: resource(&apos;Fonts &amp; Materials/Bitsumishi-d347&apos;); -unity-font-style: bold; -unity-text-align: upper-center; justify-content: flex-start; align-items: auto; align-content: auto;" />
+    </ui:VisualElement>
+    <ui:Button text="HOLD HERE&#10;" name="Hold-Here" style="height: 285px; color: rgb(255, 255, 255); -unity-background-image-tint-color: rgb(119, 255, 242); background-color: rgb(103, 219, 228); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); font-size: 60px; -unity-font-definition: resource(&apos;Fonts &amp; Materials/NimbusSans-Bold&apos;); -unity-font-style: bold; margin-bottom: 0;" />
+</ui:UXML>

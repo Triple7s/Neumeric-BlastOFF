@@ -19,6 +19,8 @@ public class S_Racer : MonoBehaviour
     private Vector3 targetPosition, nextPosition;
     
     public int TargetCheckPointIndex { get; private set; }
+    public S_CheckPointEntity TargetCheckPoint => targetCheckPoint;
+    public S_CheckPointEntity NextCheckPoint => nextCheckPoint;
     
     private void Start()
     {
@@ -85,6 +87,11 @@ public class S_Racer : MonoBehaviour
         var dirNext = (nextPosition - transform.position);
         
         return (dirTarget + dirNext).normalized;
+    }
+
+    public Vector3 GetCheckpointRotation()
+    {
+        return nextCheckPoint.transform.eulerAngles;
     }
 
     private void OnDrawGizmos()

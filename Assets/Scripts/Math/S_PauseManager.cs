@@ -5,11 +5,8 @@ using UnityEngine.SceneManagement;
 public class S_PauseManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenuUI;
-    [SerializeField] private GameObject pauseButtonUI;
     [SerializeField] private GameObject confirmRestartUI;
     [SerializeField] private GameObject confirmQuitUI;
-    [SerializeField] private GameObject MathManager;
-    [SerializeField] private GameObject VisualManager;
     [SerializeField] private GameObject playerControls;
 
     private bool isPaused = false;
@@ -27,12 +24,10 @@ public class S_PauseManager : MonoBehaviour
         Time.timeScale = 0f;
         isPaused = true;
 
-        VisualManager?.SetActive(false);
-        MathManager?.SetActive(false);
+        S_VisualManager.Instance.gameObject.SetActive(false);
+        S_MathManager.Instance.gameObject.SetActive(false);
         pauseMenuUI?.SetActive(true);
-        pauseButtonUI?.SetActive(false);
         playerControls?.SetActive(false);
-
         confirmRestartUI?.SetActive(false);
         confirmQuitUI?.SetActive(false);
 
@@ -51,12 +46,10 @@ public class S_PauseManager : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
 
-        VisualManager?.SetActive(true);
-        MathManager?.SetActive(true);
+        S_VisualManager.Instance.gameObject.SetActive(true);
+        S_MathManager.Instance.gameObject.SetActive(true);
         pauseMenuUI?.SetActive(false);
-        pauseButtonUI?.SetActive(true);
         playerControls?.SetActive(true);
-
         confirmRestartUI?.SetActive(false);
         confirmQuitUI?.SetActive(false);
 

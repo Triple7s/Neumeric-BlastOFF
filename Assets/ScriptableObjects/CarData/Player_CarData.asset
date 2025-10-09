@@ -24,7 +24,7 @@ MonoBehaviour:
   minDriftSpeed: 50
   maxSpeed: 400
   maxBoostSpeed: 600
-  baseFloatingHeight: 0.5
+  baseFloatingHeight: 1
   distBeforeSpeedChange: 100
   accelerationFluctuating: 100
   autoTurningSpeedFluctuating: 10
