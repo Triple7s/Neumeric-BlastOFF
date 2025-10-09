@@ -118,8 +118,9 @@ public class S_PlacementBox : MonoBehaviour
             }
             else
             {
-                int aiIndex = namePlate.transform.GetSiblingIndex() - 1;
-                namePlate.SetPoints(300 - (aiIndex * 50) + "");
+                // Logic for setting random points for the CPU players based on the amount of math gates there are in the race
+                //int randomPoints = Random.Range(5, 20) * _mathManager.GetMathGateCount();
+                //namePlate.SetPoints(randomPoints.ToString());
             }
         }
     }
