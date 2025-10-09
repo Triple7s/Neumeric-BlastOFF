@@ -1697,7 +1697,7 @@ PrefabInstance:
     - target: {fileID: 906006262259208124, guid: a0f21da34dec74e4988af59f1c614f64,
         type: 3}
       propertyPath: raceLaps
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 906006262259208124, guid: a0f21da34dec74e4988af59f1c614f64,
         type: 3}
