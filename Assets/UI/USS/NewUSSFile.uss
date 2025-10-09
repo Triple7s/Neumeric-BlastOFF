@@ -5,10 +5,3 @@ Button {
     top: -50px;
     margin-bottom: -60px;
 }
-
-Button:hover {
-    scale: 1.05 1.05;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-out-cubic;
-    transition-property: all;
-}
