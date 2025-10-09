@@ -260,6 +260,13 @@ public class S_MathManager : MonoBehaviour
                 break;
         }
 
+        int totalQuestions =
+            sessionLogs.addition.Count +
+            sessionLogs.subtraction.Count +
+            sessionLogs.multiplication.Count +
+            sessionLogs.division.Count;
+
+
         SaveLogs(); // write to JSON
 
         // Existing answer handling
@@ -320,6 +327,67 @@ public class S_MathManager : MonoBehaviour
                 ? ShowNextQuestionAfterDelay(0.2f)
                 : HideQuestionUIAfterDelay(0.2f));
         }
+    }
+
+    public int LogAnswerAndGetTotal(S_AnswerLog entry)
+    {
+        // Add to persistent logs (overall data)
+        switch (entry.category.ToLower())
+        {
+            case "addition":
+                logs.addition.Add(entry);
+                if (entry.isCorrect) logs.additionSummary.correct++;
+                else logs.additionSummary.incorrect++;
+                break;
+
+            case "subtraction":
+                logs.subtraction.Add(entry);
+                if (entry.isCorrect) logs.subtractionSummary.correct++;
+                else logs.subtractionSummary.incorrect++;
+                break;
+
+            case "multiplication":
+                logs.multiplication.Add(entry);
+                if (entry.isCorrect) logs.multiplicationSummary.correct++;
+                else logs.multiplicationSummary.incorrect++;
+                break;
+
+            case "division":
+                logs.division.Add(entry);
+                if (entry.isCorrect) logs.divisionSummary.correct++;
+                else logs.divisionSummary.incorrect++;
+                break;
+
+            default:
+                Debug.LogWarning("Unknown category: " + entry.category);
+                break;
+        }
+
+        // Add to session logs (this play session)
+        switch (entry.category.ToLower())
+        {
+            case "addition":
+                sessionLogs.addition.Add(entry);
+                break;
+            case "subtraction":
+                sessionLogs.subtraction.Add(entry);
+                break;
+            case "multiplication":
+                sessionLogs.multiplication.Add(entry);
+                break;
+            case "division":
+                sessionLogs.division.Add(entry);
+                break;
+        }
+
+        // Return total number of answered questions (across all categories)
+        int totalQuestions =
+            sessionLogs.addition.Count +
+            sessionLogs.subtraction.Count +
+            sessionLogs.multiplication.Count +
+            sessionLogs.division.Count;
+
+        return totalQuestions;
     }
 
     public void RaceStart()
