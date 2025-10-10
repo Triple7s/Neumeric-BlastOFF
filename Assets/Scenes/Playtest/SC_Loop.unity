@@ -9176,11 +9176,6 @@ PrefabInstance:
       propertyPath: boostParticle
       value: 
       objectReference: {fileID: 1651133735}
-    - target: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-        type: 3}
-      propertyPath: alwaysUseAutoSteering
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5356555243972702356, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: rayLength
