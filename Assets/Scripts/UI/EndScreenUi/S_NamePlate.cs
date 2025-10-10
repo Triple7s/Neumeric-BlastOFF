@@ -41,4 +41,9 @@ public class S_NamePlate : MonoBehaviour
     {
         pointsText.text = score;
     }
+
+    public string GetPoints()
+    {
+        return pointsText.text;
+    }
 }

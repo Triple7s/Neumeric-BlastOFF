@@ -78,6 +78,8 @@ public class S_RaceManager : MonoBehaviour
                 {
                     S_VisualManager.Instance.EndRace(i+1);
                     S_GameTimerManager.Instance.StopRace();
+                    S_QtmGateManager.Instance.AddPointsForFinishedRace(i+1);
+                    S_EndScreenUi.Instance.ShowEndScreen(i+1);
                     player.EndRace();
                     isRacing = false;
                 }
