@@ -115,6 +115,7 @@ public class S_CheckPointManager : MonoBehaviour
             if (!entity)
             {
                 Debug.LogError("Empty Check Point Entity in List");
+                SortList();
                 return;
             }
         }

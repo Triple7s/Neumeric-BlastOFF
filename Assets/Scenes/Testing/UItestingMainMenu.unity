@@ -525,6 +525,8 @@ MonoBehaviour:
     type: 3}
   transferDataUXML: {fileID: 9197481963319205126, guid: 46d76292825a35a43a4e3d6adab4e407,
     type: 3}
+  titlescreenUXML: {fileID: 9197481963319205126, guid: 9779249059152e74d81cf5422c9cea98,
+    type: 3}
 --- !u!1 &1532240914
 GameObject:
   m_ObjectHideFlags: 0

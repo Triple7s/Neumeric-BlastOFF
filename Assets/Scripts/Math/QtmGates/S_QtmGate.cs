@@ -9,6 +9,7 @@ public class S_QtmGate : MonoBehaviour
     private Question question;
     private void Awake()
     {
+        S_VisualManager.OnFinished += ShutDownGates;
         foreach (var gate in answerGates)
         {
             gate.RequestNewQuestion += SetNewQuestion;
@@ -60,5 +61,18 @@ public class S_QtmGate : MonoBehaviour
         } while (randomNumber == question.CorrectAnswer);
         
         return randomNumber.ToString();
+    }
+    
+    private void ShutDownGates()
+    {
+        foreach (var gate in answerGates)
+        {
+            gate.Hide();
+        }
+
+        foreach (var text in questionText)
+        {
+            text.text = "";
+        }
     }
 }

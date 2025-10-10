@@ -67,7 +67,7 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         rb.AddForce(direction * data.BoostPower, ForceMode.Impulse);
     }
 
-    public void SlowDown()
+    public virtual void SlowDown()
     {
         if (!isEngineRunning) return;
         
@@ -125,6 +125,14 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         targetRot.z = zRot;
         
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, autoTurningSpeed * Time.deltaTime);
+
+
+    }
+    
+    protected void ChangeSpeed(float speedValue, float turnValue)
+    {
+        acceleration = data.Acceleration + speedValue;
+        turningSpeed = data.TurningSpeed + turnValue;
 
     }
     
