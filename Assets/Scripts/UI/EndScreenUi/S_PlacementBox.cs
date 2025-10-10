@@ -7,6 +7,7 @@ public class S_PlacementBox : MonoBehaviour
 {
 
     [SerializeField] private TextMeshProUGUI placementText;
+    [SerializeField] private TextMeshProUGUI pointsText;
     
     private readonly List<S_NamePlate> _namePlates = new List<S_NamePlate>();
 
@@ -102,6 +103,17 @@ public class S_PlacementBox : MonoBehaviour
             break;
         }
     }
+
+    private void UpdatePlayerPointsText()
+    {
+        foreach (var namePlate in _namePlates)
+        {
+            if (!namePlate.IsPlayerPlate()) continue;
+            string points = namePlate.GetPoints();
+            pointsText.text = points + "PTS";
+            break;
+        }
+    }
     
     public void UpdatePoints()
     {
@@ -115,10 +127,27 @@ public class S_PlacementBox : MonoBehaviour
             else
             {
                 // Logic for setting random points for the CPU players based on the amount of math gates there are in the race
-                //int randomPoints = Random.Range(5, 20) * _mathManager.GetMathGateCount();
-                //namePlate.SetPoints(randomPoints.ToString());
+                int baseValue = S_QtmGateManager.Instance.GetNumberOfQuestionsAnswered() * 5;
+                int randomPoints = Random.Range(baseValue - 15, baseValue + 20);
+                namePlate.SetPoints(randomPoints.ToString());
             }
         }
+        
+        UpdatePositionsBasedOnPoints();
+        UpdatePlacementText();
+        UpdatePlayerPointsText();
+    }
+    
+    private void UpdatePositionsBasedOnPoints()
+    {
+        var sortedPlates = _namePlates.OrderByDescending(plate => int.Parse(plate.GetPlacement().TrimEnd('s', 't', 'n', 'd', 'r', 'h'))).ToList();
+        
+        for (int i = 0; i < sortedPlates.Count; i++)
+        {
+            sortedPlates[i].transform.SetSiblingIndex(i);
+        }
+        
+        UpdatePlacementsText();
     }
     
     private static List<int> ShuffleList(List<int> list)
