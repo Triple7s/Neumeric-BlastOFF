@@ -64,6 +64,11 @@ public class S_QtmGateManager : MonoBehaviour
         _numberOfQuestionsAnswered++;
     }
 
+    public void AddPointsForFinishedRace(int position)
+    {
+        score += S_GameManager.Instance.GetPointsForPlacement(position);
+    }
+
     private void AddQuestion(bool correct, MathOperator questionType)
     {
         _askedQuestions.Add((correct, questionType));
