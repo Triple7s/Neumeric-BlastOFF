@@ -126,12 +126,14 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, autoTurningSpeed * Time.deltaTime);
 
+
     }
     
     protected void ChangeSpeed(float speedValue, float turnValue)
     {
         acceleration = data.Acceleration + speedValue;
         turningSpeed = data.TurningSpeed + turnValue;
+
     }
     
     public void TurnOnEngine()

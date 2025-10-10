@@ -85,6 +85,7 @@ public class S_Racer : MonoBehaviour
         return nextCheckPoint.transform.eulerAngles;
     }
 
+
     public int ComparePlacement(int compareIndex)
     {
         return compareIndex - TargetCheckPointIndex;
