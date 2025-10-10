@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class S_EndScreenUi : MonoBehaviour
@@ -7,6 +8,7 @@ public class S_EndScreenUi : MonoBehaviour
 
     [SerializeField] private GameObject endScreenUiFirstScreen;
     [SerializeField] private S_PlacementBox raceSummaryBox;
+    [SerializeField] private S_PlacementBox raceTotalBox;
     private void Awake()
     {
         Instance = this;
@@ -15,8 +17,13 @@ public class S_EndScreenUi : MonoBehaviour
     public void ShowEndScreen(int placement)
     {
         endScreenUiFirstScreen.SetActive(true);
+        StartCoroutine(ApplyCorrectPlacement(placement));
+    }
+    
+    IEnumerator ApplyCorrectPlacement(int placement)
+    {
+        yield return new WaitForEndOfFrame();
         raceSummaryBox.MovePlayerToCorrectPosition(placement);
-        
     }
     
     
