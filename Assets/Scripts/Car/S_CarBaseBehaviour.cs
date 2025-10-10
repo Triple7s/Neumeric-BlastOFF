@@ -67,7 +67,7 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         rb.AddForce(direction * data.BoostPower, ForceMode.Impulse);
     }
 
-    public void SlowDown()
+    public virtual void SlowDown()
     {
         if (!isEngineRunning) return;
         

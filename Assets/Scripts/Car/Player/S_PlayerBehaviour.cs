@@ -6,6 +6,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     [SerializeField] private float dotProductBeforeTurn = 0.2f;
     [SerializeField] private bool alwaysUseAutoSteering;
     [SerializeField] private ParticleSystem boostParticle;
+    [SerializeField] private ParticleSystem slowParticle;
     [Header("Scripts")]
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
     [SerializeField] private S_PlayerCameraController cameraController;
@@ -122,6 +123,13 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         base.Boost();
         
         boostParticle.Play();
+    }
+
+    public override void SlowDown()
+    {
+        base.SlowDown();
+        
+        slowParticle.Play();
     }
 
     #region Event Actions

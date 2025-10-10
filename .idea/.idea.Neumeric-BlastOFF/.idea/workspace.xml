@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02b2abd1-4345-46b9-b20b-4cc4cc0dcf8f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/P_Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/P_Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Playtest/SC_GateQtm.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Playtest/SC_GateQtm.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Playtest/SC_Loop.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Playtest/SC_Loop.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Math/QtmGates/S_QtmGateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Math/QtmGates/S_QtmGateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CarData/NPC_CarData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/CarData/NPC_CarData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/Player/S_PlayerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/Player/S_PlayerBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarBaseBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarBaseBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Racing/CheckPoint/S_CheckPointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Racing/CheckPoint/S_CheckPointManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/NimbusSans-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/NimbusSans-Bold SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
