@@ -124,6 +124,7 @@ public class S_PlacementBox : MonoBehaviour
         UpdatePositionsBasedOnPoints();
         yield return new WaitForEndOfFrame();
         UpdatePlayerPointsText();
+        UpdatePlacementText();
         UpdateComputerNames();
     }
     
