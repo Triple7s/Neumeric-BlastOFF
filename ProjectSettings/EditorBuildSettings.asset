@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Inge/SC_Loop_New.unity
     guid: 6bbe8db02ca97574bad1806fc70e2e75
   - enabled: 1
+    path: Assets/Scenes/Inge/SC_GateQtm_New.unity
+    guid: c16d494527aa58b43b824423b4392cbd
+  - enabled: 0
     path: Assets/Scenes/Playtest/SC_GateQtm.unity
     guid: 9b4734dbf0c626e4785cf2f17d81999e
   - enabled: 0

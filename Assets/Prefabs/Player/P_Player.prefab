@@ -1408,36 +1408,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3559611923804874376}
-    - target: {fileID: 4406755199569688892, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.20589437
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406755199569688892, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406755199569688892, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406755199569688892, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406755199569688892, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406755199569688892, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4714178210943159640, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
         type: 3}
       propertyPath: m_TargetGraphic
@@ -1558,41 +1528,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3559611923804874376}
-    - target: {fileID: 6618066030451087960, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.785
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618066030451087960, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618066030451087960, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618066030451087960, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.41
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618066030451087960, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618066030451087960, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618066030451087960, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7919357350578607299, guid: 692b9f0a2046f924fb761fa9e1cdcea9,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
