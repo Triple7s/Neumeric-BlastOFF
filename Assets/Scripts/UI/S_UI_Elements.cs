@@ -52,6 +52,16 @@ public class S_UI_Elements : MonoBehaviour
                 button.clicked += () => LoadScene(sceneName);
             }
         });
+        
+        root.Query<Label>().ForEach(label =>
+        {
+            if (label.name.StartsWith("ScoreLabel_"))
+            {
+                string levelName = label.name.Substring("ScoreLabel_".Length);
+                int score = S_GameManager.Instance.GetScoreForLevel(levelName);
+                label.text = $"{score} PTS";
+            }
+        });
     }
 
     private void LoadAndShowMenu(VisualTreeAsset newUXML)

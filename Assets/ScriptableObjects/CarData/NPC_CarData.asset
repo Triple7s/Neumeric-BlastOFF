@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: NPC_CarData
   m_EditorClassIdentifier: Assembly-CSharp::S_CarData
   mass: 10
-  linearDamping: 1
+  linearDamping: 2.5
   angularDamping: 5
-  acceleration: 1400
+  acceleration: 4000
   brakeAcceleration: 250
-  turningSpeed: 40
-  autoTurningSpeed: 80
+  turningSpeed: 45
+  autoTurningSpeed: 100
   boostPower: 500
-  slowDownPower: 200
+  slowDownPower: 50
   minDriftSpeed: 50
   maxSpeed: 400
   maxBoostSpeed: 600
-  baseFloatingHeight: 1
-  distBeforeSpeedChange: 10
+  baseFloatingHeight: 1.5
+  distBeforeSpeedChange: 3
   accelerationFluctuating: 500
   autoTurningSpeedFluctuating: 10

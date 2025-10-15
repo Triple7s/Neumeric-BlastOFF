@@ -16,6 +16,9 @@ public class S_VisualManager : MonoBehaviour
     [SerializeField] private GameObject finishUI;
     [SerializeField] private TextMeshProUGUI finalPlaceText;
 
+    public static event Action OnFinished;
+    
+    
     private void Awake()
     {
         if (Instance == null)
@@ -60,6 +63,7 @@ public class S_VisualManager : MonoBehaviour
             canvas.SetActive(false);
         }
         finishUI.SetActive(true);
+        OnFinished?.Invoke();
         finalPlaceText.text = "Place " + place + EndingNumber(place);
     }
 

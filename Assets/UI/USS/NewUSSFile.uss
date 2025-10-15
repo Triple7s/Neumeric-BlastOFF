@@ -5,3 +5,8 @@ Button {
     top: -50px;
     margin-bottom: -60px;
 }
+
+.Button:hover {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}

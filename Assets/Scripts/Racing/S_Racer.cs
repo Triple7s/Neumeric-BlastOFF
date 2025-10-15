@@ -13,7 +13,6 @@ public class S_Racer : MonoBehaviour
     
 
     public static Action<S_QtmState.QtmState> OnQtmStateChange;
-    private bool isPlayer;
 
     private S_CheckPointEntity targetCheckPoint, nextCheckPoint;
     private Vector3 targetPosition, nextPosition;
@@ -25,8 +24,6 @@ public class S_Racer : MonoBehaviour
     private void Start()
     {
         Init();
-
-        isPlayer = GetComponent<S_PlayerBehaviour>();
     }
 
     private void Init()
@@ -47,12 +44,6 @@ public class S_Racer : MonoBehaviour
         
         if (HasPassedCheckpoint(direction, delta))
         {
-            if (isPlayer)
-            {
-                var check = S_CheckPointManager.Instance.GetCheckPoint(TargetCheckPointIndex);
-                check.PerformAction();
-            }
-            
             TargetCheckPointIndex++;
 
             GetNextCheckPoint();
@@ -92,6 +83,12 @@ public class S_Racer : MonoBehaviour
     public Vector3 GetCheckpointRotation()
     {
         return nextCheckPoint.transform.eulerAngles;
+    }
+
+
+    public int ComparePlacement(int compareIndex)
+    {
+        return compareIndex - TargetCheckPointIndex;
     }
 
     private void OnDrawGizmos()
