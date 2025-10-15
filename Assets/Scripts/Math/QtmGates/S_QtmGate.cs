@@ -27,9 +27,7 @@ public class S_QtmGate : MonoBehaviour
         question = S_QtmGateManager.Instance.GetQuestion();
 
         int randIndex = Random.Range(0, answerGates.Length);
-
-        print("Correct Answer: " + question.CorrectAnswer);
-
+        
         foreach (var text in questionText)
         {
             text.text = question.Text;

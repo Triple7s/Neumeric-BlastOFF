@@ -7,6 +7,9 @@ public class S_RaceManager : MonoBehaviour
 {
     public static S_RaceManager Instance;
     
+    // Find a better location for this later
+    public string currentLevelName = "StraightLine";
+    
     [SerializeField] private S_StartTimer startTimer;
     [SerializeField] private List<S_Racer> racers;
     [SerializeField] private int raceLaps;
@@ -82,6 +85,9 @@ public class S_RaceManager : MonoBehaviour
                     S_EndScreenUi.Instance.ShowEndScreen(i+1);
                     player.EndRace();
                     isRacing = false;
+                    S_QtmGateManager.Instance.AddPointsForFinishedRace(i+1);
+                    S_EndScreenUi.Instance.ShowEndScreen(i+1);
+                    S_GameManager.Instance.SetScoreForLevel(currentLevelName, S_QtmGateManager.Instance.GetScore());
                 }
             }
         }
