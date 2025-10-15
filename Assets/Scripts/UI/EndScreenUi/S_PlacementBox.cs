@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -7,8 +8,7 @@ public class S_PlacementBox : MonoBehaviour
 {
 
     [SerializeField] private TextMeshProUGUI placementText;
-    
-    private S_MathManager _mathManager;
+    [SerializeField] private TextMeshProUGUI pointsText;
     
     private readonly List<S_NamePlate> _namePlates = new List<S_NamePlate>();
 
@@ -20,8 +20,6 @@ public class S_PlacementBox : MonoBehaviour
         {
             _namePlates.Add(transform.GetChild(i).GetComponent<S_NamePlate>());
         }
-        
-        _mathManager = FindAnyObjectByType<S_MathManager>();
     }
     
     public void UpdatePlayerInfo()
@@ -106,23 +104,59 @@ public class S_PlacementBox : MonoBehaviour
             break;
         }
     }
+
+    private void UpdatePlayerPointsText()
+    {
+        var points = S_QtmGateManager.Instance.GetScore();
+        pointsText.text = points + "PTS";
+    }
     
-    public void UpdatePoints()
+    public void StartUpdateSecondScreen()
+    {
+        StartCoroutine(UpdateSecondScreen());
+    }
+
+    IEnumerator UpdateSecondScreen()
+    {
+        yield return new WaitForEndOfFrame();
+        UpdatePoints();
+        yield return new WaitForEndOfFrame();
+        UpdatePositionsBasedOnPoints();
+        yield return new WaitForEndOfFrame();
+        UpdatePlayerPointsText();
+        UpdatePlacementText();
+        UpdateComputerNames();
+    }
+    
+    private void UpdatePoints()
     {
         foreach (var namePlate in _namePlates)
         {
             if (namePlate.IsPlayerPlate())
             {
-                int playerPoints = _mathManager.GetScore();
+                int playerPoints = S_QtmGateManager.Instance.GetScore();
                 namePlate.SetPoints(playerPoints.ToString());
             }
             else
             {
                 // Logic for setting random points for the CPU players based on the amount of math gates there are in the race
-                //int randomPoints = Random.Range(5, 20) * _mathManager.GetMathGateCount();
-                //namePlate.SetPoints(randomPoints.ToString());
+                int baseValue = (S_QtmGateManager.Instance.GetNumberOfQuestionsAnswered() * 5)+20;
+                int randomPoints = Random.Range(baseValue - 15, baseValue + 20);
+                namePlate.SetPoints(randomPoints.ToString());
             }
         }
+        
+    }
+    
+    private void UpdatePositionsBasedOnPoints()
+    {
+        var sortedNamePlates = _namePlates.OrderByDescending(np => int.Parse(np.GetPoints())).ToList();
+        for (int i = 0; i < sortedNamePlates.Count; i++)
+        {
+            sortedNamePlates[i].transform.SetSiblingIndex(i);
+        }
+        
+        UpdatePlacementsText();
     }
     
     private static List<int> ShuffleList(List<int> list)

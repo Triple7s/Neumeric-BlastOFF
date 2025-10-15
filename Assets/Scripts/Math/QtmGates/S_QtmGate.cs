@@ -9,9 +9,11 @@ public class S_QtmGate : MonoBehaviour
     private Question question;
     private void Awake()
     {
+        S_VisualManager.OnFinished += ShutDownGates;
         foreach (var gate in answerGates)
         {
             gate.RequestNewQuestion += SetNewQuestion;
+            gate.Init(this);
         }
     }
 
@@ -25,9 +27,7 @@ public class S_QtmGate : MonoBehaviour
         question = S_QtmGateManager.Instance.GetQuestion();
 
         int randIndex = Random.Range(0, answerGates.Length);
-
-        print("Correct Answer: " + question.CorrectAnswer);
-
+        
         foreach (var text in questionText)
         {
             text.text = question.Text;
@@ -42,6 +42,11 @@ public class S_QtmGate : MonoBehaviour
             answerGates[index].SetAnswer(RandomWrongAnswer(), false);
         }
     }
+    
+    public MathOperator GetCurrentQuestionType()
+    {
+        return question.Operation;
+    }
 
     private string RandomWrongAnswer()
     {
@@ -54,5 +59,18 @@ public class S_QtmGate : MonoBehaviour
         } while (randomNumber == question.CorrectAnswer);
         
         return randomNumber.ToString();
+    }
+    
+    private void ShutDownGates()
+    {
+        foreach (var gate in answerGates)
+        {
+            gate.Hide();
+        }
+
+        foreach (var text in questionText)
+        {
+            text.text = "";
+        }
     }
 }

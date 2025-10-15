@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using Random = UnityEngine.Random;
@@ -12,6 +13,10 @@ public class S_QtmGateManager : MonoBehaviour
 
     private int score;
     private int streak;
+    private int _numberOfQuestionsAnswered;
+    private int _numberOfCorrectAnswers;
+    
+    private List<(bool, MathOperator)> _askedQuestions = new List<(bool, MathOperator)>();
 
     // Events
     public static event Action<int> OnAnswerCorrect;
@@ -20,10 +25,7 @@ public class S_QtmGateManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(this);
+        Instance = this;
     }
 
     public Question GetQuestion()
@@ -32,12 +34,13 @@ public class S_QtmGateManager : MonoBehaviour
         return equations.questions[randomIndex];
     }
 
-    public void HandleAnswer(bool isCorrect)
+    public void HandleAnswer(bool isCorrect, MathOperator answerType)
     {
         if (isCorrect)
         {
-            streak++;
             int pointsAwarded = qtmPoints + streak;
+            
+            streak++;
 
             score += pointsAwarded;
 
@@ -45,6 +48,7 @@ public class S_QtmGateManager : MonoBehaviour
             OnScoreChanged?.Invoke(score);
 
             Debug.Log($"[Gate] Correct! +{pointsAwarded}, Streak: {streak}, Total Score: {score}");
+            _numberOfCorrectAnswers++;
         }
         else
         {
@@ -53,7 +57,35 @@ public class S_QtmGateManager : MonoBehaviour
             OnAnswerWrong?.Invoke();
             OnScoreChanged?.Invoke(score);
         }
+        AddQuestion(isCorrect, answerType);
+        _numberOfQuestionsAnswered++;
+    }
+
+    public void AddPointsForFinishedRace(int position)
+    {
+        score += S_GameManager.Instance.GetPointsForPlacement(position);
+    }
+
+    private void AddQuestion(bool correct, MathOperator questionType)
+    {
+        _askedQuestions.Add((correct, questionType));
     }
 
     public int GetScore() => score;
+    
+    public int GetNumberOfQuestionsAnswered() => _numberOfQuestionsAnswered;
+    public int GetNumberOfCorrectAnswers() => _numberOfCorrectAnswers;
+    
+    public int GetNumberOfQuestionsByType(bool correct, MathOperator questionType)
+    {
+        int count = 0;
+        foreach (var (isCorrect, type) in _askedQuestions)
+        {
+            if (isCorrect == correct && type == questionType)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
 }
