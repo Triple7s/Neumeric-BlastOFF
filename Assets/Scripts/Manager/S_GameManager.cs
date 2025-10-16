@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class S_GameManager : MonoBehaviour
@@ -5,11 +6,15 @@ public class S_GameManager : MonoBehaviour
     public static S_GameManager Instance { get; private set; }
 
     [SerializeField] private SO_PointsForPlacement pointsForPlacement;
-    
+
     [SerializeField] private SO_ScoreOnLevels scoreOnLevels;
     
+    private int volumeBGM = 5;
+    private int volumeSFX = 5;
+
     private static readonly string PlayerNameKey = "PlayerName";
-    
+    //private static readonly string BGMVolumeKey = "BGMVolume";
+    //private static readonly string SFXVolumeKey = "SFXVolume";
     
     // Initialize the singleton instance
     private void Awake()
@@ -53,8 +58,32 @@ public class S_GameManager : MonoBehaviour
     {
         return PlayerPrefs.GetString(PlayerNameKey);
     }
-    
+
     #endregion
+
+    public void SetVolumeBGM(int volume)
+    {
+        volumeBGM = volume;
+        //PlayerPrefs.SetInt(BGMVolumeKey, volume);
+    }
+
+    public int GetVolumeBGM()
+    {
+        return volumeBGM;
+        //return PlayerPrefs.GetInt(BGMVolumeKey, 5);
+    }
+
+    public void SetVolumeSFX(int volume)
+    {
+        volumeSFX = volume;
+        //PlayerPrefs.SetInt(SFXVolumeKey, volume);
+    }
+
+    public int GetVolumeSFX()
+    {
+        return volumeSFX;
+        //return PlayerPrefs.GetInt(SFXVolumeKey, 5);
+    }
 
     public void SetScoreForLevel(string levelName, int score)
     {
@@ -84,4 +113,6 @@ public class S_GameManager : MonoBehaviour
     {
         return pointsForPlacement.GetPointsForPlacement(placement);
     }
+
+
 }

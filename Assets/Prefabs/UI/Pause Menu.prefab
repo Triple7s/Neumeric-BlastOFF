@@ -1941,6 +1941,7 @@ GameObject:
   - component: {fileID: 8716490609088894642}
   - component: {fileID: 2081424563806595022}
   - component: {fileID: 751462515274829132}
+  - component: {fileID: 1324361463952466511}
   m_Layer: 5
   m_Name: Pause Menu
   m_TagString: Untagged
@@ -2051,6 +2052,20 @@ MonoBehaviour:
   confirmRestartUI: {fileID: 5475811629420874231}
   confirmQuitUI: {fileID: 3683422500812573420}
   playerControls: {fileID: 0}
+--- !u!114 &1324361463952466511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3819641757830914736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113e77d28180ac343abeadddc3031259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_VolumeSlider
+  bgmVolumeSlider: {fileID: 3479260313616152350}
+  sfxVolumeSlider: {fileID: 1318073160146591277}
 --- !u!1 &3840730402385575684
 GameObject:
   m_ObjectHideFlags: 0
@@ -2349,7 +2364,7 @@ GameObject:
   - component: {fileID: 1611229435447496336}
   - component: {fileID: 1318073160146591277}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SFX Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2422,7 +2437,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 108355058625384646}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 10
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
@@ -3467,7 +3482,7 @@ GameObject:
   - component: {fileID: 7548596742925758343}
   - component: {fileID: 3479260313616152350}
   m_Layer: 5
-  m_Name: Slider (1)
+  m_Name: Music Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3540,7 +3555,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 49295126947261047}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 10
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
