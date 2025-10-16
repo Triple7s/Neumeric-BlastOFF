@@ -3,6 +3,7 @@ using UnityEngine;
 public class S_PlayerBehaviour : S_CarBaseBehaviour
 {
     [Header("Player Values")] 
+    [Tooltip("Disables checkpoint and won't control towards them")][SerializeField] private bool debuggingMode = false;
     [SerializeField] private float dotProductBeforeTurn = 0.2f;
     [SerializeField] private bool alwaysUseAutoSteering;
     [SerializeField] private ParticleSystem boostParticle;
@@ -72,7 +73,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         {
             AutoTurn(racer.GetDrivingDirection());
         }
-        else if (degreesFromTarget <= dotProductBeforeTurn)
+        else if (degreesFromTarget <= dotProductBeforeTurn && !debuggingMode)
         {
             AutoTurn(racer.GetDrivingDirection());
         }
