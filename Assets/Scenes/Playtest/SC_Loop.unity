@@ -9151,7 +9151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647743139}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.6061638, y: -0.36294183, z: -0.36166227, w: 0.6083084}
+  m_LocalRotation: {x: -0.7065101, y: -0.0021958568, z: -0, w: 0.7076996}
   m_LocalPosition: {x: 0.5276909, y: 23.212488, z: 110.461624}
   m_LocalScale: {x: 1.6187, y: 1.6187003, z: 1.6187}
   m_ConstrainProportionsScale: 0
@@ -9170,26 +9170,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-        type: 3}
-      propertyPath: boostParticle
-      value: 
-      objectReference: {fileID: 1651133735}
-    - target: {fileID: 5356555243972702356, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-        type: 3}
-      propertyPath: rayLength
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5356555243972702356, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-        type: 3}
-      propertyPath: rotationSpeed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5356555243972702356, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-        type: 3}
-      propertyPath: heightChangeSpeed
-      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
@@ -9273,12 +9253,6 @@ MonoBehaviour:
 --- !u!1 &1651133734 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 707055343029349790, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1651133730}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1651133735 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1410810174006598366, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
     type: 3}
   m_PrefabInstance: {fileID: 1651133730}
   m_PrefabAsset: {fileID: 0}
