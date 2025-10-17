@@ -64,17 +64,24 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         {
             Drive();
         }
+
+        float degreesFromTarget = 10;
+        if (!debuggingMode)
+        {
+            var targetDir = (racer.NextCheckPoint.transform.position - racer.TargetCheckPoint.transform.position).normalized;
+            var forwardDir = (transform.forward).normalized;
+
+            degreesFromTarget = Vector3.Dot(targetDir, forwardDir);
+        }
         
-        var targetDir = (racer.NextCheckPoint.transform.position - racer.TargetCheckPoint.transform.position).normalized;
-        var forwardDir = (transform.forward).normalized;
-        
-        var degreesFromTarget = Vector3.Dot(targetDir, forwardDir);
         if (isQtm)
         {
             AutoTurn(racer.GetDrivingDirection());
         }
         else if (degreesFromTarget <= dotProductBeforeTurn && !debuggingMode)
         {
+
+
             AutoTurn(racer.GetDrivingDirection());
         }
         else if (isTurning)
