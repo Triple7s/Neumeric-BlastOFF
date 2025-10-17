@@ -109,6 +109,6 @@ public class S_PauseManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("UItestingMainMenu");
     }
 }

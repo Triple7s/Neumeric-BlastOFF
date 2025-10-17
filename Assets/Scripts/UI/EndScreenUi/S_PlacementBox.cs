@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -106,16 +107,28 @@ public class S_PlacementBox : MonoBehaviour
 
     private void UpdatePlayerPointsText()
     {
-        foreach (var namePlate in _namePlates)
-        {
-            if (!namePlate.IsPlayerPlate()) continue;
-            string points = namePlate.GetPoints();
-            pointsText.text = points + "PTS";
-            break;
-        }
+        var points = S_QtmGateManager.Instance.GetScore();
+        pointsText.text = points + "PTS";
     }
     
-    public void UpdatePoints()
+    public void StartUpdateSecondScreen()
+    {
+        StartCoroutine(UpdateSecondScreen());
+    }
+
+    IEnumerator UpdateSecondScreen()
+    {
+        yield return new WaitForEndOfFrame();
+        UpdatePoints();
+        yield return new WaitForEndOfFrame();
+        UpdatePositionsBasedOnPoints();
+        yield return new WaitForEndOfFrame();
+        UpdatePlayerPointsText();
+        UpdatePlacementText();
+        UpdateComputerNames();
+    }
+    
+    private void UpdatePoints()
     {
         foreach (var namePlate in _namePlates)
         {
@@ -127,24 +140,20 @@ public class S_PlacementBox : MonoBehaviour
             else
             {
                 // Logic for setting random points for the CPU players based on the amount of math gates there are in the race
-                int baseValue = S_QtmGateManager.Instance.GetNumberOfQuestionsAnswered() * 5;
+                int baseValue = (S_QtmGateManager.Instance.GetNumberOfQuestionsAnswered() * 5)+20;
                 int randomPoints = Random.Range(baseValue - 15, baseValue + 20);
                 namePlate.SetPoints(randomPoints.ToString());
             }
         }
         
-        UpdatePositionsBasedOnPoints();
-        UpdatePlacementText();
-        UpdatePlayerPointsText();
     }
     
     private void UpdatePositionsBasedOnPoints()
     {
-        var sortedPlates = _namePlates.OrderByDescending(plate => int.Parse(plate.GetPlacement().TrimEnd('s', 't', 'n', 'd', 'r', 'h'))).ToList();
-        
-        for (int i = 0; i < sortedPlates.Count; i++)
+        var sortedNamePlates = _namePlates.OrderByDescending(np => int.Parse(np.GetPoints())).ToList();
+        for (int i = 0; i < sortedNamePlates.Count; i++)
         {
-            sortedPlates[i].transform.SetSiblingIndex(i);
+            sortedNamePlates[i].transform.SetSiblingIndex(i);
         }
         
         UpdatePlacementsText();
