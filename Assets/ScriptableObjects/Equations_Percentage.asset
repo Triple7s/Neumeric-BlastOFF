@@ -10,33 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1f2211acdb949e409d190479305ffff, type: 3}
-  m_Name: Equations_Decimal
+  m_Name: Equations_Percentage
   m_EditorClassIdentifier: Assembly-CSharp::SO_Equations
   questions:
-  - x: 0.15
-    y: 1.1
-    operation: 0
-  - x: 0.272
-    y: 1.2
-    operation: 0
-  - x: 0.16
-    y: 1.24
-    operation: 0
-  - x: 1.75
-    y: 3.5
-    operation: 0
-  - x: 2.35
-    y: 0.12
-    operation: 1
-  - x: 4.02
-    y: 1.6
-    operation: 1
-  - x: 2.244
-    y: 1.6
-    operation: 1
-  - x: 4.17
-    y: 0.17
-    operation: 1
-  - x: 200
-    y: 0.4
-    operation: 2
+  - x: 40
+    y: 200
+    operation: 4
+  - x: 20
+    y: 400
+    operation: 4
+  - x: 30
+    y: 300
+    operation: 4
+  - x: 90
+    y: 100
+    operation: 4
