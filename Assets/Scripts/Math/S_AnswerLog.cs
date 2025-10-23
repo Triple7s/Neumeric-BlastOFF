@@ -5,7 +5,7 @@ public class S_AnswerLog
 {
     public string category;
     public string question;
-    public int correctAnswer;
+    public double correctAnswer;
     //public int incorrectAnswer;
     public int chosenAnswer;
     public bool isCorrect;
