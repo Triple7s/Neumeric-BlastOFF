@@ -10,27 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1f2211acdb949e409d190479305ffff, type: 3}
-  m_Name: Equations_Percentage
+  m_Name: Equations_NegativeNumbers_Lvl1
   m_EditorClassIdentifier: Assembly-CSharp::SO_Equations
   questions:
-  - x: 40
-    y: 200
-    operation: 4
-  - x: 20
-    y: 400
-    operation: 4
-  - x: 30
-    y: 300
-    operation: 4
-  - x: 90
-    y: 100
-    operation: 4
-  - x: 30
-    y: 200
-    operation: 4
-  - x: 50
-    y: 600
-    operation: 4
-  - x: 40
-    y: 500
-    operation: 4
+  - x: 4
+    y: 6
+    operation: 1
+  - x: 2
+    y: 7
+    operation: 1
+  - x: -3
+    y: 5
+    operation: 0
+  - x: -3
+    y: 5
+    operation: 1
+  - x: 8
+    y: 6
+    operation: 1
+  - x: -5
+    y: 3
+    operation: 0
+  - x: 10
+    y: 15
+    operation: 1
+  - x: -7
+    y: 10
+    operation: 1
+  - x: 14
+    y: 17
+    operation: 1
