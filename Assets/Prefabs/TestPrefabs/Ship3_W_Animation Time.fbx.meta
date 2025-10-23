@@ -1,39 +1,9 @@
 fileFormatVersion: 2
-guid: ff8e798cb6638974ca9647961b5514fb
+guid: 2102884cbc383e947b189a14f0c4e5a9
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Body
-    second: {fileID: 2100000, guid: 1e6bd2c917ea93b41824ff08ff3c4f0a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CockPit
-    second: {fileID: 2100000, guid: 85bb6f5866ea66f47bb0b48b89f9fc6a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Decals
-    second: {fileID: 2100000, guid: cd17a032a4afd964ca1deff21dd41983, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Final_Things
-    second: {fileID: 2100000, guid: 9f916a12646773b4183626eb8cd5555f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 87172240473bb9a4695e1fd78c97f469, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: 4d4c3caee0c9c0d44b83044bc6981b6e, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -60,10 +30,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.3
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -121,7 +91,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.3
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
