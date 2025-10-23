@@ -1,8 +1,9 @@
 public enum MathOperator
 {
     Addition,
-    Subtraction, 
+    Subtraction,
     Multiplication,
-    Division
+    Division,
+    Percentage
 }
 
