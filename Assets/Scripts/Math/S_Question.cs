@@ -53,9 +53,23 @@ public class Question
                 int da = a.GetDenominator();
                 int db = b.GetDenominator();
 
-                double fa = na * db;
-                double fb = nb * da;
-                double commonDenominator = da * db;
+                double fa = 0;
+                double fb = 0;
+                double commonDenominator = 0;
+                
+                if (da == db)
+                {
+                    fa = na;
+                    fb = nb;
+                    commonDenominator = da;
+                }
+                else
+                {
+                    fa = na * db;
+                    fb = nb * da;
+                    commonDenominator = da * db;
+                }
+                
                 
                 return operation switch
                 {
