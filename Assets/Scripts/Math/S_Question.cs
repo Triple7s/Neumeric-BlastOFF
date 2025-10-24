@@ -160,7 +160,7 @@ public class Question
             if (operation == MathOperator.Percentage)
                 return $"{x:0.##}% of {y:0.##}";
             else
-                return $"{x:0.##}% of {y:0.##}";
+                return $"{x:0.##} {opSymbol} {y:0.##}";
         }
     }
 }
