@@ -33,7 +33,7 @@ public class S_QtmGate : MonoBehaviour
             text.text = question.Text;
         }
         
-        answerGates[randIndex].SetAnswer(question.CorrectAnswer.ToString(), true);
+        answerGates[randIndex].SetAnswer(question.CorrectAnswerString, true);
 
         for (int i = 1; i < answerGates.Length; i++)
         {

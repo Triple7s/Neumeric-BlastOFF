@@ -40,8 +40,8 @@ public class Question
 
 
     //public int CorrectAnswer => CalculateAnswer(x, y, operation);
-
-    public double CorrectAnswer
+    
+    public string CorrectAnswerString
     {
         get
         {
@@ -53,14 +53,36 @@ public class Question
                 int da = a.GetDenominator();
                 int db = b.GetDenominator();
 
-                //double fa = a.ToDouble();
-                //double fb = b.ToDouble();
-
                 double fa = na * db;
                 double fb = nb * da;
                 double commonDenominator = da * db;
-
                 
+                return operation switch
+                {
+                    MathOperator.Addition => $"{fa + fb}/{commonDenominator}",
+                    MathOperator.Subtraction => $"{fa - fb}/{commonDenominator}",
+                    MathOperator.Multiplication => $"{na * nb}/{da * db}",
+                    MathOperator.Division => $"{na * db}/{nb * da}",
+                    MathOperator.Percentage => ((fa / commonDenominator) * (fb / 100)).ToString(),    // x% of y
+                    _ => "0"
+                };
+                
+            }
+            else
+            {
+                return CorrectAnswer.ToString();
+            }
+        }
+    }
+
+    public double CorrectAnswer
+    {
+        get
+        {
+            if (questionType == QuestionType.Fraction)
+            {
+                double fa = a.ToDouble();
+                double fb = b.ToDouble();
 
                 return operation switch
                 {
