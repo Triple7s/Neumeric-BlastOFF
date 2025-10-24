@@ -3176,7 +3176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36abd20c74daaab4bb1abf864c328cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_QtmGateManager
-  equations: {fileID: 11400000, guid: e9ebdea27c5511f4fa1e4dbb5b6cf5c3, type: 2}
+  equations: {fileID: 11400000, guid: a07b256ed0a2b5247baa0d2918474fd9, type: 2}
   qtmPoints: 5
 --- !u!1 &1271427132 stripped
 GameObject:
