@@ -1,5 +1,6 @@
 public enum QuestionType
 {
     Normal,
-    Fraction
+    Fraction,
+    Algebra
 }

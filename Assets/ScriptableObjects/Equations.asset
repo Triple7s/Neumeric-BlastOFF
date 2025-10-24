@@ -22,6 +22,8 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 0
   - questionType: 0
     x: 134
@@ -32,6 +34,8 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 0
   - questionType: 0
     x: 182
@@ -42,6 +46,8 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 0
   - questionType: 0
     x: 12
@@ -52,6 +58,8 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 0
   - questionType: 0
     x: -26
@@ -62,6 +70,8 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 1
   - questionType: 0
     x: 7
@@ -72,6 +82,8 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 1
   - questionType: 0
     x: 25
@@ -82,6 +94,8 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 1
   - questionType: 0
     x: -23
@@ -92,6 +106,8 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 1
   - questionType: 0
     x: 10
@@ -102,6 +118,8 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 2
   - questionType: 0
     x: 10
@@ -112,6 +130,8 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 2
   - questionType: 0
     x: 5
@@ -122,6 +142,8 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 2
   - questionType: 0
     x: 3
@@ -132,6 +154,8 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 2
   - questionType: 0
     x: 66
@@ -142,6 +166,8 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 3
   - questionType: 0
     x: 30
@@ -152,6 +178,8 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 3
   - questionType: 0
     x: 17
@@ -162,6 +190,8 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 3
   - questionType: 0
     x: 0
@@ -172,4 +202,6 @@ MonoBehaviour:
     b:
       numerator: 0
       denominator: 0
+    knownValue1: 0
+    knownValue2: 0
     operation: 3
