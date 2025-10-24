@@ -50,15 +50,15 @@ public class S_QtmGate : MonoBehaviour
 
     private string RandomWrongAnswer()
     {
-        int randomNumber;
+        // int randomNumber;
 
-        do
-        {
-            randomNumber = Random.Range(0, 20);
-            
-        } while (randomNumber == question.CorrectAnswer);
+        // do
+        // {
+        //     randomNumber = Random.Range(0, 20);
+        //     
+        // } while (randomNumber == question.CorrectAnswer);
         
-        return randomNumber.ToString();
+        return question.FakeAnswerString;
     }
     
     private void ShutDownGates()

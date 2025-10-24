@@ -77,7 +77,7 @@ public class Question
                     MathOperator.Subtraction => $"{fa - fb}/{commonDenominator}",
                     MathOperator.Multiplication => $"{na * nb}/{da * db}",
                     MathOperator.Division => $"{na * db}/{nb * da}",
-                    MathOperator.Percentage => ((fa / commonDenominator) * (fb / 100)).ToString(),    // x% of y
+                    MathOperator.Percentage => ((fa / commonDenominator) * (fb / 100)).ToString("0.##"),    // x% of y
                     _ => "0"
                 };
                 
@@ -120,6 +120,24 @@ public class Question
                     _ => 0f
                 };
             }
+        }
+    }
+    
+    public string FakeAnswerString
+    {
+        get
+        {
+            System.Random rand = new System.Random();
+            double fakeAnswer = CorrectAnswer;
+
+            // Generate a fake answer that is not equal to the correct answer
+            while (Math.Abs(fakeAnswer - CorrectAnswer) < 0.01)
+            {
+                double variation = rand.NextDouble() * 10 - 5; // Random variation between -5 and +5
+                fakeAnswer = CorrectAnswer + variation;
+            }
+
+            return fakeAnswer.ToString("0.##");
         }
     }
 
