@@ -129,6 +129,66 @@ public class Question
         {
             System.Random rand = new System.Random();
             double fakeAnswer = CorrectAnswer;
+            
+            if (questionType == QuestionType.Fraction)
+            {
+                int da = a.GetDenominator();
+                int db = b.GetDenominator();
+                
+                int na = a.GetNumerator();
+                int nb = b.GetNumerator();
+                
+                int fa = na;
+                int fb = nb;
+                
+                int commonDenominator = 0;
+                
+                if (da == db)
+                {
+                    commonDenominator = da;
+                }
+                else
+                {
+                    fa = na * db;
+                    fb = nb * da;
+                    commonDenominator = da * db;
+                }
+                
+                // Generate a fake numerator that is not equal to the correct answer's numerator
+                int correctNumerator = operation switch
+                {
+                    MathOperator.Addition => fa + fb,
+                    MathOperator.Subtraction => fa - fb,
+                    MathOperator.Multiplication => na * nb,
+                    MathOperator.Division => na * db,
+                    MathOperator.Percentage => (int)((fa / commonDenominator) * (fb / 100)),
+                    _ => 0
+                };
+                
+                int fakeNumerator = correctNumerator;
+                while (fakeNumerator == correctNumerator)
+                {
+                    int variation = rand.Next(-5, 6); // Random variation between -5 and +5
+                    fakeNumerator = correctNumerator + variation;
+                }
+
+                return $"{fakeNumerator}/{commonDenominator}";
+            }
+            
+            if (CorrectAnswer % 1 == 0) // If the correct answer is an integer
+            {
+                int intCorrect = (int)CorrectAnswer;
+                int fakeIntAnswer = intCorrect;
+
+                // Generate a fake integer answer that is not equal to the correct answer
+                while (fakeIntAnswer == intCorrect)
+                {
+                    int variation = rand.Next(-5, 6); // Random variation between -5 and +5
+                    fakeIntAnswer = intCorrect + variation;
+                }
+
+                return fakeIntAnswer.ToString();
+            }
 
             // Generate a fake answer that is not equal to the correct answer
             while (Math.Abs(fakeAnswer - CorrectAnswer) < 0.01)
