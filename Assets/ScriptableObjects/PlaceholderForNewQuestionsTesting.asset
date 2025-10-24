@@ -13,15 +13,43 @@ MonoBehaviour:
   m_Name: PlaceholderForNewQuestionsTesting
   m_EditorClassIdentifier: Assembly-CSharp::SO_Equations
   questions:
-  - x: 40
-    y: 200
-    operation: 4
-  - x: 20
-    y: 400
-    operation: 4
-  - x: 30
-    y: 300
-    operation: 4
-  - x: 25
-    y: 400
-    operation: 4
+  - questionType: 1
+    x: 2
+    y: 1
+    a:
+      numerator: 2
+      denominator: 5
+    b:
+      numerator: 1
+      denominator: 5
+    operation: 0
+  - questionType: 1
+    x: 0
+    y: 0
+    a:
+      numerator: 4
+      denominator: 7
+    b:
+      numerator: 2
+      denominator: 7
+    operation: 1
+  - questionType: 1
+    x: 0
+    y: 0
+    a:
+      numerator: 2
+      denominator: 6
+    b:
+      numerator: 3
+      denominator: 6
+    operation: 0
+  - questionType: 1
+    x: 0
+    y: 0
+    a:
+      numerator: 5
+      denominator: 6
+    b:
+      numerator: 3
+      denominator: 6
+    operation: 1

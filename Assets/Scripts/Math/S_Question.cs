@@ -1,10 +1,19 @@
+using System;
 using UnityEngine;
 
 [System.Serializable]
 public class Question
 {
+    [SerializeField] private QuestionType questionType = QuestionType.Normal;
+
+    [Header("Normal Question Values")]
     [SerializeField] private double x;
     [SerializeField] private double y;
+
+    [Header("Fraction Question Values")]
+    [SerializeField] private Fraction a;
+    [SerializeField] private Fraction b;
+
     [SerializeField] private MathOperator operation;
     
     
@@ -26,6 +35,7 @@ public class Question
 
     /*public float X => x;
     public float Y => y;*/
+    public QuestionType Type => questionType;
     public MathOperator Operation => operation;
 
 
@@ -35,15 +45,45 @@ public class Question
     {
         get
         {
-            return operation switch
+            if (questionType == QuestionType.Fraction)
             {
-                MathOperator.Addition => x + y,
-                MathOperator.Subtraction => x - y,
-                MathOperator.Multiplication => x * y,
-                MathOperator.Division => y != 0 ? x / y : 0, // Avoid divide by zero
-                MathOperator.Percentage => (x / 100) * y,    // x% of y
-                _ => 0
-            };
+                int na = a.GetNumerator();
+                int nb = b.GetNumerator();
+
+                int da = a.GetDenominator();
+                int db = b.GetDenominator();
+
+                //double fa = a.ToDouble();
+                //double fb = b.ToDouble();
+
+                double fa = na * db;
+                double fb = nb * da;
+                double commonDenominator = da * db;
+
+                
+
+                return operation switch
+                {
+                    MathOperator.Addition => fa + fb,
+                    MathOperator.Subtraction => fa - fb,
+                    MathOperator.Multiplication => fa * fb,
+                    MathOperator.Division => fb != 0 ? fa / fb : 0, // Avoid divide by zero
+                    MathOperator.Percentage => (fa / 100) * fb,    // x% of y
+                    _ => 0
+                };
+            }
+            else
+            {
+                return operation switch
+                {
+                    MathOperator.Addition => x + y,
+                    MathOperator.Subtraction => x - y,
+                    MathOperator.Multiplication => x * y,
+                    MathOperator.Division => y != 0 ? x / y : 0,
+                    MathOperator.Percentage => (x / 100f) * y,
+                    _ => 0f
+                };
+            }
         }
     }
 
@@ -61,9 +101,12 @@ public class Question
                 _ => "?"
             };
 
-            return operation == MathOperator.Percentage
-                ? $"{x:0.##}% of {y:0.##}"
-                : $"{x:0.##} {opSymbol} {y:0.##}";
+            if (questionType == QuestionType.Fraction)
+                return $"{a} {opSymbol} {b}";
+            if (operation == MathOperator.Percentage)
+                return $"{x:0.##}% of {y:0.##}";
+            else
+                return $"{x:0.##}% of {y:0.##}";
         }
     }
 }
