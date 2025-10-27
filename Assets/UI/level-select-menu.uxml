@@ -9,8 +9,8 @@
         <ui:Button text="COURSE 1&#10;-- LOOP --" name="Level_SC_Loop_New" style="height: 475px; width: 734px; white-space: pre-wrap; -unity-text-align: middle-center; font-size: 50px; -unity-font-definition: resource(&apos;Fonts &amp; Materials/NimbusSans-Bold&apos;); -unity-font-style: bold; background-color: rgb(255, 103, 94); top: 0; color: rgb(255, 255, 255); flex-direction: column-reverse;">
             <ui:Label text="0 PTS" tabindex="-1" name="ScoreLabel_StraightLine" />
         </ui:Button>
-        <ui:Button text="COURSE 2&#10;-- PROTOTYPE --" name="Level_SC_GateQtm_New" style="height: 475px; width: 734px; white-space: pre-wrap; -unity-text-align: middle-center; font-size: 50px; -unity-font-definition: resource(&apos;Fonts &amp; Materials/NimbusSans-Bold&apos;); -unity-font-style: bold; background-color: rgb(255, 164, 100); top: 0; color: rgb(255, 255, 255); flex-direction: column-reverse;">
-            <ui:Label text="0 PTS" name="ScoreLabel_ClassicCourse" focusable="false" />
+        <ui:Button text="COURSE 2&#10;-- Fraction Forest --" name="Level_Jacob_TestScene" style="height: 475px; width: 734px; white-space: pre-wrap; -unity-text-align: middle-center; font-size: 50px; -unity-font-definition: resource(&apos;Fonts &amp; Materials/NimbusSans-Bold&apos;); -unity-font-style: bold; background-color: rgb(66, 180, 110); top: 0; color: rgb(255, 255, 255); flex-direction: column-reverse;">
+            <ui:Label text="0 PTS" name="ScoreLabel_FractionForest" focusable="false" />
         </ui:Button>
     </ui:VisualElement>
     <ui:VisualElement name="BottomBar" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Imported%20Assets/CleanFlatUI/Textures/square/square128/square128_fill.png?fileID=21300000&amp;guid=9845efdee2c066f468ff3846ae7ce497&amp;type=3#square128_fill&quot;); -unity-background-image-tint-color: rgb(0, 0, 0); background-size: 85% 10%; bottom: 0; height: auto; top: -12px;" />

@@ -17,3 +17,5 @@ MonoBehaviour:
     score: 0
   - levelName: ClassicCourse
     score: 0
+  - levelName: FractionForest
+    score: 0
