@@ -373,7 +373,7 @@ MonoBehaviour:
   carVfx: {fileID: 5475132890906326534}
   dotProductBeforeTurn: 0.8
   alwaysUseAutoSteering: 0
-  boostParticle: {fileID: 1303130234088783379}
+  boostParticle: {fileID: 1410810174006598366}
   slowParticle: {fileID: 8971581306190287245}
   playerInputRegister: {fileID: 3559611923804874376}
   cameraController: {fileID: 2544049755536184592}
@@ -402,9 +402,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea555b24131260b47844f42314dc77d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_PlayerMovement
-  rayLength: 2
-  rotationSpeed: 20
-  heightChangeSpeed: 25
+  rayLength: 3
+  rotationSpeed: 25
+  heightChangeSpeed: 30
   fallingSpeed: 9.81
   targetLayerMask:
     serializedVersion: 2
@@ -1008,6 +1008,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661c89b0530763c47acd4a95294bcbbc, type: 3}
+--- !u!198 &1410810174006598366 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2051846943791604453, guid: 661c89b0530763c47acd4a95294bcbbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1147762099863222331}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6597575401789079999 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6080669094586005892, guid: 661c89b0530763c47acd4a95294bcbbc,
@@ -1122,12 +1128,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6846dcb90ff8cd1489a58804539651b0, type: 3}
---- !u!198 &1303130234088783379 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1076256580177853081, guid: 6846dcb90ff8cd1489a58804539651b0,
-    type: 3}
-  m_PrefabInstance: {fileID: 2087989775616410762}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8904083820801377550 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7452242063303164292, guid: 6846dcb90ff8cd1489a58804539651b0,
