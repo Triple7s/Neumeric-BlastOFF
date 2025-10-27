@@ -3,6 +3,7 @@ using UnityEngine;
 public class S_PlayerBehaviour : S_CarBaseBehaviour
 {
     [Header("Player Values")] 
+    [Tooltip("Disables checkpoint and won't control towards them")][SerializeField] private bool debuggingMode = false;
     [SerializeField] private float dotProductBeforeTurn = 0.2f;
     [SerializeField] private bool alwaysUseAutoSteering;
     [SerializeField] private ParticleSystem boostParticle;
@@ -63,17 +64,24 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         {
             Drive();
         }
+
+        float degreesFromTarget = 10;
+        if (!debuggingMode)
+        {
+            var targetDir = (racer.NextCheckPoint.transform.position - racer.TargetCheckPoint.transform.position).normalized;
+            var forwardDir = (transform.forward).normalized;
+
+            degreesFromTarget = Vector3.Dot(targetDir, forwardDir);
+        }
         
-        var targetDir = (racer.NextCheckPoint.transform.position - racer.TargetCheckPoint.transform.position).normalized;
-        var forwardDir = (transform.forward).normalized;
-        
-        var degreesFromTarget = Vector3.Dot(targetDir, forwardDir);
         if (isQtm)
         {
             AutoTurn(racer.GetDrivingDirection());
         }
-        else if (degreesFromTarget <= dotProductBeforeTurn)
+        else if (degreesFromTarget <= dotProductBeforeTurn && !debuggingMode)
         {
+
+
             AutoTurn(racer.GetDrivingDirection());
         }
         else if (isTurning)
