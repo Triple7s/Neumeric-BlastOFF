@@ -8,12 +8,18 @@ public class S_QtmAnswer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI answerText;
 
+    private S_QtmGate _qtmGate;
     private List<S_CarBaseBehaviour> carsThatHaveAnswered = new ();
     
     private bool isCorrectAnswer;
     private bool isOff;
 
     public event Action RequestNewQuestion;
+
+    public void Init(S_QtmGate qtmGate)
+    {
+        _qtmGate = qtmGate;
+    }
 
     public void SetAnswer(string answer, bool isCorrect)
     {
@@ -42,7 +48,7 @@ public class S_QtmAnswer : MonoBehaviour
             {
                 StartCoroutine(GetNewQuestion());
 
-                S_QtmGateManager.Instance.HandleAnswer(isCorrectAnswer);
+                S_QtmGateManager.Instance.HandleAnswer(isCorrectAnswer, _qtmGate.GetCurrentQuestionType());
             }
             
             carsThatHaveAnswered.Add(car);

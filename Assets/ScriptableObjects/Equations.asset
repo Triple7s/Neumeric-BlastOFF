@@ -13,51 +13,51 @@ MonoBehaviour:
   m_Name: Equations
   m_EditorClassIdentifier: Assembly-CSharp::SO_Equations
   questions:
-  - x: 2
-    y: 2
+  - x: 12
+    y: 162
     operation: 0
-  - x: 1
-    y: 10
+  - x: 134
+    y: 15
     operation: 0
-  - x: 6
-    y: 7
+  - x: 182
+    y: 16
     operation: 0
-  - x: 4
-    y: 8
+  - x: 12
+    y: 200
     operation: 0
-  - x: 6
-    y: 2
+  - x: -26
+    y: -6
     operation: 1
-  - x: 6
+  - x: -7
+    y: -24
+    operation: 1
+  - x: 25
+    y: -16
+    operation: 1
+  - x: -23
+    y: 27
+    operation: 1
+  - x: 10
     y: 3
-    operation: 1
-  - x: 8
-    y: 5
-    operation: 1
-  - x: 70
-    y: 60
-    operation: 1
-  - x: 9
-    y: 0
+    operation: 2
+  - x: 10
+    y: 8
+    operation: 2
+  - x: 5
+    y: 4
     operation: 2
   - x: 3
-    y: 4
+    y: 9
     operation: 2
-  - x: 4
+  - x: 66
+    y: 3
+    operation: 3
+  - x: 30
+    y: 3
+    operation: 3
+  - x: 17
     y: 1
-    operation: 2
-  - x: 8
-    y: 2
-    operation: 2
-  - x: 8
-    y: 2
     operation: 3
-  - x: 4
-    y: 2
-    operation: 3
-  - x: 24
+  - x: 0
     y: 6
-    operation: 3
-  - x: 12
-    y: 4
     operation: 3
