@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Equations_X
   m_EditorClassIdentifier: Assembly-CSharp::SO_Equations
   questions:
-  - questionType: 2
+  - questionType: 1
     x: 0
     y: 0
     a:
-      numerator: 0
-      denominator: 0
+      numerator: 7
+      denominator: 69
     b:
-      numerator: 0
-      denominator: 0
+      numerator: 9
+      denominator: 3
     knownValue1: 29
     knownValue2: 23
-    algebraPosition: 1
+    xPosition: 0
     operation: 0

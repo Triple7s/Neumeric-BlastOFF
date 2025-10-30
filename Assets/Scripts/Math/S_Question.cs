@@ -19,8 +19,9 @@ public class Question
     [SerializeField] private double knownValue2; 
 
     [Header("Algebra Question Settings")]
-    [SerializeField] private AlgebraPosition algebraPosition = AlgebraPosition.Second;
+    [SerializeField] private AlgebraPosition xPosition = AlgebraPosition.Second;
 
+    [Header("Operation Question Settings")]
     [SerializeField] private MathOperator operation;
 
     public QuestionType Type => questionType;
@@ -42,7 +43,7 @@ public class Question
         switch (operation)
         {
             case MathOperator.Addition:
-                return algebraPosition switch
+                return xPosition switch
                 {
                     AlgebraPosition.First => knownValue2 - knownValue1,  // x + a = b → x = b - a
                     AlgebraPosition.Second => knownValue2 - knownValue1, // a + x = b → x = b - a
@@ -51,7 +52,7 @@ public class Question
                 };
 
             case MathOperator.Subtraction:
-                return algebraPosition switch
+                return xPosition switch
                 {
                     AlgebraPosition.First => knownValue2 + knownValue1,  // x - a = b → x = b + a
                     AlgebraPosition.Second => knownValue1 - knownValue2, // a - x = b → x = a - b
@@ -60,7 +61,7 @@ public class Question
                 };
 
             case MathOperator.Multiplication:
-                return algebraPosition switch
+                return xPosition switch
                 {
                     AlgebraPosition.First => knownValue2 / knownValue1,  // x * a = b → x = b / a
                     AlgebraPosition.Second => knownValue2 / knownValue1, // a * x = b → x = b / a
@@ -69,7 +70,7 @@ public class Question
                 };
 
             case MathOperator.Division:
-                return algebraPosition switch
+                return xPosition switch
                 {
                     AlgebraPosition.First => knownValue2 * knownValue1,  // x ÷ a = b → x = b * a
                     AlgebraPosition.Second => knownValue1 / knownValue2, // a ÷ x = b → x = a / b
@@ -251,7 +252,7 @@ public class Question
             return questionType switch
             {
                 QuestionType.Fraction => $"{a} {opSymbol} {b}",
-                QuestionType.Algebra => algebraPosition switch
+                QuestionType.Algebra => xPosition switch
                 {
                     AlgebraPosition.First => $"x {opSymbol} {knownValue1:0.##} = {knownValue2:0.##}",
                     AlgebraPosition.Second => $"{knownValue1:0.##} {opSymbol} x = {knownValue2:0.##}",
