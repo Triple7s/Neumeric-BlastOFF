@@ -13,15 +13,22 @@ MonoBehaviour:
   m_Name: PlaceholderForNewQuestionsTesting
   m_EditorClassIdentifier: Assembly-CSharp::SO_Equations
   questions:
-  - questionType: 2
-    x: 2
-    y: 1
+  - questionType: 0
+    x: 2.32
+    y: 100
     a:
-      numerator: 2
-      denominator: 5
+      numerator: 3
+      denominator: 8
     b:
-      numerator: 1
-      denominator: 5
-    knownValue1: 27
+      numerator: 4
+      denominator: 8
+    knownValue1: 100
     knownValue2: 30
-    operation: 1
+    xPosition: 0
+    operation: 4
+    conversionType: 4
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 2.37
+    percentValue: 40

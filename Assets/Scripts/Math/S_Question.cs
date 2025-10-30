@@ -24,6 +24,12 @@ public class Question
     [Header("Operation Question Settings")]
     [SerializeField] private MathOperator operation;
 
+    [Header("Conversion Type Settings")]
+    [SerializeField] private ConversionType conversionType;
+    [SerializeField] private Fraction fractionValue;
+    [SerializeField] private double decimalValue;
+    [SerializeField] private double percentValue;
+
     public QuestionType Type => questionType;
     public MathOperator Operation => operation;
 
@@ -129,6 +135,9 @@ public class Question
     {
         get
         {
+            if (questionType == QuestionType.Conversion)
+                return ConversionAnswerString;
+
             if (questionType == QuestionType.Fraction)
             {
                 int na = a.GetNumerator();
@@ -184,6 +193,17 @@ public class Question
                     commonDenominator = da * db;
                 }
 
+                double correctValue = conversionType switch
+                {
+                    ConversionType.FractionToDecimal => fractionValue.ToDouble(),
+                    ConversionType.FractionToPercent => fractionValue.ToDouble() * 100,
+                    ConversionType.DecimalToFraction => decimalValue,
+                    ConversionType.DecimalToPercent => decimalValue * 100,
+                    ConversionType.PercentToFraction => percentValue / 100.0,
+                    ConversionType.PercentToDecimal => percentValue / 100.0,
+                    _ => 0
+                };
+
                 commonDenominator = Operation switch
                 {
                     MathOperator.Multiplication => da * db,
@@ -216,6 +236,9 @@ public class Question
 
                 while (Math.Abs(fake - correct) < 0.01)
                     fake = correct + rand.Next(-5, 6);
+
+                if (conversionType.ToString().Contains("Percent"))
+                    return fake.ToString("0.##") + "%";
 
                 return fake.ToString("0.##");
             }
@@ -267,9 +290,49 @@ public class Question
                     AlgebraPosition.Third => $"{knownValue1:0.##} {opSymbol} {knownValue2:0.##} = x",
                     _ => $"? {opSymbol} ? = ?"
                 },
+                QuestionType.Conversion => conversionType switch
+                {
+                    ConversionType.FractionToDecimal => $"Convert {fractionValue} to decimal",
+                    ConversionType.FractionToPercent => $"Convert {fractionValue} to percent",
+                    ConversionType.DecimalToFraction => $"Convert {decimalValue:0.##} to fraction",
+                    ConversionType.DecimalToPercent => $"Convert {decimalValue:0.##} to percent",
+                    ConversionType.PercentToFraction => $"Convert {percentValue:0.##}% to fraction",
+                    ConversionType.PercentToDecimal => $"Convert {percentValue:0.##}% to decimal",
+                    _ => "Unknown conversion"
+                },
                 _ when operation == MathOperator.Percentage => $"{x:0.##}% of {y:0.##}",
                 _ => $"{x:0.##} {opSymbol} {y:0.##}"
             };
+        }
+    }
+
+    public string ConversionAnswerString
+    {
+        get
+        {
+            switch (conversionType)
+            {
+                case ConversionType.FractionToDecimal:
+                    return fractionValue.ToDouble().ToString("0.##");
+
+                case ConversionType.FractionToPercent:
+                    return (fractionValue.ToDouble() * 100).ToString("0.##") + "%";
+
+                case ConversionType.DecimalToFraction:
+                    return Fraction.FromDouble(decimalValue).ToString();
+
+                case ConversionType.DecimalToPercent:
+                    return (decimalValue * 100).ToString("0.##") + "%";
+
+                case ConversionType.PercentToFraction:
+                    return Fraction.FromDouble(percentValue / 100.0).ToString();
+
+                case ConversionType.PercentToDecimal:
+                    return (percentValue / 100.0).ToString("0.##");
+
+                default:
+                    return "N/A";
+            }
         }
     }
 }
