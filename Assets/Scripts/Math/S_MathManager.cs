@@ -167,14 +167,14 @@ public class S_MathManager : MonoBehaviour
 
     private void DisplayAlternatives(Question question)
     {
-        HashSet<int> alternatives = new HashSet<int>();
+        HashSet<double> alternatives = new HashSet<double>();
         alternatives.Add(currentQuestion.CorrectAnswer);
 
         // Generating 3 wrong answers
         while (alternatives.Count < 4)
         {
-            int wrongAnswer = question.CorrectAnswer + Random.Range(-10, 11);
-            if (wrongAnswer < 0) wrongAnswer = Mathf.Abs(wrongAnswer);
+            double wrongAnswer = question.CorrectAnswer + Random.Range(-10, 11);
+            //if (wrongAnswer < 0) wrongAnswer = Mathf.Abs(wrongAnswer);
             //if (wrongAnswer != currentQuestion.CorrectAnswer)
             if (!alternatives.Contains(wrongAnswer))
             {
@@ -183,7 +183,7 @@ public class S_MathManager : MonoBehaviour
         }
 
         // Shuffle
-        List<int> shuffledAlternatives = new List<int>(alternatives);
+        List<double> shuffledAlternatives = new List<double>(alternatives);
         for (int i = 0; i < shuffledAlternatives.Count; i++)
         {
             int rand = Random.Range(i, shuffledAlternatives.Count);
