@@ -161,41 +161,41 @@ public class S_CheckPointManager : MonoBehaviour
     }
     private Quaternion CalculateRotationOfCheckPoint(S_CheckPointEntity thisEntity)
     {
-        var targetDir = CalculateDirectionOfCheckPoint(thisEntity);
-        var upDir = CalculateUpDirectionOfCheckPoint(thisEntity);
+        var targetDir = CalculateDirectionOfCheckPoint(thisEntity).normalized;
+        var upDir = CalculateUpDirectionOfCheckPoint(thisEntity).normalized;
         
         if (targetDir == Vector3.zero)
         {
             Debug.LogError("Missing Target Direction");
             return Quaternion.identity;
         }
-        Quaternion targetRotation = Quaternion.LookRotation(targetDir, upDir);
+        //Quaternion targetRotation = Quaternion.LookRotation(targetDir, upDir);
+        
+        Quaternion targetRotation = thisEntity.transform.rotation;
+        targetRotation.SetLookRotation(targetDir, upDir);
+        
+        
         return targetRotation;
     }
 
     private Vector3 CalculateUpDirectionOfCheckPoint(S_CheckPointEntity thisEntity)
     {
-        var grounds = FindObjectsByType<S_DrivableSurface>(FindObjectsSortMode.None);
 
         S_DrivableSurface closetsGround = null;
-        var currentDist = Vector3.Distance(grounds[0].transform.position, thisEntity.transform.position);
-
-        foreach (var ground in grounds)
+        
+        LayerMask mask = LayerMask.GetMask("DrivableGround");
+        if (Physics.Raycast(thisEntity.transform.position, -thisEntity.transform.up, out RaycastHit hit, 2f, mask))
         {
-            if (Vector3.Distance(ground.transform.position, thisEntity.transform.position) < currentDist)
-            {
-                closetsGround = ground;
-                currentDist = Vector3.Distance(ground.transform.position, thisEntity.transform.position);
-            }
+            closetsGround = hit.collider.gameObject.GetComponent<S_DrivableSurface>();
         }
 
         if (closetsGround != null)
         {
-            var rayDir = closetsGround.transform.position - thisEntity.transform.position;
-            return FindNormal(thisEntity, rayDir);
+            return FindNormal(hit);
         }
         
         
+        Debug.LogWarning(thisEntity.name + " is missing a ground");
         return Vector3.up;
     }
 
@@ -215,24 +215,11 @@ public class S_CheckPointManager : MonoBehaviour
     }
     
     
-    private Vector3 FindNormal(S_CheckPointEntity origin, Vector3 rayDirection)
+    private Vector3 FindNormal(RaycastHit hit)
     {
-        LayerMask mask = LayerMask.GetMask("DrivableGround");
-        if (!Physics.Raycast(origin.transform.position, rayDirection, out RaycastHit hit, 0.5f, mask))
-        {
-            return Vector3.zero;
-        }
-        
-        MeshCollider meshCollider = hit.collider as MeshCollider;
-        if (!meshCollider || !meshCollider.sharedMesh)
-        {
-            return Vector3.zero;
-        }
-
-        Mesh mesh = meshCollider.sharedMesh;
         if (!hit.transform.TryGetComponent(out S_DrivableSurface cache))
         {
-            return Vector3.zero;
+            return Vector3.up;
         }
         
         // The three corners of the hit triangle
@@ -252,7 +239,7 @@ public class S_CheckPointManager : MonoBehaviour
         
         normal = hitTransform.TransformDirection(normal);
         
-        Debug.DrawRay(hit.point, normal, Color.brown);
+        Debug.DrawRay(hit.point, normal, Color.purple);
 //        Debug.Log(normal);
 
         return normal;
