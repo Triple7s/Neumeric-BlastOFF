@@ -13,24 +13,94 @@ MonoBehaviour:
   m_Name: Equations_Percentage
   m_EditorClassIdentifier: Assembly-CSharp::SO_Equations
   questions:
-  - x: 40
+  - questionType: 0
+    x: 40
     y: 200
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    xPosition: 1
     operation: 4
-  - x: 20
+  - questionType: 0
+    x: 20
     y: 400
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    xPosition: 1
     operation: 4
-  - x: 30
+  - questionType: 0
+    x: 30
     y: 300
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    xPosition: 1
     operation: 4
-  - x: 90
+  - questionType: 0
+    x: 90
     y: 100
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    xPosition: 1
     operation: 4
-  - x: 30
+  - questionType: 0
+    x: 30
     y: 200
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    xPosition: 1
     operation: 4
-  - x: 50
+  - questionType: 0
+    x: 50
     y: 600
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    xPosition: 1
     operation: 4
-  - x: 40
+  - questionType: 0
+    x: 40
     y: 500
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    xPosition: 1
     operation: 4

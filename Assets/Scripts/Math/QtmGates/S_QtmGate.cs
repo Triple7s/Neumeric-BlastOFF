@@ -33,7 +33,7 @@ public class S_QtmGate : MonoBehaviour
             text.text = question.Text;
         }
         
-        answerGates[randIndex].SetAnswer(question.CorrectAnswer.ToString(), true);
+        answerGates[randIndex].SetAnswer(question.CorrectAnswerString, true);
 
         for (int i = 1; i < answerGates.Length; i++)
         {
@@ -50,15 +50,15 @@ public class S_QtmGate : MonoBehaviour
 
     private string RandomWrongAnswer()
     {
-        int randomNumber;
+        // int randomNumber;
 
-        do
-        {
-            randomNumber = Random.Range(0, 20);
-            
-        } while (randomNumber == question.CorrectAnswer);
+        // do
+        // {
+        //     randomNumber = Random.Range(0, 20);
+        //     
+        // } while (randomNumber == question.CorrectAnswer);
         
-        return randomNumber.ToString();
+        return question.FakeAnswerString;
     }
     
     private void ShutDownGates()

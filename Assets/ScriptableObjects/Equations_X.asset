@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1f2211acdb949e409d190479305ffff, type: 3}
-  m_Name: PlaceholderForNewQuestionsTesting
+  m_Name: Equations_X
   m_EditorClassIdentifier: Assembly-CSharp::SO_Equations
   questions:
-  - questionType: 2
-    x: 2
-    y: 1
+  - questionType: 1
+    x: 0
+    y: 0
     a:
-      numerator: 2
-      denominator: 5
+      numerator: 7
+      denominator: 69
     b:
-      numerator: 1
-      denominator: 5
-    knownValue1: 27
-    knownValue2: 30
-    operation: 1
+      numerator: 9
+      denominator: 3
+    knownValue1: 29
+    knownValue2: 23
+    xPosition: 0
+    operation: 0
