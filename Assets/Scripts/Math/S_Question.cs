@@ -176,12 +176,20 @@ public class Question
                 int nb = b.GetNumerator();
 
                 int fa = na, fb = nb;
-                int commonDenominator = da == db ? da : da * db;
+                int commonDenominator = da;
                 if (da != db)
                 {
                     fa = na * db;
                     fb = nb * da;
+                    commonDenominator = da * db;
                 }
+
+                commonDenominator = Operation switch
+                {
+                    MathOperator.Multiplication => da * db,
+                    MathOperator.Division => nb * da,
+                    _ => commonDenominator
+                };
 
                 int correctNumerator = operation switch
                 {
