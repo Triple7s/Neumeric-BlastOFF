@@ -3458,6 +3458,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4424088656987062826, guid: a0f21da34dec74e4988af59f1c614f64,
+        type: 3}
+      propertyPath: equations
+      value: 
+      objectReference: {fileID: 11400000, guid: ff6c01fb97e7e0d43b888154fa268f1b,
+        type: 2}
     - target: {fileID: 4540055993575389646, guid: a0f21da34dec74e4988af59f1c614f64,
         type: 3}
       propertyPath: m_IsActive
