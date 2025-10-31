@@ -294,6 +294,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8344401530012363352, guid: 25afcd8f59ebe554bacebf9819d31503,
+        type: 3}
+      propertyPath: equations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344401530012363352, guid: 25afcd8f59ebe554bacebf9819d31503,
+        type: 3}
+      propertyPath: 'equations.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a188367c85a250c49be6887f89c272f9,
+        type: 2}
+    - target: {fileID: 8344401530012363352, guid: 25afcd8f59ebe554bacebf9819d31503,
+        type: 3}
+      propertyPath: 'equations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 5b04f476f204eaf4bbfa23dc073dce92,
+        type: 2}
+    - target: {fileID: 8344401530012363352, guid: 25afcd8f59ebe554bacebf9819d31503,
+        type: 3}
+      propertyPath: 'equations.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 669a73934898dd14c9499bba570ca116,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3176,7 +3199,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36abd20c74daaab4bb1abf864c328cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_QtmGateManager
-  equations: {fileID: 11400000, guid: 5b04f476f204eaf4bbfa23dc073dce92, type: 2}
   qtmPoints: 5
 --- !u!1 &1271427132 stripped
 GameObject:

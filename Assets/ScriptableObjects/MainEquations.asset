@@ -12,4 +12,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f2211acdb949e409d190479305ffff, type: 3}
   m_Name: MainEquations
   m_EditorClassIdentifier: Assembly-CSharp::SO_Equations
-  questions: []
+  questions:
+  - questionType: 0
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 0
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 0
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 0
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
