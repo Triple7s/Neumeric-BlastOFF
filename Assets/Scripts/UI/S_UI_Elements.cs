@@ -1,15 +1,23 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
 public class S_UI_Elements : MonoBehaviour
 {
+    [Header("UXML References")]
     [SerializeField] private VisualTreeAsset mainMenuUXML;
     [SerializeField] private VisualTreeAsset levelSelectUXML;
+    [SerializeField] private VisualTreeAsset mathSelectMenuUXML;
+    [SerializeField] private VisualTreeAsset multiplicationSelectMenuUXML;
+    [SerializeField] private VisualTreeAsset fractionSelectMenuUXML;
     [SerializeField] private VisualTreeAsset optionsUXML;
     [SerializeField] private VisualTreeAsset transferDataUXML;
-    [SerializeField] private VisualTreeAsset titlescreenUXML; // Renamed for consistency
+    [SerializeField] private VisualTreeAsset titlescreenUXML;
 
+    [Header("Equations")]
+    [SerializeField] private List<SO_Equations> equations;
+    private List<SO_Equations> equationUsedInRace = new ();
 
     private UIDocument uiDocument;
 
@@ -21,69 +29,148 @@ public class S_UI_Elements : MonoBehaviour
 
     private void RegisterCallbacks(VisualElement root)
     {
-        // --- Title Screen Button ---
+        TryBindButton(root, "Hold-Here", ShowMainMenu);
 
-        if (root.Q<Button>("Hold-Here") != null)
-        {
-            root.Q<Button>("Hold-Here").clicked += ShowMainMenu;
-        }
+        // --- Main Menu ---
+        TryBindButton(root, "PlayBtn", ShowLevelSelect);
+        TryBindButton(root, "OptionsBtn", ShowOptions);
+        TryBindButton(root, "TransferDataBtn", ShowTransferData);
+        TryBindButton(root, "QuitBtn", QuitGame);
 
-        // --- Main Menu Buttons ---
-        if (root.Q<Button>("PlayBtn") != null)
+        // --- Back Button ---
+        var backBtn = root.Q<Button>("BackToMainBtn");
+        if (backBtn != null)
         {
-            root.Q<Button>("PlayBtn").clicked += ShowLevelSelect;
-            root.Q<Button>("OptionsBtn").clicked += ShowOptions;
-            root.Q<Button>("TransferDataBtn").clicked += ShowTransferData;
-            root.Q<Button>("QuitBtn").clicked += QuitGame;
-        }
-
-        // --- Back Buttons ---
-        if (root.Q<Button>("BackToMainBtn") != null)
-        {
-            root.Q<Button>("BackToMainBtn").clicked += ShowMainMenu;
-        }
-
-        // --- Level Selection Buttons ---
-        root.Query<Button>().ForEach(button =>
-        {
-            if (button.name.StartsWith("Level_"))
+            if (uiDocument.visualTreeAsset == mathSelectMenuUXML)
+                backBtn.clicked += ShowLevelSelect;
+            else if (uiDocument.visualTreeAsset == multiplicationSelectMenuUXML || uiDocument.visualTreeAsset == fractionSelectMenuUXML)
             {
-                string sceneName = button.name.Substring("Level_".Length);
-                button.clicked += () => LoadScene(sceneName);
+                RemoveEquations();
+                backBtn.clicked += ShowMathSelect;
             }
-        });
-        
-        root.Query<Label>().ForEach(label =>
+            else
+                backBtn.clicked += ShowMainMenu;
+        }
+
+        // --- Math Type ---
+        TryBindButton(root, "Multiplication", ShowMultiplicationMenu);
+        TryBindButton(root, "Fraction", ShowFractionMenu);
+
+        // --- Multiplication table & Fraction selection ---
+        if (uiDocument.visualTreeAsset == multiplicationSelectMenuUXML || uiDocument.visualTreeAsset == fractionSelectMenuUXML)
         {
-            if (label.name.StartsWith("ScoreLabel_"))
-            {
-                string levelName = label.name.Substring("ScoreLabel_".Length);
-                int score = S_GameManager.Instance.GetScoreForLevel(levelName);
-                label.text = $"{score} PTS";
-            }
-        });
+            List<Button> btns = new List<Button>();
+            // -- Multiplication buttons --
+            btns.AddRange(root.Query<Button>().Where(b => b.name.StartsWith("MultiplicationTable-")).ToList());
+            // -- Fraction buttons --
+            btns.AddRange(root.Query<Button>().Where(b => b.name.StartsWith("Fraction-")).ToList());
+            
+            foreach (var btn in btns)
+                btn.clicked += () => AddingEquationButtonPressed(btn);
+            
+            TryBindButton(root, "Play-Button", LoadGame);
+        }
+
+
+        // --- Level Select ---
+        var levelButtons = root.Query<Button>().Where(b => b.name.StartsWith("Level_")).ToList();
+
+        foreach (var btn in levelButtons)
+        {
+            string sceneName = btn.name.Substring("Level_".Length);
+            S_GameManager.Instance.SetLevel(sceneName);
+            btn.clicked += ShowMathSelect;
+        }
+
+
+        // --- Score Labels ---
+        var scoreLabels = root.Query<Label>().Where(l => l.name.StartsWith("ScoreLabel_")).ToList();
+
+        foreach (var label in scoreLabels)
+        {
+            string levelName = label.name.Substring("ScoreLabel_".Length);
+            int score = S_GameManager.Instance.GetScoreForLevel(levelName);
+            label.text = $"{score} PTS";
+        }
+
     }
 
+    private void TryBindButton(VisualElement root, string name, System.Action action)
+    {
+        var b = root.Q<Button>(name);
+        if (b != null) b.clicked += action;
+    }
+
+    private void AddingEquationButtonPressed(Button button)
+    {
+        foreach (var equation in equations)
+        {
+            if (equation.name == button.name)
+            {
+                if (TryAddEquation(equation))
+                {
+                    Color targetTint = button.resolvedStyle.unityBackgroundImageTintColor;
+                    targetTint.a = 1.0f;
+
+                    button.style.unityBackgroundImageTintColor = targetTint;
+                }
+                else
+                {
+                    Color targetTint = button.resolvedStyle.unityBackgroundImageTintColor;
+                    targetTint.a = .5f;
+
+                    button.style.unityBackgroundImageTintColor = targetTint;
+                }
+                
+                break;
+            }
+        }
+    }
+
+    private bool TryAddEquation(SO_Equations equation)
+    {
+        if (equationUsedInRace.Contains(equation))
+        {
+            equationUsedInRace.Remove(equation);
+            return false;
+        }
+        else
+        {
+            equationUsedInRace.Add(equation);
+            return true;
+        }
+    }
+
+    private void RemoveEquations()
+    {
+        equationUsedInRace.Clear();
+    }
+
+    private void LoadGame()
+    {
+        if (equationUsedInRace.Count == 0)
+            return;
+        
+        S_GameManager.Instance.ClearEquation();
+        S_GameManager.Instance.AddEquation(equationUsedInRace);
+        SceneManager.LoadScene(S_GameManager.Instance.GetLevelName());
+    }
+    
     private void LoadAndShowMenu(VisualTreeAsset newUXML)
     {
         uiDocument.visualTreeAsset = newUXML;
-        var root = uiDocument.rootVisualElement;
-        RegisterCallbacks(root);
+        RegisterCallbacks(uiDocument.rootVisualElement);
     }
 
-    // --- Scene Navigation Methods ---
-    private void ShowTitleScreen() => LoadAndShowMenu(titlescreenUXML);
-    private void ShowMainMenu() => LoadAndShowMenu(mainMenuUXML);
-    private void ShowLevelSelect() => LoadAndShowMenu(levelSelectUXML);
-    private void ShowOptions() => LoadAndShowMenu(optionsUXML);
-    private void ShowTransferData() => LoadAndShowMenu(transferDataUXML);
-
-    // --- Game Actions ---
-    private void LoadScene(string sceneName)
-    {
-        Debug.Log($"Loading scene: {sceneName}");
-        SceneManager.LoadScene(sceneName);
-    }
+    // Navigation
+    private void ShowTitleScreen()       => LoadAndShowMenu(titlescreenUXML);
+    private void ShowMainMenu()          => LoadAndShowMenu(mainMenuUXML);
+    private void ShowLevelSelect()       => LoadAndShowMenu(levelSelectUXML);
+    private void ShowOptions()           => LoadAndShowMenu(optionsUXML);
+    private void ShowTransferData()      => LoadAndShowMenu(transferDataUXML);
+    private void ShowMathSelect()        => LoadAndShowMenu(mathSelectMenuUXML);
+    private void ShowMultiplicationMenu()=> LoadAndShowMenu(multiplicationSelectMenuUXML);
+    private void ShowFractionMenu()      => LoadAndShowMenu(fractionSelectMenuUXML);
 
     private void QuitGame()
     {

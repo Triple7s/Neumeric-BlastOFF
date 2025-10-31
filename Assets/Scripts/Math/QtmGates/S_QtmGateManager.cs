@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 using Random = UnityEngine.Random;
 
 public class S_QtmGateManager : MonoBehaviour
 {
     public static S_QtmGateManager Instance;
 
-    [SerializeField] private SO_Equations equations;
     [SerializeField] private int qtmPoints = 5;
+
+    private List<SO_Equations> equationGroup = new ();
 
     private int score;
     private int streak;
@@ -26,10 +26,13 @@ public class S_QtmGateManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        equationGroup = S_GameManager.Instance.GetEquationsForGame();
+        
     }
 
     public Question GetQuestion()
     {
+        var equations = equationGroup[Random.Range(0, equationGroup.Count)];
         int randomIndex = Random.Range(0, equations.questions.Count);
         return equations.questions[randomIndex];
     }

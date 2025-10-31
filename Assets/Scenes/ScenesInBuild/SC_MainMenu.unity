@@ -448,6 +448,74 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1001 &978376697
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4550856105214295520, guid: 25afcd8f59ebe554bacebf9819d31503,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550856105214295520, guid: 25afcd8f59ebe554bacebf9819d31503,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 720
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550856105214295520, guid: 25afcd8f59ebe554bacebf9819d31503,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550856105214295520, guid: 25afcd8f59ebe554bacebf9819d31503,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550856105214295520, guid: 25afcd8f59ebe554bacebf9819d31503,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550856105214295520, guid: 25afcd8f59ebe554bacebf9819d31503,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550856105214295520, guid: 25afcd8f59ebe554bacebf9819d31503,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550856105214295520, guid: 25afcd8f59ebe554bacebf9819d31503,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550856105214295520, guid: 25afcd8f59ebe554bacebf9819d31503,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550856105214295520, guid: 25afcd8f59ebe554bacebf9819d31503,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617736712747907451, guid: 25afcd8f59ebe554bacebf9819d31503,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 25afcd8f59ebe554bacebf9819d31503, type: 3}
 --- !u!1 &1005614628
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,12 +589,30 @@ MonoBehaviour:
     type: 3}
   levelSelectUXML: {fileID: 9197481963319205126, guid: dafa0ec2dc3f6b841a27d60ac4c60ddc,
     type: 3}
+  mathSelectMenuUXML: {fileID: 9197481963319205126, guid: 6e723d7db2f1deb4c8f208fa919e8401,
+    type: 3}
+  multiplicationSelectMenuUXML: {fileID: 9197481963319205126, guid: 1dab6bbd63dafa14e85b078d4ff10f5f,
+    type: 3}
+  fractionSelectMenuUXML: {fileID: 9197481963319205126, guid: 9e6f8cd191375a244aa1d70646d2d010,
+    type: 3}
   optionsUXML: {fileID: 9197481963319205126, guid: 43399a56c7df7d943b8d472a1d68b413,
     type: 3}
   transferDataUXML: {fileID: 9197481963319205126, guid: 46d76292825a35a43a4e3d6adab4e407,
     type: 3}
   titlescreenUXML: {fileID: 9197481963319205126, guid: 9779249059152e74d81cf5422c9cea98,
     type: 3}
+  equations:
+  - {fileID: 11400000, guid: 669a73934898dd14c9499bba570ca116, type: 2}
+  - {fileID: 11400000, guid: ba4a8141de0c2a646a6cf15d9e62b96d, type: 2}
+  - {fileID: 11400000, guid: ac64b85604f13074f93b170ba5619bd4, type: 2}
+  - {fileID: 11400000, guid: df11264107303914cb2a157e8bd1c7a7, type: 2}
+  - {fileID: 11400000, guid: f5530c781a9657240a2004bcd288bbf0, type: 2}
+  - {fileID: 11400000, guid: b086d45dc07395040949fbfca0a5c4ef, type: 2}
+  - {fileID: 11400000, guid: 6d69b6d61cbf5f54893ffde501b98813, type: 2}
+  - {fileID: 11400000, guid: 8a7268796526c3d4f87cf2a8cd41af1a, type: 2}
+  - {fileID: 11400000, guid: 2010776e073b35041a2644bc5b6b4565, type: 2}
+  - {fileID: 11400000, guid: 73819f3d501f4f04585b1817e197f7af, type: 2}
+  equationUsedInRace: []
 --- !u!1 &1532240914
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,3 +696,4 @@ SceneRoots:
   - {fileID: 502397036}
   - {fileID: 1005614630}
   - {fileID: 170209607}
+  - {fileID: 978376697}
