@@ -29,6 +29,16 @@ public class S_UI_Elements : MonoBehaviour
 
     private void RegisterCallbacks(VisualElement root)
     {
+        var sondVfxButtons = root.Query<Button>().ToList();
+
+        foreach (var button in sondVfxButtons)
+        {
+            button.clicked += ButtonClickedEffect;
+        }
+        // --- Title Screen ---
+        var holdHereBtn = root.Q<Button>("Hold-Here");
+        if (holdHereBtn != null)
+            holdHereBtn.clicked += () => S_AudioManager.Instance.PlayMusicAfterPrevious("MainMenuLoop");
         TryBindButton(root, "Hold-Here", ShowMainMenu);
 
         // --- Main Menu ---
@@ -93,6 +103,11 @@ public class S_UI_Elements : MonoBehaviour
             label.text = $"{score} PTS";
         }
 
+    }
+    
+    private void ButtonClickedEffect()
+    {
+        S_AudioManager.Instance.PlaySfx("ButtonClick");
     }
 
     private void TryBindButton(VisualElement root, string name, System.Action action)
