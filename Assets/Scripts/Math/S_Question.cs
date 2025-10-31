@@ -16,9 +16,11 @@ public class Question
 
     [Header("Algebra Question Values")]
     [SerializeField] private double knownValue1;
-    [SerializeField] private double knownValue2; 
+    [SerializeField] private double knownValue2;
 
-    [Header("Algebra Question Settings")]
+    [Header("Algebra Variable Settings")]   
+    [SerializeField] private string variableName = "x";   // allows using x, y, z etc.
+    [SerializeField] private bool isNegativeVariable = false; // allows -x
     [SerializeField] private AlgebraPosition xPosition = AlgebraPosition.Second;
 
     [Header("Operation Question Settings")]
@@ -46,41 +48,44 @@ public class Question
     // Algebraic correct answer solver
     private double SolveForX()
     {
+        // When variable is negative, flip sign logic
+        double sign = isNegativeVariable ? -1 : 1;
+
         switch (operation)
         {
             case MathOperator.Addition:
                 return xPosition switch
                 {
-                    AlgebraPosition.First => knownValue2 - knownValue1,  // x + a = b → x = b - a
-                    AlgebraPosition.Second => knownValue2 - knownValue1, // a + x = b → x = b - a
-                    AlgebraPosition.Third => knownValue1 + knownValue2,  // a + b = x → x = a + b
+                    AlgebraPosition.First => (knownValue2 - knownValue1) * sign,
+                    AlgebraPosition.Second => (knownValue2 - knownValue1) * sign,
+                    AlgebraPosition.Third => (knownValue1 + knownValue2) * sign,
                     _ => 0
                 };
 
             case MathOperator.Subtraction:
                 return xPosition switch
                 {
-                    AlgebraPosition.First => knownValue2 + knownValue1,  // x - a = b → x = b + a
-                    AlgebraPosition.Second => knownValue1 - knownValue2, // a - x = b → x = a - b
-                    AlgebraPosition.Third => knownValue1 - knownValue2,  // a - b = x → x = a - b
+                    AlgebraPosition.First => (knownValue2 + knownValue1) * sign,
+                    AlgebraPosition.Second => (knownValue1 - knownValue2) * sign,
+                    AlgebraPosition.Third => (knownValue1 - knownValue2) * sign,
                     _ => 0
                 };
 
             case MathOperator.Multiplication:
                 return xPosition switch
                 {
-                    AlgebraPosition.First => knownValue2 / knownValue1,  // x * a = b → x = b / a
-                    AlgebraPosition.Second => knownValue2 / knownValue1, // a * x = b → x = b / a
-                    AlgebraPosition.Third => knownValue1 * knownValue2,  // a * b = x → x = a * b
+                    AlgebraPosition.First => (knownValue2 / knownValue1) * sign,
+                    AlgebraPosition.Second => (knownValue2 / knownValue1) * sign,
+                    AlgebraPosition.Third => (knownValue1 * knownValue2) * sign,
                     _ => 0
                 };
 
             case MathOperator.Division:
                 return xPosition switch
                 {
-                    AlgebraPosition.First => knownValue2 * knownValue1,  // x ÷ a = b → x = b * a
-                    AlgebraPosition.Second => knownValue1 / knownValue2, // a ÷ x = b → x = a / b
-                    AlgebraPosition.Third => knownValue1 / knownValue2,  // a ÷ b = x → x = a / b
+                    AlgebraPosition.First => (knownValue2 * knownValue1) * sign,
+                    AlgebraPosition.Second => (knownValue1 / knownValue2) * sign,
+                    AlgebraPosition.Third => (knownValue1 / knownValue2) * sign,
                     _ => 0
                 };
 
@@ -176,6 +181,37 @@ public class Question
         {
             System.Random rand = new System.Random();
 
+            switch (questionType)
+            {
+                case QuestionType.Fraction:
+                    {
+                        int na = a.GetNumerator();
+                        int nb = b.GetNumerator();
+                        int da = a.GetDenominator();
+                        int db = b.GetDenominator();
+
+                        double fa = na, fb = nb, commonDenominator = da;
+
+                        if (da != db)
+                        {
+                            fa = na * db;
+                            fb = nb * da;
+                            commonDenominator = da * db;
+                        }
+
+                        string fakeFraction = operation switch
+                        {
+                            MathOperator.Addition => $"{fa + fb + rand.Next(-3, 4)}/{commonDenominator}",
+                            MathOperator.Subtraction => $"{fa - fb + rand.Next(-3, 4)}/{commonDenominator}",
+                            MathOperator.Multiplication => $"{na * nb + rand.Next(-3, 4)}/{da * db}",
+                            MathOperator.Division => $"{na * db + rand.Next(-3, 4)}/{nb * da}",
+                            MathOperator.Percentage => (((fa / commonDenominator) * (fb / 100)) + rand.NextDouble() - 0.5).ToString("0.##"),
+                            _ => "0"
+                        };
+
+                        return fakeFraction;
+                    }
+            }
             // FRACTION
             if (questionType == QuestionType.Conversion)
             {
@@ -306,14 +342,24 @@ public class Question
 
             return questionType switch
             {
+                QuestionType.Normal => $"{x:0.##} {opSymbol} {y:0.##}",
+
                 QuestionType.Fraction => $"{a} {opSymbol} {b}",
+
                 QuestionType.Algebra => xPosition switch
                 {
-                    AlgebraPosition.First => $"x {opSymbol} {knownValue1:0.##} = {knownValue2:0.##}",
-                    AlgebraPosition.Second => $"{knownValue1:0.##} {opSymbol} x = {knownValue2:0.##}",
-                    AlgebraPosition.Third => $"{knownValue1:0.##} {opSymbol} {knownValue2:0.##} = x",
+                    AlgebraPosition.First =>
+                        $"{(isNegativeVariable ? "-" : "")}{variableName} {opSymbol} {knownValue1:0.##} = {knownValue2:0.##}",
+
+                    AlgebraPosition.Second =>
+                        $"{knownValue1:0.##} {FormatOperatorWithVariable(opSymbol)} {(isNegativeVariable ? variableName : variableName)} = {knownValue2:0.##}",
+
+                    AlgebraPosition.Third =>
+                        $"{knownValue1:0.##} {opSymbol} {knownValue2:0.##} = {(isNegativeVariable ? "-" : "")}{variableName}",
+
                     _ => $"? {opSymbol} ? = ?"
                 },
+
                 QuestionType.Conversion => conversionType switch
                 {
                     ConversionType.FractionToDecimal => $"Convert {fractionValue} to decimal",
@@ -324,10 +370,42 @@ public class Question
                     ConversionType.PercentToDecimal => $"Convert {percentValue:0.##}% to decimal",
                     _ => "Unknown conversion"
                 },
+
                 _ when operation == MathOperator.Percentage => $"{x:0.##}% of {y:0.##}",
                 _ => $"{x:0.##} {opSymbol} {y:0.##}"
             };
         }
+    }
+
+    private string FormatOperator()
+    {
+        // If variable is negative and operator is addition, display as subtraction
+        if (isNegativeVariable && operation == MathOperator.Addition)
+            return "-";
+
+        return operation switch
+        {
+            MathOperator.Addition => "+",
+            MathOperator.Subtraction => "-",
+            MathOperator.Multiplication => "×",
+            MathOperator.Division => "÷",
+            MathOperator.Percentage => "% of",
+            _ => "?"
+        };
+    }
+
+    // FormatOperatorWithVariable helper
+    private string FormatOperatorWithVariable(string opSymbol)
+    {
+        // If it's addition and the variable is negative, show "-" instead of "+ -"
+        if (isNegativeVariable && opSymbol == "+")
+            return "-";
+
+        // For subtraction and negative variable, make it clear with "− (−x)" form if needed
+        if (isNegativeVariable && opSymbol == "-")
+            return "−";
+
+        return opSymbol;
     }
 
     public string ConversionAnswerString

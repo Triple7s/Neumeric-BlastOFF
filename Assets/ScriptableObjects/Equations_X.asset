@@ -13,7 +13,112 @@ MonoBehaviour:
   m_Name: Equations_X
   m_EditorClassIdentifier: Assembly-CSharp::SO_Equations
   questions:
-  - questionType: 1
+  - questionType: 2
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 46
+    knownValue2: 27
+    variableName: a
+    isNegativeVariable: 1
+    xPosition: 1
+    operation: 0
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 2
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 11
+    knownValue2: 16
+    variableName: x
+    isNegativeVariable: 0
+    xPosition: 1
+    operation: 0
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 2
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 29
+    knownValue2: 23
+    variableName: a
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 2
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 46
+    knownValue2: 16
+    variableName: y
+    isNegativeVariable: 0
+    xPosition: 1
+    operation: 1
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 2
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 25
+    knownValue2: 49
+    variableName: b
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 1
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 2
     x: 0
     y: 0
     a:
@@ -22,7 +127,183 @@ MonoBehaviour:
     b:
       numerator: 9
       denominator: 3
-    knownValue1: 29
-    knownValue2: 23
+    knownValue1: 26
+    knownValue2: 13
+    variableName: z
+    isNegativeVariable: 1
+    xPosition: 1
+    operation: 0
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 2
+    x: 0
+    y: 0
+    a:
+      numerator: 7
+      denominator: 69
+    b:
+      numerator: 9
+      denominator: 3
+    knownValue1: 18
+    knownValue2: 10
+    variableName: c
+    isNegativeVariable: 0
     xPosition: 0
     operation: 0
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 2
+    x: 0
+    y: 0
+    a:
+      numerator: 7
+      denominator: 69
+    b:
+      numerator: 9
+      denominator: 3
+    knownValue1: 38
+    knownValue2: 12
+    variableName: x
+    isNegativeVariable: 0
+    xPosition: 1
+    operation: 0
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 2
+    x: 0
+    y: 0
+    a:
+      numerator: 7
+      denominator: 69
+    b:
+      numerator: 9
+      denominator: 3
+    knownValue1: 39
+    knownValue2: 29
+    variableName: c
+    isNegativeVariable: 1
+    xPosition: 0
+    operation: 1
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 2
+    x: 0
+    y: 0
+    a:
+      numerator: 7
+      denominator: 69
+    b:
+      numerator: 9
+      denominator: 3
+    knownValue1: 35
+    knownValue2: 29
+    variableName: z
+    isNegativeVariable: 0
+    xPosition: 1
+    operation: 1
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 2
+    x: 0
+    y: 0
+    a:
+      numerator: 7
+      denominator: 69
+    b:
+      numerator: 9
+      denominator: 3
+    knownValue1: 17
+    knownValue2: 27
+    variableName: j
+    isNegativeVariable: 0
+    xPosition: 1
+    operation: 0
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 2
+    x: 0
+    y: 0
+    a:
+      numerator: 7
+      denominator: 69
+    b:
+      numerator: 9
+      denominator: 3
+    knownValue1: 36
+    knownValue2: 15
+    variableName: d
+    isNegativeVariable: 1
+    xPosition: 0
+    operation: 0
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 2
+    x: 0
+    y: 0
+    a:
+      numerator: 7
+      denominator: 69
+    b:
+      numerator: 9
+      denominator: 3
+    knownValue1: 37
+    knownValue2: 26
+    variableName: w
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0
+  - questionType: 2
+    x: 0
+    y: 0
+    a:
+      numerator: 7
+      denominator: 69
+    b:
+      numerator: 9
+      denominator: 3
+    knownValue1: 45
+    knownValue2: 24
+    variableName: g
+    isNegativeVariable: 1
+    xPosition: 1
+    operation: 0
+    conversionType: 0
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0
+    percentValue: 0

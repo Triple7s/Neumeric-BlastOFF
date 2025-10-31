@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlaceholderForNewQuestionsTesting
   m_EditorClassIdentifier: Assembly-CSharp::SO_Equations
   questions:
-  - questionType: 0
+  - questionType: 2
     x: 2.32
     y: 100
     a:
@@ -22,11 +22,13 @@ MonoBehaviour:
     b:
       numerator: 4
       denominator: 8
-    knownValue1: 100
-    knownValue2: 30
-    xPosition: 0
-    operation: 4
-    conversionType: 6
+    knownValue1: 26
+    knownValue2: 13
+    variableName: z
+    isNegativeVariable: 1
+    xPosition: 1
+    operation: 0
+    conversionType: 0
     fractionValue:
       numerator: 0
       denominator: 0
