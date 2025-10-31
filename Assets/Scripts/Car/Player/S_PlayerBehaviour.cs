@@ -13,6 +13,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
     [SerializeField] private S_PlayerCameraController cameraController;
     [SerializeField] private S_CameraStabilizer cameraStabilizer;
+    [SerializeField] private S_PlayerAnimatorController  playerAnimatorController;
         
     
     private bool isTurning, isBraking, isQtm;
