@@ -27,19 +27,30 @@ public class S_QtmGate : MonoBehaviour
         question = S_QtmGateManager.Instance.GetQuestion();
 
         int randIndex = Random.Range(0, answerGates.Length);
-        
+
         foreach (var text in questionText)
         {
             text.text = question.Text;
         }
-        
+
         answerGates[randIndex].SetAnswer(question.CorrectAnswerString, true);
+
+        string randomFakeAnswer = "";
 
         for (int i = 1; i < answerGates.Length; i++)
         {
             var index = (i + randIndex) % answerGates.Length;
-            
-            answerGates[index].SetAnswer(RandomWrongAnswer(), false);
+
+            string fakeAnswer = RandomWrongAnswer();
+
+            if (fakeAnswer == randomFakeAnswer)
+            {
+                fakeAnswer = RandomWrongAnswer();
+            }
+
+            answerGates[index].SetAnswer(fakeAnswer, false);
+
+            randomFakeAnswer = fakeAnswer;
         }
     }
     
