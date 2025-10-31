@@ -593,7 +593,7 @@ MonoBehaviour:
     type: 3}
   multiplicationSelectMenuUXML: {fileID: 9197481963319205126, guid: 1dab6bbd63dafa14e85b078d4ff10f5f,
     type: 3}
-  fractionSelectMenuUXML: {fileID: 9197481963319205126, guid: ea213185c9c4bd44d8e0d92317691ef6,
+  fractionSelectMenuUXML: {fileID: 9197481963319205126, guid: 9e6f8cd191375a244aa1d70646d2d010,
     type: 3}
   optionsUXML: {fileID: 9197481963319205126, guid: 43399a56c7df7d943b8d472a1d68b413,
     type: 3}
@@ -601,6 +601,18 @@ MonoBehaviour:
     type: 3}
   titlescreenUXML: {fileID: 9197481963319205126, guid: 9779249059152e74d81cf5422c9cea98,
     type: 3}
+  equations:
+  - {fileID: 11400000, guid: 669a73934898dd14c9499bba570ca116, type: 2}
+  - {fileID: 11400000, guid: ba4a8141de0c2a646a6cf15d9e62b96d, type: 2}
+  - {fileID: 11400000, guid: ac64b85604f13074f93b170ba5619bd4, type: 2}
+  - {fileID: 11400000, guid: df11264107303914cb2a157e8bd1c7a7, type: 2}
+  - {fileID: 11400000, guid: f5530c781a9657240a2004bcd288bbf0, type: 2}
+  - {fileID: 11400000, guid: b086d45dc07395040949fbfca0a5c4ef, type: 2}
+  - {fileID: 11400000, guid: 6d69b6d61cbf5f54893ffde501b98813, type: 2}
+  - {fileID: 11400000, guid: 8a7268796526c3d4f87cf2a8cd41af1a, type: 2}
+  - {fileID: 11400000, guid: 2010776e073b35041a2644bc5b6b4565, type: 2}
+  - {fileID: 11400000, guid: 73819f3d501f4f04585b1817e197f7af, type: 2}
+  equationUsedInRace: []
 --- !u!1 &1532240914
 GameObject:
   m_ObjectHideFlags: 0

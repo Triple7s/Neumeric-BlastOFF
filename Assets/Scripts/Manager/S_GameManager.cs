@@ -151,8 +151,8 @@ public class S_GameManager : MonoBehaviour
     
     #endregion
     
-    public string GetLevelName(int index)
+    public string GetLevelName()
     {
-        return scoreOnLevels.GetLevelName(index);
+        return levelName;
     }
 }
