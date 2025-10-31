@@ -17,7 +17,7 @@ public class S_UI_Elements : MonoBehaviour
 
     [Header("Equations")]
     [SerializeField] private List<SO_Equations> equations;
-    public List<SO_Equations> equationUsedInRace = new ();
+    private List<SO_Equations> equationUsedInRace = new ();
 
     private UIDocument uiDocument;
 
@@ -110,19 +110,14 @@ public class S_UI_Elements : MonoBehaviour
                 if (TryAddEquation(equation))
                 {
                     Color targetTint = button.resolvedStyle.unityBackgroundImageTintColor;
-                    print(targetTint);
                     targetTint.a = 1.0f;
-                    print(targetTint);
 
                     button.style.unityBackgroundImageTintColor = targetTint;
                 }
                 else
                 {
                     Color targetTint = button.resolvedStyle.unityBackgroundImageTintColor;
-                    print(targetTint);
-
                     targetTint.a = .5f;
-                    print(targetTint);
 
                     button.style.unityBackgroundImageTintColor = targetTint;
                 }
@@ -137,13 +132,11 @@ public class S_UI_Elements : MonoBehaviour
         if (equationUsedInRace.Contains(equation))
         {
             equationUsedInRace.Remove(equation);
-            Debug.Log($"Removing equation {equation.name}");
             return false;
         }
         else
         {
             equationUsedInRace.Add(equation);
-            Debug.Log($"Adding equation {equation.name}");
             return true;
         }
     }
@@ -155,6 +148,11 @@ public class S_UI_Elements : MonoBehaviour
 
     private void LoadGame()
     {
+        if (equationUsedInRace.Count == 0)
+            return;
+        
+        S_GameManager.Instance.ClearEquation();
+        S_GameManager.Instance.AddEquation(equationUsedInRace);
         SceneManager.LoadScene(S_GameManager.Instance.GetLevelName());
     }
     
