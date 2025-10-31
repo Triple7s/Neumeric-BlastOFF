@@ -10,21 +10,21 @@ public class S_VolumeSlider : MonoBehaviour
     private void Start()
     {
         // Initialize sliders with current volume levels from S_GameManager
-        bgmVolumeSlider.value = S_GameManager.Instance.GetVolumeBGM();
-        sfxVolumeSlider.value = S_GameManager.Instance.GetVolumeSFX();
+        bgmVolumeSlider.value = S_AudioManager.Instance.GetMusicVolume();
+        sfxVolumeSlider.value = S_AudioManager.Instance.GetSfxVolume();
 
         // Add listeners to handle slider value changes
         bgmVolumeSlider.onValueChanged.AddListener(OnBGMVolumeChanged);
         sfxVolumeSlider.onValueChanged.AddListener(OnSFXVolumeChanged);
     }
-
-    private void OnSFXVolumeChanged(float arg0)
+    
+    private void OnBGMVolumeChanged(float volume)
     {
-        S_GameManager.Instance.SetVolumeSFX((int)arg0);
+        S_AudioManager.Instance.MusicVolume(volume);
     }
-
-    private void OnBGMVolumeChanged(float arg0)
+    
+    private void OnSFXVolumeChanged(float volume)
     {
-        S_GameManager.Instance.SetVolumeBGM((int)arg0);
+        S_AudioManager.Instance.SfxVolume(volume);
     }
 }
