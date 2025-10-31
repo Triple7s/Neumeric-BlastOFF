@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 using Random = UnityEngine.Random;
 
 public class S_QtmGateManager : MonoBehaviour
@@ -27,11 +26,8 @@ public class S_QtmGateManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-    }
-
-    private void Start()
-    {
         equationGroup = S_GameManager.Instance.GetEquationsForGame();
+        
     }
 
     public Question GetQuestion()
