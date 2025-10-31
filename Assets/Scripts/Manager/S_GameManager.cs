@@ -129,14 +129,24 @@ public class S_GameManager : MonoBehaviour
         levelName = sceneName;
     }
     
-    public void AddEquation(SO_Equations equation)
+    public void AddEquation(List<SO_Equations> equationsToAdd)
     {
-        equations.Add(equation);
+        equations.AddRange(equationsToAdd);
     }
 
-    public void RemoveEquation(SO_Equations equation)
+    public void RemoveEquation(List<SO_Equations> equationsToRemove)
     {
-        equations.Remove(equation);
+        foreach (var equation in equationsToRemove)
+        {
+            if (equations.Contains(equation))
+                equations.Remove(equation);
+            
+        }
+    }
+
+    public void ClearEquation()
+    {
+        equations.Clear();
     }
 
     public List<SO_Equations> GetEquationsForGame()
