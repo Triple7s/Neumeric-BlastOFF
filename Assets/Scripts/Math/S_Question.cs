@@ -184,42 +184,39 @@ public class Question
             switch (questionType)
             {
                 case QuestionType.Fraction:
-                    {
-                        int na = a.GetNumerator();
-                        int nb = b.GetNumerator();
-                        int da = a.GetDenominator();
-                        int db = b.GetDenominator();
-
-                        double fa = na, fb = nb, commonDenominator = da;
-
-                        if (da != db)
-                        {
-                            fa = na * db;
-                            fb = nb * da;
-                            commonDenominator = da * db;
-                        }
-
-                        string fakeFraction = operation switch
-                        {
-                            MathOperator.Addition => $"{fa + fb + rand.Next(-3, 4)}/{commonDenominator}",
-                            MathOperator.Subtraction => $"{fa - fb + rand.Next(-3, 4)}/{commonDenominator}",
-                            MathOperator.Multiplication => $"{na * nb + rand.Next(-3, 4)}/{da * db}",
-                            MathOperator.Division => $"{na * db + rand.Next(-3, 4)}/{nb * da}",
-                            MathOperator.Percentage => (((fa / commonDenominator) * (fb / 100)) + rand.NextDouble() - 0.5).ToString("0.##"),
-                            _ => "0"
-                        };
-
-                        return fakeFraction;
-                    }
-            }
-            // FRACTION
-            if (questionType == QuestionType.Conversion)
-            {
-                System.Random random = new System.Random();
-
-                switch (conversionType)
                 {
-                    case ConversionType.FractionToDecimal:
+                    int na = a.GetNumerator();
+                    int nb = b.GetNumerator();
+                    int da = a.GetDenominator();
+                    int db = b.GetDenominator();
+
+                    double fa = na, fb = nb, commonDenominator = da;
+
+                    if (da != db)
+                    {
+                        fa = na * db;
+                        fb = nb * da;
+                        commonDenominator = da * db;
+                    }
+
+                    string fakeFraction = operation switch
+                    {
+                        MathOperator.Addition => $"{fa + fb + rand.Next(-3, 4)}/{commonDenominator}",
+                        MathOperator.Subtraction => $"{fa - fb + rand.Next(-3, 4)}/{commonDenominator}",
+                        MathOperator.Multiplication => $"{na * nb + rand.Next(-3, 4)}/{da * db}",
+                        MathOperator.Division => $"{na * db + rand.Next(-3, 4)}/{nb * da}",
+                        MathOperator.Percentage => (((fa / commonDenominator) * (fb / 100)) + rand.NextDouble() - 0.5)
+                            .ToString("0.##"),
+                        _ => "0"
+                    };
+
+                    return fakeFraction;
+                }
+                case QuestionType.Conversion:
+                {
+                    switch (conversionType)
+                    {
+                        case ConversionType.FractionToDecimal:
                         {
                             double correct = fractionValue.ToDouble();
                             double fake = correct + (rand.NextDouble() - 0.5) * 0.3; // within ±0.15
@@ -227,7 +224,7 @@ public class Question
                             return fake.ToString("0.##");
                         }
 
-                    case ConversionType.FractionToPercent:
+                        case ConversionType.FractionToPercent:
                         {
                             double correct = fractionValue.ToDouble() * 100;
                             double offset = rand.Next(-10, 11); // ±10%
@@ -236,7 +233,7 @@ public class Question
                             return fake.ToString("0.#") + "%";
                         }
 
-                    case ConversionType.DecimalToFraction:
+                        case ConversionType.DecimalToFraction:
                         {
                             // Slightly vary numerator/denominator
                             Fraction correct = Fraction.FromDouble(decimalValue);
@@ -251,7 +248,7 @@ public class Question
                             return $"{fakeN}/{fakeD}";
                         }
 
-                    case ConversionType.DecimalToPercent:
+                        case ConversionType.DecimalToPercent:
                         {
                             double correct = decimalValue * 100;
                             double offset = rand.Next(-10, 11); // ±10%
@@ -260,7 +257,7 @@ public class Question
                             return fake.ToString("0.#") + "%";
                         }
 
-                    case ConversionType.PercentToFraction:
+                        case ConversionType.PercentToFraction:
                         {
                             double decimalValueFromPercent = percentValue / 100.0;
                             Fraction correct = Fraction.FromDouble(decimalValueFromPercent);
@@ -275,7 +272,7 @@ public class Question
                             return $"{fakeN}/{fakeD}";
                         }
 
-                    case ConversionType.PercentToDecimal:
+                        case ConversionType.PercentToDecimal:
                         {
                             double correct = percentValue / 100.0;
                             double fake = correct + (rand.NextDouble() - 0.5) * 0.2; // ±0.1 variation
@@ -283,44 +280,46 @@ public class Question
                             return fake.ToString("0.##");
                         }
 
-                    default:
-                        return "???";
+                        default:
+                            return "???";
+                    }
                 }
-            }
+                case QuestionType.Algebra:
+                {
+                    double correct = SolveForX();
+                    double fake = correct;
 
-            // ALGEBRA
-            if (questionType == QuestionType.Algebra)
-            {
-                double correct = SolveForX();
-                double fake = correct;
+                    while (Math.Abs(fake - correct) < 0.01)
+                        fake = correct + rand.Next(-5, 6);
 
-                while (Math.Abs(fake - correct) < 0.01)
-                    fake = correct + rand.Next(-5, 6);
+                    if (conversionType.ToString().Contains("Percent"))
+                        return fake.ToString("0.##") + "%";
 
-                if (conversionType.ToString().Contains("Percent"))
-                    return fake.ToString("0.##") + "%";
+                    return fake.ToString("0.##");
+                }
+                case QuestionType.Normal:
+                {
+                    if (CorrectAnswer % 1 == 0)
+                    {
+                        int correctInt = (int)CorrectAnswer;
+                        int fakeInt = correctInt;
 
-                return fake.ToString("0.##");
-            }
+                        while (fakeInt == correctInt)
+                            fakeInt += rand.Next(-5, 6);
 
-            // NORMAL / PERCENTAGE
-            if (CorrectAnswer % 1 == 0)
-            {
-                int correctInt = (int)CorrectAnswer;
-                int fakeInt = correctInt;
+                        return fakeInt.ToString();
+                    }
+                    else
+                    {
+                        double fake = CorrectAnswer;
+                        while (Math.Abs(fake - CorrectAnswer) < 0.01)
+                            fake = CorrectAnswer + (rand.NextDouble() * 10 - 5);
 
-                while (fakeInt == correctInt)
-                    fakeInt += rand.Next(-5, 6);
-
-                return fakeInt.ToString();
-            }
-            else
-            {
-                double fake = CorrectAnswer;
-                while (Math.Abs(fake - CorrectAnswer) < 0.01)
-                    fake = CorrectAnswer + (rand.NextDouble() * 10 - 5);
-
-                return fake.ToString("0.##");
+                        return fake.ToString("0.##");
+                    }
+                }
+                default:
+                    return "???";
             }
         }
     }
