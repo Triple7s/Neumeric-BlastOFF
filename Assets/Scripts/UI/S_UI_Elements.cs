@@ -6,6 +6,9 @@ public class S_UI_Elements : MonoBehaviour
 {
     [SerializeField] private VisualTreeAsset mainMenuUXML;
     [SerializeField] private VisualTreeAsset levelSelectUXML;
+    [SerializeField] private VisualTreeAsset mathSelectMenuUXML;
+    [SerializeField] private VisualTreeAsset multiplicationSelectMenuUXML;
+    [SerializeField] private VisualTreeAsset fractionSelectMenuUXML;
     [SerializeField] private VisualTreeAsset optionsUXML;
     [SerializeField] private VisualTreeAsset transferDataUXML;
     [SerializeField] private VisualTreeAsset titlescreenUXML; // Renamed for consistency
@@ -40,7 +43,20 @@ public class S_UI_Elements : MonoBehaviour
         // --- Back Buttons ---
         if (root.Q<Button>("BackToMainBtn") != null)
         {
-            root.Q<Button>("BackToMainBtn").clicked += ShowMainMenu;
+            if (uiDocument.visualTreeAsset == mathSelectMenuUXML)
+                root.Q<Button>("BackToMainBtn").clicked += ShowLevelSelect;
+            else if (uiDocument.visualTreeAsset == multiplicationSelectMenuUXML || uiDocument.visualTreeAsset == fractionSelectMenuUXML)
+                root.Q<Button>("BackToMainBtn").clicked += ShowMathSelect;
+            else
+                root.Q<Button>("BackToMainBtn").clicked += ShowMainMenu;
+        }
+        
+        // --- Select Math type ---
+        if (root.Q<Button>("Multiplication") != null)
+        {
+            root.Q<Button>("Multiplication").clicked += ShowMultiplicationMenu;
+        
+            root.Q<Button>("Fraction").clicked += ShowFractionMenu;
         }
 
         // --- Level Selection Buttons ---
@@ -49,7 +65,8 @@ public class S_UI_Elements : MonoBehaviour
             if (button.name.StartsWith("Level_"))
             {
                 string sceneName = button.name.Substring("Level_".Length);
-                button.clicked += () => LoadScene(sceneName);
+                S_GameManager.Instance.SetLevel(sceneName);
+                button.clicked += ShowMathSelect;
             }
         });
         
@@ -77,13 +94,11 @@ public class S_UI_Elements : MonoBehaviour
     private void ShowLevelSelect() => LoadAndShowMenu(levelSelectUXML);
     private void ShowOptions() => LoadAndShowMenu(optionsUXML);
     private void ShowTransferData() => LoadAndShowMenu(transferDataUXML);
+    private void ShowMathSelect() => LoadAndShowMenu(mathSelectMenuUXML);
+    private void ShowMultiplicationMenu() => LoadAndShowMenu(multiplicationSelectMenuUXML);
+    private void ShowFractionMenu() => LoadAndShowMenu(fractionSelectMenuUXML);
 
     // --- Game Actions ---
-    private void LoadScene(string sceneName)
-    {
-        Debug.Log($"Loading scene: {sceneName}");
-        SceneManager.LoadScene(sceneName);
-    }
 
     private void QuitGame()
     {
