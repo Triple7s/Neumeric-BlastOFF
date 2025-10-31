@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class S_GameManager : MonoBehaviour
 {
@@ -8,6 +10,9 @@ public class S_GameManager : MonoBehaviour
     [SerializeField] private SO_PointsForPlacement pointsForPlacement;
 
     [SerializeField] private SO_ScoreOnLevels scoreOnLevels;
+    
+    private List<SO_Equations> equations = new ();
+    private string levelName;
     
     private int volumeBGM = 5;
     private int volumeSFX = 5;
@@ -61,6 +66,8 @@ public class S_GameManager : MonoBehaviour
 
     #endregion
 
+    #region Volume Methods
+
     public void SetVolumeBGM(int volume)
     {
         volumeBGM = volume;
@@ -85,6 +92,10 @@ public class S_GameManager : MonoBehaviour
         //return PlayerPrefs.GetInt(SFXVolumeKey, 5);
     }
 
+    #endregion
+
+    #region Score Methods
+
     public void SetScoreForLevel(string levelName, int score)
     {
         if (scoreOnLevels.GetScoreForLevel(levelName) < score)
@@ -99,11 +110,6 @@ public class S_GameManager : MonoBehaviour
         PlayerPrefs.SetInt(levelName, scoreOnLevels.GetScoreForLevel(levelName));
     }
     
-    public string GetLevelName(int index)
-    {
-        return scoreOnLevels.GetLevelName(index);
-    }
-    
     public int GetScoreForLevel(string levelName)
     {
         return PlayerPrefs.GetInt(levelName, 0);
@@ -114,5 +120,49 @@ public class S_GameManager : MonoBehaviour
         return pointsForPlacement.GetPointsForPlacement(placement);
     }
 
+    #endregion
 
+    #region Prepare Game Methods
+
+    public void SetLevel(string sceneName)
+    {
+        levelName = sceneName;
+    }
+    
+    public void AddEquation(List<SO_Equations> equationsToAdd)
+    {
+        equations.AddRange(equationsToAdd);
+    }
+
+    public void RemoveEquation(List<SO_Equations> equationsToRemove)
+    {
+        foreach (var equation in equationsToRemove)
+        {
+            if (equations.Contains(equation))
+                equations.Remove(equation);
+            
+        }
+    }
+
+    public void ClearEquation()
+    {
+        equations.Clear();
+    }
+
+    public List<SO_Equations> GetEquationsForGame()
+    {
+        return equations;
+    }
+    
+    public void LoadGame()
+    {
+        SceneManager.LoadScene(levelName);
+    }
+    
+    #endregion
+    
+    public string GetLevelName()
+    {
+        return levelName;
+    }
 }
