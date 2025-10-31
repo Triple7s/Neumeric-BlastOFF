@@ -26,7 +26,7 @@ MonoBehaviour:
     knownValue2: 30
     xPosition: 0
     operation: 4
-    conversionType: 4
+    conversionType: 6
     fractionValue:
       numerator: 0
       denominator: 0

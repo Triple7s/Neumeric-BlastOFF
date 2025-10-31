@@ -177,55 +177,79 @@ public class Question
             System.Random rand = new System.Random();
 
             // FRACTION
-            if (questionType == QuestionType.Fraction)
+            if (questionType == QuestionType.Conversion)
             {
-                int da = a.GetDenominator();
-                int db = b.GetDenominator();
-                int na = a.GetNumerator();
-                int nb = b.GetNumerator();
+                System.Random random = new System.Random();
 
-                int fa = na, fb = nb;
-                int commonDenominator = da;
-                if (da != db)
+                switch (conversionType)
                 {
-                    fa = na * db;
-                    fb = nb * da;
-                    commonDenominator = da * db;
+                    case ConversionType.FractionToDecimal:
+                        {
+                            double correct = fractionValue.ToDouble();
+                            double fake = correct + (rand.NextDouble() - 0.5) * 0.3; // within ±0.15
+                            fake = System.Math.Round(fake, 2);
+                            return fake.ToString("0.##");
+                        }
+
+                    case ConversionType.FractionToPercent:
+                        {
+                            double correct = fractionValue.ToDouble() * 100;
+                            double offset = rand.Next(-10, 11); // ±10%
+                            double fake = correct + offset;
+                            fake = System.Math.Max(0, System.Math.Round(fake, 1));
+                            return fake.ToString("0.#") + "%";
+                        }
+
+                    case ConversionType.DecimalToFraction:
+                        {
+                            // Slightly vary numerator/denominator
+                            Fraction correct = Fraction.FromDouble(decimalValue);
+                            int n = correct.Numerator;
+                            int d = correct.Denominator;
+
+                            int fakeN = Mathf.Clamp(n + rand.Next(-1, 2), 1, 20);
+                            int fakeD = Mathf.Clamp(d + rand.Next(-1, 2), 1, 20);
+                            if (fakeN == n && fakeD == d)
+                                fakeN += 1;
+
+                            return $"{fakeN}/{fakeD}";
+                        }
+
+                    case ConversionType.DecimalToPercent:
+                        {
+                            double correct = decimalValue * 100;
+                            double offset = rand.Next(-10, 11); // ±10%
+                            double fake = correct + offset;
+                            fake = System.Math.Max(0, System.Math.Round(fake, 1));
+                            return fake.ToString("0.#") + "%";
+                        }
+
+                    case ConversionType.PercentToFraction:
+                        {
+                            double decimalValueFromPercent = percentValue / 100.0;
+                            Fraction correct = Fraction.FromDouble(decimalValueFromPercent);
+                            int n = correct.Numerator;
+                            int d = correct.Denominator;
+
+                            int fakeN = Mathf.Clamp(n + rand.Next(-1, 2), 1, 20);
+                            int fakeD = Mathf.Clamp(d + rand.Next(-1, 2), 1, 20);
+                            if (fakeN == n && fakeD == d)
+                                fakeN += 1;
+
+                            return $"{fakeN}/{fakeD}";
+                        }
+
+                    case ConversionType.PercentToDecimal:
+                        {
+                            double correct = percentValue / 100.0;
+                            double fake = correct + (rand.NextDouble() - 0.5) * 0.2; // ±0.1 variation
+                            fake = System.Math.Round(fake, 2);
+                            return fake.ToString("0.##");
+                        }
+
+                    default:
+                        return "???";
                 }
-
-                double correctValue = conversionType switch
-                {
-                    ConversionType.FractionToDecimal => fractionValue.ToDouble(),
-                    ConversionType.FractionToPercent => fractionValue.ToDouble() * 100,
-                    ConversionType.DecimalToFraction => decimalValue,
-                    ConversionType.DecimalToPercent => decimalValue * 100,
-                    ConversionType.PercentToFraction => percentValue / 100.0,
-                    ConversionType.PercentToDecimal => percentValue / 100.0,
-                    _ => 0
-                };
-
-                commonDenominator = Operation switch
-                {
-                    MathOperator.Multiplication => da * db,
-                    MathOperator.Division => nb * da,
-                    _ => commonDenominator
-                };
-
-                int correctNumerator = operation switch
-                {
-                    MathOperator.Addition => fa + fb,
-                    MathOperator.Subtraction => fa - fb,
-                    MathOperator.Multiplication => na * nb,
-                    MathOperator.Division => na * db,
-                    MathOperator.Percentage => (int)((fa / commonDenominator) * (fb / 100)),
-                    _ => 0
-                };
-
-                int fakeNumerator = correctNumerator;
-                while (fakeNumerator == correctNumerator)
-                    fakeNumerator += rand.Next(-3, 4);
-
-                return $"{fakeNumerator}/{commonDenominator}";
             }
 
             // ALGEBRA
