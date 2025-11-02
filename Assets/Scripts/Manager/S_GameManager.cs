@@ -12,7 +12,7 @@ public class S_GameManager : MonoBehaviour
     [SerializeField] private SO_ScoreOnLevels scoreOnLevels;
     
     public List<SO_Equations> equations = new ();
-    private string levelName;
+    public string levelName;
     
     private int volumeBGM = 5;
     private int volumeSFX = 5;

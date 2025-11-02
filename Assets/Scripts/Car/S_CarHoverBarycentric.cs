@@ -70,7 +70,7 @@ public class S_CarHoverBarycentric : MonoBehaviour
 
     private Vector3 FindNormal()
     {
-        Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, rayLength);
+        Physics.Raycast(transform.position+ transform.forward, transform.TransformDirection(Vector3.down), out hit, rayLength);
         
         MeshCollider meshCollider = hit.collider as MeshCollider;
         if (!meshCollider || !meshCollider.sharedMesh)

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class S_PlayerBehaviour : S_CarBaseBehaviour
@@ -120,15 +121,32 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
 
     public void ReturnToLastCheckpoint()
     {
-        var respawnPoint = S_CheckPointManager.Instance.GetCheckPoint(racer.TargetCheckPointIndex - 1);
-        
-        var respawnPos = respawnPoint.transform.position + respawnPoint.transform.up;
-        
-        var respawnRot = respawnPoint.transform.rotation;
-        
-        transform.rotation = respawnRot;
-        transform.position = respawnPos;
+        StartCoroutine(RespawnRoutine());
     }
+
+    private IEnumerator RespawnRoutine()
+    {
+        var respawnPoint = S_CheckPointManager.Instance
+            .GetCheckPoint(racer.TargetCheckPointIndex - 1);
+
+        Vector3 respawnPos = respawnPoint.transform.position + respawnPoint.transform.up;
+        Quaternion respawnRot = respawnPoint.transform.rotation;
+
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        rb.isKinematic = true;
+        
+        
+        yield return new WaitForFixedUpdate();
+        
+        transform.position = respawnPos;
+        transform.rotation = respawnRot;
+        
+        yield return new WaitForFixedUpdate();
+
+        rb.isKinematic = false;
+    }
+
 
     public override void Boost()
     {

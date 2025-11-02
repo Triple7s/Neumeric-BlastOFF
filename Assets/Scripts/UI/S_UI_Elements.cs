@@ -87,9 +87,12 @@ public class S_UI_Elements : MonoBehaviour
 
         foreach (var btn in levelButtons)
         {
-            string sceneName = btn.name.Substring("Level_".Length);
-            S_GameManager.Instance.SetLevel(sceneName);
-            btn.clicked += ShowMathSelect;
+            btn.clicked += () =>
+            {
+                string sceneName = btn.name.Substring("Level_".Length);
+                S_GameManager.Instance.SetLevel(sceneName);
+                ShowMathSelect();
+            };
         }
 
 

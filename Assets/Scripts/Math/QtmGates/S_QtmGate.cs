@@ -11,7 +11,8 @@ public class S_QtmGate : MonoBehaviour
 
     
     private Question question;
-    private void Awake()
+
+    public void Init()
     {
         S_VisualManager.OnFinished += ShutDownGates;
         foreach (var gate in answerGates)
@@ -19,10 +20,6 @@ public class S_QtmGate : MonoBehaviour
             gate.RequestNewQuestion += SetNewQuestion;
             gate.Init(this);
         }
-    }
-
-    private void Start()
-    {
         SetNewQuestion();
     }
 

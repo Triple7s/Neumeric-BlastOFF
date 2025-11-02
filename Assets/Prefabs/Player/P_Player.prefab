@@ -378,8 +378,10 @@ MonoBehaviour:
   alwaysUseAutoSteering: 0
   boostParticle: {fileID: 1410810174006598366}
   slowParticle: {fileID: 8971581306190287245}
+  wallBounceForce: 60
   playerInputRegister: {fileID: 3559611923804874376}
   cameraController: {fileID: 2544049755536184592}
+  carAvoidSideWall: {fileID: 4987614036124648648}
   cameraStabilizer: {fileID: 3662819425711860441}
   playerAnimatorController: {fileID: 5398053644232607835}
 --- !u!114 &3559611923804874376
@@ -431,7 +433,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3476167950482654714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e7c9911a5bb84d4d8c1355fd8b0c085, type: 3}
   m_Name: 
