@@ -23,7 +23,6 @@ public class S_PlayerAnimatorController : MonoBehaviour
 
     public void SetDirectionValue(int value)
     {
-        Debug.Log("Set Int value");
         animatorInUse.SetInteger(Direction, value);
     }
 }

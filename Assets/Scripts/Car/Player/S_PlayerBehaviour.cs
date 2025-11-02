@@ -8,10 +8,12 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     [SerializeField] private bool alwaysUseAutoSteering;
     [SerializeField] private ParticleSystem boostParticle;
     [SerializeField] private ParticleSystem slowParticle;
+    [SerializeField] private float wallBounceForce = 1.0f;
 
-    [Header("Scripts")]
+    [Header("Player Scripts")]
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
     [SerializeField] private S_PlayerCameraController cameraController;
+    [SerializeField] private S_CarAvoidSideWall carAvoidSideWall;
     [SerializeField] private S_CameraStabilizer cameraStabilizer;
     [SerializeField] private S_PlayerAnimatorController  playerAnimatorController;
         
@@ -74,10 +76,16 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
 
             degreesFromTarget = Vector3.Dot(targetDir, forwardDir);
         }
+
+        var wallDir = carAvoidSideWall.CheckIfCloseToWall();
         
         if (isQtm || (degreesFromTarget <= dotProductBeforeTurn && !debuggingMode))
         {
             AutoTurn(racer.GetDrivingDirection());
+        }
+        else if (wallDir != Vector3.zero)
+        {
+            rb.AddForce(-wallDir.normalized * wallBounceForce, ForceMode.Impulse);
         }
         else if (isTurning)
         {

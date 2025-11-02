@@ -33,15 +33,10 @@ public class S_QtmAnswer : MonoBehaviour
         {
             if (qtmGate.CheckIfCarAnswer(car)) return;
             
-            Debug.Log("Car answered: " + answerText.text);
             if (isCorrectAnswer)
-            {
                 car.Boost();
-            }
             else
-            {
                 car.SlowDown();
-            }
 
             if (car is S_PlayerBehaviour _)
             {

@@ -217,11 +217,7 @@ public class S_CheckPointManager : MonoBehaviour
     
     private Vector3 FindNormal(S_CheckPointEntity origin, Vector3 rayDirection)
     {
-        LayerMask mask = LayerMask.GetMask("DrivableGround");
-        if (!Physics.Raycast(origin.transform.position, rayDirection, out RaycastHit hit, 0.5f, mask))
-        {
-            return Vector3.zero;
-        }
+        Physics.Raycast(origin.transform.position, rayDirection, out RaycastHit hit, 0.5f);
         
         MeshCollider meshCollider = hit.collider as MeshCollider;
         if (!meshCollider || !meshCollider.sharedMesh)
@@ -229,7 +225,6 @@ public class S_CheckPointManager : MonoBehaviour
             return Vector3.zero;
         }
 
-        Mesh mesh = meshCollider.sharedMesh;
         if (!hit.transform.TryGetComponent(out S_DrivableSurface cache))
         {
             return Vector3.zero;
