@@ -2,5 +2,6 @@ public enum QuestionType
 {
     Normal,
     Fraction,
-    Algebra
+    Algebra,
+    Conversion
 }

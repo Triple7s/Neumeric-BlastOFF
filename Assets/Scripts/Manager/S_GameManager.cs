@@ -11,7 +11,7 @@ public class S_GameManager : MonoBehaviour
 
     [SerializeField] private SO_ScoreOnLevels scoreOnLevels;
     
-    private List<SO_Equations> equations = new ();
+    public List<SO_Equations> equations = new ();
     private string levelName;
     
     private int volumeBGM = 5;
