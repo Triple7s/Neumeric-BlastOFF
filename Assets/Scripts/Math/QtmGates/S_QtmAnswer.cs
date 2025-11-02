@@ -35,6 +35,7 @@ public class S_QtmAnswer : MonoBehaviour
         {
             if (carsThatHaveAnswered.Contains(car)) return;
             
+            Debug.Log("Car answered: " + answerText.text);
             if (isCorrectAnswer)
             {
                 car.Boost();
@@ -44,7 +45,7 @@ public class S_QtmAnswer : MonoBehaviour
                 car.SlowDown();
             }
 
-            if (car is S_PlayerBehaviour player)
+            if (car is S_PlayerBehaviour _)
             {
                 StartCoroutine(GetNewQuestion());
 
