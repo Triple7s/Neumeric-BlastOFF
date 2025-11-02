@@ -6,12 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="02b2abd1-4345-46b9-b20b-4cc4cc0dcf8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship 2.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship 2.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/RotateLeft.001.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/RotateLeft.001.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/RotateRight 1.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/RotateRight 1.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship 2.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship 2.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship2 Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship2 Materials/Material.002.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship2 Materials/Material.002.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship2 Materials/Material.003.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship2 Materials/Material.003.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship2 Materials/Material.004.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship2 Materials/Material.004.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship2 Materials/Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship2 Materials/Material.mat.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ScenesInBuild/SC_Fraction_Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ScenesInBuild/SC_Fraction_Forest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarVFX.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarVFX.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/NimbusSans-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/NimbusSans-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/Player/S_PlayerAnimatorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/Player/S_PlayerAnimatorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/Player/S_PlayerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/Player/S_PlayerBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarBaseBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/S_CarBaseBehaviour.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

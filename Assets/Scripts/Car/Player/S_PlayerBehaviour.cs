@@ -75,14 +75,8 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
             degreesFromTarget = Vector3.Dot(targetDir, forwardDir);
         }
         
-        if (isQtm)
+        if (isQtm || (degreesFromTarget <= dotProductBeforeTurn && !debuggingMode))
         {
-            AutoTurn(racer.GetDrivingDirection());
-        }
-        else if (degreesFromTarget <= dotProductBeforeTurn && !debuggingMode)
-        {
-
-
             AutoTurn(racer.GetDrivingDirection());
         }
         else if (isTurning)
@@ -148,18 +142,22 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     private void TurnLeft()
     {
         isTurning = true;
+        playerAnimatorController.SetDirectionValue(-1);
         turnDirection = -1;
     }
 
     private void TurnRight()
     {
         isTurning = true;
+        playerAnimatorController.SetDirectionValue(1);
         turnDirection = 1;
     }
 
     private void StopTurning()
     {
         isTurning = false;
+        playerAnimatorController.SetDirectionValue(0);
+
     }
     
     private void StartBrake()

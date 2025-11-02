@@ -3384,6 +3384,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 81772748}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &83506853 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2337541536717589147, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1651133730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &84128978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72243,6 +72249,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5398053644232607835, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
+        type: 3}
+      propertyPath: animators.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398053644232607835, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
+        type: 3}
+      propertyPath: 'animators.Array.data[0]'
+      value: 
+      objectReference: {fileID: 83506853}
     - target: {fileID: 5475132890906326534, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: wrongColor.b

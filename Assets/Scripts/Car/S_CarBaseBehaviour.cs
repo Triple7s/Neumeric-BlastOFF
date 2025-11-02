@@ -46,8 +46,6 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
             AutoTurn(racer.GetDrivingDirection());
             RotateCar(racer.GetCheckpointRotation());
         }
-
-        
         
         BehaviourUpdate();
     }
@@ -125,8 +123,6 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         targetRot.z = zRot;
         
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, autoTurningSpeed * Time.deltaTime);
-
-
     }
     
     protected void ChangeSpeed(float speedValue, float turnValue)
