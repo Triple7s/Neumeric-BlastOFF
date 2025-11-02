@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -5,6 +6,9 @@ public class S_QtmGate : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI[] questionText;
     [SerializeField] private S_QtmAnswer[] answerGates;
+    
+    private List<S_CarBaseBehaviour> carsThatHaveAnswered = new ();
+
     
     private Question question;
     private void Awake()
@@ -84,4 +88,23 @@ public class S_QtmGate : MonoBehaviour
             text.text = "";
         }
     }
+
+    #region CheckCarAnswerMethods
+
+    public bool CheckIfCarAnswer(S_CarBaseBehaviour car)
+    {
+        return carsThatHaveAnswered.Contains(car);
+    }
+
+    public void AddCar(S_CarBaseBehaviour car)
+    {
+        carsThatHaveAnswered.Add(car);
+    }
+
+    public void ClearCarList()
+    {
+        carsThatHaveAnswered.Clear();
+    }
+
+    #endregion
 }
