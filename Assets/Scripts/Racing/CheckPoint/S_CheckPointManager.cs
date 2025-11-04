@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,7 +31,12 @@ public class S_CheckPointManager : MonoBehaviour
         else
             Destroy(this);
     }
-    
+
+    private void Start()
+    {
+        SortList();
+    }
+
     public S_CheckPointEntity GetCheckPoint(int index)
     {
         var checkPointEntity = checkPointEntities[index%checkPointEntities.Count];
