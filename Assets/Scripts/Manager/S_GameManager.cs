@@ -12,7 +12,7 @@ public class S_GameManager : MonoBehaviour
     [SerializeField] private SO_ScoreOnLevels scoreOnLevels;
     
     public List<SO_Equations> equations = new ();
-
+    public S_CarData playerData;
     public string levelName;
 
     private int volumeBGM = 5;
@@ -125,6 +125,11 @@ public class S_GameManager : MonoBehaviour
 
     #region Prepare Game Methods
 
+
+    public void SetSpeed(float speedValue)
+    {
+        
+    }
     public void SetLevel(string sceneName)
     {
         levelName = sceneName;

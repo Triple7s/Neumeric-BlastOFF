@@ -7,6 +7,7 @@ public class S_UI_Elements : MonoBehaviour
 {
     [Header("UXML References")]
     [SerializeField] private VisualTreeAsset mainMenuUXML;
+    [SerializeField] private VisualTreeAsset speedSelectUXML;
     [SerializeField] private VisualTreeAsset levelSelectUXML;
     [SerializeField] private VisualTreeAsset mathSelectMenuUXML;
     [SerializeField] private VisualTreeAsset multiplicationSelectMenuUXML;
@@ -42,7 +43,7 @@ public class S_UI_Elements : MonoBehaviour
         TryBindButton(root, "Hold-Here", ShowMainMenu);
 
         // --- Main Menu ---
-        TryBindButton(root, "PlayBtn", ShowLevelSelect);
+        TryBindButton(root, "PlayBtn", ShowSpeedSelect);
         TryBindButton(root, "OptionsBtn", ShowOptions);
         TryBindButton(root, "TransferDataBtn", ShowTransferData);
         TryBindButton(root, "QuitBtn", QuitGame);
@@ -53,6 +54,8 @@ public class S_UI_Elements : MonoBehaviour
         {
             if (uiDocument.visualTreeAsset == mathSelectMenuUXML)
                 backBtn.clicked += ShowLevelSelect;
+            else if (uiDocument.visualTreeAsset == levelSelectUXML)
+                backBtn.clicked += ShowSpeedSelect;
             else if (uiDocument.visualTreeAsset == multiplicationSelectMenuUXML || uiDocument.visualTreeAsset == fractionSelectMenuUXML)
             {
                 RemoveEquations();
@@ -81,7 +84,19 @@ public class S_UI_Elements : MonoBehaviour
             TryBindButton(root, "Play-Button", LoadGame);
         }
 
+        // --- Speed Select ---
+        var speedButtons = root.Query<Button>().Where(b => b.name.StartsWith("Speed_")).ToList();
 
+        foreach (var btn in speedButtons)
+        {
+            btn.clicked += () =>
+            {
+                string sceneName = btn.name.Substring("Speed_".Length);
+                S_GameManager.Instance.SetLevel(sceneName);
+                ShowLevelSelect();
+            };
+        }
+        
         // --- Level Select ---
         var levelButtons = root.Query<Button>().Where(b => b.name.StartsWith("Level_")).ToList();
 
@@ -181,14 +196,15 @@ public class S_UI_Elements : MonoBehaviour
     }
 
     // Navigation
-    private void ShowTitleScreen()       => LoadAndShowMenu(titlescreenUXML);
-    private void ShowMainMenu()          => LoadAndShowMenu(mainMenuUXML);
-    private void ShowLevelSelect()       => LoadAndShowMenu(levelSelectUXML);
-    private void ShowOptions()           => LoadAndShowMenu(optionsUXML);
-    private void ShowTransferData()      => LoadAndShowMenu(transferDataUXML);
-    private void ShowMathSelect()        => LoadAndShowMenu(mathSelectMenuUXML);
-    private void ShowMultiplicationMenu()=> LoadAndShowMenu(multiplicationSelectMenuUXML);
-    private void ShowFractionMenu()      => LoadAndShowMenu(fractionSelectMenuUXML);
+    private void ShowTitleScreen() => LoadAndShowMenu(titlescreenUXML);
+    private void ShowMainMenu() => LoadAndShowMenu(mainMenuUXML);
+    private void ShowSpeedSelect() => LoadAndShowMenu(speedSelectUXML);
+    private void ShowLevelSelect() => LoadAndShowMenu(levelSelectUXML);
+    private void ShowOptions() => LoadAndShowMenu(optionsUXML);
+    private void ShowTransferData() => LoadAndShowMenu(transferDataUXML);
+    private void ShowMathSelect() => LoadAndShowMenu(mathSelectMenuUXML);
+    private void ShowMultiplicationMenu() => LoadAndShowMenu(multiplicationSelectMenuUXML);
+    private void ShowFractionMenu() => LoadAndShowMenu(fractionSelectMenuUXML);
 
     private void QuitGame()
     {
