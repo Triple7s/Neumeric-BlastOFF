@@ -162,6 +162,7 @@ public class S_CheckPointManager : MonoBehaviour
             Gizmos.color = areaColor;
             Gizmos.DrawCube(new Vector3(0, areaSize/4, 0), cubeSize);
             
+      
             prevEntity = entity;
         }
     }
@@ -223,7 +224,7 @@ public class S_CheckPointManager : MonoBehaviour
     
     private Vector3 FindNormal(S_CheckPointEntity origin, Vector3 rayDirection)
     {
-        Physics.Raycast(origin.transform.position, rayDirection, out RaycastHit hit, 0.5f);
+        Physics.Raycast(origin.transform.position, rayDirection, out RaycastHit hit, pointRadius);
         
         MeshCollider meshCollider = hit.collider as MeshCollider;
         if (!meshCollider || !meshCollider.sharedMesh)
@@ -253,7 +254,7 @@ public class S_CheckPointManager : MonoBehaviour
         
         normal = hitTransform.TransformDirection(normal);
         
-        Debug.DrawRay(hit.point, normal, Color.brown);
+        Debug.DrawRay(hit.point, normal*pointRadius, Color.brown);
 //        Debug.Log(normal);
 
         return normal;
