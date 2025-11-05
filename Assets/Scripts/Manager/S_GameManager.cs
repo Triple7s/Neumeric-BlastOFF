@@ -140,16 +140,6 @@ public class S_GameManager : MonoBehaviour
         equations.AddRange(equationsToAdd);
     }
 
-    public void RemoveEquation(List<SO_Equations> equationsToRemove)
-    {
-        foreach (var equation in equationsToRemove)
-        {
-            if (equations.Contains(equation))
-                equations.Remove(equation);
-            
-        }
-    }
-
     public void ClearEquation()
     {
         equations.Clear();

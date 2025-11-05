@@ -43,8 +43,4 @@ public class S_CarData : ScriptableObject
     public float AutoTurningSpeedFluctuating => autoTurningSpeedFluctuating;
 
 
-    public void ChangeAcceleration(float accelerationValue)
-    {
-        acceleration = accelerationValue;
-    }
 }

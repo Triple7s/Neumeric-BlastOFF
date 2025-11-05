@@ -15,7 +15,7 @@ MonoBehaviour:
   mass: 10
   linearDamping: 2.5
   angularDamping: 5
-  acceleration: 4000
+  acceleration: 3000
   brakeAcceleration: 250
   turningSpeed: 12
   autoTurningSpeed: 200

@@ -7,8 +7,8 @@ public class S_UI_Elements : MonoBehaviour
 {
     [Header("UXML References")]
     [SerializeField] private VisualTreeAsset mainMenuUXML;
-    [SerializeField] private VisualTreeAsset speedSelectUXML;
     [SerializeField] private VisualTreeAsset levelSelectUXML;
+    [SerializeField] private VisualTreeAsset vehicleSelectUXML;
     [SerializeField] private VisualTreeAsset mathSelectMenuUXML;
     [SerializeField] private VisualTreeAsset multiplicationSelectMenuUXML;
     [SerializeField] private VisualTreeAsset fractionSelectMenuUXML;
@@ -43,7 +43,7 @@ public class S_UI_Elements : MonoBehaviour
         TryBindButton(root, "Hold-Here", ShowMainMenu);
 
         // --- Main Menu ---
-        TryBindButton(root, "PlayBtn", ShowSpeedSelect);
+        TryBindButton(root, "PlayBtn", ShowLevelSelect);
         TryBindButton(root, "OptionsBtn", ShowOptions);
         TryBindButton(root, "TransferDataBtn", ShowTransferData);
         TryBindButton(root, "QuitBtn", QuitGame);
@@ -54,8 +54,8 @@ public class S_UI_Elements : MonoBehaviour
         {
             if (uiDocument.visualTreeAsset == mathSelectMenuUXML)
                 backBtn.clicked += ShowLevelSelect;
-            else if (uiDocument.visualTreeAsset == levelSelectUXML)
-                backBtn.clicked += ShowSpeedSelect;
+            /*else if (uiDocument.visualTreeAsset == levelSelectUXML)
+                backBtn.clicked += ShowVehicleSelect;*/
             else if (uiDocument.visualTreeAsset == multiplicationSelectMenuUXML || uiDocument.visualTreeAsset == fractionSelectMenuUXML)
             {
                 RemoveEquations();
@@ -85,14 +85,14 @@ public class S_UI_Elements : MonoBehaviour
         }
 
         // --- Speed Select ---
-        var speedButtons = root.Query<Button>().Where(b => b.name.StartsWith("Speed_")).ToList();
+        var speedButtons = root.Query<Button>().Where(b => b.name.StartsWith("Vehicle_")).ToList();
 
         foreach (var btn in speedButtons)
         {
             btn.clicked += () =>
             {
-                string sceneName = btn.name.Substring("Speed_".Length);
-                S_GameManager.Instance.SetLevel(sceneName);
+                string vehicleName = btn.name.Substring("Vehicle_".Length);
+                // Method that sets vehicle
                 ShowLevelSelect();
             };
         }
@@ -198,7 +198,7 @@ public class S_UI_Elements : MonoBehaviour
     // Navigation
     private void ShowTitleScreen() => LoadAndShowMenu(titlescreenUXML);
     private void ShowMainMenu() => LoadAndShowMenu(mainMenuUXML);
-    private void ShowSpeedSelect() => LoadAndShowMenu(speedSelectUXML);
+    private void ShowVehicleSelect() => LoadAndShowMenu(vehicleSelectUXML);
     private void ShowLevelSelect() => LoadAndShowMenu(levelSelectUXML);
     private void ShowOptions() => LoadAndShowMenu(optionsUXML);
     private void ShowTransferData() => LoadAndShowMenu(transferDataUXML);
