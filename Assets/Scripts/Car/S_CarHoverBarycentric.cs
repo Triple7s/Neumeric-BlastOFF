@@ -22,7 +22,6 @@ public class S_CarHoverBarycentric : MonoBehaviour
 
         if (normal == Vector3.zero)
         {
-            rb.angularVelocity = Vector3.zero;
             MakeCarFall();
             return false;
         }

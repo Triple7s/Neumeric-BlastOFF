@@ -21,7 +21,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     
     private bool isTurning, isBraking, isQtm;
     private int turnDirection;
-    
+    private float offTrackTimer = 3.0f;
 
     protected override void Awake()
     {
@@ -80,7 +80,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
 
         var wallDir = carAvoidSideWall.CheckIfCloseToWall();
         
-        if (isQtm || (degreesFromTarget <= dotProductBeforeTurn && !debuggingMode))
+        if ((degreesFromTarget <= dotProductBeforeTurn && !debuggingMode))
         {
             AutoTurn(racer.GetDrivingDirection());
         }
@@ -92,6 +92,10 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         {
             Turn();
         }
+
+        if (offTrackTimer < cd)
+            StartCoroutine(RespawnRoutine());
+
         
         cameraController.SetFOV(rb.linearVelocity.magnitude / data.MaxSpeed);
         cameraStabilizer.StabilizeCamera(transform);

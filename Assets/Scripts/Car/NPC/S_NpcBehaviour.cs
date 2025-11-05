@@ -73,7 +73,6 @@ public class S_NpcBehaviour : S_CarBaseBehaviour
     protected override void BehaviourUpdate()
     {
         Drive();
-        
         AutoTurn(racer.GetDrivingDirection());
     }
 }

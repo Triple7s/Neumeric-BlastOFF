@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(S_Racer), typeof(S_CarHoverBarycentric), typeof(S_CarVFX))]
@@ -13,7 +11,8 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     [SerializeField] protected S_CarVFX carVfx;
     
     protected float acceleration, turningSpeed, autoTurningSpeed, maxSpeed;
-    
+    protected float cd;
+
     protected Rigidbody rb;
     
     private bool isEngineRunning = false;
@@ -44,9 +43,10 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         if (carHoverBarycentric.HoverOverGround(data.BaseFloatingHeight) == false)
         {
             AutoTurn(racer.GetDrivingDirection());
-            RotateCar(racer.GetCheckpointRotation());
+            cd += Time.deltaTime;
         }
-        
+        else
+            cd = 0;
         BehaviourUpdate();
     }
 
@@ -112,15 +112,6 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection, transform.up);
         
         var targetRot = Quaternion.RotateTowards(transform.rotation, targetRotation, autoTurningSpeed * Time.deltaTime);
-        
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, autoTurningSpeed * Time.deltaTime);
-    }
-    
-    private void RotateCar(Vector3 getCheckpointRotation)
-    {
-        var zRot = getCheckpointRotation.z;
-        var targetRot = transform.rotation;
-        targetRot.z = zRot;
         
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, autoTurningSpeed * Time.deltaTime);
     }

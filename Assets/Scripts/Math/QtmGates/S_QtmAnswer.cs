@@ -60,7 +60,7 @@ public class S_QtmAnswer : MonoBehaviour
     public void Hide()
     {
         isOff = true;
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         answerText.text = "";
     }
 }
