@@ -13512,7 +13512,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306595821}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6135534, y: 0.4451236, z: -0.40609103, w: 0.5103992}
+  m_LocalRotation: {x: 0.61355335, y: 0.4451236, z: -0.40609103, w: 0.5103992}
   m_LocalPosition: {x: -1402.33, y: 1983.23, z: -1069.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -30751,7 +30751,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 703735706}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.02411036, y: -0.53823286, z: -0.1078276, w: 0.8355222}
+  m_LocalRotation: {x: 0.024110343, y: -0.53823286, z: -0.10782757, w: 0.8355222}
   m_LocalPosition: {x: -1364.1, y: 1873.52, z: -1222.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -46767,7 +46767,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085431066}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.09156553, y: 0.06523171, z: -0.10104439, w: 0.9885093}
+  m_LocalRotation: {x: -0.09156553, y: 0.06523171, z: -0.101044394, w: 0.9885093}
   m_LocalPosition: {x: -1429.67, y: 1893.59, z: -1105.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -49039,7 +49039,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133001269}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4166398, y: 0.52378076, z: -0.32638928, w: 0.6674841}
+  m_LocalRotation: {x: 0.41663978, y: 0.52378076, z: -0.32638928, w: 0.6674841}
   m_LocalPosition: {x: -1399.4015, y: 1947.8899, z: -1069.0209}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -70027,7 +70027,12 @@ PrefabInstance:
     - target: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: debuggingMode
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
+        type: 3}
+      propertyPath: dotProductBeforeTurn
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}

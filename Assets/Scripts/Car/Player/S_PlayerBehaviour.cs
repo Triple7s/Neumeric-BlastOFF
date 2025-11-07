@@ -64,27 +64,24 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         {
             BrakeOrDrift();
         }
-        else
+        else if (debuggingMode)
         {
             Drive();
         }
-
-        float degreesFromTarget = 10;
-        if (!debuggingMode)
+        else if (CheckDotProduct())
         {
-            var targetDir = (racer.NextCheckPoint.transform.position - racer.TargetCheckPoint.transform.position).normalized;
-            var forwardDir = (transform.forward).normalized;
-
-            degreesFromTarget = Vector3.Dot(targetDir, forwardDir);
+            Debug.Log("OSEFKFKO");
+            AutoTurn(racer.GetDrivingDirection());
+        }
+        else
+        {
+            Debug.Log("I Drive");
+            Drive();
         }
 
         var wallDir = carAvoidSideWall.CheckIfCloseToWall();
         
-        if ((degreesFromTarget <= dotProductBeforeTurn && !debuggingMode))
-        {
-            AutoTurn(racer.GetDrivingDirection());
-        }
-        else if (wallDir != Vector3.zero)
+        if (wallDir != Vector3.zero)
         {
             rb.AddForce(-wallDir.normalized * wallBounceForce, ForceMode.Impulse);
         }
@@ -95,12 +92,26 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
 
         if (offTrackTimer < cd)
             StartCoroutine(RespawnRoutine());
-
         
         cameraController.SetFOV(rb.linearVelocity.magnitude / data.MaxSpeed);
         cameraStabilizer.StabilizeCamera(transform);
     }
-    
+
+    private bool CheckDotProduct()
+    {
+        float degreesFromTarget = 10;
+        if (!debuggingMode)
+        {
+            var targetDir = (racer.NextCheckPoint.transform.position - racer.TargetCheckPoint.transform.position).normalized;
+            var forwardDir = (transform.forward).normalized;
+
+            Debug.Log("Target Direction: " + targetDir);
+            Debug.Log("Foreard Direction "  + forwardDir);
+            degreesFromTarget = Vector3.Dot(targetDir, forwardDir);
+        }
+
+        return degreesFromTarget <= dotProductBeforeTurn;
+    }
 
     private void BrakeOrDrift()
     {
@@ -139,7 +150,6 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         rb.isKinematic = true;
-        
         
         yield return new WaitForFixedUpdate();
         
