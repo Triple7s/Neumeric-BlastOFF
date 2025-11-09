@@ -104,9 +104,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         {
             var targetDir = (racer.NextCheckPoint.transform.position - racer.TargetCheckPoint.transform.position).normalized;
             var forwardDir = (transform.forward).normalized;
-
-            Debug.Log("Target Direction: " + targetDir);
-            Debug.Log("Foreard Direction "  + forwardDir);
+            
             degreesFromTarget = Vector3.Dot(targetDir, forwardDir);
         }
 
