@@ -1,4 +1,16 @@
 .button:hover {
     transition-timing-function: ease-in-out;
     transition-duration: 0.5s;
+    width: 420px;
+    height: 270px;
+    margin-top: 2px;
+    margin-right: 4px;
+    margin-bottom: -60px;
+    margin-left: 4px;
+    padding-top: 10px;
+    padding-right: 12px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    min-width: auto;
+    min-height: auto;
 }
