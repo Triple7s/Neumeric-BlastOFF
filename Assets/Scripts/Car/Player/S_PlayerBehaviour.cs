@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class S_PlayerBehaviour : S_CarBaseBehaviour
@@ -8,16 +9,19 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     [SerializeField] private bool alwaysUseAutoSteering;
     [SerializeField] private ParticleSystem boostParticle;
     [SerializeField] private ParticleSystem slowParticle;
+    [SerializeField] private float wallBounceForce = 1.0f;
 
-    [Header("Scripts")]
+    [Header("Player Scripts")]
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
     [SerializeField] private S_PlayerCameraController cameraController;
+    [SerializeField] private S_CarAvoidSideWall carAvoidSideWall;
     [SerializeField] private S_CameraStabilizer cameraStabilizer;
+    [SerializeField] private S_PlayerAnimatorController  playerAnimatorController;
         
     
     private bool isTurning, isBraking, isQtm;
     private int turnDirection;
-    
+    private float offTrackTimer = 3.0f;
 
     protected override void Awake()
     {
@@ -60,39 +64,52 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         {
             BrakeOrDrift();
         }
-        else
+        else if (debuggingMode)
         {
             Drive();
         }
-
-        float degreesFromTarget = 10;
-        if (!debuggingMode)
+        else if (CheckDotProduct())
         {
-            var targetDir = (racer.NextCheckPoint.transform.position - racer.TargetCheckPoint.transform.position).normalized;
-            var forwardDir = (transform.forward).normalized;
-
-            degreesFromTarget = Vector3.Dot(targetDir, forwardDir);
+            Debug.Log("OSEFKFKO");
+            AutoTurn(racer.GetDrivingDirection());
         }
+        else
+        {
+            Debug.Log("I Drive");
+            Drive();
+        }
+
+        var wallDir = carAvoidSideWall.CheckIfCloseToWall();
         
-        if (isQtm)
+        if (wallDir != Vector3.zero)
         {
-            AutoTurn(racer.GetDrivingDirection());
-        }
-        else if (degreesFromTarget <= dotProductBeforeTurn && !debuggingMode)
-        {
-
-
-            AutoTurn(racer.GetDrivingDirection());
+            rb.AddForce(-wallDir.normalized * wallBounceForce, ForceMode.Impulse);
         }
         else if (isTurning)
         {
             Turn();
         }
+
+        if (offTrackTimer < cd)
+            StartCoroutine(RespawnRoutine());
         
         cameraController.SetFOV(rb.linearVelocity.magnitude / data.MaxSpeed);
         cameraStabilizer.StabilizeCamera(transform);
     }
-    
+
+    private bool CheckDotProduct()
+    {
+        float degreesFromTarget = 10;
+        if (!debuggingMode)
+        {
+            var targetDir = (racer.NextCheckPoint.transform.position - racer.TargetCheckPoint.transform.position).normalized;
+            var forwardDir = (transform.forward).normalized;
+            
+            degreesFromTarget = Vector3.Dot(targetDir, forwardDir);
+        }
+
+        return degreesFromTarget <= dotProductBeforeTurn;
+    }
 
     private void BrakeOrDrift()
     {
@@ -117,15 +134,31 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
 
     public void ReturnToLastCheckpoint()
     {
-        var respawnPoint = S_CheckPointManager.Instance.GetCheckPoint(racer.TargetCheckPointIndex - 1);
-        
-        var respawnPos = respawnPoint.transform.position + respawnPoint.transform.up;
-        
-        var respawnRot = respawnPoint.transform.rotation;
-        
-        transform.rotation = respawnRot;
-        transform.position = respawnPos;
+        StartCoroutine(RespawnRoutine());
     }
+
+    private IEnumerator RespawnRoutine()
+    {
+        var respawnPoint = S_CheckPointManager.Instance
+            .GetCheckPoint(racer.TargetCheckPointIndex - 1);
+
+        Vector3 respawnPos = respawnPoint.transform.position + respawnPoint.transform.up;
+        Quaternion respawnRot = respawnPoint.transform.rotation;
+
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        rb.isKinematic = true;
+        
+        yield return new WaitForFixedUpdate();
+        
+        transform.position = respawnPos;
+        transform.rotation = respawnRot;
+        
+        yield return new WaitForFixedUpdate();
+
+        rb.isKinematic = false;
+    }
+
 
     public override void Boost()
     {
@@ -147,18 +180,22 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     private void TurnLeft()
     {
         isTurning = true;
+        playerAnimatorController.SetDirectionValue(-1);
         turnDirection = -1;
     }
 
     private void TurnRight()
     {
         isTurning = true;
+        playerAnimatorController.SetDirectionValue(1);
         turnDirection = 1;
     }
 
     private void StopTurning()
     {
         isTurning = false;
+        playerAnimatorController.SetDirectionValue(0);
+
     }
     
     private void StartBrake()

@@ -1,13 +1,13 @@
 using System;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class S_CarHoverBarycentric : MonoBehaviour
 {
     [SerializeField] private float rayLength = 5f;
     [SerializeField] private float rotationSpeed = 20f;
     [SerializeField] private float heightChangeSpeed = 25f;
     [SerializeField] private float fallingSpeed = 9.81f;
-    [SerializeField] private LayerMask targetLayerMask;
     private Rigidbody rb;
     private RaycastHit hit;
 
@@ -22,7 +22,6 @@ public class S_CarHoverBarycentric : MonoBehaviour
 
         if (normal == Vector3.zero)
         {
-            rb.angularVelocity = Vector3.zero;
             MakeCarFall();
             return false;
         }
@@ -70,12 +69,7 @@ public class S_CarHoverBarycentric : MonoBehaviour
 
     private Vector3 FindNormal()
     {
-        LayerMask mask = targetLayerMask;
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, rayLength, mask))
-        {
-            Debug.LogWarning("Ray does not hit mesh with " + mask + " layer");
-            return Vector3.zero;
-        }
+        Physics.Raycast(transform.position+ transform.forward, transform.TransformDirection(Vector3.down), out hit, rayLength);
         
         MeshCollider meshCollider = hit.collider as MeshCollider;
         if (!meshCollider || !meshCollider.sharedMesh)
@@ -84,7 +78,6 @@ public class S_CarHoverBarycentric : MonoBehaviour
             return Vector3.zero;
         }
 
-        Mesh mesh = meshCollider.sharedMesh;
         if (!hit.transform.TryGetComponent(out S_DrivableSurface cache))
         {
             Debug.LogWarning("Ray does not hit mesh with S_DrivableSurface Class");

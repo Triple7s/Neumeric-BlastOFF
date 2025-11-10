@@ -589,6 +589,8 @@ MonoBehaviour:
     type: 3}
   levelSelectUXML: {fileID: 9197481963319205126, guid: dafa0ec2dc3f6b841a27d60ac4c60ddc,
     type: 3}
+  vehicleSelectUXML: {fileID: 9197481963319205126, guid: 932ecc2ffc93f6b4b9b9d2776f7e5d8e,
+    type: 3}
   mathSelectMenuUXML: {fileID: 9197481963319205126, guid: 6e723d7db2f1deb4c8f208fa919e8401,
     type: 3}
   multiplicationSelectMenuUXML: {fileID: 9197481963319205126, guid: 1dab6bbd63dafa14e85b078d4ff10f5f,

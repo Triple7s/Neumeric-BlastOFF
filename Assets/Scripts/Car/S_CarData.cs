@@ -41,5 +41,6 @@ public class S_CarData : ScriptableObject
     public float DistBeforeSpeedChange => distBeforeSpeedChange;
     public float AccelerationFluctuating => accelerationFluctuating;
     public float AutoTurningSpeedFluctuating => autoTurningSpeedFluctuating;
-    
+
+
 }

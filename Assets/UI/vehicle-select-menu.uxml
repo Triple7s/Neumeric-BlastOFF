@@ -1,0 +1,16 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/menu_style.uss?fileID=7433441132597879392&amp;guid=2061448d59a0f704b94269c472469b76&amp;type=3#menu_style" />
+    <Style src="project://database/Assets/UI/USS/NewUSSFile.uss?fileID=7433441132597879392&amp;guid=4e00680a3f7c5744fa0622802db16e1d&amp;type=3#NewUSSFile" />
+    <ui:Label text="VEHICLE SELECT" name="VehicleSelect" enable-rich-text="true" style="align-self: flex-start; font-size: 45px; -unity-font-definition: resource(&apos;Fonts &amp; Materials/NimbusSans-Bold&apos;); -unity-text-align: upper-left; align-content: flex-start; justify-content: flex-end; align-items: flex-start; left: 150px; top: 85px; -unity-font-style: bold;" />
+    <ui:VisualElement name="TopBar" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Imported%20Assets/CleanFlatUI/Textures/square/square128/square128_fill.png?fileID=21300000&amp;guid=9845efdee2c066f468ff3846ae7ce497&amp;type=3#square128_fill&quot;); -unity-background-image-tint-color: rgb(0, 0, 0); background-size: 85% 10%; bottom: 0; height: auto; top: 30px;">
+        <ui:Button name="BackToMainBtn" style="width: 88px; height: 75px; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); left: 1650px; top: -20px; background-image: url(&quot;project://database/Assets/Imported%20Assets/CleanFlatUI/Textures/icon/icon_close.png?fileID=21300000&amp;guid=23b229050d410e445baed11fb7ae6e0c&amp;type=3#icon_close&quot;); background-color: rgba(255, 255, 255, 0); -unity-background-image-tint-color: rgb(0, 0, 0); background-size: 100% 115%;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="Buttons" style="flex-grow: 1; flex-direction: row; justify-content: center; align-self: auto; align-items: center; visibility: visible; display: flex; overflow: visible; bottom: 0; top: -32px;">
+        <ui:Button name="Vehicle_1" style="height: 475px; width: 734px; white-space: pre-wrap; -unity-text-align: middle-center; font-size: 50px; -unity-font-definition: resource(&apos;Fonts &amp; Materials/NimbusSans-Bold&apos;); -unity-font-style: bold; background-color: rgb(255, 103, 94); top: 0; color: rgb(255, 255, 255); flex-direction: column-reverse;">
+            <ui:VisualElement style="flex-grow: 1;" />
+            <ui:Label text="0 PTS" tabindex="-1" name="ScoreLabel_StraightLine" />
+        </ui:Button>
+    </ui:VisualElement>
+    <ui:VisualElement name="BottomBar" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Imported%20Assets/CleanFlatUI/Textures/square/square128/square128_fill.png?fileID=21300000&amp;guid=9845efdee2c066f468ff3846ae7ce497&amp;type=3#square128_fill&quot;); -unity-background-image-tint-color: rgb(0, 0, 0); background-size: 85% 10%; bottom: 0; height: auto; top: -12px;" />
+    <ui:Label text="TAP TO NAVIGATE&#10;" name="TapToNavigate" style="-unity-font-definition: resource(&apos;Fonts &amp; Materials/NimbusSans-Bold&apos;); font-size: 40px; left: 150px; bottom: 0; -unity-font-style: bold; top: -70px;" />
+</ui:UXML>

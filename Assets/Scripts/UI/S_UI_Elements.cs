@@ -8,6 +8,7 @@ public class S_UI_Elements : MonoBehaviour
     [Header("UXML References")]
     [SerializeField] private VisualTreeAsset mainMenuUXML;
     [SerializeField] private VisualTreeAsset levelSelectUXML;
+    [SerializeField] private VisualTreeAsset vehicleSelectUXML;
     [SerializeField] private VisualTreeAsset mathSelectMenuUXML;
     [SerializeField] private VisualTreeAsset multiplicationSelectMenuUXML;
     [SerializeField] private VisualTreeAsset fractionSelectMenuUXML;
@@ -53,6 +54,8 @@ public class S_UI_Elements : MonoBehaviour
         {
             if (uiDocument.visualTreeAsset == mathSelectMenuUXML)
                 backBtn.clicked += ShowLevelSelect;
+            /*else if (uiDocument.visualTreeAsset == levelSelectUXML)
+                backBtn.clicked += ShowVehicleSelect;*/
             else if (uiDocument.visualTreeAsset == multiplicationSelectMenuUXML || uiDocument.visualTreeAsset == fractionSelectMenuUXML)
             {
                 RemoveEquations();
@@ -81,15 +84,30 @@ public class S_UI_Elements : MonoBehaviour
             TryBindButton(root, "Play-Button", LoadGame);
         }
 
+        // --- Speed Select ---
+        var speedButtons = root.Query<Button>().Where(b => b.name.StartsWith("Vehicle_")).ToList();
 
+        foreach (var btn in speedButtons)
+        {
+            btn.clicked += () =>
+            {
+                string vehicleName = btn.name.Substring("Vehicle_".Length);
+                // Method that sets vehicle
+                ShowLevelSelect();
+            };
+        }
+        
         // --- Level Select ---
         var levelButtons = root.Query<Button>().Where(b => b.name.StartsWith("Level_")).ToList();
 
         foreach (var btn in levelButtons)
         {
-            string sceneName = btn.name.Substring("Level_".Length);
-            S_GameManager.Instance.SetLevel(sceneName);
-            btn.clicked += ShowMathSelect;
+            btn.clicked += () =>
+            {
+                string sceneName = btn.name.Substring("Level_".Length);
+                S_GameManager.Instance.SetLevel(sceneName);
+                ShowMathSelect();
+            };
         }
 
 
@@ -178,14 +196,15 @@ public class S_UI_Elements : MonoBehaviour
     }
 
     // Navigation
-    private void ShowTitleScreen()       => LoadAndShowMenu(titlescreenUXML);
-    private void ShowMainMenu()          => LoadAndShowMenu(mainMenuUXML);
-    private void ShowLevelSelect()       => LoadAndShowMenu(levelSelectUXML);
-    private void ShowOptions()           => LoadAndShowMenu(optionsUXML);
-    private void ShowTransferData()      => LoadAndShowMenu(transferDataUXML);
-    private void ShowMathSelect()        => LoadAndShowMenu(mathSelectMenuUXML);
-    private void ShowMultiplicationMenu()=> LoadAndShowMenu(multiplicationSelectMenuUXML);
-    private void ShowFractionMenu()      => LoadAndShowMenu(fractionSelectMenuUXML);
+    private void ShowTitleScreen() => LoadAndShowMenu(titlescreenUXML);
+    private void ShowMainMenu() => LoadAndShowMenu(mainMenuUXML);
+    private void ShowVehicleSelect() => LoadAndShowMenu(vehicleSelectUXML);
+    private void ShowLevelSelect() => LoadAndShowMenu(levelSelectUXML);
+    private void ShowOptions() => LoadAndShowMenu(optionsUXML);
+    private void ShowTransferData() => LoadAndShowMenu(transferDataUXML);
+    private void ShowMathSelect() => LoadAndShowMenu(mathSelectMenuUXML);
+    private void ShowMultiplicationMenu() => LoadAndShowMenu(multiplicationSelectMenuUXML);
+    private void ShowFractionMenu() => LoadAndShowMenu(fractionSelectMenuUXML);
 
     private void QuitGame()
     {
