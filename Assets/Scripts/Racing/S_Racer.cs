@@ -1,6 +1,7 @@
 using System;
 using SpinMotion;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class S_Racer : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class S_Racer : MonoBehaviour
 
     private S_CheckPointEntity targetCheckPoint, nextCheckPoint;
     private Vector3 targetPosition, nextPosition;
+
+    private int QtmSelection = 0;
     
     public int TargetCheckPointIndex { get; private set; }
     public S_CheckPointEntity TargetCheckPoint => targetCheckPoint;
@@ -62,9 +65,23 @@ public class S_Racer : MonoBehaviour
         targetCheckPoint = S_CheckPointManager.Instance.GetCheckPoint(TargetCheckPointIndex);
         nextCheckPoint = S_CheckPointManager.Instance.GetCheckPoint(TargetCheckPointIndex + 1);
         
-        
         targetPosition = targetCheckPoint.transform.position;
         nextPosition = nextCheckPoint.transform.position;
+        
+        // Change the target 
+        if (targetCheckPoint.CheckPointType == CheckPointType.QtmGate)
+        {
+            
+        }
+
+        if (nextCheckPoint.CheckPointType == CheckPointType.QtmGate)
+        {
+            QtmSelection = Random.Range(-1, 2);
+
+            nextCheckPoint.TargetPosition(QtmSelection);
+        }
+        
+        
     }
 
     public float GetDistanceFromCheckPoint()
