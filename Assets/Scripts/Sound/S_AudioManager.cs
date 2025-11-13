@@ -8,6 +8,7 @@ public class S_AudioManager : MonoBehaviour
     public Sound[] musicSounds, sfxSounds;
     [SerializeField] private AudioSource musicSource, sfxSource;
     
+    private Coroutine _musicCoroutine = null;
     private bool _waitingForMusicToEnd;
     
     private void Awake()
@@ -26,7 +27,7 @@ public class S_AudioManager : MonoBehaviour
     private void Start()
     {
         // Start playing main menu music at the beginning
-        PlayMusic("MainMenuStart");
+        // PlayMusic("MainMenuStart");
     }
     
     /// <summary>
@@ -76,7 +77,7 @@ public class S_AudioManager : MonoBehaviour
     {
         musicSource.loop = false;
         _waitingForMusicToEnd = true;
-        StartCoroutine(PlayMusicAfterPreviousSong(name));
+        _musicCoroutine = StartCoroutine(PlayMusicAfterPreviousSong(name));
     }
     
     IEnumerator PlayMusicAfterPreviousSong(string name)
@@ -87,6 +88,15 @@ public class S_AudioManager : MonoBehaviour
         }
         _waitingForMusicToEnd = false;
         PlayMusic(name);
+    }
+    
+    /// <summary>
+    /// Stop the music
+    /// </summary>
+    public void StopMusic()
+    {
+        if (_musicCoroutine != null) StopCoroutine(_musicCoroutine);
+        musicSource.Stop();
     }
     
     /// <summary>
