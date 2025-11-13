@@ -10,6 +10,7 @@ public class S_PlayMusic : MonoBehaviour
     
     private void Start()
     {
+        S_AudioManager.Instance.StopMusic();
         S_AudioManager.Instance.PlayMusic(musicNameStart);
         if (musicLoop) S_AudioManager.Instance.PlayMusicAfterPrevious(musicNameLoop);
     }
