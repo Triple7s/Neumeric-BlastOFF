@@ -16892,7 +16892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380151042}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.72335917, y: 0.48262832, z: -0.3663466, w: 0.33107653}
+  m_LocalRotation: {x: 0.72335917, y: 0.48262832, z: -0.3663466, w: 0.3310765}
   m_LocalPosition: {x: -1367.9, y: 1944.5, z: -1075.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17010,7 +17010,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384201594}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09315159, y: -0.7033832, z: -0.09155572, w: 0.69870776}
+  m_LocalRotation: {x: 0.093151584, y: -0.7033832, z: -0.091555715, w: 0.69870776}
   m_LocalPosition: {x: -1076.5, y: 1880.2999, z: -1140.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -19024,6 +19024,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1933791326576520944, guid: 70ecdb29758fa924788212a523363e45,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2499842445052097128, guid: 70ecdb29758fa924788212a523363e45,
         type: 3}
       propertyPath: m_Enabled
@@ -19095,6 +19100,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 405c4ab24d292f6429af914e3352e91e,
         type: 2}
+    - target: {fileID: 6614457023153908301, guid: 70ecdb29758fa924788212a523363e45,
+        type: 3}
+      propertyPath: checkpointsToSpeedChange
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8823261238902755696, guid: 70ecdb29758fa924788212a523363e45,
         type: 3}
       propertyPath: m_IsActive
@@ -36355,6 +36365,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1933791326576520944, guid: 70ecdb29758fa924788212a523363e45,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2499842445052097128, guid: 70ecdb29758fa924788212a523363e45,
         type: 3}
       propertyPath: m_Enabled
@@ -36426,6 +36441,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 405c4ab24d292f6429af914e3352e91e,
         type: 2}
+    - target: {fileID: 6614457023153908301, guid: 70ecdb29758fa924788212a523363e45,
+        type: 3}
+      propertyPath: checkpointsToSpeedChange
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8823261238902755696, guid: 70ecdb29758fa924788212a523363e45,
         type: 3}
       propertyPath: m_IsActive
@@ -44239,7 +44259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023374345}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7243322, y: 0.43938684, z: -0.48756653, w: 0.21109466}
+  m_LocalRotation: {x: 0.7243322, y: 0.43938687, z: -0.48756653, w: 0.21109463}
   m_LocalPosition: {x: -1363.6, y: 1953.4, z: -1070.2001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -45926,16 +45946,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2499842445052097128, guid: 70ecdb29758fa924788212a523363e45,
         type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2499842445052097128, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: carRenderers.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2499842445052097128, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
       propertyPath: 'carRenderers.Array.data[1]'
       value: 
       objectReference: {fileID: 1435060896}
@@ -45989,12 +45999,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6614457023153908301, guid: 70ecdb29758fa924788212a523363e45,
-        type: 3}
-      propertyPath: data
-      value: 
-      objectReference: {fileID: 11400000, guid: 405c4ab24d292f6429af914e3352e91e,
-        type: 2}
     - target: {fileID: 8823261238902755696, guid: 70ecdb29758fa924788212a523363e45,
         type: 3}
       propertyPath: m_IsActive
@@ -72580,22 +72584,22 @@ PrefabInstance:
     - target: {fileID: 5475132890906326534, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.56
+      value: -0.29
       objectReference: {fileID: 0}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.45
+      value: 3.56
       objectReference: {fileID: 0}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
@@ -81433,7 +81437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862060168}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.024655927, y: -0.21900533, z: -0.1084372, w: 0.96936584}
+  m_LocalRotation: {x: 0.024655925, y: -0.21900533, z: -0.10843719, w: 0.96936584}
   m_LocalPosition: {x: -1384.5485, y: 1880.9327, z: -1153.4735}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -92381,7 +92385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105136385}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7157633, y: 0.07590862, z: 0.44384205, w: 0.53378373}
+  m_LocalRotation: {x: -0.7157633, y: 0.07590866, z: 0.44384208, w: 0.5337838}
   m_LocalPosition: {x: -1277.5, y: 1953.1, z: -1046.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

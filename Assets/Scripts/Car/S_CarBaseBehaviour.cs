@@ -97,14 +97,15 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         if (rb.linearVelocity.magnitude > maxSpeed)
         {
             var newSpeed = rb.linearVelocity.normalized * maxSpeed;
-            rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, newSpeed, 100f * Time.deltaTime);
+            rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, newSpeed, 2f * Time.deltaTime);
 
             if (rb.linearVelocity.magnitude > data.MaxBoostSpeed)
             {
                 var speed = rb.linearVelocity.normalized * data.MaxBoostSpeed;
-                rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, speed, 1000 * Time.deltaTime);
+                rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, speed, Time.deltaTime);
             }
         }
+        
     }
     
     protected void AutoTurn(Vector3 targetDirection)
@@ -114,13 +115,6 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         var targetRot = Quaternion.RotateTowards(transform.rotation, targetRotation, autoTurningSpeed * Time.deltaTime);
         
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, autoTurningSpeed * Time.deltaTime);
-    }
-    
-    protected void ChangeSpeed(float speedValue, float turnValue)
-    {
-        acceleration = data.Acceleration + speedValue;
-        turningSpeed = data.TurningSpeed + turnValue;
-
     }
     
     public void TurnOnEngine()

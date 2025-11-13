@@ -74,7 +74,6 @@ public class S_CarHoverBarycentric : MonoBehaviour
         MeshCollider meshCollider = hit.collider as MeshCollider;
         if (!meshCollider || !meshCollider.sharedMesh)
         {
-            Debug.Log("missing");
             return Vector3.zero;
         }
 

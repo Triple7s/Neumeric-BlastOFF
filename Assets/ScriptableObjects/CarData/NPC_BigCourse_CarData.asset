@@ -15,7 +15,7 @@ MonoBehaviour:
   mass: 10
   linearDamping: 2.5
   angularDamping: 5
-  acceleration: 2500
+  acceleration: 2800
   brakeAcceleration: 250
   turningSpeed: 45
   autoTurningSpeed: 100
@@ -25,6 +25,3 @@ MonoBehaviour:
   maxSpeed: 400
   maxBoostSpeed: 600
   baseFloatingHeight: 1.5
-  distBeforeSpeedChange: 3
-  accelerationFluctuating: 500
-  autoTurningSpeedFluctuating: 10
