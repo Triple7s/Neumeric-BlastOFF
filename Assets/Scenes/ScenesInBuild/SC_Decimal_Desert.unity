@@ -10446,18 +10446,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 231618351}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &231907178 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3424660272499531272, guid: 40a86fac49fd544499c2d2c65342f23c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1945954311018267880}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fee402ff4a5b3a34db218cb4c25f263f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::S_PauseManager
 --- !u!1001 &234577722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71710,22 +71698,22 @@ PrefabInstance:
     - target: {fileID: 247563300170859371, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.999853
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 247563300170859371, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.017146023
+      value: 0.0000000017194043
       objectReference: {fileID: 0}
     - target: {fileID: 247563300170859371, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008065586
+      value: 0.000000007465247
       objectReference: {fileID: 0}
     - target: {fileID: 247563300170859371, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000027415978
+      value: -0.000000003744325
       objectReference: {fileID: 0}
     - target: {fileID: 1290961879054346791, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
@@ -71735,7 +71723,7 @@ PrefabInstance:
     - target: {fileID: 1831933537464622718, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: field of view
-      value: 122.8708
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1976938247512052433, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
@@ -71745,7 +71733,7 @@ PrefabInstance:
     - target: {fileID: 2335383963157103456, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: Lens.FieldOfView
-      value: 122.8708
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2909340294871678947, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
@@ -71795,22 +71783,22 @@ PrefabInstance:
     - target: {fileID: 4885159968352739220, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.999853
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4885159968352739220, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.017146023
+      value: 0.0000000017194043
       objectReference: {fileID: 0}
     - target: {fileID: 4885159968352739220, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008065586
+      value: 0.000000007465247
       objectReference: {fileID: 0}
     - target: {fileID: 4885159968352739220, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000027415978
+      value: -0.000000003744325
       objectReference: {fileID: 0}
     - target: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
@@ -86979,6 +86967,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1986825696}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1988197733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1988197734}
+  - component: {fileID: 1988197735}
+  m_Layer: 0
+  m_Name: SetMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1988197734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988197733}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1988197735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988197733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548599ebfe1cbc247ac9e63e9f37c2d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_PlayMusic
+  musicNameStart: DecimalDesertStart
+  musicNameLoop: DecimalDesertLoop
+  musicLoop: 1
 --- !u!1001 &1989681903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93977,6 +94012,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8707926779778137096, guid: 40a86fac49fd544499c2d2c65342f23c,
+        type: 3}
+      propertyPath: playerControls
+      value: 
+      objectReference: {fileID: 1651133731}
     - target: {fileID: 8973458332984113721, guid: 40a86fac49fd544499c2d2c65342f23c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -93997,6 +94037,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40a86fac49fd544499c2d2c65342f23c, type: 3}
+--- !u!114 &1945954311018267881 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8707926779778137096, guid: 40a86fac49fd544499c2d2c65342f23c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1945954311018267880}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee402ff4a5b3a34db218cb4c25f263f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_PauseManager
 --- !u!1001 &7759394086731264983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94949,7 +95001,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 231907178}
+      objectReference: {fileID: 1945954311018267881}
     - target: {fileID: 5902115712344728729, guid: 687822f95406ad54486304d836319d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -95035,3 +95087,4 @@ SceneRoots:
   - {fileID: 922270716}
   - {fileID: 1778066862}
   - {fileID: 2140974923}
+  - {fileID: 1988197734}
