@@ -39,7 +39,7 @@ public class S_UI_Elements : MonoBehaviour
         // --- Title Screen ---
         var holdHereBtn = root.Q<Button>("Hold-Here");
         if (holdHereBtn != null)
-            holdHereBtn.clicked += () => S_AudioManager.Instance.PlayMusicAfterPrevious("MainMenuLoop");
+            holdHereBtn.clicked += () => S_AudioManager.Instance.PlayMusic("MainMenuLoop");
         TryBindButton(root, "Hold-Here", ShowMainMenu);
 
         // --- Main Menu ---
