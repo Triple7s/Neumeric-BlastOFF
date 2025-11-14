@@ -50,6 +50,15 @@ public class S_SubmitIP : MonoBehaviour
             StartCoroutine(QtmJsonUploader.UploadJson(jsonPath, uploadUrl));
         }
 
+        if (_ipAddress.Length >= 9)
+        {
+            formattedIP = FifthFormatVersion(_ipAddress);
+            Debug.Log(formattedIP);
+
+            string uploadUrl = "http://" + formattedIP + ":5000/upload";
+            StartCoroutine(QtmJsonUploader.UploadJson(jsonPath, uploadUrl));
+        }
+
     }
     
     private string FirstFormatVersion(string ip)
@@ -85,6 +94,15 @@ public class S_SubmitIP : MonoBehaviour
         string second = ip.Substring(3, 2);
         string third = ip.Substring(5, 3);
         string fourth = ip.Substring(8, 1);
+        return first + "." + second + "." + third + "." + fourth;
+    }
+
+    private string FifthFormatVersion(string ip)
+    {
+        string first = ip.Substring(0, 2);
+        string second = ip.Substring(2, 3);
+        string third = ip.Substring(5, 2);
+        string fourth = ip.Substring(7, 2);
         return first + "." + second + "." + third + "." + fourth;
     }
 }
