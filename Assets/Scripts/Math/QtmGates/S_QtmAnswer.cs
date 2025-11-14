@@ -42,7 +42,7 @@ public class S_QtmAnswer : MonoBehaviour
             {
                 StartCoroutine(GetNewQuestion());
 
-                S_QtmGateManager.Instance.HandleAnswer(isCorrectAnswer, qtmGate.GetCurrentQuestionType());
+                S_QtmGateManager.Instance.HandleAnswer(isCorrectAnswer, qtmGate.GetCurrentQuestionType(), qtmGate.GetCurrentQuestionText());
             }
             
             qtmGate.AddCar(car);
