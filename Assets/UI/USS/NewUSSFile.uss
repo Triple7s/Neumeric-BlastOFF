@@ -10,3 +10,87 @@ Button {
     transition-timing-function: ease-in-out;
     transition-duration: 0.5s;
 }
+
+.uiTitleButton {
+    height: auto;
+    color: rgb(0, 0, 0);
+    -unity-background-image-tint-color: rgba(119, 255, 242, 0);
+    background-color: rgba(103, 219, 228, 0);
+    border-left-color: rgba(149, 149, 149, 0);
+    border-right-color: rgba(149, 149, 149, 0);
+    border-top-color: rgba(149, 149, 149, 0);
+    border-bottom-color: rgba(149, 149, 149, 0);
+    font-size: 60px;
+    -unity-font-definition: resource('Fonts & Materials/NimbusSans-Bold');
+    -unity-font-style: bold;
+    margin-bottom: 0;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    background-size: 100% 100%;
+    align-self: stretch;
+    margin-left: 2px;
+    transform-origin: center;
+    align-content: auto;
+    top: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 350px;
+}
+
+.uiTitleButton:active {
+    height: auto;
+    color: rgb(0, 0, 0);
+    -unity-background-image-tint-color: rgba(119, 255, 242, 0);
+    background-color: rgba(103, 219, 228, 0);
+    border-left-color: rgba(149, 149, 149, 0);
+    border-right-color: rgba(149, 149, 149, 0);
+    border-top-color: rgba(149, 149, 149, 0);
+    border-bottom-color: rgba(149, 149, 149, 0);
+    font-size: 106px;
+    -unity-font-definition: resource('Fonts & Materials/NimbusSans-Bold');
+    -unity-font-style: bold;
+    margin-bottom: 0;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    background-size: 100% 100%;
+    align-self: stretch;
+    margin-left: 2px;
+    transform-origin: center;
+    align-content: auto;
+    top: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 350px;
+}
+
+.uiTitleButton:inactive {
+    height: auto;
+    color: rgb(0, 0, 0);
+    -unity-background-image-tint-color: rgba(119, 255, 242, 0);
+    background-color: rgba(103, 219, 228, 0);
+    border-left-color: rgba(149, 149, 149, 0);
+    border-right-color: rgba(149, 149, 149, 0);
+    border-top-color: rgba(149, 149, 149, 0);
+    border-bottom-color: rgba(149, 149, 149, 0);
+    font-size: 60px;
+    -unity-font-definition: resource('Fonts & Materials/NimbusSans-Bold');
+    -unity-font-style: bold;
+    margin-bottom: 0;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    background-size: 100% 100%;
+    align-self: stretch;
+    margin-left: 2px;
+    transform-origin: center;
+    align-content: auto;
+    top: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 350px;
+}
