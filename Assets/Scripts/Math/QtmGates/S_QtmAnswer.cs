@@ -12,6 +12,7 @@ public class S_QtmAnswer : MonoBehaviour
     private bool isCorrectAnswer;
     private bool isOff;
 
+    public bool IsCorrectAnswer => isCorrectAnswer;
     public event Action RequestNewQuestion;
 
     public void Init(S_QtmGate qtmGate)

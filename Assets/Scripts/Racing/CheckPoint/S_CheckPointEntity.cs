@@ -14,7 +14,8 @@ public class S_CheckPointEntity : MonoBehaviour
 {
     [SerializeField] private CheckPointType checkPointType = CheckPointType.Normal;
     [SerializeField] private float spacing = 2f;
-
+    [SerializeField] private S_QtmGate qtmGate;
+    
     public CheckPointType CheckPointType => checkPointType;
     public float Spacing => spacing;
 
@@ -38,6 +39,11 @@ public class S_CheckPointEntity : MonoBehaviour
         var pos = transform.position + offset;
         
         return pos;
+    }
+
+    public int GetCorrectAnswer()
+    {
+        return qtmGate.GetCorrectAnswer();
     }
 
 

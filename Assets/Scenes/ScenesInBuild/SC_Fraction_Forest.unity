@@ -749,6 +749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &14255373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -973,6 +974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &27470889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1395,6 +1397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 1
   spacing: 9.72
+  qtmGate: {fileID: 667684547}
 --- !u!1001 &37452598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3466,6 +3469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &86472504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3675,6 +3679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &89253235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4388,6 +4393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &100298696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4493,6 +4499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!4 &100763302
 Transform:
   m_ObjectHideFlags: 0
@@ -4554,6 +4561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &103249044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5929,6 +5937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &133348094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9305,6 +9314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &210908271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9917,6 +9927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1 &223253906
 GameObject:
   m_ObjectHideFlags: 0
@@ -9963,6 +9974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &224077922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10231,6 +10243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &231209673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13155,6 +13168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &284720055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13506,6 +13520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &293042523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14331,6 +14346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &320192017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15704,6 +15720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &351319101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16150,6 +16167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &369776553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17085,6 +17103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &391039783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18477,6 +18496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &417437658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19415,6 +19435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &439065865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20128,6 +20149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1 &453648761
 GameObject:
   m_ObjectHideFlags: 0
@@ -20308,6 +20330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &454937010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20843,6 +20866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &465601210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22924,6 +22948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &514818716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23266,6 +23291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!4 &529800258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 934dca27ebfb4af4996a8f080a08b524,
@@ -25221,6 +25247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1 &583521939
 GameObject:
   m_ObjectHideFlags: 0
@@ -25267,6 +25294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &584060249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26238,7 +26266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &592823449
 Transform:
   m_ObjectHideFlags: 0
@@ -27357,6 +27385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &621205862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28144,6 +28173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &635266390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28522,6 +28552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &640185692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28731,6 +28762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &648104088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29865,6 +29897,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 667684545}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &667684547 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2559200424581990462, guid: 6682ccbd10262524eb80d5b95a75758f,
+    type: 3}
+  m_PrefabInstance: {fileID: 667684545}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8797e29eba621049a1b7528dcc89e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_QtmGate
 --- !u!1 &668779448
 GameObject:
   m_ObjectHideFlags: 0
@@ -30668,6 +30712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 1
   spacing: 9.73
+  qtmGate: {fileID: 1605780680}
 --- !u!1001 &683188967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30862,6 +30907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &688609351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31797,6 +31843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &705713357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33517,6 +33564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &757898065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33815,6 +33863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &766378609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34335,6 +34384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!4 &780155573 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ccf987f35482a6749858ddb521438561,
@@ -35638,6 +35688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1 &817398595
 GameObject:
   m_ObjectHideFlags: 0
@@ -35684,6 +35735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1 &817687796
 GameObject:
   m_ObjectHideFlags: 0
@@ -35730,6 +35782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &820529148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36416,6 +36469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &827180181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37161,6 +37215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!4 &847786535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3f5308edbeb77b8478d08108722500f0,
@@ -37287,6 +37342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &850650200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38951,6 +39007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &886167962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40072,7 +40129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925031571}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.76772356, y: 0.358986, z: -0.5279677, w: 0.054587275}
+  m_LocalRotation: {x: 0.7677235, y: 0.35898602, z: -0.52796775, w: 0.05458726}
   m_LocalPosition: {x: -1353.7001, y: 1962.3, z: -1063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -40093,6 +40150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &931054165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40228,6 +40286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &937912196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41080,7 +41139,7 @@ PrefabInstance:
     - target: {fileID: 4753990512071022045, guid: 6682ccbd10262524eb80d5b95a75758f,
         type: 3}
       propertyPath: m_Name
-      value: QtmGate (8)
+      value: QtmGate (7)
       objectReference: {fileID: 0}
     - target: {fileID: 8887533851987256099, guid: 6682ccbd10262524eb80d5b95a75758f,
         type: 3}
@@ -41940,6 +41999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1 &982731845
 GameObject:
   m_ObjectHideFlags: 0
@@ -41986,6 +42046,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
+--- !u!114 &983692739 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2559200424581990462, guid: 6682ccbd10262524eb80d5b95a75758f,
+    type: 3}
+  m_PrefabInstance: {fileID: 204540518}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8797e29eba621049a1b7528dcc89e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_QtmGate
 --- !u!1001 &988114796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42717,6 +42790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!4 &1005927319 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ccf987f35482a6749858ddb521438561,
@@ -44057,6 +44131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1 &1037113307
 GameObject:
   m_ObjectHideFlags: 0
@@ -44243,6 +44318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 1
   spacing: 10.4
+  qtmGate: {fileID: 1268031735}
 --- !u!1001 &1040324578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44840,7 +44916,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044826190}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.74611396, y: 0.21914151, z: -0.5970034, w: -0.19717516}
+  m_LocalRotation: {x: 0.74611396, y: 0.21914151, z: -0.5970034, w: -0.19717517}
   m_LocalPosition: {x: -1320.7001, y: 1973.4, z: -1048.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -44861,6 +44937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1046847864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45131,6 +45208,11 @@ PrefabInstance:
       propertyPath: 'carRenderers.Array.data[1]'
       value: 
       objectReference: {fileID: 1435060896}
+    - target: {fileID: 2636353213146717478, guid: 70ecdb29758fa924788212a523363e45,
+        type: 3}
+      propertyPath: alwaysAnswerCorrect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3821017774730754886, guid: 70ecdb29758fa924788212a523363e45,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45432,6 +45514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1054904865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47087,6 +47170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1070650697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47791,6 +47875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1085609167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48296,6 +48381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1096044518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49162,6 +49248,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1117228865}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1117574421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2559200424581990462, guid: 6682ccbd10262524eb80d5b95a75758f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1060032227}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8797e29eba621049a1b7528dcc89e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_QtmGate
 --- !u!1001 &1117820430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50067,6 +50165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1134280114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50424,6 +50523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1 &1143284400
 GameObject:
   m_ObjectHideFlags: 0
@@ -50820,6 +50920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1149015541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52691,6 +52792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1208944768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52825,6 +52927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1 &1213233667
 GameObject:
   m_ObjectHideFlags: 0
@@ -52871,6 +52974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1213570631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54848,6 +54952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!4 &1250773960 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c682b87b28a9d804481b614dec016e04,
@@ -54900,6 +55005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 1
   spacing: 10.56
+  qtmGate: {fileID: 2074608615}
 --- !u!1001 &1254604340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55291,6 +55397,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1266370643}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1268031735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2559200424581990462, guid: 6682ccbd10262524eb80d5b95a75758f,
+    type: 3}
+  m_PrefabInstance: {fileID: 971105820}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8797e29eba621049a1b7528dcc89e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_QtmGate
 --- !u!1001 &1268517333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55426,6 +55544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1272333786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56288,6 +56407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1 &1285102795
 GameObject:
   m_ObjectHideFlags: 0
@@ -56334,6 +56454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1286455512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57165,6 +57286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!4 &1309907668
 Transform:
   m_ObjectHideFlags: 0
@@ -58307,6 +58429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1336655198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60066,6 +60189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1 &1379852307
 GameObject:
   m_ObjectHideFlags: 0
@@ -60097,6 +60221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!4 &1379852309
 Transform:
   m_ObjectHideFlags: 0
@@ -60232,6 +60357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1385269615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62274,6 +62400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!23 &1435060896 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -4683669308469848369, guid: ff8e798cb6638974ca9647961b5514fb,
@@ -63203,6 +63330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1450891599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63323,6 +63451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1453447604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64187,6 +64316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1467986667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64292,6 +64422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!4 &1468536193
 Transform:
   m_ObjectHideFlags: 0
@@ -64658,6 +64789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1476651504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64778,6 +64910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 1
   spacing: 10.45
+  qtmGate: {fileID: 983692739}
 --- !u!1001 &1477070519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64852,6 +64985,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1477070519}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1482528657 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2559200424581990462, guid: 6682ccbd10262524eb80d5b95a75758f,
+    type: 3}
+  m_PrefabInstance: {fileID: 676330662}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8797e29eba621049a1b7528dcc89e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_QtmGate
 --- !u!1001 &1483108844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65105,6 +65250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!4 &1488912919
 Transform:
   m_ObjectHideFlags: 0
@@ -65166,6 +65312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1496112175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66597,6 +66744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1523395403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67765,6 +67913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!4 &1548115296
 Transform:
   m_ObjectHideFlags: 0
@@ -69483,6 +69632,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1602810919}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1605780680 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2559200424581990462, guid: 6682ccbd10262524eb80d5b95a75758f,
+    type: 3}
+  m_PrefabInstance: {fileID: 960959032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8797e29eba621049a1b7528dcc89e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_QtmGate
 --- !u!1001 &1607081046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69618,6 +69779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1609788540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70446,7 +70608,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622478507}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.63369536, y: 0.30504996, z: 0.2097153, w: 0.67926013}
+  m_LocalRotation: {x: -0.63369536, y: 0.30504996, z: 0.20971532, w: 0.67926013}
   m_LocalPosition: {x: -1268.6, y: 1918.2094, z: -1046.0884}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -70467,6 +70629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1625086938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71592,6 +71755,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -3.2200654
       objectReference: {fileID: 0}
+    - target: {fileID: 920630926225535308, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
+        type: 3}
+      propertyPath: alwaysAnswerCorrect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1609095619098185014, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -71656,7 +71824,7 @@ PrefabInstance:
     - target: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: alwaysUseAutoSteering
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5475132890906326534, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
@@ -74807,6 +74975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1734251880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77679,6 +77848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!4 &1812043074
 Transform:
   m_ObjectHideFlags: 0
@@ -80206,6 +80376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1 &1860704099
 GameObject:
   m_ObjectHideFlags: 0
@@ -81091,6 +81262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1 &1880510379
 GameObject:
   m_ObjectHideFlags: 0
@@ -81137,6 +81309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1882237071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81696,6 +81869,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1885531766}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1885531768 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2559200424581990462, guid: 6682ccbd10262524eb80d5b95a75758f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1885531766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8797e29eba621049a1b7528dcc89e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_QtmGate
 --- !u!1001 &1893419911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82453,6 +82638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1912137878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82573,6 +82759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1916127822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83004,6 +83191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 1
   spacing: 9.35
+  qtmGate: {fileID: 1117574421}
 --- !u!1001 &1927164651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84010,6 +84198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1944840178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84699,6 +84888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1954075733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84834,6 +85024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1960739766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84969,6 +85160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1961130517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85572,7 +85764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970300033}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.69552267, y: 0.14220342, z: 0.37097734, w: 0.5986671}
+  m_LocalRotation: {x: -0.6955227, y: 0.1422034, z: 0.37097734, w: 0.5986671}
   m_LocalPosition: {x: -1271.1, y: 1941.8, z: -1046.7001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -85593,6 +85785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &1970504907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87356,6 +87549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1 &2014514685
 GameObject:
   m_ObjectHideFlags: 0
@@ -87678,6 +87872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &2036364282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88829,6 +89024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 1
   spacing: 10.26
+  qtmGate: {fileID: 1885531768}
 --- !u!1 &2047945797
 GameObject:
   m_ObjectHideFlags: 0
@@ -88989,6 +89185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &2055019210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89835,6 +90032,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
+--- !u!114 &2074608615 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2559200424581990462, guid: 6682ccbd10262524eb80d5b95a75758f,
+    type: 3}
+  m_PrefabInstance: {fileID: 244895515}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8797e29eba621049a1b7528dcc89e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_QtmGate
 --- !u!1 &2075806836
 GameObject:
   m_ObjectHideFlags: 0
@@ -89881,6 +90091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 1
   spacing: 9.86
+  qtmGate: {fileID: 1482528657}
 --- !u!1 &2079787138
 GameObject:
   m_ObjectHideFlags: 0
@@ -89927,6 +90138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &2082463002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90539,6 +90751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &2095099349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91050,6 +91263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &2107252134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92447,6 +92661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &2130091983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92878,6 +93093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &2136771612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93377,6 +93593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::S_CheckPointEntity
   checkPointType: 0
   spacing: 2
+  qtmGate: {fileID: 0}
 --- !u!1001 &2147445135
 PrefabInstance:
   m_ObjectHideFlags: 0

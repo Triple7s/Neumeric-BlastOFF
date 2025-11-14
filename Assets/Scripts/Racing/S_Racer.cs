@@ -5,6 +5,8 @@ using Random = UnityEngine.Random;
 
 public class S_Racer : MonoBehaviour
 {
+    [SerializeField] private bool alwaysAnswerCorrect;
+    
     
     [Header("Gizmos Settings")]
     [SerializeField] private bool hideGizmos;
@@ -77,7 +79,8 @@ public class S_Racer : MonoBehaviour
 
         if (nextCheckPoint.CheckPointType == CheckPointType.QtmGate)
         {
-            QtmSelection = Random.Range(-1, 2);
+            QtmSelection = alwaysAnswerCorrect ? nextCheckPoint.GetCorrectAnswer() : Random.Range(-1, 2);
+
 
             nextPosition = nextCheckPoint.TargetPosition(QtmSelection, nextCheckPoint.Spacing);
         }
