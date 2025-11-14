@@ -17,38 +17,19 @@ print("UPLOAD_FOLDER is set to:", UPLOAD_FOLDER)
 def upload():
     try:
         data = request.get_json(force=True)
-        print("Received JSON:", data)
+        print("Received:", data)
     except Exception as e:
-        return jsonify({"status": "error", "message": f"Invalid JSON: {e}"}), 400
+        return {"status": "error", "message": str(e)}, 400
 
-    # 🔹 Extract values according to new JSON format
-    student_name = data.get("student", "unknown")
-    summary = data.get("summary", {})
-    categories = data.get("categories", {})
+    student_id = data["student"]["name"]
+    filepath = os.path.join(UPLOAD_FOLDER, f"{student_id}_answers.json")
 
-    total_questions = summary.get("total_questions", 0)
-    correct_answers = summary.get("correct_answers", 0)
-
-    # 🔹 Print received info
-    print(f"\n Received quiz submission from: {student_name}")
-    print(f"   Total Questions: {total_questions}, Correct: {correct_answers}")
-    print("   Categories:")
-    for cat, stats in categories.items():
-        print(f"     {cat.capitalize()}: {stats['correct']}/{stats['total']}")
-
-    # 🔹 Save file under student's name (replace spaces)
-    safe_name = student_name.replace(" ", "_")
-    filepath = os.path.join(UPLOAD_FOLDER, f"{safe_name}_submission.json")
+    print(f"Saving JSON to: {filepath}")
 
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4)
 
-    print(f"Saved submission to: {filepath}\n")
-
-    return jsonify({
-        "status": "success",
-        "message": f"Received quiz results from {student_name}"
-    })
+    return jsonify({"status": "success", "message": f"Received answers from {student_id}"})
 
 
 if __name__ == "__main__":

@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class S_SubmitIP : MonoBehaviour
 {
@@ -11,14 +12,44 @@ public class S_SubmitIP : MonoBehaviour
     public void OnSubmitIP()
     {
         _ipAddress = ipInputField.text;
-        string formattedIP = FirstFormatVersion(_ipAddress);
-        Debug.Log(formattedIP);
-        formattedIP = SecondFormatVersion(_ipAddress);
-        Debug.Log(formattedIP);
-        formattedIP = ThirdFormatVersion(_ipAddress);
-        Debug.Log(formattedIP);
-        formattedIP = FourthFormatVersion(_ipAddress);
-        Debug.Log(formattedIP);
+        string formattedIP = "";
+        string jsonPath = Path.Combine(Application.persistentDataPath, "answers.json");
+        if (_ipAddress.Length >= 8)
+        {
+            formattedIP = FirstFormatVersion(_ipAddress);
+            Debug.Log(formattedIP);
+
+            string uploadUrl = "http://" + formattedIP + ":5000/upload";
+            StartCoroutine(QtmJsonUploader.UploadJson(jsonPath, uploadUrl));
+        }
+
+        if (_ipAddress.Length >= 11)
+        {
+            formattedIP = SecondFormatVersion(_ipAddress);
+            Debug.Log(formattedIP);
+
+            string uploadUrl = "http://" + formattedIP + ":5000/upload";
+            StartCoroutine(QtmJsonUploader.UploadJson(jsonPath, uploadUrl));
+        }
+
+        if (_ipAddress.Length >= 9)
+        {
+            formattedIP = ThirdFormatVersion(_ipAddress);
+            Debug.Log(formattedIP);
+
+            string uploadUrl = "http://" + formattedIP + ":5000/upload";
+            StartCoroutine(QtmJsonUploader.UploadJson(jsonPath, uploadUrl));
+        }
+
+        if (_ipAddress.Length >= 9)
+        {
+            formattedIP = FourthFormatVersion(_ipAddress);
+            Debug.Log(formattedIP);
+
+            string uploadUrl = "http://" + formattedIP + ":5000/upload";
+            StartCoroutine(QtmJsonUploader.UploadJson(jsonPath, uploadUrl));
+        }
+
     }
     
     private string FirstFormatVersion(string ip)
@@ -44,7 +75,7 @@ public class S_SubmitIP : MonoBehaviour
         string first = ip.Substring(0, 3);
         string second = ip.Substring(3, 2);
         string third = ip.Substring(5, 2);
-        string fourth = ip.Substring(7, 1);
+        string fourth = ip.Substring(7, 2);
         return first + "." + second + "." + third + "." + fourth;
     }
 
