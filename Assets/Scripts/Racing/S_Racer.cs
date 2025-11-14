@@ -71,14 +71,15 @@ public class S_Racer : MonoBehaviour
         // Change the target 
         if (targetCheckPoint.CheckPointType == CheckPointType.QtmGate)
         {
-            
+            targetPosition = targetCheckPoint.TargetPosition(QtmSelection, targetCheckPoint.Spacing);
+            nextPosition = nextCheckPoint.TargetPosition(QtmSelection, targetCheckPoint.Spacing);
         }
 
         if (nextCheckPoint.CheckPointType == CheckPointType.QtmGate)
         {
             QtmSelection = Random.Range(-1, 2);
 
-            nextCheckPoint.TargetPosition(QtmSelection);
+            nextPosition = nextCheckPoint.TargetPosition(QtmSelection, nextCheckPoint.Spacing);
         }
         
         

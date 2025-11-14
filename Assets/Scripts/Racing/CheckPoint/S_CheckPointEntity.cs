@@ -16,6 +16,7 @@ public class S_CheckPointEntity : MonoBehaviour
     [SerializeField] private float spacing = 2f;
 
     public CheckPointType CheckPointType => checkPointType;
+    public float Spacing => spacing;
 
     private void OnDrawGizmos()
     {
@@ -31,9 +32,9 @@ public class S_CheckPointEntity : MonoBehaviour
         }
     }
 
-    public Vector3 TargetPosition(int targetIndex)
+    public Vector3 TargetPosition(int targetIndex, float savedSpace)
     {
-        var offset = transform.right * targetIndex * spacing;
+        var offset = transform.right * (targetIndex * savedSpace);
         var pos = transform.position + offset;
         
         return pos;

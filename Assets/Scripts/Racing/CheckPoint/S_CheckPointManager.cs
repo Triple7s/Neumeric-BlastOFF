@@ -174,7 +174,6 @@ public class S_CheckPointManager : MonoBehaviour
 
     private Vector3 CalculateUpDirectionOfCheckPoint(S_CheckPointEntity thisEntity)
     {
-
         S_DrivableSurface closetsGround = null;
         
         LayerMask mask = LayerMask.GetMask("DrivableGround");
@@ -187,7 +186,6 @@ public class S_CheckPointManager : MonoBehaviour
         {
             return FindNormal(hit);
         }
-        
         
         Debug.LogWarning(thisEntity.name + " is missing a ground");
         return Vector3.up;
