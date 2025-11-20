@@ -14,6 +14,8 @@ public class S_GameManager : MonoBehaviour
     public List<SO_Equations> equations = new ();
     public S_CarData playerData;
     public string levelName;
+    
+    private bool _isUsingFirstControlScheme = true;
 
     private int volumeBGM = 5;
     private int volumeSFX = 5;
@@ -119,6 +121,20 @@ public class S_GameManager : MonoBehaviour
     public int GetPointsForPlacement(int placement)
     {
         return pointsForPlacement.GetPointsForPlacement(placement);
+    }
+
+    #endregion
+
+    #region ControlScheme
+    
+    public void SetControlScheme(bool isFirstScheme)
+    {
+        _isUsingFirstControlScheme = isFirstScheme;
+    }
+    
+    public bool GetControlScheme()
+    {
+        return _isUsingFirstControlScheme;
     }
 
     #endregion
