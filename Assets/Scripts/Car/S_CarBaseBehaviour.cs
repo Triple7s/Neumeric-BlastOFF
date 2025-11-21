@@ -17,6 +17,8 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     
     private bool isEngineRunning = false;
 
+    private int qtmComboMeter = 0;
+
 
     protected virtual void Awake()
     {
@@ -56,13 +58,16 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         if (!isEngineRunning) return;
         
         carVfx.CorrectAnswerVisual();
-        
+        /*
         Vector3 direction = rb.linearVelocity.normalized;
         if (direction == Vector3.zero)
         {
             direction = transform.forward;
         }
         rb.AddForce(direction * data.BoostPower, ForceMode.Impulse);
+        */
+
+        qtmComboMeter += 1;
     }
 
     public virtual void SlowDown()
@@ -72,13 +77,16 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         
         carVfx.WrongAnswerVisual();
         
-        
+        /*
         Vector3 direction = rb.linearVelocity.normalized;
         if (direction == Vector3.zero)
         {
             direction = transform.forward;
         }
         rb.AddForce(-direction * data.SlowDownPower, ForceMode.Impulse);
+        */
+
+        qtmComboMeter = 0;
     }
     
 
@@ -91,19 +99,27 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
             
             return;
         }
-        
-        rb.AddForce(transform.forward * (acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
+
+        var boostIncrease = 1 + qtmComboMeter * 0.1f;
+        rb.AddForce(transform.forward * (acceleration * Time.fixedDeltaTime * boostIncrease), ForceMode.Acceleration);
+
+        if (GetType() == typeof(S_PlayerBehaviour))
+        {
+            print(name + rb.linearVelocity.magnitude);
+        }
         
         if (rb.linearVelocity.magnitude > maxSpeed)
         {
             var newSpeed = rb.linearVelocity.normalized * maxSpeed;
             rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, newSpeed, 2f * Time.deltaTime);
 
+            /*
             if (rb.linearVelocity.magnitude > data.MaxBoostSpeed)
             {
                 var speed = rb.linearVelocity.normalized * data.MaxBoostSpeed;
                 rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, speed, Time.deltaTime);
             }
+            */
         }
         
     }

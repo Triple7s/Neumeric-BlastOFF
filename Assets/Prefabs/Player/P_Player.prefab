@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d532bac93a06eea489f8361e6c6f61c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_PlayerBehaviour
-  data: {fileID: 11400000, guid: 89999c0d1257d96438aa27b37ff8ec5a, type: 2}
+  data: {fileID: 11400000, guid: 2e5f388ddbc239a4e885ec0881299d66, type: 2}
   racer: {fileID: 920630926225535308}
   carHoverBarycentric: {fileID: 5356555243972702356}
   carVfx: {fileID: 5475132890906326534}
@@ -451,6 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0193fca7e9eaa7e4c89de1b94a93f4d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_Racer
+  alwaysAnswerCorrect: 0
   hideGizmos: 0
   targetColor: {r: 0.9411765, g: 1, b: 0.9411765, a: 1}
   nextColor: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
