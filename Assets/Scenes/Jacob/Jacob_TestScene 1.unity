@@ -41269,6 +41269,11 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d92a229915c45a4286ceb2660b3bc3c, type: 2}
+    - target: {fileID: -8961359253771211100, guid: d0b1d2e6257ac52449d135da57e9c631,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0b1d2e6257ac52449d135da57e9c631,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41329,6 +41334,11 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 787404bbb89d6634abd0d9a3a0ba790e, type: 2}
+    - target: {fileID: -8153468022190502949, guid: d0b1d2e6257ac52449d135da57e9c631,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -7918335002988649766, guid: d0b1d2e6257ac52449d135da57e9c631,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -41364,11 +41374,26 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d92a229915c45a4286ceb2660b3bc3c, type: 2}
+    - target: {fileID: -1857309847194865932, guid: d0b1d2e6257ac52449d135da57e9c631,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1063203228461421988, guid: d0b1d2e6257ac52449d135da57e9c631,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -241587437493983680, guid: d0b1d2e6257ac52449d135da57e9c631,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d92a229915c45a4286ceb2660b3bc3c, type: 2}
+    - target: {fileID: 50754954277266222, guid: d0b1d2e6257ac52449d135da57e9c631,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 327064008815436722, guid: d0b1d2e6257ac52449d135da57e9c631,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -41388,6 +41413,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: JWT_P_Sand Dune_DONE_kindof
+      objectReference: {fileID: 0}
+    - target: {fileID: 921391927218321214, guid: d0b1d2e6257ac52449d135da57e9c631,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1442450553484104045, guid: d0b1d2e6257ac52449d135da57e9c631,
         type: 3}
@@ -41414,16 +41444,31 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d92a229915c45a4286ceb2660b3bc3c, type: 2}
+    - target: {fileID: 4767400413853537203, guid: d0b1d2e6257ac52449d135da57e9c631,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5008022236170083033, guid: d0b1d2e6257ac52449d135da57e9c631,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 787404bbb89d6634abd0d9a3a0ba790e, type: 2}
+    - target: {fileID: 5148817236446094103, guid: d0b1d2e6257ac52449d135da57e9c631,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5670784105149147771, guid: d0b1d2e6257ac52449d135da57e9c631,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d92a229915c45a4286ceb2660b3bc3c, type: 2}
+    - target: {fileID: 6507901977716847365, guid: d0b1d2e6257ac52449d135da57e9c631,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7339356831882890532, guid: d0b1d2e6257ac52449d135da57e9c631,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
