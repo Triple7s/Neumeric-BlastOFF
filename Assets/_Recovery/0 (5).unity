@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 94764546}
   - component: {fileID: 94764548}
   - component: {fileID: 94764547}
+  - component: {fileID: 94764549}
   m_Layer: 5
   m_Name: Teacher code (text)
   m_TagString: Untagged
@@ -256,6 +257,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94764545}
   m_CullTransparentMesh: 1
+--- !u!114 &94764549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94764545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c9481841155274b9d35c5948fe26a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_TeacherServerLauncher
+  pythonExecutable: python3
+  serverScriptPath: Scripts/TeacherServer/teacher_server.py
+  serverPort: 5000
+  startServerButton: {fileID: 277824918}
+  stopServerButton: {fileID: 0}
+  ipDisplayText: {fileID: 94764547}
 --- !u!1 &277824916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,7 +1223,6 @@ GameObject:
   - component: {fileID: 1872166910}
   - component: {fileID: 1872166909}
   - component: {fileID: 1872166911}
-  - component: {fileID: 1872166912}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1354,22 +1372,7 @@ MonoBehaviour:
   serverPort: 5000
   startServerButton: {fileID: 277824918}
   stopServerButton: {fileID: 2107659823}
-  ipDisplayText: {fileID: 94764547}
---- !u!114 &1872166912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872166904}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff1216fd5df43124a957aa9f1a016fa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EmbeddedTeacherServer
-  port: 5000
-  autoStart: 0
-  ipDisplay: {fileID: 94764547}
+  ipDisplayText: {fileID: 0}
 --- !u!1 &1923708458
 GameObject:
   m_ObjectHideFlags: 0

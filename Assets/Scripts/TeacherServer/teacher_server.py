@@ -1,17 +1,22 @@
 from flask import Flask, request, jsonify
 import os
 import json
+import sys
+
+# --- Determine save directory passed from Unity ---
+if len(sys.argv) > 1:
+    BASE_DIR = sys.argv[1]  # Unity passes Application.persistentDataPath/QTM_Submissions
+else:
+    # fallback for running manually
+    BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "submissions")
+
+BASE_DIR = os.path.abspath(BASE_DIR)
+
+# Create folder if it doesn't exist
+os.makedirs(BASE_DIR, exist_ok=True)
+print("Saving JSON files to:", BASE_DIR)
 
 app = Flask(__name__)
-
-# --- Configure upload folder relative to teacher_server.py ---
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))   # .../Assets/Scripts/TeacherServer
-UPLOAD_FOLDER = os.path.join(BASE_DIR, "submissions")   # inside TeacherServer/submissions
-UPLOAD_FOLDER = os.path.abspath(UPLOAD_FOLDER)
-
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-print("UPLOAD_FOLDER is set to:", UPLOAD_FOLDER)
-
 
 @app.route("/upload", methods=["POST"])
 def upload():
@@ -21,15 +26,18 @@ def upload():
     except Exception as e:
         return {"status": "error", "message": str(e)}, 400
 
-    student_id = data["student"]["name"]
-    filepath = os.path.join(UPLOAD_FOLDER, f"{student_id}_answers.json")
+    # Extract student name safely
+    student_name = data["student"]["name"]
+    sanitized = "".join(c for c in student_name if c.isalnum() or c in (' ','_','-')).strip()
 
-    print(f"Saving JSON to: {filepath}")
+    file_path = os.path.join(BASE_DIR, f"{sanitized}_answers.json")
 
-    with open(filepath, "w", encoding="utf-8") as f:
+    print(f"Saving JSON to: {file_path}")
+
+    with open(file_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4)
 
-    return jsonify({"status": "success", "message": f"Received answers from {student_id}"})
+    return jsonify({"status": "success", "message": f"Received answers from {student_name}"})
 
 
 if __name__ == "__main__":
