@@ -36,13 +36,18 @@ public class S_RaceManager : MonoBehaviour
 
     private void Start()
     {
-        startTimer.StartTimer();
-        
         foreach (var racer in racers)
         {
             cars.Add(racer.GetComponent<S_CarBaseBehaviour>());
         }
+        
+        StartRaceCountDown();
+    }
 
+    private void StartRaceCountDown()
+    {
+        startTimer.StartTimer();
+        
         lapCounter = 1;
     }
 

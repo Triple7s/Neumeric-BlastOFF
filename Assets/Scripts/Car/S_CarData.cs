@@ -33,5 +33,6 @@ public class S_CarData : ScriptableObject
     //public float BoostPower => boostPower;
     //public float SlowDownPower => slowDownPower;
     //public float MaxBoostSpeed => maxBoostSpeed;
+    public int MaxQtmCombo => maxQtmCombo;
     public float BaseFloatingHeight => baseFloatingHeight;
 }

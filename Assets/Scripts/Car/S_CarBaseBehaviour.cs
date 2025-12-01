@@ -68,6 +68,10 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         */
 
         qtmComboMeter += 1;
+        if (qtmComboMeter > data.MaxQtmCombo)
+        {
+            qtmComboMeter = data.MaxQtmCombo;
+        }
     }
 
     public virtual void SlowDown()

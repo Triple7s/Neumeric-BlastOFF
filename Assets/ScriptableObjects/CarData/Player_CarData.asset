@@ -20,5 +20,5 @@ MonoBehaviour:
   turningSpeed: 17
   autoTurningSpeed: 200
   maxSpeed: 400
-  maxQtmCombo: 10
+  maxQtmCombo: 6
   baseFloatingHeight: 2

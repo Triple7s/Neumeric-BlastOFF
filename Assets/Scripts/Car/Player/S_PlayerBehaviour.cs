@@ -20,7 +20,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     [SerializeField] private S_PlayerAnimatorController  playerAnimatorController;
         
     
-    private bool isTurning, isBraking, isQtm, tempAutoSteering;
+    private bool isTurning, isBraking, tempAutoSteering;
     private int turnDirection;
     private float offTrackTimer = 3.0f;
 
@@ -224,14 +224,12 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         S_VisualManager.Instance.ToggleControls(false);
         StopTurning();
         StopBrake();
-        isQtm = true;
     }
 
     private void TurnOffAutoSteering()
     {
         print("QTM is turning off");
         S_VisualManager.Instance.ToggleControls(true);
-        isQtm = false;
     }
     
     #endregion
