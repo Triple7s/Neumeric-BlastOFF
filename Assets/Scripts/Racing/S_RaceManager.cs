@@ -44,7 +44,7 @@ public class S_RaceManager : MonoBehaviour
         StartRaceCountDown();
     }
 
-    private void StartRaceCountDown()
+    public void StartRaceCountDown()
     {
         startTimer.StartTimer();
         
