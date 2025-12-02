@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class S_PauseManager : MonoBehaviour
 {
@@ -8,8 +9,28 @@ public class S_PauseManager : MonoBehaviour
     [SerializeField] private GameObject confirmRestartUI;
     [SerializeField] private GameObject confirmQuitUI;
     [SerializeField] private GameObject playerControls;
+    
+    [SerializeField] private Button controlScheme1Button, controlScheme2Button;
 
     private bool isPaused = false;
+
+    private void Start()
+    {
+        if (S_GameManager.Instance.GetControlScheme())
+        {
+            controlScheme1Button.interactable = false;
+            controlScheme1Button.transform.GetChild(0).gameObject.SetActive(true);
+            controlScheme2Button.interactable = true;
+            controlScheme2Button.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        else
+        {
+            controlScheme1Button.interactable = true;
+            controlScheme1Button.transform.GetChild(0).gameObject.SetActive(false);
+            controlScheme2Button.interactable = false;
+            controlScheme2Button.transform.GetChild(0).gameObject.SetActive(true);
+        }
+    }
 
     public void TogglePause()
     {
@@ -109,6 +130,6 @@ public class S_PauseManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("UItestingMainMenu");
+        SceneManager.LoadScene("SC_MainMenu");
     }
 }

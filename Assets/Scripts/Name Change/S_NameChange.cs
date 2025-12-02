@@ -7,7 +7,7 @@ public class S_NameChange : MonoBehaviour
 {
     [SerializeField] private TMP_InputField nameInputField;
     
-    [SerializeField] private string nextSceneName = "UItestingMainMenu";
+    [SerializeField] private string nextSceneName = "SC_MainMenu";
 
     void Start()
     {

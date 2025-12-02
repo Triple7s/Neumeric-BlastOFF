@@ -12,8 +12,11 @@ public class S_GameManager : MonoBehaviour
     [SerializeField] private SO_ScoreOnLevels scoreOnLevels;
     
     public List<SO_Equations> equations = new ();
-    private string levelName;
+    public S_CarData playerData;
+    public string levelName;
     
+    private bool _isUsingFirstControlScheme = true;
+
     private int volumeBGM = 5;
     private int volumeSFX = 5;
 
@@ -122,8 +125,27 @@ public class S_GameManager : MonoBehaviour
 
     #endregion
 
+    #region ControlScheme
+    
+    public void SetControlScheme(bool isFirstScheme)
+    {
+        _isUsingFirstControlScheme = isFirstScheme;
+    }
+    
+    public bool GetControlScheme()
+    {
+        return _isUsingFirstControlScheme;
+    }
+
+    #endregion
+
     #region Prepare Game Methods
 
+
+    public void SetSpeed(float speedValue)
+    {
+        
+    }
     public void SetLevel(string sceneName)
     {
         levelName = sceneName;
@@ -132,16 +154,6 @@ public class S_GameManager : MonoBehaviour
     public void AddEquation(List<SO_Equations> equationsToAdd)
     {
         equations.AddRange(equationsToAdd);
-    }
-
-    public void RemoveEquation(List<SO_Equations> equationsToRemove)
-    {
-        foreach (var equation in equationsToRemove)
-        {
-            if (equations.Contains(equation))
-                equations.Remove(equation);
-            
-        }
     }
 
     public void ClearEquation()

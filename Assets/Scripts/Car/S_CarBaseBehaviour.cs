@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(S_Racer), typeof(S_CarHoverBarycentric), typeof(S_CarVFX))]
@@ -13,10 +11,13 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
     [SerializeField] protected S_CarVFX carVfx;
     
     protected float acceleration, turningSpeed, autoTurningSpeed, maxSpeed;
-    
+    protected float cd;
+
     protected Rigidbody rb;
     
     private bool isEngineRunning = false;
+
+    private int qtmComboMeter = 0;
 
 
     protected virtual void Awake()
@@ -44,11 +45,10 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         if (carHoverBarycentric.HoverOverGround(data.BaseFloatingHeight) == false)
         {
             AutoTurn(racer.GetDrivingDirection());
-            RotateCar(racer.GetCheckpointRotation());
+            cd += Time.deltaTime;
         }
-
-        
-        
+        else
+            cd = 0;
         BehaviourUpdate();
     }
 
@@ -58,13 +58,20 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         if (!isEngineRunning) return;
         
         carVfx.CorrectAnswerVisual();
-        
+        /*
         Vector3 direction = rb.linearVelocity.normalized;
         if (direction == Vector3.zero)
         {
             direction = transform.forward;
         }
         rb.AddForce(direction * data.BoostPower, ForceMode.Impulse);
+        */
+
+        qtmComboMeter += 1;
+        if (qtmComboMeter > data.MaxQtmCombo)
+        {
+            qtmComboMeter = data.MaxQtmCombo;
+        }
     }
 
     public virtual void SlowDown()
@@ -74,13 +81,16 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         
         carVfx.WrongAnswerVisual();
         
-        
+        /*
         Vector3 direction = rb.linearVelocity.normalized;
         if (direction == Vector3.zero)
         {
             direction = transform.forward;
         }
         rb.AddForce(-direction * data.SlowDownPower, ForceMode.Impulse);
+        */
+
+        qtmComboMeter = 0;
     }
     
 
@@ -93,20 +103,29 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
             
             return;
         }
-        
-        rb.AddForce(transform.forward * (acceleration * Time.fixedDeltaTime), ForceMode.Acceleration);
+
+        var boostIncrease = 1 + qtmComboMeter * 0.1f;
+        rb.AddForce(transform.forward * (acceleration * Time.fixedDeltaTime * boostIncrease), ForceMode.Acceleration);
+
+        if (GetType() == typeof(S_PlayerBehaviour))
+        {
+            print(name + rb.linearVelocity.magnitude);
+        }
         
         if (rb.linearVelocity.magnitude > maxSpeed)
         {
             var newSpeed = rb.linearVelocity.normalized * maxSpeed;
-            rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, newSpeed, 100f * Time.deltaTime);
+            rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, newSpeed, 2f * Time.deltaTime);
 
+            /*
             if (rb.linearVelocity.magnitude > data.MaxBoostSpeed)
             {
                 var speed = rb.linearVelocity.normalized * data.MaxBoostSpeed;
-                rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, speed, 1000 * Time.deltaTime);
+                rb.linearVelocity = Vector3.Slerp( rb.linearVelocity, speed, Time.deltaTime);
             }
+            */
         }
+        
     }
     
     protected void AutoTurn(Vector3 targetDirection)
@@ -116,24 +135,6 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
         var targetRot = Quaternion.RotateTowards(transform.rotation, targetRotation, autoTurningSpeed * Time.deltaTime);
         
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, autoTurningSpeed * Time.deltaTime);
-    }
-    
-    private void RotateCar(Vector3 getCheckpointRotation)
-    {
-        var zRot = getCheckpointRotation.z;
-        var targetRot = transform.rotation;
-        targetRot.z = zRot;
-        
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, autoTurningSpeed * Time.deltaTime);
-
-
-    }
-    
-    protected void ChangeSpeed(float speedValue, float turnValue)
-    {
-        acceleration = data.Acceleration + speedValue;
-        turningSpeed = data.TurningSpeed + turnValue;
-
     }
     
     public void TurnOnEngine()

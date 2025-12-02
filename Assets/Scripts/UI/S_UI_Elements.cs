@@ -8,6 +8,7 @@ public class S_UI_Elements : MonoBehaviour
     [Header("UXML References")]
     [SerializeField] private VisualTreeAsset mainMenuUXML;
     [SerializeField] private VisualTreeAsset levelSelectUXML;
+    [SerializeField] private VisualTreeAsset vehicleSelectUXML;
     [SerializeField] private VisualTreeAsset mathSelectMenuUXML;
     [SerializeField] private VisualTreeAsset multiplicationSelectMenuUXML;
     [SerializeField] private VisualTreeAsset fractionSelectMenuUXML;
@@ -38,7 +39,7 @@ public class S_UI_Elements : MonoBehaviour
         // --- Title Screen ---
         var holdHereBtn = root.Q<Button>("Hold-Here");
         if (holdHereBtn != null)
-            holdHereBtn.clicked += () => S_AudioManager.Instance.PlayMusicAfterPrevious("MainMenuLoop");
+            holdHereBtn.clicked += () => S_AudioManager.Instance.PlayMusic("MainMenuLoop");
         TryBindButton(root, "Hold-Here", ShowMainMenu);
 
         // --- Main Menu ---
@@ -53,6 +54,8 @@ public class S_UI_Elements : MonoBehaviour
         {
             if (uiDocument.visualTreeAsset == mathSelectMenuUXML)
                 backBtn.clicked += ShowLevelSelect;
+            /*else if (uiDocument.visualTreeAsset == levelSelectUXML)
+                backBtn.clicked += ShowVehicleSelect;*/
             else if (uiDocument.visualTreeAsset == multiplicationSelectMenuUXML || uiDocument.visualTreeAsset == fractionSelectMenuUXML)
             {
                 RemoveEquations();
@@ -81,15 +84,43 @@ public class S_UI_Elements : MonoBehaviour
             TryBindButton(root, "Play-Button", LoadGame);
         }
 
+        // --- Speed Select ---
+        var speedButtons = root.Query<Button>().Where(b => b.name.StartsWith("Vehicle_")).ToList();
 
+        foreach (var btn in speedButtons)
+        {
+            btn.clicked += () =>
+            {
+                string vehicleName = btn.name.Substring("Vehicle_".Length);
+                // Method that sets vehicle
+                ShowLevelSelect();
+            };
+        }
+        
         // --- Level Select ---
         var levelButtons = root.Query<Button>().Where(b => b.name.StartsWith("Level_")).ToList();
 
         foreach (var btn in levelButtons)
         {
-            string sceneName = btn.name.Substring("Level_".Length);
-            S_GameManager.Instance.SetLevel(sceneName);
-            btn.clicked += ShowMathSelect;
+            btn.clicked += () =>
+            {
+                string sceneName = btn.name.Substring("Level_".Length);
+                S_GameManager.Instance.SetLevel(sceneName);
+                ShowMathSelect();
+            };
+        }
+        
+        // Transfer Menu ---
+        var transferBtn = root.Query<Button>().Where(b => b.name.StartsWith("Scene_")).ToList();
+        
+        foreach (var btn in transferBtn)
+        {
+            btn.clicked += () =>
+            {
+                string sceneName = btn.name.Substring("Scene_".Length);
+                S_GameManager.Instance.SetLevel(sceneName);
+                LoadTransferScene();
+            };
         }
 
 
@@ -177,15 +208,21 @@ public class S_UI_Elements : MonoBehaviour
         RegisterCallbacks(uiDocument.rootVisualElement);
     }
 
+    private void LoadTransferScene()
+    {
+        SceneManager.LoadScene(S_GameManager.Instance.GetLevelName());
+    }
+
     // Navigation
-    private void ShowTitleScreen()       => LoadAndShowMenu(titlescreenUXML);
-    private void ShowMainMenu()          => LoadAndShowMenu(mainMenuUXML);
-    private void ShowLevelSelect()       => LoadAndShowMenu(levelSelectUXML);
-    private void ShowOptions()           => LoadAndShowMenu(optionsUXML);
-    private void ShowTransferData()      => LoadAndShowMenu(transferDataUXML);
-    private void ShowMathSelect()        => LoadAndShowMenu(mathSelectMenuUXML);
-    private void ShowMultiplicationMenu()=> LoadAndShowMenu(multiplicationSelectMenuUXML);
-    private void ShowFractionMenu()      => LoadAndShowMenu(fractionSelectMenuUXML);
+    private void ShowTitleScreen() => LoadAndShowMenu(titlescreenUXML);
+    private void ShowMainMenu() => LoadAndShowMenu(mainMenuUXML);
+    private void ShowVehicleSelect() => LoadAndShowMenu(vehicleSelectUXML);
+    private void ShowLevelSelect() => LoadAndShowMenu(levelSelectUXML);
+    private void ShowOptions() => LoadAndShowMenu(optionsUXML);
+    private void ShowTransferData() => LoadAndShowMenu(transferDataUXML);
+    private void ShowMathSelect() => LoadAndShowMenu(mathSelectMenuUXML);
+    private void ShowMultiplicationMenu() => LoadAndShowMenu(multiplicationSelectMenuUXML);
+    private void ShowFractionMenu() => LoadAndShowMenu(fractionSelectMenuUXML);
 
     private void QuitGame()
     {

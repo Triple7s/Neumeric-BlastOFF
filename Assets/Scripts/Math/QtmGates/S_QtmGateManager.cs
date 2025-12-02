@@ -23,11 +23,16 @@ public class S_QtmGateManager : MonoBehaviour
     public static event Action OnAnswerWrong;
     public static event Action<int> OnScoreChanged;
 
-    private void Awake()
+    private void Start()
     {
         Instance = this;
         equationGroup = S_GameManager.Instance.GetEquationsForGame();
-        
+
+        foreach (var gate in FindObjectsByType<S_QtmGate>(FindObjectsSortMode.None))
+        {
+            gate.Init();
+        }
+
     }
 
     public Question GetQuestion()

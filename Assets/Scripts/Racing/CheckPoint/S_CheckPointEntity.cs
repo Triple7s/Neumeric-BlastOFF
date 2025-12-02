@@ -1,32 +1,52 @@
+using System;
+using Unity.AppUI.UI;
 using UnityEngine;
+using UnityEngine.Serialization;
+
+public enum CheckPointType
+{
+    Normal,
+    QtmGate,
+}
 
 [ExecuteInEditMode]
-
 public class S_CheckPointEntity : MonoBehaviour
 {
-/*
-    [Header("Checkpoint Settings")] 
-    [SerializeField] private CheckPointType checkPointType;
+    [SerializeField] private CheckPointType checkPointType = CheckPointType.Normal;
+    [SerializeField] private float spacing = 2f;
+    [SerializeField] private S_QtmGate qtmGate;
+    
+    public CheckPointType CheckPointType => checkPointType;
+    public float Spacing => spacing;
 
-    public void PerformAction()
+    private void OnDrawGizmos()
     {
-        switch (checkPointType)
+        if (checkPointType == CheckPointType.Normal)
+            return;
+
+        for (int i = -1; i <= 1; i++)
         {
-            case CheckPointType.Normal:
-                return;
-            case CheckPointType.SingleQtm:
-                S_MathManager.Instance.OnTriggerEntered(S_TriggerVersion.QTMTrigger);
-                break;
-            case CheckPointType.MultiQtm:
-                S_MathManager.Instance.OnTriggerEntered(S_TriggerVersion.MultipleQTMsTrigger);
-                break;
-            case CheckPointType.HideQtm:
-                S_MathManager.Instance.OnTriggerEntered(S_TriggerVersion.HideQTMTrigger);
-                break;
+            var offsetPos = transform.right * i * spacing;
+            var spawnPos = transform.position + offsetPos;
+            
+            Gizmos.DrawWireCube(spawnPos, new Vector3(1, 1, 1));
         }
     }
-    
-    */
+
+    public Vector3 TargetPosition(int targetIndex, float savedSpace)
+    {
+        var offset = transform.right * (targetIndex * savedSpace);
+        var pos = transform.position + offset;
+        
+        return pos;
+    }
+
+    public int GetCorrectAnswer()
+    {
+        return qtmGate.GetCorrectAnswer();
+    }
+
+
 #if UNITY_EDITOR
     private void OnValidate()
     {

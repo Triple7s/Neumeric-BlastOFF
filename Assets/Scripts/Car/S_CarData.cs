@@ -13,17 +13,14 @@ public class S_CarData : ScriptableObject
     [SerializeField] private float brakeAcceleration = 250f;
     [SerializeField] private float turningSpeed = 20f;
     [SerializeField] private float autoTurningSpeed = 60f;
-    [SerializeField] private float boostPower = 800f;
-    [SerializeField] private float slowDownPower = 50f;
+    //[SerializeField] private float boostPower = 800f;
+    //[SerializeField] private float slowDownPower = 50f;
     [Header("Limits")]
-    [SerializeField] private float minDriftSpeed = 50f;
     [SerializeField] private float maxSpeed = 100f;
-    [SerializeField] private float maxBoostSpeed = 100f;
+    [SerializeField] private int maxQtmCombo = 5;
+    //[SerializeField] private float maxBoostSpeed = 100f;
     [SerializeField] private float baseFloatingHeight = 1f;
-    [Header("NPC Only")] 
-    [SerializeField] private int distBeforeSpeedChange = 3;
-    [SerializeField] private float accelerationFluctuating = 100f; 
-    [SerializeField] private float autoTurningSpeedFluctuating = 10f;
+    
     public float Mass => mass;
     public float LinearDamping => linearDamping;
     public float AngularDamping => angularDamping;
@@ -33,13 +30,9 @@ public class S_CarData : ScriptableObject
     public float BrakeAcceleration => brakeAcceleration;
     public float TurningSpeed => turningSpeed;
     public float AutoTurningSpeed => autoTurningSpeed;
-    public float BoostPower => boostPower;
-    public float SlowDownPower => slowDownPower;
-    public float MaxBoostSpeed => maxBoostSpeed;
+    //public float BoostPower => boostPower;
+    //public float SlowDownPower => slowDownPower;
+    //public float MaxBoostSpeed => maxBoostSpeed;
+    public int MaxQtmCombo => maxQtmCombo;
     public float BaseFloatingHeight => baseFloatingHeight;
-    public float MinDriftSpeed => minDriftSpeed;
-    public float DistBeforeSpeedChange => distBeforeSpeedChange;
-    public float AccelerationFluctuating => accelerationFluctuating;
-    public float AutoTurningSpeedFluctuating => autoTurningSpeedFluctuating;
-    
 }

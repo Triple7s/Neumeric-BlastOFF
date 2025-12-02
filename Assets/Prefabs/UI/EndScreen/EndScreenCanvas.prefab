@@ -3375,7 +3375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf32e6d5a4534e94f962ad054a4aa0db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_SceneLoading
-  presetSceneName: UItestingMainMenu
+  presetSceneName: SC_MainMenu
 --- !u!1 &5112266177636951359
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class S_SceneLoading : MonoBehaviour
 {
-    [SerializeField] private string presetSceneName = "UItestingMainMenu";
+    [SerializeField] private string presetSceneName = "SC_MainMenu";
     
     public void LoadNewScene(string sceneName = "")
     {
