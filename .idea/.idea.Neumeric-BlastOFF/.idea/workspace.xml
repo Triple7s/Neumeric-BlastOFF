@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02b2abd1-4345-46b9-b20b-4cc4cc0dcf8f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Math/QtmGate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Math/QtmGate.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/mat/MathGate.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/mat/MathGate.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship 2.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship 2.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CarData/NPC_CarData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/CarData/NPC_CarData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/NimbusSans-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/NimbusSans-Bold SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Pathfinding",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -152,7 +151,6 @@
       <workItem from="1763108908008" duration="5388000" />
       <workItem from="1763714981920" duration="5042000" />
       <workItem from="1764584834240" duration="1414000" />
-      <workItem from="1764674639230" duration="693000" />
     </task>
     <servers />
   </component>

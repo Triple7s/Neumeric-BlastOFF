@@ -106,11 +106,6 @@ public abstract class S_CarBaseBehaviour : MonoBehaviour
 
         var boostIncrease = 1 + qtmComboMeter * 0.1f;
         rb.AddForce(transform.forward * (acceleration * Time.fixedDeltaTime * boostIncrease), ForceMode.Acceleration);
-
-        if (GetType() == typeof(S_PlayerBehaviour))
-        {
-            print(name + rb.linearVelocity.magnitude);
-        }
         
         if (rb.linearVelocity.magnitude > maxSpeed)
         {
