@@ -85,27 +85,48 @@ public class S_RaceManager : MonoBehaviour
                 S_VisualManager.Instance.UpdatePlaceText(i+1);
                 S_VisualManager.Instance.UpdateLapText(thisLap, raceLaps);
 
-                if (thisLap-1 == raceLaps)
+                if (thisLap - 1 == raceLaps)
                 {
-                    S_VisualManager.Instance.EndRace(i+1);
-                    S_GameTimerManager.Instance.StopRace();
-                    S_QtmGateManager.Instance.AddPointsForFinishedRace(i+1);
-                    S_EndScreenUi.Instance.ShowEndScreen(i+1);
-                    player.EndRace();
                     isRacing = false;
-                    S_QtmGateManager.Instance.AddPointsForFinishedRace(i+1);
-                    S_EndScreenUi.Instance.ShowEndScreen(i+1);
+
+                    S_VisualManager.Instance.EndRace(i + 1);
+                    S_GameTimerManager.Instance.StopRace();
+                    S_QtmGateManager.Instance.AddPointsForFinishedRace(i + 1);
+                    S_EndScreenUi.Instance.ShowEndScreen(i + 1);
+                    player.EndRace();
+
+                    // Save highscore
                     S_GameManager.Instance.SetScoreForLevel(currentLevelName, S_QtmGateManager.Instance.GetScore());
 
+                    // Notify finish handler
                     finishHandler.OnRaceFinished();
 
-                    Debug.Log("Race finished! Saving answers.json for teacher...");
-
+                    // Build JSON path
                     string jsonPath = Path.Combine(Application.persistentDataPath, "answers.json");
 
+                    Debug.Log($"[RaceManager] Saving QTM JSON → {jsonPath}");
+
+                    // 1) Write the JSON file locally
                     S_QtmJsonBuilder.SaveQtmResultsToFile(jsonPath);
 
-                    Debug.Log($"answers.json created at: {jsonPath}");
+                    // 2) Upload JSON to teacher server (IF enabled)
+                    if (usingUIQtm)
+                    {
+                        string ip = PlayerPrefs.GetString("TeacherServerIP", "");
+                        if (!string.IsNullOrWhiteSpace(ip))
+                        {
+                            string uploadUrl = $"http://{ip}:5000/upload";
+                            Debug.Log($"[RaceManager] Uploading results → {uploadUrl}");
+
+                            StartCoroutine(QtmJsonUploader.UploadJson(jsonPath, uploadUrl));
+                        }
+                        else
+                        {
+                            Debug.LogWarning("[RaceManager] No TeacherServerIP set—skipping upload.");
+                        }
+                    }
+
+                    Debug.Log("[RaceManager] Race finished! JSON saved and upload triggered.");
                 }
             }
         }
