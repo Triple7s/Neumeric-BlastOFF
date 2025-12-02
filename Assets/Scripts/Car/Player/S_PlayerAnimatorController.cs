@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class S_PlayerAnimatorController : MonoBehaviour
@@ -9,10 +8,18 @@ public class S_PlayerAnimatorController : MonoBehaviour
     
     private Animator animatorInUse;
 
-    private void Start()
+    public void InitializePlayerAnimatorController()
     {
         foreach (Animator animator in animators)
         {
+            if (animator.TryGetComponent(out S_CarId carId))
+            {
+                if (carId.CarId == S_GameManager.Instance.playerVehicleId)
+                {
+                    carId.gameObject.SetActive(true);
+                }
+            }
+            
             if (animator.gameObject.activeInHierarchy)
             {
                 animatorInUse = animator;

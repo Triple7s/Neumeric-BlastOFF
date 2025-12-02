@@ -13,7 +13,7 @@ public class S_CarVFX : MonoBehaviour
     
     [SerializeField] private float blinkDuration = 0.2f;
 
-    private void Start()
+    public void InitializeCarVFX()
     {
         // Set originalColor
         foreach (var render in carRenderers)

@@ -18,6 +18,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     [SerializeField] private S_CarAvoidSideWall carAvoidSideWall;
     [SerializeField] private S_CameraStabilizer cameraStabilizer;
     [SerializeField] private S_PlayerAnimatorController  playerAnimatorController;
+    [SerializeField] private S_CarVFX carVFX;
         
     
     private bool isTurning, isBraking, tempAutoSteering;
@@ -44,6 +45,9 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     protected override void Start()
     {
         base.Start();
+
+        playerAnimatorController.InitializePlayerAnimatorController();
+        carVFX.InitializeCarVFX();
     }
 
     public void EndRace()
