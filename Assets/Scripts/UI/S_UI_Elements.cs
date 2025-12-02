@@ -76,7 +76,7 @@ public class S_UI_Elements : MonoBehaviour
             // -- Multiplication buttons --
             btns.AddRange(root.Query<Button>().Where(b => b.name.StartsWith("MultiplicationTable-")).ToList());
             // -- Fraction buttons --
-            btns.AddRange(root.Query<Button>().Where(b => b.name.StartsWith("Fraction-")).ToList());
+            btns.AddRange(root.Query<Button>().Where(b => b.name.StartsWith("Conversion-")).ToList());
             
             foreach (var btn in btns)
                 btn.clicked += () => AddingEquationButtonPressed(btn);

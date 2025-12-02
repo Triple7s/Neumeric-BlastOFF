@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1f2211acdb949e409d190479305ffff, type: 3}
-  m_Name: Percent_To_Fraction
+  m_Name: Conversion-Percent_To_Decimal
   m_EditorClassIdentifier: Assembly-CSharp::SO_Equations
   questions:
   - questionType: 3
@@ -28,7 +28,7 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 5
+    conversionType: 6
     fractionValue:
       numerator: 0
       denominator: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 5
+    conversionType: 6
     fractionValue:
       numerator: 0
       denominator: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 5
+    conversionType: 6
     fractionValue:
       numerator: 0
       denominator: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 5
+    conversionType: 6
     fractionValue:
       numerator: 0
       denominator: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 5
+    conversionType: 6
     fractionValue:
       numerator: 0
       denominator: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 5
+    conversionType: 6
     fractionValue:
       numerator: 0
       denominator: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 5
+    conversionType: 6
     fractionValue:
       numerator: 0
       denominator: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 5
+    conversionType: 6
     fractionValue:
       numerator: 0
       denominator: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 5
+    conversionType: 6
     fractionValue:
       numerator: 0
       denominator: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 5
+    conversionType: 6
     fractionValue:
       numerator: 0
       denominator: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 5
+    conversionType: 6
     fractionValue:
       numerator: 0
       denominator: 0
@@ -259,7 +259,7 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 5
+    conversionType: 6
     fractionValue:
       numerator: 0
       denominator: 0
@@ -280,7 +280,7 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 5
+    conversionType: 6
     fractionValue:
       numerator: 0
       denominator: 0
@@ -301,7 +301,7 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 5
+    conversionType: 6
     fractionValue:
       numerator: 0
       denominator: 0

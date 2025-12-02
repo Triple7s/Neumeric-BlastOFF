@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1f2211acdb949e409d190479305ffff, type: 3}
-  m_Name: Decimal_To_Percent
+  m_Name: Conversion-Percent_To_Fraction
   m_EditorClassIdentifier: Assembly-CSharp::SO_Equations
   questions:
   - questionType: 3
@@ -28,12 +28,12 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 4
+    conversionType: 5
     fractionValue:
       numerator: 0
       denominator: 0
-    decimalValue: 0.5
-    percentValue: 0
+    decimalValue: 0
+    percentValue: 54
   - questionType: 3
     x: 0
     y: 0
@@ -49,12 +49,12 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 4
+    conversionType: 5
     fractionValue:
       numerator: 0
       denominator: 0
-    decimalValue: 0.8
-    percentValue: 0
+    decimalValue: 0
+    percentValue: 41
   - questionType: 3
     x: 0
     y: 0
@@ -70,12 +70,12 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 4
+    conversionType: 5
     fractionValue:
       numerator: 0
       denominator: 0
-    decimalValue: 0.13
-    percentValue: 0
+    decimalValue: 0
+    percentValue: 15
   - questionType: 3
     x: 0
     y: 0
@@ -91,12 +91,12 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 4
+    conversionType: 5
     fractionValue:
       numerator: 0
       denominator: 0
-    decimalValue: 0.42
-    percentValue: 0
+    decimalValue: 0
+    percentValue: 27
   - questionType: 3
     x: 0
     y: 0
@@ -112,12 +112,12 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 4
+    conversionType: 5
     fractionValue:
       numerator: 0
       denominator: 0
-    decimalValue: 0.25
-    percentValue: 0
+    decimalValue: 0
+    percentValue: 29
   - questionType: 3
     x: 0
     y: 0
@@ -133,12 +133,12 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 4
+    conversionType: 5
     fractionValue:
       numerator: 0
       denominator: 0
-    decimalValue: 0.92
-    percentValue: 0
+    decimalValue: 0
+    percentValue: 70
   - questionType: 3
     x: 0
     y: 0
@@ -154,12 +154,12 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 4
+    conversionType: 5
     fractionValue:
       numerator: 0
       denominator: 0
-    decimalValue: 0.3
-    percentValue: 0
+    decimalValue: 0
+    percentValue: 22
   - questionType: 3
     x: 0
     y: 0
@@ -175,12 +175,12 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 4
+    conversionType: 5
     fractionValue:
       numerator: 0
       denominator: 0
-    decimalValue: 0.2
-    percentValue: 0
+    decimalValue: 0
+    percentValue: 86
   - questionType: 3
     x: 0
     y: 0
@@ -196,12 +196,12 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 4
+    conversionType: 5
     fractionValue:
       numerator: 0
       denominator: 0
-    decimalValue: 0.22
-    percentValue: 0
+    decimalValue: 0
+    percentValue: 39
   - questionType: 3
     x: 0
     y: 0
@@ -217,12 +217,12 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 4
+    conversionType: 5
     fractionValue:
       numerator: 0
       denominator: 0
-    decimalValue: 0.89
-    percentValue: 0
+    decimalValue: 0
+    percentValue: 57
   - questionType: 3
     x: 0
     y: 0
@@ -238,12 +238,12 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 4
+    conversionType: 5
     fractionValue:
       numerator: 0
       denominator: 0
-    decimalValue: 0.02
-    percentValue: 0
+    decimalValue: 0
+    percentValue: 5
   - questionType: 3
     x: 0
     y: 0
@@ -259,12 +259,12 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 4
+    conversionType: 5
     fractionValue:
       numerator: 0
       denominator: 0
-    decimalValue: 0.95
-    percentValue: 0
+    decimalValue: 0
+    percentValue: 25
   - questionType: 3
     x: 0
     y: 0
@@ -280,12 +280,12 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 4
+    conversionType: 5
     fractionValue:
       numerator: 0
       denominator: 0
-    decimalValue: 0.7
-    percentValue: 0
+    decimalValue: 0
+    percentValue: 6
   - questionType: 3
     x: 0
     y: 0
@@ -301,135 +301,9 @@ MonoBehaviour:
     isNegativeVariable: 0
     xPosition: 0
     operation: 0
-    conversionType: 4
+    conversionType: 5
     fractionValue:
       numerator: 0
       denominator: 0
-    decimalValue: 0.9
-    percentValue: 0
-  - questionType: 3
-    x: 0
-    y: 0
-    a:
-      numerator: 0
-      denominator: 0
-    b:
-      numerator: 0
-      denominator: 0
-    knownValue1: 0
-    knownValue2: 0
-    variableName: 
-    isNegativeVariable: 0
-    xPosition: 0
-    operation: 0
-    conversionType: 4
-    fractionValue:
-      numerator: 0
-      denominator: 0
-    decimalValue: 0.31
-    percentValue: 0
-  - questionType: 3
-    x: 0
-    y: 0
-    a:
-      numerator: 0
-      denominator: 0
-    b:
-      numerator: 0
-      denominator: 0
-    knownValue1: 0
-    knownValue2: 0
-    variableName: 
-    isNegativeVariable: 0
-    xPosition: 0
-    operation: 0
-    conversionType: 4
-    fractionValue:
-      numerator: 0
-      denominator: 0
-    decimalValue: 0.15
-    percentValue: 0
-  - questionType: 3
-    x: 0
-    y: 0
-    a:
-      numerator: 0
-      denominator: 0
-    b:
-      numerator: 0
-      denominator: 0
-    knownValue1: 0
-    knownValue2: 0
-    variableName: 
-    isNegativeVariable: 0
-    xPosition: 0
-    operation: 0
-    conversionType: 4
-    fractionValue:
-      numerator: 0
-      denominator: 0
-    decimalValue: 0.45
-    percentValue: 0
-  - questionType: 3
-    x: 0
-    y: 0
-    a:
-      numerator: 0
-      denominator: 0
-    b:
-      numerator: 0
-      denominator: 0
-    knownValue1: 0
-    knownValue2: 0
-    variableName: 
-    isNegativeVariable: 0
-    xPosition: 0
-    operation: 0
-    conversionType: 4
-    fractionValue:
-      numerator: 0
-      denominator: 0
-    decimalValue: 0.16
-    percentValue: 0
-  - questionType: 3
-    x: 0
-    y: 0
-    a:
-      numerator: 0
-      denominator: 0
-    b:
-      numerator: 0
-      denominator: 0
-    knownValue1: 0
-    knownValue2: 0
-    variableName: 
-    isNegativeVariable: 0
-    xPosition: 0
-    operation: 0
-    conversionType: 4
-    fractionValue:
-      numerator: 0
-      denominator: 0
-    decimalValue: 0.1
-    percentValue: 0
-  - questionType: 3
-    x: 0
-    y: 0
-    a:
-      numerator: 0
-      denominator: 0
-    b:
-      numerator: 0
-      denominator: 0
-    knownValue1: 0
-    knownValue2: 0
-    variableName: 
-    isNegativeVariable: 0
-    xPosition: 0
-    operation: 0
-    conversionType: 4
-    fractionValue:
-      numerator: 0
-      denominator: 0
-    decimalValue: 0.6
-    percentValue: 0
+    decimalValue: 0
+    percentValue: 100
