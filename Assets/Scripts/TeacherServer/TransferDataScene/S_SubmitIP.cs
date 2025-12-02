@@ -76,6 +76,14 @@ public class S_SubmitIP : MonoBehaviour
             string uploadUrl = "http://" + formattedIP + ":5000/upload";
             StartCoroutine(QtmJsonUploader.UploadJson(jsonPath, uploadUrl));
         }
+        if (_ipAddress.Length >= 11)
+        {
+            formattedIP = EighthFormatVersion(_ipAddress);
+            Debug.Log(formattedIP);
+
+            string uploadUrl = "http://" + formattedIP + ":5000/upload";
+            StartCoroutine(QtmJsonUploader.UploadJson(jsonPath, uploadUrl));
+        }
 
     }
     
@@ -141,5 +149,15 @@ public class S_SubmitIP : MonoBehaviour
         string fourth = ip.Substring(8, 2);
         return first + "." + second + "." + third + "." + fourth;
     }
+
+    private string EighthFormatVersion(string ip)
+    {
+        string first = ip.Substring(0, 3);
+        string second = ip.Substring(3, 3);
+        string third = ip.Substring(6, 2);
+        string fourth = ip.Substring(8, 3);
+        return first + "." + second + "." + third + "." + fourth;
+    }
+
 }
 
