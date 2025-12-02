@@ -3,15 +3,20 @@ import os
 import json
 import sys
 
-# ----- Get save path from Unity -----
-if len(sys.argv) > 1:
-    BASE_DIR = sys.argv[1]    # Unity's persistentDataPath/QTM_Submissions
-else:
-    BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "submissions")
+# Unity will pass the submissions folder path as first argument.
+# Example:
+# python teacher_server.py "C:/MyBuild/MyGame_Data/StreamingAssets/TeacherServer/submissions"
 
-BASE_DIR = os.path.abspath(BASE_DIR)
-os.makedirs(BASE_DIR, exist_ok=True)
-print("Saving JSON files to:", BASE_DIR)
+if len(sys.argv) > 1:
+    UPLOAD_FOLDER = os.path.abspath(sys.argv[1])
+else:
+    # Fallback: local folder next to this script
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    UPLOAD_FOLDER = os.path.join(BASE_DIR, "submissions")
+
+# Ensure directory exists
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+print("UPLOAD_FOLDER is set to:", UPLOAD_FOLDER)
 
 app = Flask(__name__)
 
@@ -19,22 +24,22 @@ app = Flask(__name__)
 def upload():
     try:
         data = request.get_json(force=True)
-        print("Received:", data)
+        print("Received JSON from student:", data)
     except Exception as e:
         return {"status": "error", "message": str(e)}, 400
 
+    # Extract student name
     student_name = data["student"]["name"]
-    sanitized = "".join(c for c in student_name if c.isalnum() or c in (' ','_','-')).strip()
+    safe_name = "".join(c for c in student_name if c.isalnum() or c in " _-").strip()
 
-    filepath = os.path.join(BASE_DIR, f"{sanitized}_answers.json")
+    filepath = os.path.join(UPLOAD_FOLDER, f"{safe_name}_answers.json")
 
-    print(f"Saving JSON to: {filepath}")
+    print("Saving JSON to:", filepath)
 
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4)
 
-    return jsonify({"status": "success", "message": f"Received answers from {student_name}"})
-
+    return jsonify({"status": "success", "message": f"Saved for {student_name}"})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)

@@ -62,7 +62,8 @@ public class S_TeacherServerLauncher : MonoBehaviour
         serverProcess.StartInfo.FileName = pythonExecutable;
 
         // Build path to StreamingAssets/TeacherServer/submissions
-        string savePath = Path.Combine(Application.persistentDataPath + "QTM_Submissions");
+        string savePath = Path.Combine(Application.dataPath, "StreamingAssets/TeacherServer/submissions");
+        Directory.CreateDirectory(savePath);
 
         // Ensure folder exists in the build
         Directory.CreateDirectory(savePath);
