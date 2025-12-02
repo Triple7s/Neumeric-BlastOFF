@@ -16,7 +16,8 @@ public class S_QtmGateManager : MonoBehaviour
     private int _numberOfQuestionsAnswered;
     private int _numberOfCorrectAnswers;
     
-    private List<(bool, MathOperator)> _askedQuestions = new List<(bool, MathOperator)>();
+    private List<(bool, MathOperator, string)> _askedQuestions = new List<(bool, MathOperator, string)>();
+
 
     // Events
     public static event Action<int> OnAnswerCorrect;
@@ -42,7 +43,7 @@ public class S_QtmGateManager : MonoBehaviour
         return equations.questions[randomIndex];
     }
 
-    public void HandleAnswer(bool isCorrect, MathOperator answerType)
+    public void HandleAnswer(bool isCorrect, MathOperator answerType, string questionText)
     {
         if (isCorrect)
         {
@@ -65,7 +66,7 @@ public class S_QtmGateManager : MonoBehaviour
             OnAnswerWrong?.Invoke();
             OnScoreChanged?.Invoke(score);
         }
-        AddQuestion(isCorrect, answerType);
+        AddQuestion(isCorrect, answerType, questionText);
         _numberOfQuestionsAnswered++;
     }
 
@@ -74,20 +75,20 @@ public class S_QtmGateManager : MonoBehaviour
         score += S_GameManager.Instance.GetPointsForPlacement(position);
     }
 
-    private void AddQuestion(bool correct, MathOperator questionType)
+    private void AddQuestion(bool correct, MathOperator questionType, string questionText)
     {
-        _askedQuestions.Add((correct, questionType));
+        _askedQuestions.Add((correct, questionType, questionText));
     }
 
     public int GetScore() => score;
     
     public int GetNumberOfQuestionsAnswered() => _numberOfQuestionsAnswered;
     public int GetNumberOfCorrectAnswers() => _numberOfCorrectAnswers;
-    
+
     public int GetNumberOfQuestionsByType(bool correct, MathOperator questionType)
     {
         int count = 0;
-        foreach (var (isCorrect, type) in _askedQuestions)
+        foreach (var (isCorrect, type, questionText) in _askedQuestions)
         {
             if (isCorrect == correct && type == questionType)
             {
@@ -96,4 +97,18 @@ public class S_QtmGateManager : MonoBehaviour
         }
         return count;
     }
+
+    public string GetAllQuestionsOfType(MathOperator questionType)
+    {
+        string result = "";
+        foreach (var (isCorrect, type, questionText) in _askedQuestions)
+        {
+            if (type == questionType)
+            {
+                result += $"{questionText} - {(isCorrect ? "Correct" : "Wrong")}\n";
+            }
+        }
+        return result;
+    }
+    
 }

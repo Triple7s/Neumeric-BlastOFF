@@ -459,7 +459,7 @@ public class S_MathManager : MonoBehaviour
         string json = JsonUtility.ToJson(wrapper, true);
 
         File.WriteAllText(logFilePath, json);
-        Debug.Log("Saved logs to: " + logFilePath);
+        //Debug.Log("Saved logs to: " + logFilePath);
 
         //UploadingToServer();
     }

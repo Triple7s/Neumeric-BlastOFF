@@ -54,10 +54,15 @@ public class S_QtmGate : MonoBehaviour
             randomFakeAnswer = fakeAnswer;
         }
     }
-    
+
     public MathOperator GetCurrentQuestionType()
     {
         return question.Operation;
+    }
+    
+    public string GetCurrentQuestionText()
+    {
+        return question.Text;
     }
 
     public int GetCorrectAnswer()
