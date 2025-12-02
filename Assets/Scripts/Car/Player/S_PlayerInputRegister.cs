@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class S_PlayerInputRegister : MonoBehaviour
 {

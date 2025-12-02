@@ -356,7 +356,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &5137941399101899967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d532bac93a06eea489f8361e6c6f61c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_PlayerBehaviour
-  data: {fileID: 11400000, guid: 89999c0d1257d96438aa27b37ff8ec5a, type: 2}
+  data: {fileID: 11400000, guid: 2e5f388ddbc239a4e885ec0881299d66, type: 2}
   racer: {fileID: 920630926225535308}
   carHoverBarycentric: {fileID: 5356555243972702356}
   carVfx: {fileID: 5475132890906326534}
@@ -379,6 +379,7 @@ MonoBehaviour:
   boostParticle: {fileID: 1410810174006598366}
   slowParticle: {fileID: 8971581306190287245}
   wallBounceForce: 60
+  boostAutoTurnTimer: 1.5
   playerInputRegister: {fileID: 3559611923804874376}
   cameraController: {fileID: 2544049755536184592}
   carAvoidSideWall: {fileID: 4987614036124648648}
@@ -450,6 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0193fca7e9eaa7e4c89de1b94a93f4d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_Racer
+  alwaysAnswerCorrect: 0
   hideGizmos: 0
   targetColor: {r: 0.9411765, g: 1, b: 0.9411765, a: 1}
   nextColor: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
@@ -858,8 +860,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9041932598008035803}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.000000043329376, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00005429983, y: 2.4999576, z: -3.2199426}
+  m_LocalRotation: {x: 0, y: 0.00000004165745, z: 0, w: 1}
+  m_LocalPosition: {x: -0.00000020861626, y: 2.5, z: -3.2199993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

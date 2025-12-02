@@ -109,6 +109,19 @@ public class S_UI_Elements : MonoBehaviour
                 ShowMathSelect();
             };
         }
+        
+        // Transfer Menu ---
+        var transferBtn = root.Query<Button>().Where(b => b.name.StartsWith("Scene_")).ToList();
+        
+        foreach (var btn in transferBtn)
+        {
+            btn.clicked += () =>
+            {
+                string sceneName = btn.name.Substring("Scene_".Length);
+                S_GameManager.Instance.SetLevel(sceneName);
+                LoadTransferScene();
+            };
+        }
 
 
         // --- Score Labels ---
@@ -193,6 +206,11 @@ public class S_UI_Elements : MonoBehaviour
     {
         uiDocument.visualTreeAsset = newUXML;
         RegisterCallbacks(uiDocument.rootVisualElement);
+    }
+
+    private void LoadTransferScene()
+    {
+        SceneManager.LoadScene(S_GameManager.Instance.GetLevelName());
     }
 
     // Navigation

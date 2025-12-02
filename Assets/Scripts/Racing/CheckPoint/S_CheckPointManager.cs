@@ -1,13 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CheckPointType
-{
-    Normal,
-    SingleQtm,
-    MultiQtm,
-    HideQtm,
-}
+
 public class S_CheckPointManager : MonoBehaviour
 {
     public static S_CheckPointManager Instance { get; private set; }
@@ -180,7 +174,6 @@ public class S_CheckPointManager : MonoBehaviour
 
     private Vector3 CalculateUpDirectionOfCheckPoint(S_CheckPointEntity thisEntity)
     {
-
         S_DrivableSurface closetsGround = null;
         
         LayerMask mask = LayerMask.GetMask("DrivableGround");
@@ -193,7 +186,6 @@ public class S_CheckPointManager : MonoBehaviour
         {
             return FindNormal(hit);
         }
-        
         
         Debug.LogWarning(thisEntity.name + " is missing a ground");
         return Vector3.up;

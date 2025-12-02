@@ -1,9 +1,12 @@
 using System;
 using SpinMotion;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class S_Racer : MonoBehaviour
 {
+    [SerializeField] private bool alwaysAnswerCorrect;
+    
     
     [Header("Gizmos Settings")]
     [SerializeField] private bool hideGizmos;
@@ -16,6 +19,8 @@ public class S_Racer : MonoBehaviour
 
     private S_CheckPointEntity targetCheckPoint, nextCheckPoint;
     private Vector3 targetPosition, nextPosition;
+
+    private int QtmSelection = 0;
     
     public int TargetCheckPointIndex { get; private set; }
     public S_CheckPointEntity TargetCheckPoint => targetCheckPoint;
@@ -62,9 +67,25 @@ public class S_Racer : MonoBehaviour
         targetCheckPoint = S_CheckPointManager.Instance.GetCheckPoint(TargetCheckPointIndex);
         nextCheckPoint = S_CheckPointManager.Instance.GetCheckPoint(TargetCheckPointIndex + 1);
         
-        
         targetPosition = targetCheckPoint.transform.position;
         nextPosition = nextCheckPoint.transform.position;
+        
+        // Change the target 
+        if (targetCheckPoint.CheckPointType == CheckPointType.QtmGate)
+        {
+            targetPosition = targetCheckPoint.TargetPosition(QtmSelection, targetCheckPoint.Spacing);
+            nextPosition = nextCheckPoint.TargetPosition(QtmSelection, targetCheckPoint.Spacing);
+        }
+
+        if (nextCheckPoint.CheckPointType == CheckPointType.QtmGate)
+        {
+            QtmSelection = alwaysAnswerCorrect ? nextCheckPoint.GetCorrectAnswer() : Random.Range(-1, 2);
+
+
+            nextPosition = nextCheckPoint.TargetPosition(QtmSelection, nextCheckPoint.Spacing);
+        }
+        
+        
     }
 
     public float GetDistanceFromCheckPoint()

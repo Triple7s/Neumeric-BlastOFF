@@ -34,7 +34,7 @@ public class S_VisualManager : MonoBehaviour
 
     public void SwapControlsScheme()
     {
-        int childCount = controls.transform.childCount;
+        /*int childCount = controls.transform.childCount;
         for (int i = 0; i < childCount; i++)
         {
             if (controls.transform.GetChild(i).gameObject.activeSelf)
@@ -43,6 +43,37 @@ public class S_VisualManager : MonoBehaviour
                 controls.transform.GetChild((i + 1) % childCount).gameObject.SetActive(true);
                 break;
             }
+        }*/
+        bool currentScheme = S_GameManager.Instance.GetControlScheme();
+        
+        
+        if (currentScheme)
+        {
+            controls.transform.GetChild(0).gameObject.SetActive(true);
+            controls.transform.GetChild(1).gameObject.SetActive(false);
+            S_GameManager.Instance.SetControlScheme(!currentScheme);
+        }
+        else
+        {
+            controls.transform.GetChild(0).gameObject.SetActive(false);
+            controls.transform.GetChild(1).gameObject.SetActive(true);
+            S_GameManager.Instance.SetControlScheme(!currentScheme);
+        }
+    }
+
+    private void Start()
+    {
+        UpdateControlsAtStart();
+    }
+
+    private void UpdateControlsAtStart()
+    {
+        bool currentScheme = S_GameManager.Instance.GetControlScheme();
+
+        if (currentScheme == false)
+        {
+            controls.transform.GetChild(0).gameObject.SetActive(true);
+            controls.transform.GetChild(1).gameObject.SetActive(false);
         }
     }
 

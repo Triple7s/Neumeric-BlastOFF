@@ -10,6 +10,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     [SerializeField] private ParticleSystem boostParticle;
     [SerializeField] private ParticleSystem slowParticle;
     [SerializeField] private float wallBounceForce = 1.0f;
+    [SerializeField] private float boostAutoTurnTimer = 1.5f;
 
     [Header("Player Scripts")]
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
@@ -19,7 +20,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     [SerializeField] private S_PlayerAnimatorController  playerAnimatorController;
         
     
-    private bool isTurning, isBraking, isQtm;
+    private bool isTurning, isBraking, tempAutoSteering;
     private int turnDirection;
     private float offTrackTimer = 3.0f;
 
@@ -52,7 +53,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     
     protected override void BehaviourUpdate()
     {
-        if (alwaysUseAutoSteering)
+        if (alwaysUseAutoSteering || tempAutoSteering)
         {
             Drive();
             AutoTurn(racer.GetDrivingDirection());
@@ -70,12 +71,10 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         }
         else if (CheckDotProduct())
         {
-            Debug.Log("OSEFKFKO");
             AutoTurn(racer.GetDrivingDirection());
         }
         else
         {
-            Debug.Log("I Drive");
             Drive();
         }
 
@@ -165,8 +164,19 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         base.Boost();
         
         boostParticle.Play();
+
+        if (!tempAutoSteering)
+            StartCoroutine(AutoSteerAfterBoost());
     }
 
+    private IEnumerator AutoSteerAfterBoost()
+    {
+        tempAutoSteering = true;
+
+        yield return new WaitForSeconds(boostAutoTurnTimer);
+        
+        tempAutoSteering = false;
+    }
 
     public override void SlowDown()
     {
@@ -214,14 +224,12 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         S_VisualManager.Instance.ToggleControls(false);
         StopTurning();
         StopBrake();
-        isQtm = true;
     }
 
     private void TurnOffAutoSteering()
     {
         print("QTM is turning off");
         S_VisualManager.Instance.ToggleControls(true);
-        isQtm = false;
     }
     
     #endregion

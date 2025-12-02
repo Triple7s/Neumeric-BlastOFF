@@ -65,6 +65,18 @@ public class S_QtmGate : MonoBehaviour
         return question.Text;
     }
 
+    public int GetCorrectAnswer()
+    {
+        for (int i = 0; i < answerGates.Length; i++)
+        {
+            if (answerGates[i].IsCorrectAnswer)
+            {
+                return i - 1;
+            }
+        }
+        return 0;
+    }
+
     private string RandomWrongAnswer()
     {
         // int randomNumber;
