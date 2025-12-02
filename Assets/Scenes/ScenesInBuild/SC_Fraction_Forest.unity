@@ -21577,12 +21577,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 468457612}
   m_PrefabAsset: {fileID: 0}
---- !u!137 &468567617 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1525381163267284032, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1651133730}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &468865360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25808,12 +25802,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fb51bf4d885d4ee4f88d188f961d9d82,
     type: 3}
   m_PrefabInstance: {fileID: 584060249}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &584071022 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 9162737115830074691, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1651133730}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &584136091
 PrefabInstance:
@@ -34423,12 +34411,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fb51bf4d885d4ee4f88d188f961d9d82,
     type: 3}
   m_PrefabInstance: {fileID: 766378609}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &770120566 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8962628150312035836, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1651133730}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &770322543
 PrefabInstance:
@@ -71812,41 +71794,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-        type: 3}
-      propertyPath: carVFX
-      value: 
-      objectReference: {fileID: 1651133744}
-    - target: {fileID: 5475132890906326534, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-        type: 3}
-      propertyPath: carRenderers.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5475132890906326534, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-        type: 3}
-      propertyPath: carSkinnedRenderers.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5475132890906326534, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-        type: 3}
-      propertyPath: 'carSkinnedRenderers.Array.data[1]'
-      value: 
-      objectReference: {fileID: 468567617}
-    - target: {fileID: 5475132890906326534, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-        type: 3}
-      propertyPath: 'carSkinnedRenderers.Array.data[2]'
-      value: 
-      objectReference: {fileID: 770120566}
-    - target: {fileID: 5475132890906326534, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-        type: 3}
-      propertyPath: 'carSkinnedRenderers.Array.data[3]'
-      value: 
-      objectReference: {fileID: 584071022}
-    - target: {fileID: 5475132890906326534, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-        type: 3}
-      propertyPath: 'carSkinnedRenderers.Array.data[4]'
-      value: 
-      objectReference: {fileID: 1830793304}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -71944,18 +71891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d532bac93a06eea489f8361e6c6f61c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_PlayerBehaviour
---- !u!114 &1651133744 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5475132890906326534, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1651133730}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bedd81184089004dbb2c749ba5f831b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::S_CarVFX
 --- !u!1 &1656217774
 GameObject:
   m_ObjectHideFlags: 0
@@ -78806,12 +78741,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d1e6dc864506cd54caf6d55887134cdb,
     type: 3}
   m_PrefabInstance: {fileID: 1830389862}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &1830793304 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3198883986871583592, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1651133730}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1831983853
 PrefabInstance:
