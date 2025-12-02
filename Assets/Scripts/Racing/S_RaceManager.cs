@@ -104,7 +104,7 @@ public class S_RaceManager : MonoBehaviour
                     // Build JSON path
                     string jsonPath = Path.Combine(Application.persistentDataPath, "answers.json");
 
-                    Debug.Log($"[RaceManager] Saving QTM JSON → {jsonPath}");
+                    Debug.Log($"[RaceManager] Saving QTM JSON -> {jsonPath}");
 
                     // 1) Write the JSON file locally
                     S_QtmJsonBuilder.SaveQtmResultsToFile(jsonPath);
