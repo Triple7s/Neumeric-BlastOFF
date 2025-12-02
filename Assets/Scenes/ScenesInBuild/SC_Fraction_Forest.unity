@@ -71907,6 +71907,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
+      propertyPath: boostAutoTurnTimer
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5137941399101899967, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
+        type: 3}
       propertyPath: dotProductBeforeTurn
       value: 0.6
       objectReference: {fileID: 0}

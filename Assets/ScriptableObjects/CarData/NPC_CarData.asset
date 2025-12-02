@@ -19,9 +19,6 @@ MonoBehaviour:
   brakeAcceleration: 250
   turningSpeed: 45
   autoTurningSpeed: 100
-  boostPower: 500
-  slowDownPower: 200
-  minDriftSpeed: 50
   maxSpeed: 400
-  maxBoostSpeed: 600
+  maxQtmCombo: 3
   baseFloatingHeight: 1.5
