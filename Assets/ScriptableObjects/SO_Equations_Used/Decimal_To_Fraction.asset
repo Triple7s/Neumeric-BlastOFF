@@ -1,0 +1,435 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f2211acdb949e409d190479305ffff, type: 3}
+  m_Name: Decimal_To_Fraction
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Equations
+  questions:
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.5
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.8
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.13
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.42
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.25
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.92
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.3
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.2
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.22
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.89
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.02
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.95
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.7
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.9
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.31
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.15
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.45
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.16
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.1
+    percentValue: 0
+  - questionType: 3
+    x: 0
+    y: 0
+    a:
+      numerator: 0
+      denominator: 0
+    b:
+      numerator: 0
+      denominator: 0
+    knownValue1: 0
+    knownValue2: 0
+    variableName: 
+    isNegativeVariable: 0
+    xPosition: 0
+    operation: 0
+    conversionType: 3
+    fractionValue:
+      numerator: 0
+      denominator: 0
+    decimalValue: 0.6
+    percentValue: 0
