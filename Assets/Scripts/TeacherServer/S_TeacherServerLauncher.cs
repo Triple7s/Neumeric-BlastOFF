@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Diagnostics;
 using UnityEngine.UI;
 using System.IO;
+using TMPro;
 
 using System;
 
@@ -17,6 +18,8 @@ public class S_TeacherServerLauncher : MonoBehaviour
     public Button stopServerButton;
 
     private Process serverProcess;
+
+    [SerializeField] private TextMeshProUGUI ipDisplayText;
 
     void Start()
     {
@@ -43,7 +46,8 @@ public class S_TeacherServerLauncher : MonoBehaviour
         }
 
         // Combine Application.dataPath (Assets folder) with relative path
-        string fullScriptPath = Path.Combine(Application.dataPath, "Scripts", "TeacherServer", "teacher_server.py");
+        //string fullScriptPath = Path.Combine(Application.dataPath, "Scripts", "TeacherServer", "teacher_server.py");
+        string fullScriptPath = Path.Combine(Application.streamingAssetsPath, "TeacherServer/teacher_server.py");
 
         // Normalize path separators for the OS
         fullScriptPath = Path.GetFullPath(fullScriptPath);
@@ -56,7 +60,17 @@ public class S_TeacherServerLauncher : MonoBehaviour
 
         serverProcess = new Process();
         serverProcess.StartInfo.FileName = pythonExecutable;
-        serverProcess.StartInfo.Arguments = $"\"{fullScriptPath}\"";
+
+        // Build path to StreamingAssets/TeacherServer/submissions
+        string savePath = Path.Combine(Application.dataPath, "StreamingAssets/TeacherServer/submissions");
+        Directory.CreateDirectory(savePath);
+
+        // Ensure folder exists in the build
+        Directory.CreateDirectory(savePath);
+
+        // Pass both script path + save path to Python
+        serverProcess.StartInfo.Arguments = $"\"{fullScriptPath}\" \"{savePath}\"";
+
         serverProcess.StartInfo.UseShellExecute = false;
         serverProcess.StartInfo.RedirectStandardOutput = true;
         serverProcess.StartInfo.RedirectStandardError = true;
@@ -73,7 +87,15 @@ public class S_TeacherServerLauncher : MonoBehaviour
             serverProcess.Start();
             serverProcess.BeginOutputReadLine();
             serverProcess.BeginErrorReadLine();
+
+            string ip = GetLocalIPAddress();
+            string message = $"{ip}";
             UnityEngine.Debug.Log("Teacher server started!");
+
+            if (ipDisplayText != null)
+                ipDisplayText.text = message;
+            else
+                UnityEngine.Debug.LogWarning("ipDisplayText is not assigned in Inspector!");
         }
         catch (Exception e)
         {
@@ -98,5 +120,30 @@ public class S_TeacherServerLauncher : MonoBehaviour
     private void OnApplicationQuit()
     {
         StopServer();
+    }
+
+    private string GetLocalIPAddress()
+    {
+        string localIP = "Unknown";
+
+        try
+        {
+            var host = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                // Only use IPv4
+                if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                {
+                    localIP = ip.ToString();
+                    break;
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            UnityEngine.Debug.LogError("Could not determine local IP: " + e.Message);
+        }
+
+        return localIP;
     }
 }

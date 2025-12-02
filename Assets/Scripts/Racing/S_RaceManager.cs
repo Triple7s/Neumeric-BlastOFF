@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class S_RaceManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class S_RaceManager : MonoBehaviour
     [SerializeField] private S_StartTimer startTimer;
     [SerializeField] private List<S_Racer> racers;
     [SerializeField] private int raceLaps;
+
+    [SerializeField] private S_RaceFinishHandler finishHandler;
 
     public bool usingUIQtm;
     
@@ -93,6 +96,16 @@ public class S_RaceManager : MonoBehaviour
                     S_QtmGateManager.Instance.AddPointsForFinishedRace(i+1);
                     S_EndScreenUi.Instance.ShowEndScreen(i+1);
                     S_GameManager.Instance.SetScoreForLevel(currentLevelName, S_QtmGateManager.Instance.GetScore());
+
+                    finishHandler.OnRaceFinished();
+
+                    Debug.Log("Race finished! Saving answers.json for teacher...");
+
+                    string jsonPath = Path.Combine(Application.persistentDataPath, "answers.json");
+
+                    S_QtmJsonBuilder.SaveQtmResultsToFile(jsonPath);
+
+                    Debug.Log($"answers.json created at: {jsonPath}");
                 }
             }
         }
