@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02b2abd1-4345-46b9-b20b-4cc4cc0dcf8f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ScenesInBuild/SC_MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ScenesInBuild/SC_MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ScenesInBuild/SC_Decimal_Desert_Dome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ScenesInBuild/SC_Decimal_Desert_Dome.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/S_GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/S_GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/S_UI_Elements.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/S_UI_Elements.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/fraction-select-menu.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/fraction-select-menu.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/math-select-menu.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/math-select-menu.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/multiplication-select-menu.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/multiplication-select-menu.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/level-select-menu.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/level-select-menu.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/main-menu.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/main-menu.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/vehicle-select-menu.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/vehicle-select-menu.uxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

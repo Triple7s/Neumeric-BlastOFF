@@ -14,6 +14,7 @@ public class S_GameManager : MonoBehaviour
     public List<SO_Equations> equations = new ();
     public S_CarData playerData;
     public string levelName;
+    public int playerVehicleId;
     
     private bool _isUsingFirstControlScheme = true;
 
@@ -68,6 +69,7 @@ public class S_GameManager : MonoBehaviour
     }
 
     #endregion
+    
 
     #region Volume Methods
 
@@ -142,9 +144,9 @@ public class S_GameManager : MonoBehaviour
     #region Prepare Game Methods
 
 
-    public void SetSpeed(float speedValue)
+    public void SetVehicle(int vehicleId)
     {
-        
+        playerVehicleId =  vehicleId;
     }
     public void SetLevel(string sceneName)
     {

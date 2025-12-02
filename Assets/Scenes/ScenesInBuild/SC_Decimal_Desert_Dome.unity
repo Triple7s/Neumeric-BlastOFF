@@ -8906,6 +8906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2123880995}
   - component: {fileID: 2123880996}
+  - component: {fileID: 2123880997}
   m_Layer: 0
   m_Name: SetMusic
   m_TagString: Untagged
@@ -8943,6 +8944,26 @@ MonoBehaviour:
   musicNameStart: DecimalDesertStart
   musicNameLoop: DecimalDesertLoop
   musicLoop: 1
+--- !u!114 &2123880997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123880994}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd23997f07d48b4e964ac1c5c77a562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_EngineAudio
+  runningsound: {fileID: 0}
+  runningMaxVolume: 1
+  runningMaxPitch: 2
+  idlesound: {fileID: 0}
+  idleMaxVolume: 0.6
+  idleMaxPitch: 1
+  rb: {fileID: 0}
+  maxSpeed: 30
 --- !u!1 &2138381988
 GameObject:
   m_ObjectHideFlags: 0

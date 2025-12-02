@@ -43,7 +43,7 @@ public class S_UI_Elements : MonoBehaviour
         TryBindButton(root, "Hold-Here", ShowMainMenu);
 
         // --- Main Menu ---
-        TryBindButton(root, "PlayBtn", ShowLevelSelect);
+        TryBindButton(root, "PlayBtn", ShowVehicleSelect);
         TryBindButton(root, "OptionsBtn", ShowOptions);
         TryBindButton(root, "TransferDataBtn", ShowTransferData);
         TryBindButton(root, "QuitBtn", QuitGame);
@@ -54,8 +54,8 @@ public class S_UI_Elements : MonoBehaviour
         {
             if (uiDocument.visualTreeAsset == mathSelectMenuUXML)
                 backBtn.clicked += ShowLevelSelect;
-            /*else if (uiDocument.visualTreeAsset == levelSelectUXML)
-                backBtn.clicked += ShowVehicleSelect;*/
+            else if (uiDocument.visualTreeAsset == levelSelectUXML)
+                backBtn.clicked += ShowVehicleSelect;
             else if (uiDocument.visualTreeAsset == multiplicationSelectMenuUXML || uiDocument.visualTreeAsset == fractionSelectMenuUXML)
             {
                 RemoveEquations();
@@ -92,7 +92,8 @@ public class S_UI_Elements : MonoBehaviour
             btn.clicked += () =>
             {
                 string vehicleName = btn.name.Substring("Vehicle_".Length);
-                // Method that sets vehicle
+                int vehicleId = int.Parse(vehicleName);
+                S_GameManager.Instance.SetVehicle(vehicleId);
                 ShowLevelSelect();
             };
         }
