@@ -47,6 +47,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         base.Start();
 
         playerAnimatorController.InitializePlayerAnimatorController();
+        
         carVFX.InitializeCarVFX();
     }
 

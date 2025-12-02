@@ -28,7 +28,7 @@ public class S_CarVFX : MonoBehaviour
         {
             if (!render.gameObject.activeInHierarchy)
                 continue;
-                
+            print(render.name);
             originalColor = render.materials[0].color;
         }
     }
@@ -66,8 +66,6 @@ public class S_CarVFX : MonoBehaviour
             if (!render.gameObject.activeInHierarchy)
                 continue;
                 
-            originalColor = render.materials[0].color;
-                
             render.materials[0].color = blinkColor;
         }
         
@@ -75,8 +73,6 @@ public class S_CarVFX : MonoBehaviour
         {
             if (!render.gameObject.activeInHierarchy)
                 continue;
-                
-            originalColor = render.materials[0].color;
                 
             render.materials[0].color = blinkColor;
         }
