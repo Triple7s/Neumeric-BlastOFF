@@ -94,3 +94,6 @@ Button {
     bottom: 0;
     padding-top: 350px;
 }
+
+#SFXSlider Fill {
+}
