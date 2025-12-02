@@ -3,7 +3,57 @@ guid: eed718bbe87857e4bbce17b22252c473
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MathGate
+    second: {fileID: 2100000, guid: b05b4d0735c7eab44a48a71b3e44f750, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MathGate.001
+    second: {fileID: 2100000, guid: 66660ed7438cc25448c09570235ab2cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MathGate.002
+    second: {fileID: 2100000, guid: 36bb53bfdc04a81468f970dc1aefce29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MathGate.003
+    second: {fileID: 2100000, guid: 030e371fdfb80f941b08f3cdc3e9a85a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Side_MathGate
+    second: {fileID: 2100000, guid: aeecc3df9d48d1a48a24683a0a8bb451, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Side_MathGate.001
+    second: {fileID: 2100000, guid: 0f458f4a254a9ed438984916ba5a435c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Side_MathGate.002
+    second: {fileID: 2100000, guid: cc2932c57f937344fa25c859b74f6fd0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Side_MathGate.003
+    second: {fileID: 2100000, guid: 3d0e2f73b29f9cd4b899be98a2e014fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Side_MathGate.004
+    second: {fileID: 2100000, guid: 630dc81bc74f4a24cb81d6946a194b6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Side_MathGate.005
+    second: {fileID: 2100000, guid: 5ceb9ac889f04ab4d97ba56df7da084d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
