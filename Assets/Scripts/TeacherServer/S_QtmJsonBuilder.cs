@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.IO;
 
-public class S_QtmJsonBuilder : MonoBehaviour
+public class S_QtmJsonBuilder
 {
     public static void SaveQtmResultsToFile(string path)
     {

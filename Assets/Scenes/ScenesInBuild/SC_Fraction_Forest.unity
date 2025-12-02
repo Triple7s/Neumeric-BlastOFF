@@ -4607,7 +4607,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101054485}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.64653546, y: 0.4685162, z: -0.38114277, w: 0.46606305}
+  m_LocalRotation: {x: 0.64653546, y: 0.46851614, z: -0.38114274, w: 0.46606308}
   m_LocalPosition: {x: -1369.4, y: 1933.1, z: -1081.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -32135,7 +32135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 703735706}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14215003, y: -0.7586401, z: -0.11654591, w: 0.62504053}
+  m_LocalRotation: {x: 0.14215003, y: -0.75864005, z: -0.1165459, w: 0.6250406}
   m_LocalPosition: {x: -1308.64, y: 1881.38, z: -1195.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -36118,7 +36118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817687796}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.07353831, y: 0.39438617, z: -0.16793205, w: 0.9004724}
+  m_LocalRotation: {x: -0.07353831, y: 0.39438614, z: -0.16793206, w: 0.9004724}
   m_LocalPosition: {x: -1368.575, y: 1881.134, z: -1055.1848}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -45035,7 +45035,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044826190}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7256561, y: 0.19348235, z: -0.615488, w: -0.23908675}
+  m_LocalRotation: {x: 0.7256561, y: 0.19348231, z: -0.615488, w: -0.23908673}
   m_LocalPosition: {x: -1310.7, y: 1972.9, z: -1047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -47268,7 +47268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069822610}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7255914, y: 0.46170706, z: -0.4320304, w: 0.27146533}
+  m_LocalRotation: {x: 0.7255914, y: 0.46170706, z: -0.4320304, w: 0.2714653}
   m_LocalPosition: {x: -1366.3, y: 1948.7001, z: -1073}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -82556,7 +82556,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910747754}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5805018, y: 0.39432102, z: 0.15225525, w: 0.69595045}
+  m_LocalRotation: {x: -0.5805018, y: 0.39432102, z: 0.15225528, w: 0.69595045}
   m_LocalPosition: {x: -1272.5587, y: 1904.4854, z: -1046.1719}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -93975,6 +93975,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 906006262259208124, guid: 687822f95406ad54486304d836319d65,
         type: 3}
+      propertyPath: finishHandler
+      value: 
+      objectReference: {fileID: 7759394086731264985}
+    - target: {fileID: 906006262259208124, guid: 687822f95406ad54486304d836319d65,
+        type: 3}
       propertyPath: currentLevelName
       value: FractionForest
       objectReference: {fileID: 0}
@@ -95032,8 +95037,30 @@ PrefabInstance:
         type: 3}
       insertIndex: 2
       addedObject: {fileID: 1875224973}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3657098420433424451, guid: 687822f95406ad54486304d836319d65,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7759394086731264985}
   m_SourcePrefab: {fileID: 100100000, guid: 687822f95406ad54486304d836319d65, type: 3}
+--- !u!1 &7759394086731264984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3657098420433424451, guid: 687822f95406ad54486304d836319d65,
+    type: 3}
+  m_PrefabInstance: {fileID: 7759394086731264983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7759394086731264985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7759394086731264984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ca55cfa98115247a128216c031bf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_RaceFinishHandler
 --- !u!23 &7762067043992412168
 MeshRenderer:
   m_ObjectHideFlags: 0
