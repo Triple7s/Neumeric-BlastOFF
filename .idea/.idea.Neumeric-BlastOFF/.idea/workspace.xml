@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="02b2abd1-4345-46b9-b20b-4cc4cc0dcf8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neumeric-BlastOFF/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/P_Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/P_Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship 3.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship 3.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship_3/Ship3_Animation Time.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TestPrefabs/Ship_3/Ship3_Animation Time.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ScenesInBuild/SC_Fraction_Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ScenesInBuild/SC_Fraction_Forest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/Player/S_PlayerAnimatorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Car/Player/S_PlayerAnimatorController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/NimbusSans-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/NimbusSans-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ScenesInBuild/SC_Decimal_Desert_Dome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ScenesInBuild/SC_Decimal_Desert_Dome.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/vehicle-select-menu.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/vehicle-select-menu.uxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
