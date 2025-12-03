@@ -672,8 +672,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_StartTimer
   timerText: {fileID: 5657362751335971798}
-  countDown: 5
-  visibleDuration: 3
+  countDown: 3
+  visibleDuration: 2
   fadeDuration: 0.5
 --- !u!1 &3635680014320374827
 GameObject:
@@ -851,6 +851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9ab23a9fef41043877ee987d906f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_RaceManager
+  currentLevelName: StraightLine
   startTimer: {fileID: 1235390876157654858}
   racers:
   - {fileID: 0}
@@ -858,6 +859,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   raceLaps: 3
+  finishHandler: {fileID: 0}
   usingUIQtm: 0
 --- !u!1 &4134045675390768887
 GameObject:
@@ -1309,7 +1311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36abd20c74daaab4bb1abf864c328cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_QtmGateManager
-  equations: {fileID: 11400000, guid: d7e453a575420a0408b5cdd24db03302, type: 2}
   qtmPoints: 5
 --- !u!1 &5293638500746957672
 GameObject:

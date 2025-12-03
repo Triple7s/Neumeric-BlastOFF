@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScenesInBuild/SC_Decimal_Desert_Dome.unity
     guid: c1fdbc74ca4ef704bbe3ba68057819de
+  - enabled: 1
+    path: Assets/Scenes/ScenesInBuild/SC_Minus_City.unity
+    guid: f1a60e602b554c640ae6da671f43bd17
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
       guid: a69a577ac35ca9d43a72e5d64f51fded, type: 2}
