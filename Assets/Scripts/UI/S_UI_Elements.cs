@@ -20,6 +20,10 @@ public class S_UI_Elements : MonoBehaviour
     [SerializeField] private List<SO_Equations> equations;
     private List<SO_Equations> equationUsedInRace = new ();
 
+    [Header("SettingsMenu")]
+    [SerializeField] private SO_SetSliderMenu slidersSettingsMenu;
+    [SerializeField] private SO_ControlSchemeMenu controlSchemeMenu;
+    
     private UIDocument uiDocument;
 
     private void Awake()
@@ -27,12 +31,23 @@ public class S_UI_Elements : MonoBehaviour
         uiDocument = GetComponent<UIDocument>();
         ShowTitleScreen();
     }
+    
+    private void Start()
+    {
+        slidersSettingsMenu.InitializeAudioVolumesForUse();
+        controlSchemeMenu.InitializeControlSchemeUI();
+    }
+
+    private void Update()
+    {
+        slidersSettingsMenu.SetAudioVolumes();
+    }
 
     private void RegisterCallbacks(VisualElement root)
     {
-        var sondVfxButtons = root.Query<Button>().ToList();
+        var soundVfxButtons = root.Query<Button>().ToList();
 
-        foreach (var button in sondVfxButtons)
+        foreach (var button in soundVfxButtons)
         {
             button.clicked += ButtonClickedEffect;
         }
@@ -48,6 +63,10 @@ public class S_UI_Elements : MonoBehaviour
         TryBindButton(root, "TransferDataBtn", ShowTransferData);
         TryBindButton(root, "QuitBtn", QuitGame);
 
+        // --- Options Menu ---
+        TryBindButton(root,"ControlScheme_2_Button", ChangeControlSchemeTo2);
+        TryBindButton(root,"ControlScheme_1_Button", ChangeControlSchemeTo1);
+        
         // --- Back Button ---
         var backBtn = root.Q<Button>("BackToMainBtn");
         if (backBtn != null)
@@ -136,7 +155,26 @@ public class S_UI_Elements : MonoBehaviour
         }
 
     }
-    
+
+    private void ChangeControlSchemeTo1()
+    {
+        Debug.Log("ChangeControlSchemeTo1 button pressed");
+        if (S_GameManager.Instance.GetControlScheme() == true) return;
+
+        controlSchemeMenu.UpdateControlSchemeUI(true);
+
+        S_GameManager.Instance.SetControlScheme(true);
+    }
+
+    private void ChangeControlSchemeTo2()
+    {
+        Debug.Log("ChangeControlSchemeTo2 button pressed");
+        if (S_GameManager.Instance.GetControlScheme() == false) return;
+
+        controlSchemeMenu.UpdateControlSchemeUI(false);
+
+        S_GameManager.Instance.SetControlScheme(false);
+    }
     private void ButtonClickedEffect()
     {
         S_AudioManager.Instance.PlaySfx("ButtonClick");
