@@ -667,6 +667,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5967ae0f37e6e804488b29a640c1d77a, type: 2}
   - {fileID: 11400000, guid: 91badccd88e25ed4993996026c10ec0c, type: 2}
   - {fileID: 11400000, guid: 19b4b0d1952207647b1b9ad673dd07f6, type: 2}
+  slidersSettingsMenu: {fileID: 11400000, guid: 4de36637a27f42c4b91c01a7b8a5be98,
+    type: 2}
+  controlSchemeMenu: {fileID: 11400000, guid: 061cbe2017839464bb22a3aa6ebf1780, type: 2}
 --- !u!1001 &1303274769
 PrefabInstance:
   m_ObjectHideFlags: 0
