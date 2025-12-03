@@ -59,6 +59,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2e00eaf151326c0459fb66d0feb7c260, type: 3}
   - name: FractionForestLoop
     clip: {fileID: 8300000, guid: 73d2f29a553c9374491639d5d735471b, type: 3}
+  - name: MinusCityStart
+    clip: {fileID: 8300000, guid: 43ed58d0e3fd87942973a05493fad554, type: 3}
+  - name: MinusCityLoop
+    clip: {fileID: 8300000, guid: c9ae33fac554f0c488029d9007b229c1, type: 3}
   sfxSounds:
   - name: ButtonClick
     clip: {fileID: 8300000, guid: eaef4f143647145b9b7029c298a0dd81, type: 3}

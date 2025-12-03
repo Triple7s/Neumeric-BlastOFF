@@ -12,7 +12,7 @@
         <ui:Button text="COURSE 2&#10;-- Decimal Desert --" name="Level_SC_Decimal_Desert_Dome" style="height: 100%; width: 30%; white-space: pre-wrap; -unity-text-align: middle-center; font-size: 50px; -unity-font-definition: resource(&apos;Fonts &amp; Materials/NimbusSans-Bold&apos;); -unity-font-style: bold; background-color: rgb(224, 211, 115); top: 0; color: rgb(0, 0, 0); flex-direction: column-reverse; min-width: auto;">
             <ui:Label text="0 PTS" tabindex="-1" name="ScoreLabel_DecimalDesert" />
         </ui:Button>
-        <ui:Button text="COURSE 3&#10;-- Minus City --" name="Level_SC_Minus_City" enabled="false" style="height: 100%; width: 30%; white-space: pre-wrap; -unity-text-align: middle-center; font-size: 50px; -unity-font-definition: resource(&apos;Fonts &amp; Materials/NimbusSans-Bold&apos;); -unity-font-style: bold; background-color: rgb(236, 110, 110); top: 0; color: rgb(0, 0, 0); flex-direction: column-reverse; min-width: auto;">
+        <ui:Button text="COURSE 3&#10;-- Minus City --" name="Level_SC_Minus_City" enabled="true" style="height: 100%; width: 30%; white-space: pre-wrap; -unity-text-align: middle-center; font-size: 50px; -unity-font-definition: resource(&apos;Fonts &amp; Materials/NimbusSans-Bold&apos;); -unity-font-style: bold; background-color: rgb(236, 110, 110); top: 0; color: rgb(0, 0, 0); flex-direction: column-reverse; min-width: auto;">
             <ui:Label text="0 PTS" tabindex="-1" name="ScoreLabel_MinusCity" />
         </ui:Button>
     </ui:VisualElement>

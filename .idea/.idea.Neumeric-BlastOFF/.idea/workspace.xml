@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02b2abd1-4345-46b9-b20b-4cc4cc0dcf8f" name="Changes" comment="" />
+    <list default="true" id="02b2abd1-4345-46b9-b20b-4cc4cc0dcf8f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Map/MinusCity/FBX_CitymapRoad.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Map/MinusCity/FBX_CitymapRoad.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GroupsForScene/AudioManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GroupsForScene/AudioManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ScenesInBuild/SC_Minus_City.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ScenesInBuild/SC_Minus_City.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,7 +151,7 @@
       <workItem from="1763108908008" duration="5388000" />
       <workItem from="1763714981920" duration="5042000" />
       <workItem from="1764584834240" duration="1414000" />
-      <workItem from="1764759782685" duration="4373000" />
+      <workItem from="1764759782685" duration="4978000" />
     </task>
     <servers />
   </component>
