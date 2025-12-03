@@ -1,9 +1,9 @@
 #SFXSlider Label {
     display: flex;
-    background-image: url("project://database/Assets/Imported%20Assets/CleanFlatUI/Textures/icon/icon_sound.png?fileID=21300000&guid=0330d54cfc95dee4181eb78429c1164d&type=3#icon_sound");
+    background-image: url("project://database/Assets/UI/Images/Speaking.png?fileID=21300000&guid=e5c6be9f18e324641b68b82a39b4da9f&type=3#Speaking");
     background-color: rgba(0, 0, 0, 0);
-    -unity-background-image-tint-color: rgb(53, 8, 8);
-    background-size: 60% 100%;
+    -unity-background-image-tint-color: rgb(0, 0, 0);
+    background-size: 50% 100%;
     color: rgba(27, 27, 27, 0);
     overflow: visible;
 }
@@ -49,13 +49,16 @@
     -unity-background-image-tint-color: rgb(0, 0, 0);
     left: auto;
     right: auto;
+    align-self: auto;
+    align-content: flex-start;
+    align-items: stretch;
 }
 
 #MusicSlider Label {
     display: flex;
-    background-image: url("project://database/Assets/Imported%20Assets/CleanFlatUI/Textures/icon/icon_sound.png?fileID=21300000&guid=0330d54cfc95dee4181eb78429c1164d&type=3#icon_sound");
-    background-size: 60% 100%;
-    -unity-background-image-tint-color: rgb(215, 103, 103);
+    background-image: url("project://database/Assets/UI/Images/Music%202.png?fileID=21300000&guid=2b02c46030dcf584d89d64b0db73532b&type=3#Music 2");
+    background-size: 50% 100%;
+    -unity-background-image-tint-color: rgb(0, 0, 0);
     color: rgba(27, 27, 27, 0);
     background-color: rgba(0, 0, 0, 0);
 }
