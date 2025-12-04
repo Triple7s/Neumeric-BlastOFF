@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class S_PlayerBehaviour : S_CarBaseBehaviour
@@ -12,6 +13,13 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
     [SerializeField] private float wallBounceForce = 1.0f;
     [SerializeField] private float boostAutoTurnTimer = 1.5f;
 
+    [Header("Player SFX")]
+    [SerializeField] private AudioSource boostAudioSource;
+    [SerializeField] private List<AudioClip> boostAudioClips;
+    [SerializeField] private AudioSource slowDownAudioSource;
+    [SerializeField] private AudioClip slowDownAudioClip;
+    
+    
     [Header("Player Scripts")]
     [SerializeField] private S_PlayerInputRegister playerInputRegister;
     [SerializeField] private S_PlayerCameraController cameraController;
@@ -172,6 +180,15 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
 
         if (!tempAutoSteering)
             StartCoroutine(AutoSteerAfterBoost());
+
+        PlayBoostSfx();
+    }
+
+    private void PlayBoostSfx()
+    {
+        AudioClip clip = boostAudioClips[Random.Range(0, boostAudioClips.Count)];
+        
+        boostAudioSource.PlayOneShot(clip);
     }
 
     private IEnumerator AutoSteerAfterBoost()
@@ -188,6 +205,7 @@ public class S_PlayerBehaviour : S_CarBaseBehaviour
         base.SlowDown();
         
         slowParticle.Play();
+        slowDownAudioSource.PlayOneShot(slowDownAudioClip);
     }
 
     #region Event Actions

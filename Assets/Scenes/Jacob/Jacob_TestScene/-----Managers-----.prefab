@@ -168,6 +168,7 @@ Transform:
   m_Children:
   - {fileID: 3251547267178482274}
   - {fileID: 9020744105098574466}
+  - {fileID: 5518969556364740128}
   - {fileID: 2597639206743593098}
   - {fileID: 7508121200933764499}
   - {fileID: 5187758411468005926}
@@ -672,8 +673,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_StartTimer
   timerText: {fileID: 5657362751335971798}
-  countDown: 5
-  visibleDuration: 3
+  countDown: 3
+  visibleDuration: 2
   fadeDuration: 0.5
 --- !u!1 &3635680014320374827
 GameObject:
@@ -851,13 +852,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9ab23a9fef41043877ee987d906f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_RaceManager
+  currentLevelName: StraightLine
   startTimer: {fileID: 1235390876157654858}
   racers:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  raceLaps: 3
+  raceLaps: 2
+  finishHandler: {fileID: 5560755614421089267}
   usingUIQtm: 0
 --- !u!1 &4134045675390768887
 GameObject:
@@ -1309,7 +1312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36abd20c74daaab4bb1abf864c328cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_QtmGateManager
-  equations: {fileID: 11400000, guid: d7e453a575420a0408b5cdd24db03302, type: 2}
   qtmPoints: 5
 --- !u!1 &5293638500746957672
 GameObject:
@@ -1605,6 +1607,50 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &5778122057809013368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5518969556364740128}
+  - component: {fileID: 5560755614421089267}
+  m_Layer: 0
+  m_Name: S_RaceFinishHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5518969556364740128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5778122057809013368}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -462.87466, y: 0, z: 38.16685}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2746361688518556408}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5560755614421089267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5778122057809013368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ca55cfa98115247a128216c031bf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_RaceFinishHandler
 --- !u!1 &5885944525524285989
 GameObject:
   m_ObjectHideFlags: 0
