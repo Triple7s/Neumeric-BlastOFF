@@ -783,6 +783,7 @@ GameObject:
   - component: {fileID: 5245329320980585977}
   - component: {fileID: 1234655753571259832}
   - component: {fileID: 6549026736152124782}
+  - component: {fileID: 7381725940067756283}
   m_Layer: 5
   m_Name: Continue button
   m_TagString: Untagged
@@ -929,6 +930,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &7381725940067756283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075164034863978494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae32f6ce58673214baca01612f347654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_PlayButtonSound
 --- !u!1 &2252779554417793870
 GameObject:
   m_ObjectHideFlags: 0
@@ -3393,6 +3406,7 @@ GameObject:
   - component: {fileID: 8629150154292088268}
   - component: {fileID: 4728740009518987787}
   - component: {fileID: 7389470912352544148}
+  - component: {fileID: 4526188267819485252}
   m_Layer: 5
   m_Name: Continue button
   m_TagString: Untagged
@@ -3528,6 +3542,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S_SceneLoading
   presetSceneName: SC_MainMenu
+--- !u!114 &4526188267819485252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4652001751420949304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae32f6ce58673214baca01612f347654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_PlayButtonSound
 --- !u!1 &5112266177636951359
 GameObject:
   m_ObjectHideFlags: 0
@@ -4245,6 +4271,7 @@ GameObject:
   - component: {fileID: 5808600574942639205}
   - component: {fileID: 6659550443495025277}
   - component: {fileID: 443024428073945635}
+  - component: {fileID: 7318272847019454405}
   m_Layer: 5
   m_Name: Continue button
   m_TagString: Untagged
@@ -4379,6 +4406,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &7318272847019454405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6112879958950249343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae32f6ce58673214baca01612f347654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_PlayButtonSound
 --- !u!1 &6327327907171112857
 GameObject:
   m_ObjectHideFlags: 0

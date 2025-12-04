@@ -95083,8 +95083,30 @@ PrefabInstance:
         type: 3}
       insertIndex: 2
       addedObject: {fileID: 1875224973}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5757160054935921566, guid: 687822f95406ad54486304d836319d65,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7759394086731264985}
   m_SourcePrefab: {fileID: 100100000, guid: 687822f95406ad54486304d836319d65, type: 3}
+--- !u!1 &7759394086731264984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5757160054935921566, guid: 687822f95406ad54486304d836319d65,
+    type: 3}
+  m_PrefabInstance: {fileID: 7759394086731264983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7759394086731264985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7759394086731264984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae32f6ce58673214baca01612f347654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_PlayButtonSound
 --- !u!23 &7762067043992412168
 MeshRenderer:
   m_ObjectHideFlags: 0

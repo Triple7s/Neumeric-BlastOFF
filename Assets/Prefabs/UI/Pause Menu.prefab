@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 6349694933702728754}
   - component: {fileID: 202359991997695130}
   - component: {fileID: 205658229721823796}
+  - component: {fileID: 8080778514881052063}
   m_Layer: 5
   m_Name: Yellow Box
   m_TagString: Untagged
@@ -524,6 +525,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8080778514881052063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362202499397068756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae32f6ce58673214baca01612f347654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_PlayButtonSound
 --- !u!1 &1497544110780485801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,6 +1017,7 @@ GameObject:
   - component: {fileID: 4590254634341804397}
   - component: {fileID: 114790226037042023}
   - component: {fileID: 5065996891361008985}
+  - component: {fileID: 4564377865785863673}
   m_Layer: 5
   m_Name: Control Scheme 1
   m_TagString: Untagged
@@ -1161,6 +1175,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &4564377865785863673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2527687707318901412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae32f6ce58673214baca01612f347654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_PlayButtonSound
 --- !u!1 &2535540296447015888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,6 +1710,7 @@ GameObject:
   - component: {fileID: 406520528349810262}
   - component: {fileID: 1471890330334816264}
   - component: {fileID: 6409099262650124260}
+  - component: {fileID: 3205878273856913008}
   m_Layer: 5
   m_Name: Green Box
   m_TagString: Untagged
@@ -1805,6 +1832,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3205878273856913008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3603210697275381461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae32f6ce58673214baca01612f347654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_PlayButtonSound
 --- !u!1 &3683422500812573420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2646,6 +2685,7 @@ GameObject:
   - component: {fileID: 7653689401377599151}
   - component: {fileID: 6856771422311756610}
   - component: {fileID: 8620622030963053292}
+  - component: {fileID: 98734786179930113}
   m_Layer: 5
   m_Name: Check Mark
   m_TagString: Untagged
@@ -2766,6 +2806,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &98734786179930113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4789196999634830673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae32f6ce58673214baca01612f347654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_PlayButtonSound
 --- !u!1 &5106944059320806197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2778,6 +2830,7 @@ GameObject:
   - component: {fileID: 6323076111432474614}
   - component: {fileID: 4489758362390250884}
   - component: {fileID: 7213175995214569829}
+  - component: {fileID: 5250331036702017596}
   m_Layer: 5
   m_Name: Cross Mark
   m_TagString: Untagged
@@ -2898,6 +2951,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5250331036702017596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5106944059320806197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae32f6ce58673214baca01612f347654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_PlayButtonSound
 --- !u!1 &5475811629420874231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2951,6 +3016,7 @@ GameObject:
   - component: {fileID: 9132897773312396181}
   - component: {fileID: 4185317828750502657}
   - component: {fileID: 9002089244094547219}
+  - component: {fileID: 4108159701419574433}
   m_Layer: 5
   m_Name: Red Box
   m_TagString: Untagged
@@ -3072,6 +3138,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4108159701419574433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5556555384241670215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae32f6ce58673214baca01612f347654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_PlayButtonSound
 --- !u!1 &5566863114958852035
 GameObject:
   m_ObjectHideFlags: 0
@@ -3769,6 +3847,7 @@ GameObject:
   - component: {fileID: 1929241701139742575}
   - component: {fileID: 7455568625139814559}
   - component: {fileID: 7401037992554850793}
+  - component: {fileID: 6088215572100716881}
   m_Layer: 5
   m_Name: Cross Mark
   m_TagString: Untagged
@@ -3889,6 +3968,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6088215572100716881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7318218178326785088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae32f6ce58673214baca01612f347654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_PlayButtonSound
 --- !u!1 &7828462986999574096
 GameObject:
   m_ObjectHideFlags: 0
@@ -3976,6 +4067,7 @@ GameObject:
   - component: {fileID: 524057476450884115}
   - component: {fileID: 6839650785690664854}
   - component: {fileID: 6062995015100678179}
+  - component: {fileID: 4837132156336520933}
   m_Layer: 5
   m_Name: Control Scheme 2
   m_TagString: Untagged
@@ -4133,6 +4225,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &4837132156336520933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843537348009589016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae32f6ce58673214baca01612f347654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_PlayButtonSound
 --- !u!1 &7875053069879564930
 GameObject:
   m_ObjectHideFlags: 0
@@ -4282,6 +4386,7 @@ GameObject:
   - component: {fileID: 1521234833078992186}
   - component: {fileID: 3092538756739102953}
   - component: {fileID: 3529238220961497662}
+  - component: {fileID: 6532794690467651703}
   m_Layer: 5
   m_Name: Check Mark
   m_TagString: Untagged
@@ -4402,6 +4507,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6532794690467651703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8903440172754728947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae32f6ce58673214baca01612f347654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_PlayButtonSound
 --- !u!1 &9077861052202284634
 GameObject:
   m_ObjectHideFlags: 0
