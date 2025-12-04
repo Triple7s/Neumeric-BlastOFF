@@ -1,16 +1,14 @@
+using System;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class SpinCamera : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private CinemachineOrbitalFollow cof;
+    [SerializeField] private float rotationSpeed;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        cof.HorizontalAxis.Value += rotationSpeed * Time.deltaTime;
     }
 }
