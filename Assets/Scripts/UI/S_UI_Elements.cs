@@ -24,6 +24,9 @@ public class S_UI_Elements : MonoBehaviour
     [SerializeField] private SO_SetSliderMenu slidersSettingsMenu;
     [SerializeField] private SO_ControlSchemeMenu controlSchemeMenu;
     
+    [Header("Other References")]
+    [SerializeField] private UnityEngine.UI.Image backgroundImage;
+    
     private UIDocument uiDocument;
 
     private void Awake()
@@ -54,7 +57,10 @@ public class S_UI_Elements : MonoBehaviour
         // --- Title Screen ---
         var holdHereBtn = root.Q<Button>("Hold-Here");
         if (holdHereBtn != null)
+        {
             holdHereBtn.clicked += () => S_AudioManager.Instance.PlayMusic("MainMenuLoop");
+            holdHereBtn.clicked += () => backgroundImage.color = Color.white;
+        }
         TryBindButton(root, "Hold-Here", ShowMainMenu);
 
         // --- Main Menu ---
