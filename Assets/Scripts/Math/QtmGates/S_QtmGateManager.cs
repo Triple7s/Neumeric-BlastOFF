@@ -11,6 +11,8 @@ public class S_QtmGateManager : MonoBehaviour
 
     private List<SO_Equations> equationGroup = new ();
 
+    public static List<QtmEntry> Results = new List<QtmEntry>();
+
     private int score;
     private int streak;
     private int _numberOfQuestionsAnswered;
@@ -43,7 +45,7 @@ public class S_QtmGateManager : MonoBehaviour
         return equations.questions[randomIndex];
     }
 
-    public void HandleAnswer(bool isCorrect, MathOperator answerType, string questionText)
+    public void HandleAnswer(bool isCorrect, MathOperator answerType, string questionText, string correctAnswer, string playerAnswer)
     {
         if (isCorrect)
         {
@@ -66,8 +68,27 @@ public class S_QtmGateManager : MonoBehaviour
             OnAnswerWrong?.Invoke();
             OnScoreChanged?.Invoke(score);
         }
+
         AddQuestion(isCorrect, answerType, questionText);
+        
+        StoreEntry(isCorrect, questionText, correctAnswer, playerAnswer, category: "Math");
+
         _numberOfQuestionsAnswered++;
+    }
+
+    // New function that stores the complete QtmEntry
+    private void StoreEntry(bool isCorrect, string questionText, string correctAnswer, string playerAnswer, string category)
+    {
+        QtmEntry entry = new QtmEntry(
+            questionText,
+            correctAnswer,
+            playerAnswer,
+            isCorrect
+        );
+
+        Results.Add(entry);
+
+        Debug.Log($"[QTM] Added entry → Q: {questionText}, A: {playerAnswer}, Correct: {isCorrect}");
     }
 
     public void AddPointsForFinishedRace(int position)
@@ -110,5 +131,4 @@ public class S_QtmGateManager : MonoBehaviour
         }
         return result;
     }
-    
 }

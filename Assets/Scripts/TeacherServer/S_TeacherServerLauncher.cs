@@ -3,117 +3,138 @@ using System.Diagnostics;
 using UnityEngine.UI;
 using System.IO;
 using TMPro;
-
 using System;
 
 public class S_TeacherServerLauncher : MonoBehaviour
 {
-    [Header("Server Settings")]
-    public string pythonExecutable = "python3";
-    public string serverScriptPath = "Scripts/TeacherServer/teacher_server.py";
-    public int serverPort = 5000;
+    [Header("Python Settings")]
+    public string pythonExecutable = "python";
 
-    [Header("UI References")]
-    public Button startServerButton;
-    public Button stopServerButton;
+    [Header("UI")]
+    [SerializeField] private Button startServerButton;
+    [SerializeField] private Button stopServerButton;
+    [SerializeField] private TextMeshProUGUI ipDisplayText;
 
     private Process serverProcess;
 
-    [SerializeField] private TextMeshProUGUI ipDisplayText;
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
 
-    void Start()
+    private void Start()
     {
         pythonExecutable = PythonPathHelper.GetPythonExecutablePath();
+
         if (string.IsNullOrEmpty(pythonExecutable))
         {
-            UnityEngine.Debug.LogError("Cannot start server: Python not found for current user.");
+            UnityEngine.Debug.LogError("No Python installation detected. Cannot start server.");
             return;
         }
 
-        if (startServerButton != null)
-            startServerButton.onClick.AddListener(StartServer);
-
-        if (stopServerButton != null)
-            stopServerButton.onClick.AddListener(StopServer);
+        startServerButton?.onClick.AddListener(StartServer);
+        stopServerButton?.onClick.AddListener(StopServer);
     }
 
     public void StartServer()
     {
-        if (serverProcess != null && !serverProcess.HasExited)
+        /*#if UNITY_EDITOR
+            UnityEngine.Debug.LogWarning("[Launcher] Server disabled in Editor. Only runs in Build.");
+            return;
+        #endif*/
+
+        try
         {
-            UnityEngine.Debug.LogWarning("Server is already running!");
+            if (serverProcess != null && !serverProcess.HasExited)
+            {
+                serverProcess.Kill();
+                serverProcess.WaitForExit();
+            }
+        }
+        catch {}
+
+        serverProcess = null;
+
+        string scriptPath = Path.Combine(
+            Application.dataPath,
+            "StreamingAssets",
+            "TeacherServer",
+            "teacher_server.py"
+        );
+
+        if (!File.Exists(scriptPath))
+        {
+            UnityEngine.Debug.LogError("[Launcher] Python script not found: " + scriptPath);
             return;
         }
 
-        // Combine Application.dataPath (Assets folder) with relative path
-        //string fullScriptPath = Path.Combine(Application.dataPath, "Scripts", "TeacherServer", "teacher_server.py");
-        string fullScriptPath = Path.Combine(Application.streamingAssetsPath, "TeacherServer/teacher_server.py");
+        string submissionsFolder = Path.Combine(
+            Application.persistentDataPath,
+            "teacher_submissions"
+        );
 
-        // Normalize path separators for the OS
-        fullScriptPath = Path.GetFullPath(fullScriptPath);
+        Directory.CreateDirectory(submissionsFolder);
 
-        if (!File.Exists(fullScriptPath))
-        {
-            UnityEngine.Debug.LogError("Server script not found: " + fullScriptPath);
-            return;
-        }
+        UnityEngine.Debug.Log("[Launcher] Using submissions folder (persistent): " + submissionsFolder);
 
         serverProcess = new Process();
         serverProcess.StartInfo.FileName = pythonExecutable;
+        serverProcess.StartInfo.Arguments = $"\"{scriptPath}\" \"{submissionsFolder}\"";
 
-        // Build path to StreamingAssets/TeacherServer/submissions
-        string savePath = Path.Combine(Application.dataPath, "StreamingAssets/TeacherServer/submissions");
-        Directory.CreateDirectory(savePath);
-
-        // Ensure folder exists in the build
-        Directory.CreateDirectory(savePath);
-
-        // Pass both script path + save path to Python
-        serverProcess.StartInfo.Arguments = $"\"{fullScriptPath}\" \"{savePath}\"";
+        UnityEngine.Debug.Log("[Launcher] Full command: " +
+            serverProcess.StartInfo.FileName + " " +
+            serverProcess.StartInfo.Arguments);
 
         serverProcess.StartInfo.UseShellExecute = false;
         serverProcess.StartInfo.RedirectStandardOutput = true;
         serverProcess.StartInfo.RedirectStandardError = true;
         serverProcess.StartInfo.CreateNoWindow = true;
 
-        serverProcess.OutputDataReceived += (sender, args) => { if (args.Data != null) UnityEngine.Debug.Log("[Server] " + args.Data); };
-        serverProcess.ErrorDataReceived += (sender, args) => { if (args.Data != null) UnityEngine.Debug.LogWarning("[Server] " + args.Data); };
-
-        try
+        serverProcess.OutputDataReceived += (s, e) =>
         {
-            UnityEngine.Debug.Log("Using Python executable: " + pythonExecutable);
-            UnityEngine.Debug.Log("Starting Python server...");
+            if (!string.IsNullOrEmpty(e.Data)) UnityEngine.Debug.Log("[Python] " + e.Data);
+        };
 
-            serverProcess.Start();
-            serverProcess.BeginOutputReadLine();
-            serverProcess.BeginErrorReadLine();
-
-            string ip = GetLocalIPAddress();
-            string message = $"{ip}";
-            UnityEngine.Debug.Log("Teacher server started!");
-
-            if (ipDisplayText != null)
-                ipDisplayText.text = message;
-            else
-                UnityEngine.Debug.LogWarning("ipDisplayText is not assigned in Inspector!");
-        }
-        catch (Exception e)
+        serverProcess.ErrorDataReceived += (s, e) =>
         {
-            UnityEngine.Debug.LogError("Failed to start server: " + e.Message);
+            if (!string.IsNullOrEmpty(e.Data)) UnityEngine.Debug.LogError("[Python ERROR] " + e.Data);
+        };
+
+        UnityEngine.Debug.Log("[Launcher] Starting Python server...");
+        UnityEngine.Debug.Log("[Launcher] FULL PYTHON COMMAND:");
+        UnityEngine.Debug.Log(serverProcess.StartInfo.FileName + " " + serverProcess.StartInfo.Arguments);
+
+        serverProcess.Start();
+        serverProcess.BeginOutputReadLine();
+        serverProcess.BeginErrorReadLine();
+
+        string ip = GetLocalIPAddress();
+
+        if (ipDisplayText != null)
+        {
+            ipDisplayText.text = ip;   // <-- Updates UI text from “Local Server IP” to “192.xxx.xxx.xxx”
         }
+        else
+        {
+            UnityEngine.Debug.LogWarning("[Launcher] ipDisplayText is NOT assigned.");
+        }
+
+        UnityEngine.Debug.Log("[Launcher] Server running on: http://" + ip + ":5000/upload");
     }
 
     public void StopServer()
     {
+        UnityEngine.Debug.Log("[Launcher] StopServer() called.");
+
         if (serverProcess != null && !serverProcess.HasExited)
         {
             serverProcess.Kill();
             serverProcess.WaitForExit();
-            UnityEngine.Debug.Log("Teacher server stopped!");
+            UnityEngine.Debug.Log("[Launcher] Teacher server stopped.");
         }
         else
         {
-            UnityEngine.Debug.LogWarning("Server is not running!");
+            UnityEngine.Debug.LogWarning("[Launcher] Server was not running.");
         }
     }
 
@@ -124,26 +145,20 @@ public class S_TeacherServerLauncher : MonoBehaviour
 
     private string GetLocalIPAddress()
     {
-        string localIP = "Unknown";
-
         try
         {
             var host = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName());
             foreach (var ip in host.AddressList)
             {
-                // Only use IPv4
                 if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
-                {
-                    localIP = ip.ToString();
-                    break;
-                }
+                    return ip.ToString();
             }
         }
         catch (Exception e)
         {
-            UnityEngine.Debug.LogError("Could not determine local IP: " + e.Message);
+            UnityEngine.Debug.LogError("[Launcher] IP detection failed: " + e.Message);
         }
 
-        return localIP;
+        return "127.0.0.1";
     }
 }
