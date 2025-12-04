@@ -33,6 +33,16 @@ public class S_PlacementBox : MonoBehaviour
         }
     }
 
+    private void UpdatePlayerInfoWithoutTime()
+    {
+        foreach (var namePlate in _namePlates)
+        {
+            if (!namePlate.IsPlayerPlate()) continue;
+            namePlate.SetName(S_GameManager.Instance.GetPlayerName());
+            break;
+        }
+    }
+
     public void MovePlayerToCorrectPosition(int playerPlacement)
     {
         foreach (var namePlate in _namePlates)
@@ -126,6 +136,7 @@ public class S_PlacementBox : MonoBehaviour
         UpdatePlayerPointsText();
         UpdatePlacementText();
         UpdateComputerNames();
+        UpdatePlayerInfoWithoutTime();
     }
     
     private void UpdatePoints()
