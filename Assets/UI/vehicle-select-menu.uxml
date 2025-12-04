@@ -7,19 +7,19 @@
     </ui:VisualElement>
     <ui:VisualElement name="Buttons" style="flex-grow: 1; flex-direction: row; justify-content: center; align-self: auto; align-items: center; visibility: visible; display: flex; overflow: visible; bottom: 0; top: -32px; width: 100%; height: 28%;">
         <ui:Button name="Vehicle_3" style="height: 80%; width: 22%; white-space: pre-wrap; -unity-text-align: middle-center; font-size: 50px; -unity-font-definition: resource(&apos;Fonts &amp; Materials/NimbusSans-Bold&apos;); -unity-font-style: bold; background-color: rgb(107, 222, 203); top: 0; color: rgb(0, 0, 0); flex-direction: column-reverse; align-content: flex-start;">
-            <ui:VisualElement style="flex-grow: 1;" />
+            <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/Images/Cars/Car_3.png?fileID=2800000&amp;guid=098efb5e2e24dcc49a63920111d03323&amp;type=3#Car_3&quot;);" />
             <ui:Label text="Purple Plus" tabindex="-1" name="Name_of_vehicle" />
         </ui:Button>
-        <ui:Button name="Vehicle_4" enabled="false" style="height: 80%; width: 22%; white-space: pre-wrap; -unity-text-align: middle-center; font-size: 50px; -unity-font-definition: resource(&apos;Fonts &amp; Materials/NimbusSans-Bold&apos;); -unity-font-style: bold; background-color: rgb(150, 230, 118); top: 0; color: rgb(0, 0, 0); flex-direction: column-reverse; align-content: flex-start;">
-            <ui:VisualElement style="flex-grow: 1; background-image: none;" />
-            <ui:Label text="Purple Plus" tabindex="-1" name="Name_of_vehicle" />
+        <ui:Button name="Vehicle_4" enabled="true" style="height: 80%; width: 22%; white-space: pre-wrap; -unity-text-align: middle-center; font-size: 50px; -unity-font-definition: resource(&apos;Fonts &amp; Materials/NimbusSans-Bold&apos;); -unity-font-style: bold; background-color: rgb(150, 230, 118); top: 0; color: rgb(0, 0, 0); flex-direction: column-reverse; align-content: flex-start;">
+            <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/Images/Cars/Car_4.png?fileID=2800000&amp;guid=661208784e80230419f5e627d0d76c65&amp;type=3#Car_4&quot;);" />
+            <ui:Label text="Green Degree" tabindex="-1" name="Name_of_vehicle" />
         </ui:Button>
         <ui:Button name="Vehicle_1" style="height: 80%; width: 22%; white-space: pre-wrap; -unity-text-align: middle-center; font-size: 50px; -unity-font-definition: resource(&apos;Fonts &amp; Materials/NimbusSans-Bold&apos;); -unity-font-style: bold; background-color: rgb(224, 211, 115); top: 0; color: rgb(0, 0, 0); flex-direction: column-reverse; align-content: flex-start;">
-            <ui:VisualElement style="flex-grow: 1;" />
+            <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/Images/Cars/Cat_1.png?fileID=2800000&amp;guid=c1ba4cfcf615b65498d1f0a1d4740579&amp;type=3#Cat_1&quot;);" />
             <ui:Label text="Red Decimal" tabindex="-1" name="Name_of_vehicle" />
         </ui:Button>
         <ui:Button name="Vehicle_2" style="height: 80%; width: 22%; white-space: pre-wrap; -unity-text-align: middle-center; font-size: 50px; -unity-font-definition: resource(&apos;Fonts &amp; Materials/NimbusSans-Bold&apos;); -unity-font-style: bold; background-color: rgb(255, 103, 94); top: 0; color: rgb(0, 0, 0); flex-direction: column-reverse; align-content: flex-start;">
-            <ui:VisualElement style="flex-grow: 1;" />
+            <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/Images/Cars/Car_2_2.png?fileID=2800000&amp;guid=a5767f6318aaf0444871f67a1b22c2f7&amp;type=3#Car_2_2&quot;);" />
             <ui:Label text="Grey Geometry" tabindex="-1" name="Name_of_vehicle" />
         </ui:Button>
     </ui:VisualElement>
