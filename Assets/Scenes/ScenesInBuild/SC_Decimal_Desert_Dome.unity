@@ -3456,7 +3456,7 @@ PrefabInstance:
     - target: {fileID: 8344401530012363352, guid: 25afcd8f59ebe554bacebf9819d31503,
         type: 3}
       propertyPath: playerVehicleId
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8344401530012363352, guid: 25afcd8f59ebe554bacebf9819d31503,
         type: 3}
@@ -3537,6 +3537,11 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: e0af02c1e32280e48835822740b8c31d, type: 2}
+    - target: {fileID: -5363424281805771908, guid: d0b1d2e6257ac52449d135da57e9c631,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0d7cf65d8c49f0c44b3af0bb782c9b64, type: 2}
     - target: {fileID: -3195828791156449804, guid: d0b1d2e6257ac52449d135da57e9c631,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -3552,6 +3557,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: JWT_P_Sand Dune_DONE_kindof
       objectReference: {fileID: 0}
+    - target: {fileID: 1809103453133894053, guid: d0b1d2e6257ac52449d135da57e9c631,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 38db9abad4fb05b4b8a241ea078a19d1, type: 2}
     - target: {fileID: 5252682845850649624, guid: d0b1d2e6257ac52449d135da57e9c631,
         type: 3}
       propertyPath: m_Layer
@@ -3562,6 +3572,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8628502785719625371, guid: d0b1d2e6257ac52449d135da57e9c631,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0d7cf65d8c49f0c44b3af0bb782c9b64, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6667,10 +6682,40 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 29930150}
     m_Modifications:
+    - target: {fileID: 1831933537464622718, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
+        type: 3}
+      propertyPath: field of view
+      value: 106.7323
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335383963157103456, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
+        type: 3}
+      propertyPath: Lens.FieldOfView
+      value: 106.7323
+      objectReference: {fileID: 0}
     - target: {fileID: 3476167950482654714, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980368466099368656, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356894726146009194, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356894726146009194, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356894726146009194, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6235112473959526203, guid: 59eb57d5b0ee7ac41b9d5a3eb8a1b93c,
         type: 3}
