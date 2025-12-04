@@ -12,6 +12,9 @@ public class S_QtmAnswer : MonoBehaviour
     private bool isCorrectAnswer;
     private bool isOff;
 
+    string correctAnswer;
+    string playerAnswer;
+
     public bool IsCorrectAnswer => isCorrectAnswer;
     public event Action RequestNewQuestion;
 
@@ -43,7 +46,7 @@ public class S_QtmAnswer : MonoBehaviour
             {
                 StartCoroutine(GetNewQuestion());
 
-                S_QtmGateManager.Instance.HandleAnswer(isCorrectAnswer, qtmGate.GetCurrentQuestionType(), qtmGate.GetCurrentQuestionText());
+                S_QtmGateManager.Instance.HandleAnswer(isCorrectAnswer, qtmGate.GetCurrentQuestionType(), qtmGate.GetCurrentQuestionText(), correctAnswer, playerAnswer);
             }
             
             qtmGate.AddCar(car);

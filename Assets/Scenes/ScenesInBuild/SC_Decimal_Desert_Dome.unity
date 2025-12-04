@@ -8758,6 +8758,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 906006262259208124, guid: 687822f95406ad54486304d836319d65,
         type: 3}
+      propertyPath: finishHandler
+      value: 
+      objectReference: {fileID: 7759394086731264985}
+    - target: {fileID: 906006262259208124, guid: 687822f95406ad54486304d836319d65,
+        type: 3}
       propertyPath: currentLevelName
       value: DecimalDesert
       objectReference: {fileID: 0}
@@ -9774,8 +9779,30 @@ PrefabInstance:
         type: 3}
       insertIndex: 2
       addedObject: {fileID: 1875224973}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3657098420433424451, guid: 687822f95406ad54486304d836319d65,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7759394086731264985}
   m_SourcePrefab: {fileID: 100100000, guid: 687822f95406ad54486304d836319d65, type: 3}
+--- !u!1 &7759394086731264984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3657098420433424451, guid: 687822f95406ad54486304d836319d65,
+    type: 3}
+  m_PrefabInstance: {fileID: 7759394086731264983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7759394086731264985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7759394086731264984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ca55cfa98115247a128216c031bf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S_RaceFinishHandler
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
