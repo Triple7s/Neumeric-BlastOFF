@@ -38,10 +38,10 @@ public class S_TeacherServerLauncher : MonoBehaviour
 
     public void StartServer()
     {
-        #if UNITY_EDITOR
+        /*#if UNITY_EDITOR
             UnityEngine.Debug.LogWarning("[Launcher] Server disabled in Editor. Only runs in Build.");
             return;
-        #endif
+        #endif*/
 
         try
         {

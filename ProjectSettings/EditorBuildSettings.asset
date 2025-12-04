@@ -5,22 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ScenesInBuild/SC_PlayerNameChange.unity
     guid: 5c113ac44ccee264789391fed9790885
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ScenesInBuild/SC_MainMenu.unity
     guid: 1f7a3a2d4a7cbe1499d37acf693a9294
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ScenesInBuild/SC_Fraction_Forest.unity
     guid: e23fed62d5e0d394cbb09561e5b70784
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ScenesInBuild/SC_Decimal_Desert_Dome.unity
     guid: c1fdbc74ca4ef704bbe3ba68057819de
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ScenesInBuild/SC_TransferData.unity
     guid: 61e0aac186ea8034ea2c2746f7d3c8a3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Teacher Server.unity
     guid: 774e9b5d319f19140a3739939120527f
   m_configObjects:

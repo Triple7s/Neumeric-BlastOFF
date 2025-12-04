@@ -89,6 +89,9 @@ public class S_RaceManager : MonoBehaviour
                 {
                     isRacing = false;
 
+                    QtmResultsHolder.CachedResults = new List<QtmEntry>(S_QtmGateManager.Results);
+                    Debug.Log("[RaceManager] Stored " + QtmResultsHolder.CachedResults.Count + " QTM entries for UI scene.");
+
                     S_VisualManager.Instance.EndRace(i + 1);
                     S_GameTimerManager.Instance.StopRace();
                     S_QtmGateManager.Instance.AddPointsForFinishedRace(i + 1);
@@ -102,6 +105,8 @@ public class S_RaceManager : MonoBehaviour
                     finishHandler.OnRaceFinished();
 
                     // Build JSON path
+                    string teacherFolder = Path.Combine(Application.persistentDataPath, "teacher_submissions");
+                    Directory.CreateDirectory(teacherFolder);
                     string jsonPath = Path.Combine(Application.persistentDataPath, "answers.json");
 
                     Debug.Log($"[RaceManager] Saving QTM JSON -> {jsonPath}");
